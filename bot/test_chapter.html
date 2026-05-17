@@ -1,0 +1,1198 @@
+﻿<!DOCTYPE html><html lang="ar" dir="rtl"> <head><script type="50a303a1e3b15701ab8156ec-text/javascript">
+    // CRITICAL: Set theme variables IMMEDIATELY, before any CSS loads
+    // This runs synchronously before any other resources are fetched
+    (function() {
+      var d = document.documentElement;
+      
+      function hexToHsl(hex) {
+        var r = 0, g = 0, b = 0;
+        if (hex.length === 4) { r = parseInt(hex[1] + hex[1], 16); g = parseInt(hex[2] + hex[2], 16); b = parseInt(hex[3] + hex[3], 16); }
+        else if (hex.length === 7) { r = parseInt(hex[1] + hex[2], 16); g = parseInt(hex[3] + hex[4], 16); b = parseInt(hex[5] + hex[6], 16); }
+        r /= 255; g /= 255; b /= 255;
+        var cmin = Math.min(r, g, b), cmax = Math.max(r, g, b), delta = cmax - cmin, h = 0, s = 0, l = 0;
+        if (delta !== 0) { if (cmax === r) h = ((g - b) / delta) % 6; else if (cmax === g) h = (b - r) / delta + 2; else h = (r - g) / delta + 4; }
+        h = Math.round(h * 60); if (h < 0) h += 360;
+        l = (cmax + cmin) / 2; s = delta === 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
+        return h + ' ' + (s * 100).toFixed(1) + '% ' + (l * 100).toFixed(1) + '%';
+      }
+      function darkenColor(hex, percent) {
+        var num = parseInt(hex.replace('#', ''), 16), amt = Math.round(2.55 * percent);
+        var R = Math.max((num >> 16) - amt, 0), G = Math.max((num >> 8 & 0xFF) - amt, 0), B = Math.max((num & 0xFF) - amt, 0);
+        return '#' + (0x1000000 + R * 0x10000 + G * 0x100 + B).toString(16).slice(1);
+      }
+      function hexToRgb(hex) {
+        var r = 0, g = 0, b = 0;
+        if (hex.length === 4) { r = parseInt(hex[1] + hex[1], 16); g = parseInt(hex[2] + hex[2], 16); b = parseInt(hex[3] + hex[3], 16); }
+        else if (hex.length === 7) { r = parseInt(hex[1] + hex[2], 16); g = parseInt(hex[3] + hex[4], 16); b = parseInt(hex[5] + hex[6], 16); }
+        return r + ', ' + g + ', ' + b;
+      }
+
+      // Get stored preferences
+      var storedColor = localStorage.getItem('themeColor') || '#E50914';
+      var storedMode = localStorage.getItem('themeMode');
+      var isDark = storedMode !== 'light';
+
+      // Preset dark variants for common colors
+      var presets = {
+        '#E50914': '#B20710', '#0EA5E9': '#0284C7', '#10B981': '#059669',
+        '#8B5CF6': '#7C3AED', '#EC4899': '#DB2777', '#F97316': '#EA580C',
+        '#EAB308': '#CA8A04', '#06B6D4': '#0891B2'
+      };
+      var darkColor = presets[storedColor] || darkenColor(storedColor, 20);
+      var hslValue = hexToHsl(storedColor);
+      var rgbValue = hexToRgb(storedColor);
+
+      // Apply theme class
+      d.classList.add(isDark ? 'dark' : 'light');
+
+      // 1. Apply CSS custom properties directly to :root (document.documentElement)
+      d.style.setProperty('--color-brand-primary', storedColor);
+      d.style.setProperty('--color-brand-primary-dark', darkColor);
+      d.style.setProperty('--color-brand-primary-hsl', hslValue);
+      d.style.setProperty('--color-brand-primary-rgb', rgbValue);
+      d.style.setProperty('--color-brand-red', storedColor);
+      d.style.setProperty('--color-brand-red-dark', darkColor);
+      
+      // 2. Inject a critical style tag to ensure variables are set even if inline styles get overridden
+      // This is crucial for preventing flash on data-heavy pages
+      var style = document.createElement('style');
+      style.id = 'theme-vars';
+      style.innerHTML = ':root { --color-brand-primary: ' + storedColor + ' !important; --color-brand-primary-dark: ' + darkColor + ' !important; --color-brand-primary-hsl: ' + hslValue + ' !important; --color-brand-primary-rgb: ' + rgbValue + ' !important; --color-brand-red: ' + storedColor + ' !important; --color-brand-red-dark: ' + darkColor + ' !important; }';
+      document.head.appendChild(style);
+    })();
+    </script><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta name="msvalidate.01" content="30F0B0F312C934F206AF910A379D6ABC"><meta name="google-site-verification" content="9BrmiBmN-rTPP_I3x-3itjxJ4aW2Wi6wvS2rbPl_dk4"><link rel="alternate" hreflang="ar" href="https://mangatek.com/reader/white-dragon-duke-pendragon/124"><link rel="alternate" hreflang="x-default" href="https://mangatek.com/reader/white-dragon-duke-pendragon/124"><link rel="icon" href="/Logo/logo.ico" type="image/x-icon"><link rel="apple-touch-icon" href="/Logo/mangatek_logo.png"><link rel="manifest" href="/manifest.webmanifest"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><style type="text/css">@font-face {font-family:Tajawal;font-style:normal;font-weight:400;src:url(/cf-fonts/s/tajawal/5.0.11/arabic/400/normal.woff2);unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0898-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;font-display:swap;}@font-face {font-family:Tajawal;font-style:normal;font-weight:400;src:url(/cf-fonts/s/tajawal/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Tajawal;font-style:normal;font-weight:500;src:url(/cf-fonts/s/tajawal/5.0.11/latin/500/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Tajawal;font-style:normal;font-weight:500;src:url(/cf-fonts/s/tajawal/5.0.11/arabic/500/normal.woff2);unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0898-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;font-display:swap;}@font-face {font-family:Tajawal;font-style:normal;font-weight:700;src:url(/cf-fonts/s/tajawal/5.0.11/arabic/700/normal.woff2);unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0898-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;font-display:swap;}@font-face {font-family:Tajawal;font-style:normal;font-weight:700;src:url(/cf-fonts/s/tajawal/5.0.11/latin/700/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Tajawal;font-style:normal;font-weight:800;src:url(/cf-fonts/s/tajawal/5.0.11/arabic/800/normal.woff2);unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0898-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;font-display:swap;}@font-face {font-family:Tajawal;font-style:normal;font-weight:800;src:url(/cf-fonts/s/tajawal/5.0.11/latin/800/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}</style><script async defer src="https://www.googletagmanager.com/gtag/js?id=G-W8MD69ZT8X" type="50a303a1e3b15701ab8156ec-text/javascript"></script><script type="50a303a1e3b15701ab8156ec-module" src="/_astro/Layout.astro_astro_type_script_index_0_lang.v7xrGfOY.js"></script><title>White Dragon Duke: Pendragon Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 124 Ã™Â…Ã˜ÂªÃ˜Â±Ã˜Â¬Ã™Â… - Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§Ã˜ÂªÃ™Âƒ</title><meta name="title" content="White Dragon Duke: Pendragon Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 124 Ã™Â…Ã˜ÂªÃ˜Â±Ã˜Â¬Ã™Â… - Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§Ã˜ÂªÃ™Âƒ"><meta name="description" content="Ã˜Â§Ã™Â‚Ã˜Â±Ã˜Â£ White Dragon Duke: Pendragon Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 124 Ã™Â…Ã˜ÂªÃ˜Â±Ã˜Â¬Ã™Â… Ã™Â„Ã™Â„Ã˜Â¹Ã˜Â±Ã˜Â¨Ã™ÂŠÃ˜Â© Ã˜Â£Ã™ÂˆÃ™Â†Ã™Â„Ã˜Â§Ã™ÂŠÃ™Â†"><meta name="keywords" content="Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§, Ã™Â…Ã˜Â§Ã™Â†Ã™Â‡Ã™ÂˆÃ˜Â§, Ã™ÂˆÃ™ÂŠÃ˜Â¨ Ã˜ÂªÃ™ÂˆÃ™Â†, Ã™Â‚Ã˜Â±Ã˜Â§Ã˜Â¡Ã˜Â© Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã˜Â§Ã™ÂˆÃ™Â† Ã™Â„Ã˜Â§Ã™ÂŠÃ™Â†, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã™Â…Ã˜ÂªÃ˜Â±Ã˜Â¬Ã™Â…Ã˜Â©, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã˜Â¹Ã˜Â±Ã˜Â¨Ã™ÂŠÃ˜Â©, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã˜Â¬Ã˜Â¯Ã™ÂŠÃ˜Â¯Ã˜Â©, Ã™Â…Ã˜Â§Ã™Â†Ã™Â‡Ã™ÂˆÃ˜Â§ Ã™ÂƒÃ™ÂˆÃ˜Â±Ã™ÂŠÃ˜Â©, Ã™Â…Ã˜Â§Ã™Â†Ã™Â‡Ã™ÂˆÃ˜Â§ Ã˜ÂµÃ™ÂŠÃ™Â†Ã™ÂŠÃ˜Â©, Ã™ÂˆÃ™ÂŠÃ˜Â¨ Ã˜ÂªÃ™ÂˆÃ™Â† Ã˜Â¹Ã˜Â±Ã˜Â¨Ã™ÂŠ, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã˜Â£Ã™ÂƒÃ˜Â´Ã™Â†, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã˜Â±Ã™ÂˆÃ™Â…Ã˜Â§Ã™Â†Ã˜Â³Ã™ÂŠÃ˜Â©, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã˜Â¯Ã˜Â±Ã˜Â§Ã™Â…Ã˜Â§, Ã˜Â¥Ã™ÂŠÃ˜Â³Ã™ÂŠÃ™ÂƒÃ˜Â§Ã™ÂŠ, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã™ÂÃ™Â†Ã™ÂˆÃ™Â† Ã™Â‚Ã˜ÂªÃ˜Â§Ã™Â„Ã™ÂŠÃ˜Â©, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã˜Â´Ã™ÂˆÃ™Â†Ã™ÂŠÃ™Â†, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã˜Â³Ã™ÂŠÃ™Â†Ã™ÂŠÃ™Â†, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã˜Â´Ã™ÂˆÃ˜Â¬Ã™Âˆ, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã˜Â¬Ã™ÂˆÃ˜Â³Ã™ÂŠ, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã˜Â±Ã˜Â¹Ã˜Â¨, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã˜ÂºÃ™Â…Ã™ÂˆÃ˜Â¶, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã˜Â®Ã™ÂŠÃ˜Â§Ã™Â„ Ã˜Â¹Ã™Â„Ã™Â…Ã™ÂŠ, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã˜Â§Ã™Â„Ã˜Â§Ã™Â†Ã˜ÂªÃ™Â‚Ã˜Â§Ã™Â…, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã˜Â§Ã™Â„Ã™Â†Ã˜Â¸Ã˜Â§Ã™Â…, Ã™Â…Ã˜Â§Ã™Â†Ã™Â‡Ã™ÂˆÃ˜Â§ Ã™Â…Ã™Â„Ã™ÂˆÃ™Â†Ã˜Â©, Ã˜ÂªÃ˜Â­Ã™Â…Ã™ÂŠÃ™Â„ Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ PDF, Ã˜Â£Ã˜Â­Ã˜Â¯Ã˜Â« Ã™ÂÃ˜ÂµÃ™ÂˆÃ™Â„ Ã˜Â§Ã™Â„Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã™ÂƒÃ˜Â§Ã™Â…Ã™Â„Ã˜Â©, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã™Â…Ã˜Â³Ã˜ÂªÃ™Â…Ã˜Â±Ã˜Â©, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã™Â…Ã™Â†Ã˜ÂªÃ™Â‡Ã™ÂŠÃ˜Â©, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã™Â„Ã™ÂŠÃ™Âƒ, Ã˜Â¨Ã˜Â¯Ã™ÂŠÃ™Â„ Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã™Â„Ã™ÂŠÃ™Âƒ, Ã˜Â¬Ã™ÂŠ Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§, Ã˜Â£Ã˜Â²Ã™ÂˆÃ˜Â±Ã˜Â§ Ã˜Â³Ã™ÂƒÃ˜Â§Ã™Â†Ã˜Â², Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã˜Â§Ã™Â„Ã˜Â¹Ã˜Â§Ã˜Â´Ã™Â‚, Ã˜ÂªÃ™ÂŠÃ™Â… Ã˜Â§Ã™ÂƒÃ˜Â³, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã™Â…Ã˜Â¬Ã˜Â§Ã™Â†Ã™ÂŠÃ˜Â©, mangatek, manga arabic, arabic manhwa, webtoon arabic, read manga online, manga translation, solo leveling, one piece, jujutsu kaisen, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã™Â„Ã™Â„Ã˜Â¬Ã™ÂˆÃ˜Â§Ã™Â„, Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã˜Â³Ã˜Â±Ã™ÂŠÃ˜Â¹Ã˜Â© Ã˜Â§Ã™Â„Ã˜ÂªÃ˜Â­Ã™Â…Ã™ÂŠÃ™Â„, Ã˜ÂªÃ˜Â±Ã˜Â¬Ã™Â…Ã˜Â© Ã˜Â§Ã˜Â­Ã˜ÂªÃ˜Â±Ã˜Â§Ã™ÂÃ™ÂŠÃ˜Â©"><meta name="author" content="mangatek"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large"><meta name="bingbot" content="index, follow"><meta name="content-language" content="ar"><link rel="canonical" href="https://mangatek.com/reader/white-dragon-duke-pendragon/124"><meta property="og:type" content="article"><meta property="og:url" content="https://mangatek.com/reader/white-dragon-duke-pendragon/124"><meta property="og:title" content="White Dragon Duke: Pendragon Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 124 Ã™Â…Ã˜ÂªÃ˜Â±Ã˜Â¬Ã™Â… - Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§Ã˜ÂªÃ™Âƒ"><meta property="og:description" content="Ã˜Â§Ã™Â‚Ã˜Â±Ã˜Â£ White Dragon Duke: Pendragon Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 124 Ã™Â…Ã˜ÂªÃ˜Â±Ã˜Â¬Ã™Â… Ã™Â„Ã™Â„Ã˜Â¹Ã˜Â±Ã˜Â¨Ã™ÂŠÃ˜Â© Ã˜Â£Ã™ÂˆÃ™Â†Ã™Â„Ã˜Â§Ã™ÂŠÃ™Â†"><meta property="og:image" content="https://api.mangatek.com/covers/whitedragondukependragon%20-%20cover.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:site_name" content="Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§Ã˜ÂªÃ™Âƒ - Mangatek"><meta property="og:locale" content="ar_AR"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://mangatek.com/reader/white-dragon-duke-pendragon/124"><meta name="twitter:title" content="White Dragon Duke: Pendragon Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 124 Ã™Â…Ã˜ÂªÃ˜Â±Ã˜Â¬Ã™Â… - Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§Ã˜ÂªÃ™Âƒ"><meta name="twitter:description" content="Ã˜Â§Ã™Â‚Ã˜Â±Ã˜Â£ White Dragon Duke: Pendragon Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 124 Ã™Â…Ã˜ÂªÃ˜Â±Ã˜Â¬Ã™Â… Ã™Â„Ã™Â„Ã˜Â¹Ã˜Â±Ã˜Â¨Ã™ÂŠÃ˜Â© Ã˜Â£Ã™ÂˆÃ™Â†Ã™Â„Ã˜Â§Ã™ÂŠÃ™Â†"><meta name="twitter:image" content="https://api.mangatek.com/covers/whitedragondukependragon%20-%20cover.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§Ã˜ÂªÃ™Âƒ - Mangatek","alternateName":["Mangatek","Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§Ã˜ÂªÃ™Âƒ"],"url":"https://mangatek.com/","logo":"https://mangatek.com/Logo/mangatek_logo.png","sameAs":["https://discord.gg/YU35cXTVej"],"contactPoint":{"@type":"ContactPoint","contactType":"customer service","availableLanguage":["Arabic","English"]}}</script><script type="application/ld+json">{"@context":"https://schema.org","inLanguage":"ar","@type":"ComicIssue","name":"White Dragon Duke: Pendragon Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 124 Ã™Â…Ã˜ÂªÃ˜Â±Ã˜Â¬Ã™Â… - Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§Ã˜ÂªÃ™Âƒ","headline":"White Dragon Duke: Pendragon Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 124 Ã™Â…Ã˜ÂªÃ˜Â±Ã˜Â¬Ã™Â… - Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§Ã˜ÂªÃ™Âƒ","description":"Ã˜Â§Ã™Â‚Ã˜Â±Ã˜Â£ White Dragon Duke: Pendragon Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 124 Ã™Â…Ã˜ÂªÃ˜Â±Ã˜Â¬Ã™Â… Ã™Â„Ã™Â„Ã˜Â¹Ã˜Â±Ã˜Â¨Ã™ÂŠÃ˜Â© Ã˜Â£Ã™ÂˆÃ™Â†Ã™Â„Ã˜Â§Ã™ÂŠÃ™Â†","url":"https://mangatek.com/reader/white-dragon-duke-pendragon/124","image":"https://api.mangatek.com/covers/whitedragondukependragon%20-%20cover.png","author":{"@type":"Organization","name":"Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§Ã˜ÂªÃ™Âƒ - Mangatek"},"publisher":{"@type":"Organization","name":"Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§Ã˜ÂªÃ™Âƒ - Mangatek","logo":{"@type":"ImageObject","url":"https://mangatek.com/Logo/mangatek_logo.png"}},"datePublished":"2025","isAccessibleForFree":true,"mainEntityOfPage":{"@type":"WebPage","@id":"https://mangatek.com/reader/white-dragon-duke-pendragon/124"}}</script><script type="application/ld+json">{"@context":"https://schema.org","inLanguage":"ar","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ã˜Â§Ã™Â„Ã˜Â±Ã˜Â¦Ã™ÂŠÃ˜Â³Ã™ÂŠÃ˜Â©","item":"https://mangatek.com/"},{"@type":"ListItem","position":2,"name":"Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§","item":"https://mangatek.com/manga-list"},{"@type":"ListItem","position":3,"name":"Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ ","item":"https://mangatek.com/reader/white-dragon-duke-pendragon/124"}]}</script><meta name="theme-color" content="#0a0a0f"><script type="text/javascript" data-cfasync="false">
+        /*<![CDATA[/* */
+        (function(){var k=window,b="ca65738cb8598e981a70064f9b871b45",z=[["siteId",915*882*921-738094628],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","always"]],f=["d3d3LnhhZHNtYXJ0LmNvbS9yQkkvU1Zrdm4vdm1vLm1pbi5qcw==","ZDExZW5xMnJ5bXkweWwuY2xvdWRmcm9udC5uZXQvY2pzb24yLm1pbi5qcw=="],e=-1,c,p,o=function(){clearTimeout(p);e++;if(f[e]&&!(1776621138000<(new Date).getTime()&&1<e)){c=k.document.createElement("script");c.type="text/javascript";c.async=!0;var s=k.document.getElementsByTagName("script")[0];c.src="https://"+atob(f[e]);c.crossOrigin="anonymous";c.onerror=o;c.onload=function(){clearTimeout(p);k[b.slice(0,16)+b.slice(0,16)]||o()};p=setTimeout(o,5E3);s.parentNode.insertBefore(c,s)}};if(!k[b]){try{Object.freeze(k[b]=z)}catch(e){}o()}})();
+        /*]]>/* */
+        </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4265615880550564" crossorigin="anonymous" type="50a303a1e3b15701ab8156ec-text/javascript"></script><link rel="stylesheet" href="/_astro/about.CqmzhABB.css">
+<link rel="stylesheet" href="/_astro/_chapter_.CfZ8Pauz.css">
+<style>body{font-family:Tajawal,Arial,sans-serif}.floating-animation[data-astro-cid-pxli64he]{animation:floating 3s ease-in-out infinite}.pulse-slow[data-astro-cid-pxli64he]{animation:pulse 3s cubic-bezier(.4,0,.6,1) infinite}.fade-in-up[data-astro-cid-pxli64he]{animation:fadeInUp .8s ease-out forwards;opacity:0;transform:translateY(30px)}.fade-in-up-delay[data-astro-cid-pxli64he]{animation:fadeInUp .8s ease-out .3s forwards;opacity:0;transform:translateY(30px)}.fade-in-up-delay-2[data-astro-cid-pxli64he]{animation:fadeInUp .8s ease-out .6s forwards;opacity:0;transform:translateY(30px)}.glow-effect[data-astro-cid-pxli64he]{box-shadow:0 0 20px #e509144d;transition:box-shadow .3s ease}.glow-effect[data-astro-cid-pxli64he]:hover{box-shadow:0 0 30px #e5091480}.discord-hover[data-astro-cid-pxli64he]:hover{transform:translateY(-2px);box-shadow:0 10px 25px #dc26264d}@keyframes floating{0%,to{transform:translateY(0)}50%{transform:translateY(-20px)}}@keyframes fadeInUp{to{opacity:1;transform:translateY(0)}}.bg-gradient-custom[data-astro-cid-pxli64he]{background:linear-gradient(135deg,#0f0000,#1a0505,#2b0b0b)}.text-gradient[data-astro-cid-pxli64he]{background:linear-gradient(135deg,#ef4444,#dc2626);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+</style>
+<link rel="stylesheet" href="/_astro/latest.D9uh26PE.css">
+<style>@keyframes gradient{0%,to{opacity:.2}50%{opacity:.4}}.animate-gradient[data-astro-cid-pxjg5jkk]{animation:gradient 8s ease-in-out infinite}@keyframes pulse-slow{0%,to{opacity:.5}50%{opacity:.75}}.animate-pulse-slow[data-astro-cid-pxjg5jkk]{animation:pulse-slow 3s ease-in-out infinite}@keyframes bounce-slow{0%,to{transform:translateY(0)}50%{transform:translateY(-5px)}}.animate-bounce-slow[data-astro-cid-pxjg5jkk]{animation:bounce-slow 2s ease-in-out infinite}@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))){.backdrop-blur-xl[data-astro-cid-pxjg5jkk]{-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}}
+</style></head> <body class="min-h-screen flex flex-col font-arabic antialiased relative" style="background-color: var(--color-bg-primary); color: var(--color-text-primary);"> <div id="gift-received-overlay" class="fixed inset-0 z-[99999] hidden" data-astro-cid-mwgz7csn> <div class="gift-backdrop absolute inset-0 bg-black/85 backdrop-blur-md" data-astro-cid-mwgz7csn></div> <canvas id="gift-confetti-canvas" class="absolute inset-0 pointer-events-none" data-astro-cid-mwgz7csn></canvas> <div class="gift-overlay-content relative z-10 flex items-center justify-center min-h-screen p-4" data-astro-cid-mwgz7csn> <div class="gift-modal w-full max-w-md text-center" data-astro-cid-mwgz7csn> <div class="gift-glow-ring mx-auto mb-6 relative" data-astro-cid-mwgz7csn> <div class="gift-glow-pulse" data-astro-cid-mwgz7csn></div> <div id="gift-icon-circle" class="gift-icon-circle" data-astro-cid-mwgz7csn> <i id="gift-icon" class="fas fa-gift text-4xl text-white" data-astro-cid-mwgz7csn></i> </div> </div> <h2 id="gift-title" class="text-3xl font-bold text-white mb-3" style="font-family: 'Tajawal', sans-serif; text-shadow: 0 0 30px rgba(212, 175, 55, 0.4);" data-astro-cid-mwgz7csn>
+Ã°ÂŸÂŽÂ‰ Ã™Â„Ã™Â‚Ã˜Â¯ Ã˜Â­Ã˜ÂµÃ™Â„Ã˜Âª Ã˜Â¹Ã™Â„Ã™Â‰ Ã™Â‡Ã˜Â¯Ã™ÂŠÃ˜Â©!
+</h2> <p id="gift-sender" class="text-lg mb-4" style="color: #d4af37; font-family: 'Tajawal', sans-serif;" data-astro-cid-mwgz7csn>
+Ã™Â…Ã™Â† Ã˜Â¥Ã˜Â¯Ã˜Â§Ã˜Â±Ã˜Â© Ã˜Â§Ã™Â„Ã™Â…Ã™ÂˆÃ™Â‚Ã˜Â¹
+</p> <div class="gift-details-card mx-auto mb-6" data-astro-cid-mwgz7csn> <div class="gift-item-info" data-astro-cid-mwgz7csn> <div id="gift-item-icon" class="gift-item-icon-wrapper" data-astro-cid-mwgz7csn> <i class="fas fa-coins text-2xl" data-astro-cid-mwgz7csn></i> </div> <div class="gift-item-text" data-astro-cid-mwgz7csn> <span id="gift-item-name" class="gift-item-name" data-astro-cid-mwgz7csn>Ã™Â‡Ã˜Â¯Ã™ÂŠÃ˜Â©</span> <span id="gift-item-desc" class="gift-item-desc" data-astro-cid-mwgz7csn>Ã˜ÂªÃ™Â… Ã˜Â¥Ã˜Â±Ã˜Â³Ã˜Â§Ã™Â„Ã™Â‡Ã˜Â§ Ã˜Â¥Ã™Â„Ã™ÂŠÃ™Âƒ Ã™ÂƒÃ™Â‡Ã˜Â¯Ã™ÂŠÃ˜Â©</span> </div> </div> </div> <p id="gift-message" class="text-gray-300 text-sm mb-8 leading-relaxed max-w-xs mx-auto" style="font-family: 'Tajawal', sans-serif;" data-astro-cid-mwgz7csn>
+Ã˜ÂªÃ™Â…Ã˜ÂªÃ˜Â¹ Ã˜Â¨Ã™Â‡Ã˜Â°Ã™Â‡ Ã˜Â§Ã™Â„Ã™Â‡Ã˜Â¯Ã™ÂŠÃ˜Â©! Ã™ÂŠÃ™Â…Ã™ÂƒÃ™Â†Ã™Âƒ Ã™Â…Ã˜Â´Ã˜Â§Ã™Â‡Ã˜Â¯Ã˜ÂªÃ™Â‡Ã˜Â§ Ã™ÂÃ™ÂŠ Ã˜Â­Ã˜Â³Ã˜Â§Ã˜Â¨Ã™Âƒ.
+</p> <div class="flex flex-col gap-3 max-w-xs mx-auto" data-astro-cid-mwgz7csn> <button id="gift-accept-btn" class="gift-accept-btn" data-astro-cid-mwgz7csn> <i class="fas fa-check-circle" data-astro-cid-mwgz7csn></i> <span data-astro-cid-mwgz7csn>Ã˜Â§Ã˜Â³Ã˜ÂªÃ™Â„Ã˜Â§Ã™Â… Ã˜Â§Ã™Â„Ã™Â‡Ã˜Â¯Ã™ÂŠÃ˜Â©</span> </button> <a id="gift-action-link" href="/profile" class="gift-action-link-btn" style="display:none;" data-astro-cid-mwgz7csn> <i class="fas fa-arrow-left" data-astro-cid-mwgz7csn></i> <span id="gift-action-text" data-astro-cid-mwgz7csn>Ã˜Â¹Ã˜Â±Ã˜Â¶</span> </a> </div> <div class="gift-sparkles" data-astro-cid-mwgz7csn> <div class="sparkle s1" data-astro-cid-mwgz7csn>Ã¢ÂœÂ¦</div> <div class="sparkle s2" data-astro-cid-mwgz7csn>Ã¢ÂœÂ§</div> <div class="sparkle s3" data-astro-cid-mwgz7csn>Ã¢Â­Â</div> <div class="sparkle s4" data-astro-cid-mwgz7csn>Ã¢ÂœÂ¦</div> <div class="sparkle s5" data-astro-cid-mwgz7csn>Ã¢ÂœÂ§</div> <div class="sparkle s6" data-astro-cid-mwgz7csn>Ã¢Â­Â</div> </div> </div> </div> </div>  <script type="50a303a1e3b15701ab8156ec-module" src="/_astro/GiftReceivedOverlay.astro_astro_type_script_index_0_lang.hvgnS_NK.js"></script>  <div id="shop-update-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 hidden transition-opacity duration-300"> <div class="bg-[var(--color-bg-elevated,#1f1f1f)] border border-[var(--color-border-main,#333)] rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.6)] w-[90%] max-w-md p-0 text-white animate-fade-in relative overflow-hidden group"> <div class="absolute top-0 left-0 right-0 h-1 bg-[var(--color-brand-primary,#E50914)]"></div> <button id="shop-update-close" class="absolute top-4 left-4 text-gray-400 hover:text-white text-xl z-10 transition-colors w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10"> <i class="fas fa-times"></i> </button> <div class="p-8 text-center bg-gradient-to-b from-[var(--color-bg-elevated,#1f1f1f)] to-[#141414]"> <div class="w-20 h-20 bg-[var(--color-brand-primary,#E50914)]/10 text-[var(--color-brand-primary,#E50914)] rounded-full flex items-center justify-center mx-auto mb-6 border border-[var(--color-brand-primary,#E50914)]/20 shadow-[0_0_30px_rgba(229,9,20,0.15)] group-hover:scale-110 transition-transform duration-500"> <i class="fas fa-store text-3xl drop-shadow-lg"></i> </div> <h2 class="text-2xl font-bold text-white mb-3 tracking-wide">
+Ã˜ÂªÃ˜Â­Ã˜Â¯Ã™ÂŠÃ˜Â« Ã˜Â¬Ã˜Â¯Ã™ÂŠÃ˜Â¯ Ã™ÂÃ™ÂŠ Ã˜Â§Ã™Â„Ã™Â…Ã˜ÂªÃ˜Â¬Ã˜Â±
+</h2> <p class="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto mb-8">
+Ã˜Â§Ã™ÂƒÃ˜ÂªÃ˜Â´Ã™Â Ã˜Â§Ã™Â„Ã˜Â¹Ã™Â†Ã˜Â§Ã˜ÂµÃ˜Â± Ã˜Â§Ã™Â„Ã˜Â­Ã˜ÂµÃ˜Â±Ã™ÂŠÃ˜Â© Ã™ÂˆÃ˜Â§Ã™Â„Ã˜Â¬Ã˜Â¯Ã™ÂŠÃ˜Â¯Ã˜Â© Ã˜Â§Ã™Â„Ã˜ÂªÃ™ÂŠ Ã˜ÂªÃ™Â…Ã˜Âª Ã˜Â¥Ã˜Â¶Ã˜Â§Ã™ÂÃ˜ÂªÃ™Â‡Ã˜Â§ Ã™Â„Ã™Â„Ã˜ÂªÃ™Âˆ. Ã™Â„Ã˜Â§ Ã˜ÂªÃ™ÂÃ™ÂˆÃ˜Âª Ã˜Â§Ã™Â„Ã™ÂÃ˜Â±Ã˜ÂµÃ˜Â©!
+</p> <a href="/store" id="go-to-store-btn" class="flex items-center justify-center gap-3 w-full py-3.5 bg-[var(--color-brand-primary,#E50914)] text-white rounded hover:bg-[var(--color-brand-primary-dark,#b20710)] font-bold transition-all shadow-lg hover:shadow-[0_0_25px_rgba(229,9,20,0.4)] text-lg"> <i class="fas fa-shopping-cart"></i> <span>Ã˜ÂªÃ˜ÂµÃ™ÂÃ˜Â­ Ã˜Â§Ã™Â„Ã™Â…Ã˜ÂªÃ˜Â¬Ã˜Â± Ã˜Â§Ã™Â„Ã˜Â¢Ã™Â†</span> </a> </div> </div> </div> <script type="50a303a1e3b15701ab8156ec-module" src="/_astro/ShopUpdateNotification.astro_astro_type_script_index_0_lang.Bzo_kxRg.js"></script> <div id="mission-completed-toast" class="fixed bottom-6 right-6 z-[9999] hidden transition-all duration-300 pointer-events-none" data-astro-cid-ux45bpdy> <div class="mission-toast-content pointer-events-auto bg-[var(--color-bg-elevated,#1f1f1f)] border border-[var(--color-border-main,#333)] rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.6)] w-80 text-white relative overflow-hidden transform translate-y-10 opacity-0 transition-all duration-500 hover:scale-[1.02]" data-astro-cid-ux45bpdy> <div class="absolute inset-0 overflow-hidden pointer-events-none" data-astro-cid-ux45bpdy> <div class="particle particle-1" data-astro-cid-ux45bpdy></div> <div class="particle particle-2" data-astro-cid-ux45bpdy></div> <div class="particle particle-3" data-astro-cid-ux45bpdy></div> </div> <div class="absolute top-0 bottom-0 right-0 w-1 bg-gradient-to-b from-[var(--color-brand-primary,#E50914)] to-[var(--color-brand-primary-dark,#b20710)]" data-astro-cid-ux45bpdy></div> <button id="mission-toast-close" class="absolute top-2 left-2 text-gray-400 hover:text-white text-sm z-20 transition-all w-6 h-6 flex items-center justify-center rounded-full hover:bg-white/10" data-astro-cid-ux45bpdy> <i class="fas fa-times" data-astro-cid-ux45bpdy></i> </button> <div class="p-4 flex items-center gap-4 relative z-10" data-astro-cid-ux45bpdy> <div class="shrink-0 relative" data-astro-cid-ux45bpdy> <div class="absolute inset-0 bg-[var(--color-brand-primary,#E50914)]/20 rounded-full animate-ping-slow" data-astro-cid-ux45bpdy></div> <div class="relative w-12 h-12 bg-gradient-to-br from-[var(--color-brand-primary,#E50914)] to-[var(--color-brand-primary-dark,#b20710)] rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(229,9,20,0.3)]" data-astro-cid-ux45bpdy> <i class="fas fa-trophy text-lg text-white" data-astro-cid-ux45bpdy></i> </div> </div> <div class="grow min-w-0" data-astro-cid-ux45bpdy> <div id="mission-type-badge" class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold mb-1 bg-amber-500/20 text-amber-400 border border-amber-500/30" data-astro-cid-ux45bpdy> <i class="fas fa-star text-[9px]" data-astro-cid-ux45bpdy></i> <span id="mission-type-text" data-astro-cid-ux45bpdy>Ã™Â…Ã™Â‡Ã™Â…Ã˜Â©</span> </div> <h3 class="font-bold text-white text-sm leading-tight truncate" data-astro-cid-ux45bpdy> <span id="mission-title" data-astro-cid-ux45bpdy>Ã˜ÂªÃ™Â… Ã˜Â¥Ã™Â†Ã˜Â¬Ã˜Â§Ã˜Â² Ã˜Â§Ã™Â„Ã™Â…Ã™Â‡Ã™Â…Ã˜Â©!</span> </h3> <div class="flex items-center gap-1 mt-1" data-astro-cid-ux45bpdy> <span class="text-xs text-gray-400" data-astro-cid-ux45bpdy>Ã˜Â§Ã™Â„Ã™Â…Ã™ÂƒÃ˜Â§Ã™ÂÃ˜Â£Ã˜Â©:</span> <i class="fas fa-coins text-amber-400 text-xs" data-astro-cid-ux45bpdy></i> <span id="mission-points" class="font-bold text-amber-400 text-sm" data-astro-cid-ux45bpdy>100</span> </div> </div> </div> <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gray-700/50" data-astro-cid-ux45bpdy> <div id="mission-progress-bar" class="h-full bg-[var(--color-brand-primary,#E50914)] w-full origin-right transition-transform duration-[5000ms] linear" data-astro-cid-ux45bpdy></div> </div> </div> </div>  <script type="50a303a1e3b15701ab8156ec-module">let o=null;const l=5e3,m={DAILY:{text:"Ã™ÂŠÃ™ÂˆÃ™Â…Ã™ÂŠ",class:"bg-blue-500/20 text-blue-400 border-blue-500/30"},WEEKLY:{text:"Ã˜Â£Ã˜Â³Ã˜Â¨Ã™ÂˆÃ˜Â¹Ã™ÂŠ",class:"bg-purple-500/20 text-purple-400 border-purple-500/30"},ACHIEVEMENT:{text:"Ã˜Â¥Ã™Â†Ã˜Â¬Ã˜Â§Ã˜Â²",class:"bg-amber-500/20 text-amber-400 border-amber-500/30"}};function p(t){const e=document.getElementById("mission-completed-toast"),r=document.getElementById("mission-type-badge"),a=document.getElementById("mission-type-text"),c=document.getElementById("mission-title"),u=document.getElementById("mission-points"),s=document.getElementById("mission-progress-bar");if(!e||!t)return;const i=m[t.type]||m.DAILY;r.className=`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold mb-1 border ${i.class}`,a.textContent=i.text,c.textContent=t.title||"Ã™Â…Ã™Â‡Ã™Â…Ã˜Â© Ã™Â…Ã™ÂƒÃ˜ÂªÃ™Â…Ã™Â„Ã˜Â©",u.textContent=t.pointsReward||0,s&&(s.style.transition="none",s.style.transform="scaleX(1)"),e.classList.remove("hidden"),requestAnimationFrame(()=>{requestAnimationFrame(()=>{e.classList.add("show"),s&&(s.style.transition=`transform ${l}ms linear`,s.style.transform="scaleX(0)")})});try{const n=new Audio("/sounds/mission-complete.mp3");n.volume=.2,n.play().catch(()=>{})}catch{}o&&clearTimeout(o),o=setTimeout(d,l)}function d(){const t=document.getElementById("mission-completed-toast");t&&(t.classList.remove("show"),setTimeout(()=>{t.classList.add("hidden")},500))}document.addEventListener("DOMContentLoaded",()=>{document.getElementById("mission-toast-close")?.addEventListener("click",d)});document.addEventListener("missionCompleted",t=>{const e=t.detail;e&&setTimeout(()=>{p(e)},500)});</script> <div id="ad-bait-primary" class="pub_300x250 pub_300x250m pub_728x90 text-ad textAd text_ad text_ads text-ads text-ad-links ad-unit" style="position: absolute; top: -9999px; left: -9999px; width: 1px; height: 1px; z-index: -1; pointer-events: none; background: transparent;">&nbsp;</div><div id="ad-bait-secondary" class="adsbox doubleclick ad-placeholder ad-badge banner-ad ad-container" style="position: absolute; top: -9999px; left: -9999px; width: 1px; height: 1px; z-index: -1; pointer-events: none; background: transparent;">&nbsp;</div><div id="ad-bait-tertiary" class="adsbygoogle google-ads ad-wrapper sponsored-content ad-slot" style="position: absolute; top: -9999px; left: -9999px; width: 1px; height: 1px; z-index: -1; pointer-events: none; background: transparent;">&nbsp;</div><div id="ad-bait-banner" class="banner_ad advertising ad-frame ad-block ad-300" style="position: absolute; top: -9999px; left: -9999px; width: 1px; height: 1px; z-index: -1; pointer-events: none; background: transparent;">&nbsp;</div><div id="adblock-overlay" class="fixed inset-0 z-[9999] hidden" style="direction: ltr;"><div class="absolute inset-0 bg-black/90 backdrop-blur-md"></div><div class="relative z-10 w-full h-full flex items-center justify-center p-4"><div class="w-full max-w-md" style="margin: 0 auto;"><div class="bg-zinc-900 rounded-2xl p-6 md:p-8 border border-zinc-800 shadow-2xl" style="direction: rtl; text-align: center;"><div class="flex justify-center mb-5"><div class="w-16 h-16 rounded-full bg-zinc-800 border-2 border-orange-500/50 flex items-center justify-center"><i class="fas fa-coins text-3xl text-orange-400"></i></div></div><h2 class="text-xl md:text-2xl font-bold text-red-500 mb-2">
+Ã˜Â§Ã™Â†Ã˜ÂªÃ˜Â¨Ã™Â‡: Ã™Â†Ã˜Â¸Ã˜Â§Ã™Â… Ã˜Â§Ã™Â„Ã™Â†Ã™Â‚Ã˜Â§Ã˜Â· Ã™Â…Ã˜Â¹Ã˜Â·Ã™Â„
+</h2><p class="text-gray-300 text-sm mb-4">
+Ã™Â„Ã™Â‚Ã˜Â¯ Ã˜Â§Ã™ÂƒÃ˜ÂªÃ˜Â´Ã™ÂÃ™Â†Ã˜Â§ Ã˜Â£Ã™Â†Ã™Âƒ Ã˜ÂªÃ˜Â³Ã˜ÂªÃ˜Â®Ã˜Â¯Ã™Â…
+<span id="blocker-type" class="text-orange-400 font-bold">Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¹ Ã˜Â¥Ã˜Â¹Ã™Â„Ã˜Â§Ã™Â†Ã˜Â§Ã˜Âª</span>.
+          Ã™ÂŠÃ™Â…Ã™ÂƒÃ™Â†Ã™Âƒ Ã˜ÂªÃ˜ÂµÃ™ÂÃ˜Â­ Ã˜Â§Ã™Â„Ã™Â…Ã™ÂˆÃ™Â‚Ã˜Â¹ Ã˜Â¨Ã˜Â­Ã˜Â±Ã™ÂŠÃ˜Â©Ã˜ÂŒ Ã™ÂˆÃ™Â„Ã™ÂƒÃ™Â† <span class="text-red-400 font-bold underline">Ã™Â„Ã™Â† Ã™ÂŠÃ˜ÂªÃ™Â… Ã˜Â§Ã˜Â­Ã˜ÂªÃ˜Â³Ã˜Â§Ã˜Â¨ Ã˜Â£Ã™ÂŠ Ã™Â†Ã™Â‚Ã˜Â§Ã˜Â·</span> Ã™Â…Ã™Â† Ã˜Â§Ã™Â„Ã™Â…Ã™Â‡Ã˜Â§Ã™Â… Ã˜Â£Ã˜Â«Ã™Â†Ã˜Â§Ã˜Â¡ Ã˜ÂªÃ™ÂÃ˜Â¹Ã™ÂŠÃ™Â„Ã™Â‡.
+</p><div class="bg-red-900/20 border border-red-900/50 rounded-lg p-4 mb-4 text-right"><p class="text-red-400 text-sm font-bold mb-2"><i class="fas fa-exclamation-triangle ml-1"></i>
+Ã˜ÂªÃ™Â†Ã˜Â¨Ã™ÂŠÃ™Â‡ Ã™Â‡Ã˜Â§Ã™Â… Ã˜Â¬Ã˜Â¯Ã˜Â§Ã™Â‹:
+</p><p class="text-gray-300 text-xs leading-relaxed">
+Ã˜Â¹Ã™Â†Ã˜Â¯ Ã˜ÂªÃ˜Â¹Ã˜Â·Ã™ÂŠÃ™Â„ Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¹ Ã˜Â§Ã™Â„Ã˜Â¥Ã˜Â¹Ã™Â„Ã˜Â§Ã™Â†Ã˜Â§Ã˜ÂªÃ˜ÂŒ <span class="text-white font-bold underline">Ã˜Â³Ã˜ÂªÃ˜Â­Ã˜ÂªÃ˜Â§Ã˜Â¬ Ã™Â„Ã™Â„Ã˜Â§Ã™Â†Ã˜ÂªÃ˜Â¸Ã˜Â§Ã˜Â± 24 Ã˜Â³Ã˜Â§Ã˜Â¹Ã˜Â© Ã™ÂƒÃ˜Â§Ã™Â…Ã™Â„Ã˜Â©</span> Ã™Â‚Ã˜Â¨Ã™Â„ Ã˜Â£Ã™Â† Ã˜ÂªÃ˜ÂªÃ™Â…Ã™ÂƒÃ™Â† Ã™Â…Ã™Â† Ã™ÂƒÃ˜Â³Ã˜Â¨ Ã˜Â§Ã™Â„Ã™Â†Ã™Â‚Ã˜Â§Ã˜Â· Ã™Â…Ã˜Â¬Ã˜Â¯Ã˜Â¯Ã˜Â§Ã™Â‹.
+</p><p class="text-gray-400 text-[10px] mt-2 opacity-75">
+Ã˜ÂªÃ™Â… Ã™ÂˆÃ˜Â¶Ã˜Â¹ Ã™Â‡Ã˜Â°Ã˜Â§ Ã˜Â§Ã™Â„Ã˜Â´Ã˜Â±Ã˜Â· Ã˜Â§Ã™Â„Ã˜ÂµÃ˜Â§Ã˜Â±Ã™Â… Ã™Â„Ã™Â…Ã™Â†Ã˜Â¹ Ã˜Â§Ã™Â„Ã˜ÂªÃ™Â„Ã˜Â§Ã˜Â¹Ã˜Â¨ Ã˜Â¨Ã˜Â§Ã™Â„Ã™Â†Ã˜Â¸Ã˜Â§Ã™Â… (Ã™Â…Ã˜Â«Ã™Â„ Ã˜Â§Ã™Â„Ã˜Â¥Ã™ÂŠÃ™Â‚Ã˜Â§Ã™Â Ã˜Â§Ã™Â„Ã™Â…Ã˜Â¤Ã™Â‚Ã˜Âª Ã™ÂÃ™Â‚Ã˜Â· Ã˜Â¹Ã™Â†Ã˜Â¯ Ã˜Â§Ã™Â„Ã˜Â­Ã˜Â§Ã˜Â¬Ã˜Â© Ã™Â„Ã™Â„Ã™Â†Ã™Â‚Ã˜Â§Ã˜Â·).
+</p></div><div id="brave-instructions" class="hidden mb-4 p-3 bg-zinc-800/50 rounded-lg text-right border border-zinc-700/50"><p class="text-gray-300 text-xs"><span class="text-orange-400 font-semibold">Brave:</span>
+Ã˜Â§Ã˜Â¶Ã˜ÂºÃ˜Â· Ã˜Â¹Ã™Â„Ã™Â‰ Ã˜Â§Ã™Â„Ã˜Â£Ã˜Â³Ã˜Â¯ Ã¢Â†Â Ã˜Â£Ã™ÂˆÃ™Â‚Ã™Â Shields Ã¢Â†Â Ã˜Â£Ã˜Â¹Ã˜Â¯ Ã˜Â§Ã™Â„Ã˜ÂªÃ˜Â­Ã™Â…Ã™ÂŠÃ™Â„
+</p></div><div id="adblock-instructions" class="hidden mb-4 p-3 bg-zinc-800/50 rounded-lg text-right border border-zinc-700/50"><p class="text-gray-300 text-xs"><span class="text-orange-400 font-semibold">Ã˜Â¥Ã˜Â¶Ã˜Â§Ã™ÂÃ˜Â© Ã˜Â§Ã™Â„Ã˜Â­Ã˜Â¬Ã˜Â¨:</span>
+Ã˜Â§Ã˜Â¶Ã˜ÂºÃ˜Â· Ã˜Â¹Ã™Â„Ã™ÂŠÃ™Â‡Ã˜Â§ Ã¢Â†Â Ã˜Â£Ã™ÂˆÃ™Â‚Ã™Â Ã™Â„Ã™Â„Ã™Â…Ã™ÂˆÃ™Â‚Ã˜Â¹ Ã¢Â†Â Ã˜Â£Ã˜Â¹Ã˜Â¯ Ã˜Â§Ã™Â„Ã˜ÂªÃ˜Â­Ã™Â…Ã™ÂŠÃ™Â„
+</p></div><div class="flex gap-2 mb-3"><button id="refresh-page-btn" class="flex-1 py-2.5 px-3 bg-zinc-700 hover:bg-zinc-600 text-white font-medium rounded-lg transition-all text-sm flex items-center justify-center gap-2"><i class="fas fa-check text-green-400"></i><span>Ã˜ÂªÃ™Â… Ã˜Â§Ã™Â„Ã˜ÂªÃ˜Â¹Ã˜Â·Ã™ÂŠÃ™Â„</span></button><button id="continue-anyway-btn" class="flex-1 py-2.5 px-3 bg-zinc-800 hover:bg-zinc-700 text-gray-300 hover:text-white border border-zinc-600 rounded-lg transition-all text-sm flex items-center justify-center gap-2"><span>Ã™Â„Ã˜Â§Ã˜ÂŒ Ã˜Â£Ã˜Â±Ã™ÂÃ˜Â¶</span><span id="countdown" class="text-orange-400 text-xs">(5)</span></button></div><p class="text-green-400/80 text-xs mb-3"><i class="fas fa-arrow-left ml-1"></i>
+Ã˜Â¨Ã˜Â¥Ã™Â…Ã™ÂƒÃ˜Â§Ã™Â†Ã™Âƒ Ã™Â…Ã˜ÂªÃ˜Â§Ã˜Â¨Ã˜Â¹Ã˜Â© Ã˜ÂªÃ˜ÂµÃ™ÂÃ˜Â­ Ã˜Â§Ã™Â„Ã™Â…Ã™ÂˆÃ™Â‚Ã˜Â¹ Ã˜Â¨Ã˜Â¯Ã™ÂˆÃ™Â† Ã™Â…Ã˜Â´Ã˜Â§Ã™ÂƒÃ™Â„
+</p><a href="/store" class="block w-full py-2 px-4 text-gray-500 hover:text-gray-300 text-xs transition-colors"><i class="fas fa-gem ml-1"></i>
+Ã˜Â£Ã™Âˆ Ã˜Â§Ã˜Â´Ã˜ÂªÃ˜Â±Ã™Â Ã™Â…Ã™ÂŠÃ˜Â²Ã˜Â© Ã˜Â¥Ã˜Â²Ã˜Â§Ã™Â„Ã˜Â© Ã˜Â§Ã™Â„Ã˜Â¥Ã˜Â¹Ã™Â„Ã˜Â§Ã™Â†Ã˜Â§Ã˜Âª Ã™Â…Ã™Â† Ã˜Â§Ã™Â„Ã™Â…Ã˜ÂªÃ˜Â¬Ã˜Â±
+</a></div></div></div></div><style>
+/* Overlay Animation */
+#adblock-overlay.show {
+  display: flex !important;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#adblock-overlay.show > .relative > div {
+  animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 640px) {
+  #adblock-overlay .max-w-md {
+    max-width: 100%;
+  }
+}
+</style><script type="50a303a1e3b15701ab8156ec-module" src="/_astro/AdblockDetector.astro_astro_type_script_index_0_lang.cVFng-Wl.js"></script> <div id="gift-reward-btn" class="fixed left-6 z-40 hidden transition-all duration-300 translate-y-2 hover:translate-y-0 bottom-24" data-is-reader="true" data-astro-cid-yzccprjy> <button id="open-gift-overlay" class="relative flex items-center justify-center w-12 h-12 bg-[#181818] border border-zinc-800 hover:border-[var(--color-brand-primary,#E50914)] rounded-full text-gray-400 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl" aria-label="Rewards" data-astro-cid-yzccprjy> <i class="fas fa-gift text-lg" data-astro-cid-yzccprjy></i> <span id="gift-badge" class="absolute -top-1 -right-1 w-5 h-5 bg-[var(--color-brand-primary,#E50914)] rounded-full flex items-center justify-center text-[10px] text-white font-bold" data-astro-cid-yzccprjy>
+0
+</span> </button> </div> <div id="gift-overlay" class="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 hidden opacity-0 transition-opacity duration-300" data-astro-cid-yzccprjy> <div id="gift-overlay-content" class="relative w-[90%] max-w-md mx-4 bg-[#181818] border border-zinc-800 rounded-lg shadow-2xl overflow-hidden transform scale-95 transition-transform duration-300 max-h-[80vh] overflow-y-auto" data-astro-cid-yzccprjy> <div class="h-0.5 bg-gradient-to-r from-[var(--color-brand-primary,#E50914)] to-[#5865F2]" data-astro-cid-yzccprjy></div> <button id="close-gift-overlay" class="absolute top-3 left-3 w-8 h-8 rounded-full hover:bg-zinc-800 flex items-center justify-center text-gray-500 hover:text-white transition-colors z-10" data-astro-cid-yzccprjy> <i class="fas fa-times" data-astro-cid-yzccprjy></i> </button> <div class="p-6 pt-10" data-astro-cid-yzccprjy> <div class="text-center mb-6" data-astro-cid-yzccprjy> <div class="w-14 h-14 bg-gradient-to-br from-[var(--color-brand-primary,#E50914)] to-[#5865F2] rounded-full flex items-center justify-center mx-auto mb-4" data-astro-cid-yzccprjy> <i class="fas fa-gift text-2xl text-white" data-astro-cid-yzccprjy></i> </div> <h2 class="text-xl font-bold text-white" data-astro-cid-yzccprjy>Ã™Â…Ã™ÂƒÃ˜Â§Ã™ÂÃ˜Â¢Ã˜Âª Ã™Â…Ã˜Â¬Ã˜Â§Ã™Â†Ã™ÂŠÃ˜Â©!</h2> <p class="text-gray-400 text-sm mt-1" data-astro-cid-yzccprjy>Ã˜Â§Ã™ÂƒÃ™Â…Ã™Â„ Ã˜Â§Ã™Â„Ã™Â…Ã™Â‡Ã˜Â§Ã™Â… Ã˜Â§Ã™Â„Ã˜ÂªÃ˜Â§Ã™Â„Ã™ÂŠÃ˜Â© Ã™ÂˆÃ˜Â§Ã˜Â­Ã˜ÂµÃ™Â„ Ã˜Â¹Ã™Â„Ã™Â‰ Ã™Â†Ã™Â‚Ã˜Â§Ã˜Â· Ã™Â…Ã˜Â¬Ã˜Â§Ã™Â†Ã™ÂŠÃ˜Â©</p> </div> <div id="login-warning" class="hidden mb-4 p-3 bg-orange-900/30 border border-orange-500/30 rounded text-orange-300 text-sm text-center" data-astro-cid-yzccprjy> <i class="fas fa-exclamation-triangle ml-2" data-astro-cid-yzccprjy></i>
+Ã™ÂŠÃ˜Â¬Ã˜Â¨ Ã˜Â¹Ã™Â„Ã™ÂŠÃ™Âƒ <a href="/login" class="underline font-bold" data-astro-cid-yzccprjy>Ã˜ÂªÃ˜Â³Ã˜Â¬Ã™ÂŠÃ™Â„ Ã˜Â§Ã™Â„Ã˜Â¯Ã˜Â®Ã™ÂˆÃ™Â„</a> Ã™Â„Ã™Â„Ã˜Â­Ã˜ÂµÃ™ÂˆÃ™Â„ Ã˜Â¹Ã™Â„Ã™Â‰ Ã˜Â§Ã™Â„Ã™Â†Ã™Â‚Ã˜Â§Ã˜Â·
+</div> <div id="missions-list" class="space-y-3" data-astro-cid-yzccprjy> <div class="text-center text-gray-500 py-4" data-astro-cid-yzccprjy> <i class="fas fa-spinner fa-spin text-lg" data-astro-cid-yzccprjy></i> <p class="text-sm mt-2" data-astro-cid-yzccprjy>Ã˜Â¬Ã˜Â§Ã˜Â±Ã™ÂŠ Ã˜Â§Ã™Â„Ã˜ÂªÃ˜Â­Ã™Â…Ã™ÂŠÃ™Â„...</p> </div> </div> <div id="verification-container" class="hidden mt-4" data-astro-cid-yzccprjy> <div class="flex items-center justify-center gap-3 text-gray-400" data-astro-cid-yzccprjy> <div class="verification-spinner" data-astro-cid-yzccprjy></div> <span id="verification-text" data-astro-cid-yzccprjy>Ã˜Â¬Ã˜Â§Ã˜Â±Ã™ÂŠ Ã˜Â§Ã™Â„Ã˜ÂªÃ˜Â­Ã™Â‚Ã™Â‚...</span> </div> </div> <div id="success-container" class="hidden mt-4 p-4 bg-green-900/30 border border-green-500/30 rounded text-center" data-astro-cid-yzccprjy> <i class="fas fa-check-circle text-green-400 text-3xl mb-2" data-astro-cid-yzccprjy></i> <p class="text-green-300 font-bold" id="success-message" data-astro-cid-yzccprjy>Ã˜ÂªÃ™Â… Ã˜Â¥Ã˜Â¶Ã˜Â§Ã™ÂÃ˜Â© Ã˜Â§Ã™Â„Ã™Â†Ã™Â‚Ã˜Â§Ã˜Â· Ã˜Â¨Ã™Â†Ã˜Â¬Ã˜Â§Ã˜Â­!</p> </div> <div class="mt-6 pt-4 border-t border-zinc-800 text-center" data-astro-cid-yzccprjy> <button id="reject-offers-btn" class="text-white hover:text-gray-300 text-sm transition-colors" data-astro-cid-yzccprjy> <i class="fas fa-eye-slash ml-1" data-astro-cid-yzccprjy></i>
+Ã™Â„Ã˜Â§ Ã˜Â£Ã˜Â±Ã™ÂŠÃ˜Â¯ Ã™Â‡Ã˜Â°Ã™Â‡ Ã˜Â§Ã™Â„Ã˜Â¹Ã˜Â±Ã™ÂˆÃ˜Â¶ Ã˜Â§Ã™Â„Ã˜Â¢Ã™Â†
+</button> </div> </div> </div> </div> <div id="reject-confirm-overlay" class="fixed inset-0 bg-black/90 flex items-center justify-center z-[60] hidden opacity-0 transition-opacity duration-300" data-astro-cid-yzccprjy> <div id="reject-confirm-content" class="relative w-[90%] max-w-sm mx-4 bg-[#181818] border border-zinc-800 rounded-lg shadow-2xl overflow-hidden transform scale-95 transition-transform duration-300" data-astro-cid-yzccprjy> <div class="h-0.5" style="background-color: var(--color-brand-primary, #E50914);" data-astro-cid-yzccprjy></div> <div class="p-6 text-center" data-astro-cid-yzccprjy> <div class="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: rgba(var(--color-brand-primary-rgb, 229, 9, 20), 0.2);" data-astro-cid-yzccprjy> <i class="fas fa-eye-slash text-2xl" style="color: var(--color-brand-primary, #E50914);" data-astro-cid-yzccprjy></i> </div> <h3 class="text-lg font-bold text-white mb-2" data-astro-cid-yzccprjy>Ã˜Â¥Ã˜Â®Ã™ÂÃ˜Â§Ã˜Â¡ Ã˜Â§Ã™Â„Ã˜Â¹Ã˜Â±Ã™ÂˆÃ˜Â¶Ã˜ÂŸ</h3> <p class="text-gray-400 text-sm mb-6" data-astro-cid-yzccprjy>Ã˜Â³Ã™ÂŠÃ˜ÂªÃ™Â… Ã˜Â¥Ã˜Â®Ã™ÂÃ˜Â§Ã˜Â¡ Ã™Â‡Ã˜Â°Ã™Â‡ Ã˜Â§Ã™Â„Ã˜Â¹Ã˜Â±Ã™ÂˆÃ˜Â¶ Ã™Â„Ã™Â…Ã˜Â¯Ã˜Â© 24 Ã˜Â³Ã˜Â§Ã˜Â¹Ã˜Â©. Ã™ÂŠÃ™Â…Ã™ÂƒÃ™Â†Ã™Âƒ Ã˜Â§Ã™Â„Ã˜Â¹Ã™ÂˆÃ˜Â¯Ã˜Â© Ã™Â„Ã™Â‡Ã˜Â§ Ã™ÂÃ™ÂŠ Ã˜Â£Ã™ÂŠ Ã™ÂˆÃ™Â‚Ã˜Âª Ã™Â…Ã™Â† Ã˜ÂµÃ™ÂÃ˜Â­Ã˜Â© Ã˜Â§Ã™Â„Ã™Â…Ã™Â‡Ã˜Â§Ã™Â….</p> <div class="flex gap-3" data-astro-cid-yzccprjy> <button id="confirm-reject-btn" class="flex-1 py-2.5 text-white rounded font-bold text-sm transition-colors hover:opacity-90" style="background-color: var(--color-brand-primary, #E50914);" data-astro-cid-yzccprjy> <i class="fas fa-check ml-1" data-astro-cid-yzccprjy></i>
+Ã™Â†Ã˜Â¹Ã™Â…Ã˜ÂŒ Ã˜Â¥Ã˜Â®Ã™ÂÃ˜Â§Ã˜Â¡
+</button> <button id="cancel-reject-btn" class="flex-1 py-2.5 bg-zinc-700 hover:bg-zinc-600 text-white rounded font-bold text-sm transition-colors" data-astro-cid-yzccprjy> <i class="fas fa-times ml-1" data-astro-cid-yzccprjy></i>
+Ã˜Â¥Ã™Â„Ã˜ÂºÃ˜Â§Ã˜Â¡
+</button> </div> </div> </div> </div>  <script type="50a303a1e3b15701ab8156ec-text/javascript">(function(){const isLoggedIn = false;
+const isReaderPage = true;
+
+  const API_BASE = window.location.hostname === 'localhost' 
+    ? 'http://localhost:3001/api' 
+    : 'https://api.mangatek.com/api';
+  
+  let missionsData = [];
+  let missionIds = []; // Track mission IDs to detect new missions
+  
+  document.addEventListener('DOMContentLoaded', async () => {
+    const giftBtn = document.getElementById('gift-reward-btn');
+    const badge = document.getElementById('gift-badge');
+    const overlay = document.getElementById('gift-overlay');
+    const openBtn = document.getElementById('open-gift-overlay');
+    const closeBtn = document.getElementById('close-gift-overlay');
+    const loginWarning = document.getElementById('login-warning');
+    const missionsList = document.getElementById('missions-list');
+    const verificationContainer = document.getElementById('verification-container');
+    const verificationText = document.getElementById('verification-text');
+    const successContainer = document.getElementById('success-container');
+    const successMessage = document.getElementById('success-message');
+    const rejectBtn = document.getElementById('reject-offers-btn');
+    
+    // Check if user rejected offers (24h hide)
+    const rejectedUntil = localStorage.getItem('gift_offers_rejected_until');
+    const lastMissionIds = localStorage.getItem('gift_last_mission_ids');
+    
+    // Fetch link-click missions
+    try {
+      let token = localStorage.getItem('auth_token') || localStorage.getItem('token');
+      // Fallback to cookie if token missing
+      if (!token) {
+          const match = document.cookie.match(/(?:^|;\s*)auth=([^;]+)/);
+          if (match) token = decodeURIComponent(match[1]);
+      }
+      
+      const headers = token ? { 'Authorization': `Bearer ${token}` } : {};
+      
+      const res = await fetch(`${API_BASE}/missions/link-click`, { headers });
+      const data = await res.json();
+      
+      if (data.success && data.available) {
+        missionsData = data.missions;
+        missionIds = data.missions.map(m => m.id).sort().join(',');
+        const availableCount = data.missions.filter(m => !m.isCompleted).length;
+        
+        // Check if we should show (not rejected, or new missions added)
+        const isRejected = rejectedUntil && Date.now() < parseInt(rejectedUntil);
+        const hasNewMissions = lastMissionIds !== missionIds;
+        
+        // Only show if there are actual available missions
+        if (availableCount > 0 && (!isRejected || hasNewMissions)) {
+          giftBtn.classList.remove('hidden');
+          badge.textContent = availableCount;
+          
+          // Clear rejection if new missions were added
+          if (hasNewMissions) {
+            localStorage.removeItem('gift_offers_rejected_until');
+            localStorage.setItem('gift_last_mission_ids', missionIds);
+          }
+          
+          // Show login warning if not logged in
+          // Use multiple sources: API response, server-side isLoggedIn, and token check
+          const authToken = token; // Use the resolved token
+          const userIsLoggedIn = data.isLoggedIn || isLoggedIn || !!authToken;
+          
+          if (!userIsLoggedIn) {
+            loginWarning.classList.remove('hidden');
+          }
+        }
+        
+        // Determine logged in status for rendering (reuse same logic)
+        const userLoggedIn = data.isLoggedIn || isLoggedIn || !!token;
+        renderMissions(data.missions, userLoggedIn);
+      } else {
+        missionsList.innerHTML = `
+          <div class="text-center text-gray-500 py-4">
+            <i class="fas fa-gift text-2xl mb-2"></i>
+            <p class="text-sm">Ã™Â„Ã˜Â§ Ã˜ÂªÃ™ÂˆÃ˜Â¬Ã˜Â¯ Ã™Â…Ã™Â‡Ã˜Â§Ã™Â… Ã™Â…Ã˜ÂªÃ˜Â§Ã˜Â­Ã˜Â© Ã˜Â­Ã˜Â§Ã™Â„Ã™ÂŠÃ˜Â§Ã™Â‹</p>
+          </div>
+        `;
+      }
+    } catch (error) {
+      console.error('Failed to fetch link-click missions:', error);
+      missionsList.innerHTML = `
+        <div class="text-center text-red-400 py-4">
+          <i class="fas fa-exclamation-circle text-2xl mb-2"></i>
+          <p class="text-sm">Ã˜Â­Ã˜Â¯Ã˜Â« Ã˜Â®Ã˜Â·Ã˜Â£ Ã™ÂÃ™ÂŠ Ã˜Â§Ã™Â„Ã˜ÂªÃ˜Â­Ã™Â…Ã™ÂŠÃ™Â„</p>
+        </div>
+      `;
+    }
+    
+    // Reader page scroll behavior
+    if (isReaderPage && giftBtn) {
+      let lastScrollY = 0;
+      let scrollUpDistance = 0;
+      
+      window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY; // or pageYOffset matches Layout
+        
+        if (currentScrollY < lastScrollY) {
+            // User is scrolling UP
+            scrollUpDistance += (lastScrollY - currentScrollY);
+        } else {
+            // User is scrolling DOWN
+            scrollUpDistance = 0;
+        }
+
+        // Show button only if:
+        // 1. We are deep enough in the page (> 300px)
+        // 2. User has scrolled up significantly (> 500px) to avoid accidental triggers
+        // Matches Layout.astro behavior
+        if (currentScrollY > 300 && scrollUpDistance > 500) {
+            giftBtn.classList.remove('scroll-hidden');
+        } else {
+            giftBtn.classList.add('scroll-hidden');
+        }
+        
+        lastScrollY = Math.max(0, currentScrollY);
+      }, { passive: true });
+    }
+    
+    // Reject offers button - show confirmation
+    const rejectConfirmOverlay = document.getElementById('reject-confirm-overlay');
+    const confirmRejectBtn = document.getElementById('confirm-reject-btn');
+    const cancelRejectBtn = document.getElementById('cancel-reject-btn');
+    
+    function showRejectConfirm() {
+      rejectConfirmOverlay.classList.remove('hidden');
+      setTimeout(() => rejectConfirmOverlay.classList.add('show'), 10);
+    }
+    
+    function hideRejectConfirm() {
+      rejectConfirmOverlay.classList.remove('show');
+      setTimeout(() => {
+        rejectConfirmOverlay.classList.add('hidden');
+      }, 300);
+    }
+    
+    rejectBtn?.addEventListener('click', () => {
+      showRejectConfirm();
+    });
+    
+    cancelRejectBtn?.addEventListener('click', () => {
+      hideRejectConfirm();
+    });
+    
+    confirmRejectBtn?.addEventListener('click', () => {
+      // Hide for 24 hours
+      const hideUntil = Date.now() + (24 * 60 * 60 * 1000);
+      localStorage.setItem('gift_offers_rejected_until', hideUntil.toString());
+      localStorage.setItem('gift_last_mission_ids', missionIds);
+      
+      giftBtn.classList.add('hidden');
+      hideRejectConfirm();
+      hideOverlay();
+    });
+    
+    rejectConfirmOverlay?.addEventListener('click', (e) => {
+      if (e.target === rejectConfirmOverlay) hideRejectConfirm();
+    });
+    
+    function renderMissions(missions, userLoggedIn) {
+      missionsList.innerHTML = missions.map(mission => {
+        const isExternalVisit = mission.actionType === 'EXTERNAL_VISIT';
+        const isDiscord = mission.linkUrl?.includes('discord');
+        const icon = isExternalVisit ? 'fas fa-globe' : isDiscord ? 'fab fa-discord' : 'fas fa-external-link';
+        const iconBg = isExternalVisit ? 'bg-green-600' : isDiscord ? 'bg-[#5865F2]' : 'bg-[var(--color-brand-primary,#E50914)]';
+        const durationMin = mission.minDurationSeconds ? Math.round(mission.minDurationSeconds / 60) : 5;
+
+        return `
+          <div class="mission-card ${mission.isCompleted ? 'completed' : ''}" data-mission-id="${mission.id}" data-action-type="${mission.actionType || 'LINK_CLICK'}">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 ${iconBg} rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="${icon} text-white"></i>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-white text-sm">${mission.title}</h3>
+                ${isExternalVisit ? `<p class="text-gray-500 text-[10px] mt-0.5">Ã˜Â²Ã˜Â± Ã˜Â§Ã™Â„Ã™Â…Ã™ÂˆÃ™Â‚Ã˜Â¹ Ã™ÂˆÃ˜Â§Ã˜Â³Ã˜ÂªÃ˜Â®Ã˜Â¯Ã™Â…Ã™Â‡ Ã™Â„Ã™Â…Ã˜Â¯Ã˜Â© ${durationMin} Ã˜Â¯Ã™Â‚Ã˜Â§Ã˜Â¦Ã™Â‚</p>` : ''}
+                <div class="flex items-center gap-2 mt-1">
+                  <span class="text-yellow-500 font-bold text-sm">+${mission.pointsReward}</span>
+                  <i class="fas fa-coins text-yellow-500 text-xs"></i>
+                </div>
+              </div>
+              ${mission.isCompleted ? `
+                <div class="text-green-400">
+                  <i class="fas fa-check-circle text-xl"></i>
+                </div>
+              ` : isExternalVisit ? `
+                <button
+                  class="ev-start-btn px-3 py-1.5 bg-green-600 hover:bg-green-700 text-white text-xs rounded transition-colors"
+                  data-mission-id="${mission.id}"
+                  ${!userLoggedIn ? 'disabled title="Ã™ÂŠÃ˜Â¬Ã˜Â¨ Ã˜ÂªÃ˜Â³Ã˜Â¬Ã™ÂŠÃ™Â„ Ã˜Â§Ã™Â„Ã˜Â¯Ã˜Â®Ã™ÂˆÃ™Â„ Ã˜Â£Ã™ÂˆÃ™Â„Ã˜Â§Ã™Â‹"' : ''}
+                >
+                  <i class="fas fa-play ml-1"></i>
+                  Ã˜Â§Ã˜Â¨Ã˜Â¯Ã˜Â£
+                </button>
+              ` : `
+                <div class="flex gap-2">
+                  <a href="${mission.linkUrl || '#'}" target="_blank" rel="noopener noreferrer"
+                     class="visit-link px-3 py-1.5 bg-zinc-700 hover:bg-zinc-600 text-white text-xs rounded transition-colors"
+                     data-mission-id="${mission.id}">
+                    <i class="fas fa-external-link ml-1"></i>
+                    Ã˜Â²Ã™ÂŠÃ˜Â§Ã˜Â±Ã˜Â©
+                  </a>
+                  <div
+                    role="button"
+                    class="claim-btn px-3 py-1.5 bg-zinc-800 text-gray-500 text-xs rounded transition-colors min-w-[80px] flex items-center justify-center cursor-not-allowed select-none"
+                    data-mission-id="${mission.id}"
+                    data-visited="false"
+                    data-disabled="true"
+                    title="${!userLoggedIn ? 'Ã™ÂŠÃ˜Â¬Ã˜Â¨ Ã˜ÂªÃ˜Â³Ã˜Â¬Ã™ÂŠÃ™Â„ Ã˜Â§Ã™Â„Ã˜Â¯Ã˜Â®Ã™ÂˆÃ™Â„ Ã˜Â£Ã™ÂˆÃ™Â„Ã˜Â§Ã™Â‹' : ''}"
+                  >
+                    <i class="fas fa-coins ml-1"></i>
+                    Ã™Â…Ã˜Â·Ã˜Â§Ã™Â„Ã˜Â¨Ã˜Â©
+                  </div>
+                </div>
+              `}
+            </div>
+            ${isExternalVisit && !mission.isCompleted ? `
+              <div class="ev-progress hidden mt-3 pt-3 border-t border-zinc-700" data-mission-id="${mission.id}">
+                <div class="flex items-center gap-2 text-gray-400 text-xs">
+                  <div class="verification-spinner"></div>
+                  <span class="ev-status-text">Ã˜Â¬Ã˜Â§Ã˜Â±Ã™ÂŠ Ã˜Â§Ã™Â„Ã˜ÂªÃ˜Â­Ã™Â‚Ã™Â‚ Ã™Â…Ã™Â† Ã˜Â§Ã™Â„Ã˜Â§Ã˜Â³Ã˜ÂªÃ˜Â®Ã˜Â¯Ã˜Â§Ã™Â…...</span>
+                </div>
+              </div>
+            ` : ''}
+          </div>
+        `;
+      }).join('');
+      
+      // Add click listeners for visit links
+      document.querySelectorAll('.visit-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          const missionId = this.getAttribute('data-mission-id');
+          // Store visit timestamp (removed as per request to reset on refresh)
+          // const now = Date.now();
+          // localStorage.setItem(`mission_visited_time_${missionId}`, now.toString());
+
+          if (!userLoggedIn) return;
+
+          const claimBtn = document.querySelector(`.claim-btn[data-mission-id="${missionId}"]`);
+          if (!claimBtn) return;
+          
+          startCountdown(claimBtn, 20);
+        });
+      });
+      
+      function startCountdown(btn, seconds) {
+          // Prevent multiple intervals
+          if (btn.dataset.interval) return;
+          
+          let secondsLeft = seconds;
+          let lastTick = Date.now();
+          
+          // Set disabled state
+          btn.setAttribute('data-disabled', 'true');
+          btn.classList.add('cursor-not-allowed', 'bg-zinc-800', 'text-gray-500');
+          btn.classList.remove('cursor-pointer', 'bg-[var(--color-brand-primary,#E50914)]', 'text-white', 'hover:opacity-90');
+          
+          // Initial text
+          btn.innerHTML = `<span class="text-[10px]">Ã™ÂŠÃ˜Â±Ã˜Â¬Ã™Â‰ Ã˜Â§Ã™Â„Ã˜Â§Ã™Â†Ã˜ÂªÃ˜Â¸Ã˜Â§Ã˜Â±...</span>`;
+          
+          const interval = setInterval(() => {
+            const now = Date.now();
+            const delta = now - lastTick;
+            lastTick = now;
+            
+            // Smart Pause Logic:
+            // 1. If user is looking at the tab (hasFocus) AND the browser was running smoothly (delta < 2s),
+            //    we assume they are staring at the button -> PAUSE.
+            // 2. If user was away (blurred) OR browser was suspended (delta > 2s, common on mobile when switching apps),
+            //    we assume they were doing the task -> COUNT DOWN.
+            if (document.hasFocus() && delta < 2000) {
+                 return;
+            }
+
+            // Decrement by actual elapsed seconds (handles suspension jumps)
+            secondsLeft -= (delta / 1000);
+            
+            if (secondsLeft <= 0) {
+              clearInterval(interval);
+              delete btn.dataset.interval;
+              enableClaimButton(btn);
+            } else {
+               // Keep showing wait message without seconds
+               btn.innerHTML = `<span class="text-[10px]">Ã™ÂŠÃ˜Â±Ã˜Â¬Ã™Â‰ Ã˜Â§Ã™Â„Ã˜Â§Ã™Â†Ã˜ÂªÃ˜Â¸Ã˜Â§Ã˜Â±...</span>`;
+            }
+          }, 1000);
+          
+          btn.dataset.interval = interval;
+      }
+      
+      function enableClaimButton(btn) {
+          btn.setAttribute('data-disabled', 'false');
+          btn.dataset.visited = 'true'; // Update data attribute
+          
+          // Update styling
+          btn.classList.remove('cursor-not-allowed', 'bg-zinc-800', 'text-gray-500');
+          btn.classList.add('cursor-pointer', 'bg-[var(--color-brand-primary,#E50914)]', 'hover:opacity-90', 'text-white');
+          
+          btn.innerHTML = `<i class="fas fa-coins ml-1"></i> Ã™Â…Ã˜Â·Ã˜Â§Ã™Â„Ã˜Â¨Ã™Â‡`;
+      }
+      
+      // Removed check for previously visited missions (lines 451-473) so button resets on refresh
+      
+      // Add external visit start button listeners
+      document.querySelectorAll('.ev-start-btn').forEach(btn => {
+        btn.addEventListener('click', async function() {
+          let token = localStorage.getItem('auth_token') || localStorage.getItem('token');
+          if (!token) {
+            const match = document.cookie.match(/(?:^|;\s*)auth=([^;]+)/);
+            if (match) token = decodeURIComponent(match[1]);
+          }
+          if (!token) { window.location.href = '/login'; return; }
+
+          const missionId = this.getAttribute('data-mission-id');
+          this.disabled = true;
+          this.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+
+          try {
+            const res = await fetch(`${API_BASE}/promotions/external-visit/start`, {
+              method: 'POST',
+              headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' },
+              body: JSON.stringify({ missionId: parseInt(missionId) })
+            });
+            const data = await res.json();
+            if (data.success) {
+              // Open external site with token
+              window.open(data.targetUrl, '_blank');
+
+              // Show progress indicator
+              const progressEl = document.querySelector(`.ev-progress[data-mission-id="${missionId}"]`);
+              if (progressEl) progressEl.classList.remove('hidden');
+              this.innerHTML = '<i class="fas fa-hourglass-half ml-1"></i> Ã™Â‚Ã™ÂŠÃ˜Â¯ Ã˜Â§Ã™Â„Ã˜ÂªÃ™Â†Ã™ÂÃ™ÂŠÃ˜Â°';
+              this.classList.replace('bg-green-600', 'bg-zinc-700');
+              this.classList.replace('hover:bg-green-700', 'hover:bg-zinc-600');
+
+              // Poll for completion
+              const evToken = data.token;
+              const pollInterval = setInterval(async () => {
+                try {
+                  const statusRes = await fetch(`${API_BASE}/promotions/external-visit/status?token=${evToken}`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                  });
+                  const statusData = await statusRes.json();
+                  if (statusData.status === 'COMPLETED') {
+                    clearInterval(pollInterval);
+                    const card = document.querySelector(`.mission-card[data-mission-id="${missionId}"]`);
+                    markMissionAsCompleted(card, 'Ã˜ÂªÃ™Â… Ã˜Â¥Ã™ÂƒÃ™Â…Ã˜Â§Ã™Â„ Ã˜Â§Ã™Â„Ã™Â…Ã™Â‡Ã™Â…Ã˜Â©!');
+                    const currentCount = Math.max(0, parseInt(badge.textContent || '0') - 1);
+                    badge.textContent = currentCount;
+                    if (currentCount <= 0) {
+                      setTimeout(() => { giftBtn.classList.add('hidden'); hideOverlay(); }, 3000);
+                    }
+                  } else if (statusData.status === 'EXPIRED') {
+                    clearInterval(pollInterval);
+                    if (progressEl) {
+                      progressEl.querySelector('.ev-status-text').textContent = 'Ã˜Â§Ã™Â†Ã˜ÂªÃ™Â‡Ã˜Âª Ã˜ÂµÃ™Â„Ã˜Â§Ã˜Â­Ã™ÂŠÃ˜Â© Ã˜Â§Ã™Â„Ã˜Â¬Ã™Â„Ã˜Â³Ã˜Â©';
+                    }
+                  }
+                } catch (e) { /* ignore poll errors */ }
+              }, 15000); // Poll every 15 seconds
+
+              // Stop polling after 35 minutes
+              setTimeout(() => clearInterval(pollInterval), 35 * 60 * 1000);
+            } else {
+              alert(data.message || 'Ã˜Â­Ã˜Â¯Ã˜Â« Ã˜Â®Ã˜Â·Ã˜Â£');
+              this.disabled = false;
+              this.innerHTML = '<i class="fas fa-play ml-1"></i> Ã˜Â§Ã˜Â¨Ã˜Â¯Ã˜Â£';
+            }
+          } catch (err) {
+            console.error('Start external visit error:', err);
+            this.disabled = false;
+            this.innerHTML = '<i class="fas fa-play ml-1"></i> Ã˜Â§Ã˜Â¨Ã˜Â¯Ã˜Â£';
+          }
+        });
+      });
+
+      // Add claim button listeners
+      document.querySelectorAll('.claim-btn').forEach(btn => {
+        btn.addEventListener('click', async function(e) {
+          e.preventDefault(); 
+          e.stopPropagation();
+          
+          // Check disabled state via attribute
+          if (this.getAttribute('data-disabled') === 'true') return;
+          
+          // Check login status from the API response
+          let token = localStorage.getItem('auth_token') || localStorage.getItem('token');
+          
+          // Fallback to cookie if token missing (prevent redirect loop if logged in via cookie)
+          if (!token) {
+             const match = document.cookie.match(/(?:^|;\s*)auth=([^;]+)/);
+             if (match) token = decodeURIComponent(match[1]);
+          }
+          
+          if (!token) {
+            window.location.href = '/login';
+            return;
+          }
+          
+          const missionId = this.getAttribute('data-mission-id');
+          await claimMission(missionId);
+        });
+      });
+    }
+    
+    async function claimMission(missionId) {
+      const missionCard = document.querySelector(`[data-mission-id="${missionId}"].mission-card`);
+      
+      // Hide mission card controls temporarily or show loading state inside card?
+      // Current design: hide card, show global verification container.
+      if (missionCard) missionCard.style.display = 'none';
+      verificationContainer.classList.remove('hidden');
+      
+      // Fake verification steps
+      const steps = [
+        'Ã˜Â¬Ã˜Â§Ã˜Â±Ã™ÂŠ Ã˜Â§Ã™Â„Ã˜ÂªÃ˜Â­Ã™Â‚Ã™Â‚...',
+        'Ã˜Â§Ã™Â„Ã˜ÂªÃ˜Â­Ã™Â‚Ã™Â‚ Ã™Â…Ã™Â† Ã˜Â§Ã™Â„Ã˜Â²Ã™ÂŠÃ˜Â§Ã˜Â±Ã˜Â©...',
+        'Ã˜ÂªÃ˜Â£Ã™ÂƒÃ™ÂŠÃ˜Â¯ Ã˜Â§Ã™Â„Ã™Â…Ã™Â‡Ã™Â…Ã˜Â©...',
+        'Ã˜Â¬Ã˜Â§Ã˜Â±Ã™ÂŠ Ã˜Â¥Ã˜Â¶Ã˜Â§Ã™ÂÃ˜Â© Ã˜Â§Ã™Â„Ã™Â†Ã™Â‚Ã˜Â§Ã˜Â·...'
+      ];
+      
+      for (let i = 0; i < steps.length; i++) {
+        verificationText.textContent = steps[i];
+        await new Promise(r => setTimeout(r, 700));
+      }
+      
+      // Make API call
+      try {
+        let token = localStorage.getItem('auth_token') || localStorage.getItem('token');
+        if (!token) {
+           const match = document.cookie.match(/(?:^|;\s*)auth=([^;]+)/);
+           if (match) token = decodeURIComponent(match[1]);
+        }
+        
+        const res = await fetch(`${API_BASE}/missions/link-click/complete`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ missionId: parseInt(missionId) })
+        });
+        
+        const data = await res.json();
+        
+        verificationContainer.classList.add('hidden');
+        
+        if (data.success) {
+          successContainer.classList.remove('hidden');
+          successMessage.innerHTML = `Ã˜ÂªÃ™Â… Ã˜Â¥Ã˜Â¶Ã˜Â§Ã™ÂÃ˜Â© <span class="text-yellow-400 font-bold">${data.pointsAwarded}</span> Ã™Â†Ã™Â‚Ã˜Â·Ã˜Â©!<br>Ã˜Â±Ã˜ÂµÃ™ÂŠÃ˜Â¯Ã™Âƒ Ã˜Â§Ã™Â„Ã˜Â¬Ã˜Â¯Ã™ÂŠÃ˜Â¯: ${data.newBalance}`;
+          
+          // Update badge
+          const currentCount = Math.max(0, parseInt(badge.textContent || '0') - 1);
+          badge.textContent = currentCount;
+          
+          if (currentCount <= 0) {
+            // Hide the main button if no missions left
+            const giftBtn = document.getElementById('gift-reward-btn');
+            if (giftBtn) {
+                setTimeout(() => {
+                    giftBtn.classList.add('hidden');
+                    hideOverlay(); // Also close overlay since nothing left
+                }, 4000); // Wait for success animation to finish (3s + buffer)
+            }
+          }
+          localStorage.removeItem(`mission_visited_${missionId}`);
+          localStorage.removeItem(`mission_visited_time_${missionId}`);
+          
+          // Instead of reloading, mark completed visually
+          setTimeout(() => {
+            successContainer.classList.add('hidden');
+            markMissionAsCompleted(missionCard, data.mission.title);
+          }, 3000); 
+          
+        } else {
+          if (data.alreadyCompleted) {
+            // It's already done, just update the UI to reflect that without error
+            verificationContainer.classList.add('hidden');
+            markMissionAsCompleted(missionCard, "Ã˜Â§Ã™Â„Ã™Â…Ã™Â‡Ã™Â…Ã˜Â© Ã™Â…Ã™ÂƒÃ˜ÂªÃ™Â…Ã™Â„Ã˜Â©");
+            
+            // Show a small toast
+            const toast = document.createElement('div');
+            toast.className = 'fixed top-4 left-1/2 transform -translate-x-1/2 bg-blue-900 border border-blue-500 text-white px-6 py-3 rounded-lg shadow-xl z-[70] flex items-center gap-3 animate-fade-in-down';
+            toast.innerHTML = `<i class="fas fa-info-circle text-xl"></i> <span>Ã™Â„Ã™Â‚Ã˜Â¯ Ã˜Â£Ã™ÂƒÃ™Â…Ã™Â„Ã˜Âª Ã™Â‡Ã˜Â°Ã™Â‡ Ã˜Â§Ã™Â„Ã™Â…Ã™Â‡Ã™Â…Ã˜Â© Ã™Â…Ã˜Â³Ã˜Â¨Ã™Â‚Ã˜Â§Ã™Â‹</span>`;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 4000);
+            
+          } else {
+            // Generic error
+            if (missionCard) missionCard.style.display = '';
+            
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'fixed top-4 left-1/2 transform -translate-x-1/2 bg-red-900 border border-red-500 text-white px-6 py-3 rounded-lg shadow-xl z-[70] flex items-center gap-3 animate-fade-in-down';
+            errorDiv.innerHTML = `<i class="fas fa-exclamation-circle text-xl"></i> <span>${data.message || 'Ã˜Â­Ã˜Â¯Ã˜Â« Ã˜Â®Ã˜Â·Ã˜Â£'}</span>`;
+            document.body.appendChild(errorDiv);
+            setTimeout(() => errorDiv.remove(), 4000);
+          }
+        }
+      } catch (error) {
+        console.error('Claim error:', error);
+        verificationContainer.classList.add('hidden');
+        if (missionCard) missionCard.style.display = '';
+        
+        // Show error in a nicer way
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'fixed top-4 left-1/2 transform -translate-x-1/2 bg-red-900 border border-red-500 text-white px-6 py-3 rounded-lg shadow-xl z-[70] flex items-center gap-3 animate-fade-in-down';
+        errorDiv.innerHTML = `<i class="fas fa-exclamation-circle text-xl"></i> <span>Ã˜Â­Ã˜Â¯Ã˜Â« Ã˜Â®Ã˜Â·Ã˜Â£ Ã™ÂÃ™ÂŠ Ã˜Â§Ã™Â„Ã˜Â§Ã˜ÂªÃ˜ÂµÃ˜Â§Ã™Â„</span>`;
+        document.body.appendChild(errorDiv);
+        setTimeout(() => errorDiv.remove(), 4000);
+      }
+    }
+
+    // Helper to mark card as completed
+    function markMissionAsCompleted(missionCard, title) {
+        if (!missionCard) return;
+        missionCard.style.display = '';
+        missionCard.classList.add('completed', 'opacity-60');
+        // Disable buttons inside
+        const buttons = missionCard.querySelectorAll('button, a');
+        buttons.forEach(b => b.style.pointerEvents = 'none');
+        
+        missionCard.innerHTML = `
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-green-900 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-check text-green-400"></i>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-white text-sm line-through text-gray-400">${title}</h3>
+                <div class="text-green-400 text-xs mt-1">
+                  Ã™Â…Ã™ÂƒÃ˜ÂªÃ™Â…Ã™Â„Ã˜Â©
+                </div>
+              </div>
+              <div class="text-green-400">
+                <i class="fas fa-check-circle text-xl"></i>
+              </div>
+            </div>
+        `;
+    }
+    
+    function showOverlay() {
+      overlay.classList.remove('hidden');
+      setTimeout(() => overlay.classList.add('show'), 10);
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function hideOverlay() {
+      overlay.classList.remove('show');
+      setTimeout(() => {
+        overlay.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+    
+    openBtn?.addEventListener('click', showOverlay);
+    closeBtn?.addEventListener('click', hideOverlay);
+    
+    overlay?.addEventListener('click', (e) => {
+      if (e.target === overlay) hideOverlay();
+    });
+    
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !overlay.classList.contains('hidden')) hideOverlay();
+    });
+  });
+})();</script> <header data-site-nav class="fixed top-0 left-0 right-0 z-[70] transition-all duration-300 bg-gradient-to-b from-black/80 to-transparent" id="main-navbar" data-astro-cid-353qvbhl> <div class="container mx-auto px-6 max-w-[1400px]" data-astro-cid-353qvbhl> <div id="navbar-row" class="flex items-center justify-between h-16 gap-4" data-astro-cid-353qvbhl> <div class="flex items-center gap-8" data-astro-cid-353qvbhl> <a href="/" class="shrink-0 flex items-center gap-2 group" data-astro-cid-353qvbhl> <span class="text-3xl font-black tracking-tighter group-hover:scale-105 transition-transform" style="color: var(--color-brand-primary, #E50914);" data-astro-cid-353qvbhl>MANGATEK</span> </a> <nav class="hidden lg:flex items-center gap-6" data-astro-cid-353qvbhl> <a href="/" class="text-sm font-bold transition-colors duration-200 flex items-center gap-2 text-gray-400 hover:text-gray-200" data-astro-cid-353qvbhl> Ã˜Â§Ã™Â„Ã˜Â±Ã˜Â¦Ã™ÂŠÃ˜Â³Ã™ÂŠÃ˜Â© </a><a href="/manga-list" class="text-sm font-bold transition-colors duration-200 flex items-center gap-2 text-gray-400 hover:text-gray-200" data-astro-cid-353qvbhl> Ã˜Â§Ã™Â„Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ </a><a href="/latest" class="text-sm font-bold transition-colors duration-200 flex items-center gap-2 text-gray-400 hover:text-gray-200" data-astro-cid-353qvbhl> Ã˜Â£Ã˜Â­Ã˜Â¯Ã˜Â« Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™ÂˆÃ™Â„ </a><a href="/genres" class="text-sm font-bold transition-colors duration-200 flex items-center gap-2 text-gray-400 hover:text-gray-200" data-astro-cid-353qvbhl> Ã˜Â§Ã™Â„Ã˜ÂªÃ˜ÂµÃ™Â†Ã™ÂŠÃ™ÂÃ˜Â§Ã˜Âª </a><a href="/store" class="text-sm font-bold transition-colors duration-200 flex items-center gap-2 text-gray-400 hover:text-gray-200" data-astro-cid-353qvbhl> Ã˜Â§Ã™Â„Ã™Â…Ã˜ÂªÃ˜Â¬Ã˜Â± </a>  </nav> </div> <div class="flex items-center gap-4 md:gap-6" data-astro-cid-353qvbhl> <a href="/donate" class="hidden md:flex items-center gap-2 px-4 py-1.5 rounded-full text-white text-xs font-bold shadow-lg hover:brightness-110 transition-all transform hover:scale-105" style="background-color: var(--color-brand-primary, #E50914);" data-astro-cid-353qvbhl> <i class="fas fa-heart text-[10px] animate-pulse" data-astro-cid-353qvbhl></i> <span data-astro-cid-353qvbhl>Ã˜Â§Ã˜Â¯Ã˜Â¹Ã™Â…Ã™Â†Ã˜Â§</span> </a> <div class="flex md:hidden items-center gap-6" data-astro-cid-353qvbhl> <button id="navbar-flip-btn" class="text-white/60 hover:text-white transition-colors p-2 -m-2" aria-label="Ã˜ÂªÃ˜Â¨Ã˜Â¯Ã™ÂŠÃ™Â„ Ã˜Â§Ã˜ÂªÃ˜Â¬Ã˜Â§Ã™Â‡ Ã˜Â§Ã™Â„Ã˜Â´Ã˜Â±Ã™ÂŠÃ˜Â·" title="Ã˜ÂªÃ˜Â¨Ã˜Â¯Ã™ÂŠÃ™Â„ Ã˜Â§Ã˜ÂªÃ˜Â¬Ã˜Â§Ã™Â‡ Ã˜Â§Ã™Â„Ã˜Â´Ã˜Â±Ã™ÂŠÃ˜Â·" data-astro-cid-353qvbhl> <i class="fas fa-exchange-alt text-lg" data-astro-cid-353qvbhl></i> </button> <button id="search-trigger-mobile" class="text-white hover:text-gray-300 transition-colors p-2 -m-2" aria-label="Ã˜Â¨Ã˜Â­Ã˜Â«" data-astro-cid-353qvbhl> <i class="fas fa-search text-xl" data-astro-cid-353qvbhl></i> </button>  <button id="mobile-menu-button" class="text-white hover:text-gray-300 transition-colors p-2 -m-2" aria-label="Ã˜Â§Ã™Â„Ã™Â‚Ã˜Â§Ã˜Â¦Ã™Â…Ã˜Â©" data-astro-cid-353qvbhl> <i class="fas fa-bars text-xl" data-astro-cid-353qvbhl></i> </button> </div> <button id="search-trigger" class="hidden md:block text-white hover:text-gray-300 transition-colors" aria-label="Ã˜Â¨Ã˜Â­Ã˜Â«" data-astro-cid-353qvbhl> <i class="fas fa-search text-xl" data-astro-cid-353qvbhl></i> </button> <div class="hidden md:block" data-astro-cid-353qvbhl> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script type="50a303a1e3b15701ab8156ec-text/javascript">(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();;(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="Z1IIdkE" prefix="r1" component-url="/_astro/ThemeSettings.DKVjY8XN.js" component-export="default" renderer-url="/_astro/client.Di_8Mrau.js" props="{&quot;data-astro-cid-353qvbhl&quot;:[0,true]}" ssr client="load" opts="{&quot;name&quot;:&quot;ThemeSettings&quot;,&quot;value&quot;:true}" await-children><div class="relative"><button class="p-2 text-gray-400 hover:text-white transition-colors duration-200 relative group" title="Ã˜Â¥Ã˜Â¹Ã˜Â¯Ã˜Â§Ã˜Â¯Ã˜Â§Ã˜Âª Ã˜Â§Ã™Â„Ã™Â…Ã˜Â¸Ã™Â‡Ã˜Â±" aria-label="Ã˜Â¥Ã˜Â¹Ã˜Â¯Ã˜Â§Ã˜Â¯Ã˜Â§Ã˜Âª Ã˜Â§Ã™Â„Ã™Â…Ã˜Â¸Ã™Â‡Ã˜Â±"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg><span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full border border-zinc-800" style="background-color:var(--color-brand-primary, #E50914)"></span></button></div><!--astro:end--></astro-island> </div> <div class="hidden md:flex items-center gap-4" data-astro-cid-353qvbhl> <a href="/login" class="text-white hover:text-gray-300 text-sm font-bold transition-colors" data-astro-cid-353qvbhl>Ã˜ÂªÃ˜Â³Ã˜Â¬Ã™ÂŠÃ™Â„ Ã˜Â§Ã™Â„Ã˜Â¯Ã˜Â®Ã™ÂˆÃ™Â„</a> <a href="/register" class="text-white px-5 py-2 rounded-sm text-sm font-bold transition-colors shadow-sm hover:opacity-80" style="background-color: var(--color-brand-primary, #E50914);" data-astro-cid-353qvbhl>Ã˜Â¥Ã™Â†Ã˜Â´Ã˜Â§Ã˜Â¡ Ã˜Â­Ã˜Â³Ã˜Â§Ã˜Â¨</a> </div> </div> </div> </div> </header> <div id="search-overlay" class="fixed inset-0 bg-black/98 backdrop-blur-md z-[80] hidden flex flex-col items-center pt-16 md:pt-24 opacity-0 transition-opacity duration-300" data-astro-cid-353qvbhl> <button id="search-close" class="absolute top-4 right-4 md:top-6 md:right-6 w-10 h-10 rounded-full bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-gray-400 hover:text-white transition-all flex items-center justify-center group" data-astro-cid-353qvbhl> <i class="fas fa-times text-lg group-hover:rotate-90 transition-transform duration-200" data-astro-cid-353qvbhl></i> </button> <div class="w-full max-w-2xl px-4 md:px-6" data-astro-cid-353qvbhl> <form id="search-overlay-form" class="relative" data-astro-cid-353qvbhl> <i class="fas fa-search absolute right-4 top-1/2 -translate-y-1/2 text-xl pointer-events-none" style="color: var(--color-brand-primary, #E50914);" data-astro-cid-353qvbhl></i> <input type="text" id="search-overlay-input" class="w-full bg-zinc-900/80 border-2 border-zinc-700 hover:border-zinc-600 focus:border-[var(--color-brand-primary,#E50914)] text-xl md:text-2xl font-bold py-4 pr-14 pl-14 rounded-xl focus:outline-none transition-all text-right text-white placeholder-zinc-500" placeholder="Ã˜Â§Ã˜Â¨Ã˜Â­Ã˜Â« Ã˜Â¹Ã™Â† Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§..." autocomplete="off" data-astro-cid-353qvbhl> <button type="submit" id="search-submit-btn" class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-lg flex items-center justify-center text-white transition-all hover:brightness-110 shadow-lg" style="background-color: var(--color-brand-primary, #E50914); box-shadow: 0 4px 14px rgba(229, 9, 20, 0.3);" aria-label="Ã˜Â¨Ã˜Â­Ã˜Â«" data-astro-cid-353qvbhl> <i class="fas fa-arrow-left" data-astro-cid-353qvbhl></i> </button> </form> <p id="search-hint" class="text-zinc-500 text-sm mt-4 text-center" data-astro-cid-353qvbhl> <i class="fas fa-keyboard ml-2 text-xs" data-astro-cid-353qvbhl></i>
+Ã˜Â§Ã™ÂƒÃ˜ÂªÃ˜Â¨ Ã˜Â§Ã˜Â³Ã™Â… Ã˜Â§Ã™Â„Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ Ã™Â„Ã™Â„Ã˜Â¨Ã˜Â­Ã˜Â« Ã˜Â£Ã™Âˆ Ã˜Â§Ã˜Â¶Ã˜ÂºÃ˜Â· Enter Ã™Â„Ã™Â„Ã˜Â§Ã™Â†Ã˜ÂªÃ™Â‚Ã˜Â§Ã™Â„ Ã™Â„Ã˜ÂµÃ™ÂÃ˜Â­Ã˜Â© Ã˜Â§Ã™Â„Ã˜Â¨Ã˜Â­Ã˜Â«
+</p> <div id="search-suggestions" class="mt-6 hidden" data-astro-cid-353qvbhl> <div class="flex items-center justify-between mb-4" data-astro-cid-353qvbhl> <span class="text-zinc-400 text-sm font-medium flex items-center gap-2" data-astro-cid-353qvbhl> <i class="fas fa-lightbulb text-yellow-500 text-xs" data-astro-cid-353qvbhl></i>
+Ã˜Â§Ã™Â‚Ã˜ÂªÃ˜Â±Ã˜Â§Ã˜Â­Ã˜Â§Ã˜Âª Ã˜Â§Ã™Â„Ã˜Â¨Ã˜Â­Ã˜Â«
+</span> <a id="view-all-results" href="#" class="text-sm font-bold hover:underline transition-colors flex items-center gap-1" style="color: var(--color-brand-primary, #E50914);" data-astro-cid-353qvbhl>
+Ã˜Â¹Ã˜Â±Ã˜Â¶ Ã™ÂƒÃ™Â„ Ã˜Â§Ã™Â„Ã™Â†Ã˜ÂªÃ˜Â§Ã˜Â¦Ã˜Â¬ <i class="fas fa-arrow-left text-xs" data-astro-cid-353qvbhl></i> </a> </div> <div id="search-suggestions-list" class="space-y-2" data-astro-cid-353qvbhl></div> </div> <div id="search-overlay-results" class="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-h-[55vh] overflow-y-auto custom-scrollbar pb-4 hidden" data-astro-cid-353qvbhl></div> </div> </div> <div id="mobile-notifications-overlay" class="fixed inset-0 bg-black/95 backdrop-blur-sm z-[80] hidden flex flex-col opacity-0 transition-opacity duration-300" data-astro-cid-353qvbhl> <div class="flex items-center justify-between p-4 border-b border-zinc-800" data-astro-cid-353qvbhl> <h2 class="text-lg font-bold text-white flex items-center gap-2" data-astro-cid-353qvbhl> <i class="fas fa-bell" style="color: var(--color-brand-primary, #E50914);" data-astro-cid-353qvbhl></i>
+Ã˜Â§Ã™Â„Ã˜Â¥Ã˜Â´Ã˜Â¹Ã˜Â§Ã˜Â±Ã˜Â§Ã˜Âª
+</h2> <button id="mobile-notifications-close" class="w-10 h-10 rounded-full bg-zinc-800 hover:bg-zinc-700 text-gray-400 hover:text-white transition-all flex items-center justify-center" data-astro-cid-353qvbhl> <i class="fas fa-times text-xl" data-astro-cid-353qvbhl></i> </button> </div> <div id="mobile-notifications-list" class="flex-1 overflow-y-auto custom-scrollbar" style="direction: ltr;" data-astro-cid-353qvbhl> <div style="direction: rtl;" data-astro-cid-353qvbhl> <div class="p-8 text-center text-gray-500" data-astro-cid-353qvbhl> <i class="fas fa-spinner fa-spin text-2xl mb-3" data-astro-cid-353qvbhl></i> <p data-astro-cid-353qvbhl>Ã˜Â¬Ã˜Â§Ã˜Â±Ã™ÂŠ Ã˜Â§Ã™Â„Ã˜ÂªÃ˜Â­Ã™Â…Ã™ÂŠÃ™Â„...</p> </div> </div> </div> <div class="p-4 border-t border-zinc-800 bg-zinc-900/80 safe-area-bottom" data-astro-cid-353qvbhl> <div class="flex gap-3" data-astro-cid-353qvbhl> <button id="mobile-clear-all-notifications" class="flex-1 py-3 rounded-lg text-gray-300 font-medium bg-zinc-800 hover:bg-zinc-700 transition-colors" data-astro-cid-353qvbhl> <i class="fas fa-trash ml-2" data-astro-cid-353qvbhl></i>
+Ã™Â…Ã˜Â³Ã˜Â­ Ã˜Â§Ã™Â„Ã™ÂƒÃ™Â„
+</button> <a href="/profile?tab=notifications" class="flex-1 py-3 rounded-lg text-white font-bold text-center transition-colors" style="background-color: var(--color-brand-primary, #E50914);" data-astro-cid-353qvbhl>
+Ã˜Â¹Ã˜Â±Ã˜Â¶ Ã˜Â§Ã™Â„Ã™ÂƒÃ™Â„
+<i class="fas fa-arrow-left mr-2" data-astro-cid-353qvbhl></i> </a> </div> </div> </div> <div id="logout-confirm-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] hidden flex items-center justify-center opacity-0 transition-opacity duration-300" data-astro-cid-353qvbhl> <div class="bg-zinc-900 border border-zinc-700 rounded-xl shadow-2xl w-full max-w-sm mx-4 overflow-hidden transform scale-95 transition-transform duration-300" data-astro-cid-353qvbhl> <div class="p-6 text-center" data-astro-cid-353qvbhl> <div class="w-16 h-16 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-4" data-astro-cid-353qvbhl> <i class="fas fa-sign-out-alt text-3xl text-red-500" data-astro-cid-353qvbhl></i> </div> <h3 class="text-xl font-bold text-white mb-2" data-astro-cid-353qvbhl>Ã˜ÂªÃ˜Â³Ã˜Â¬Ã™ÂŠÃ™Â„ Ã˜Â§Ã™Â„Ã˜Â®Ã˜Â±Ã™ÂˆÃ˜Â¬</h3> <p class="text-gray-400 mb-6" data-astro-cid-353qvbhl>Ã™Â‡Ã™Â„ Ã˜Â£Ã™Â†Ã˜Âª Ã™Â…Ã˜ÂªÃ˜Â£Ã™ÂƒÃ˜Â¯ Ã˜Â£Ã™Â†Ã™Âƒ Ã˜ÂªÃ˜Â±Ã™ÂŠÃ˜Â¯ Ã˜ÂªÃ˜Â³Ã˜Â¬Ã™ÂŠÃ™Â„ Ã˜Â§Ã™Â„Ã˜Â®Ã˜Â±Ã™ÂˆÃ˜Â¬ Ã™Â…Ã™Â† Ã˜Â­Ã˜Â³Ã˜Â§Ã˜Â¨Ã™ÂƒÃ˜ÂŸ</p> <div class="flex gap-3" data-astro-cid-353qvbhl> <button id="confirm-logout-btn" class="flex-1 py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg transition-colors" data-astro-cid-353qvbhl>
+Ã™Â†Ã˜Â¹Ã™Â…Ã˜ÂŒ Ã˜Â®Ã˜Â±Ã™ÂˆÃ˜Â¬
+</button> <button id="cancel-logout-btn" class="flex-1 py-2.5 bg-zinc-800 hover:bg-zinc-700 text-gray-300 font-bold rounded-lg transition-colors border border-zinc-700" data-astro-cid-353qvbhl>
+Ã˜Â¥Ã™Â„Ã˜ÂºÃ˜Â§Ã˜Â¡
+</button> </div> </div> </div> </div> <div id="mobile-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden z-[75] transition-opacity duration-300" data-astro-cid-353qvbhl></div> <aside id="mobile-drawer" class="fixed inset-y-0 right-0 w-[280px] shadow-2xl transform translate-x-full transition-transform duration-300 z-[90] flex flex-col invisible" style="background-color: var(--color-bg-primary);" data-astro-cid-353qvbhl> <div class="flex flex-col h-[100dvh] overflow-hidden" data-astro-cid-353qvbhl> <div class="flex items-center justify-between p-4 flex-shrink-0" data-astro-cid-353qvbhl> <span class="text-xl font-black" style="color: var(--color-brand-primary, #E50914);" data-astro-cid-353qvbhl>MANGATEK</span> <div class="flex items-center gap-2" data-astro-cid-353qvbhl> <button id="hand-switch-btn" class="w-8 h-8 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-gray-400 hover:text-white transition-all flex items-center justify-center border border-zinc-700" aria-label="Ã˜ÂªÃ˜Â¨Ã˜Â¯Ã™ÂŠÃ™Â„ Ã˜Â¬Ã™Â‡Ã˜Â© Ã˜Â§Ã™Â„Ã™Â‚Ã˜Â§Ã˜Â¦Ã™Â…Ã˜Â©" title="Ã˜ÂªÃ˜Â¨Ã˜Â¯Ã™ÂŠÃ™Â„ Ã˜Â¬Ã™Â‡Ã˜Â© Ã˜Â§Ã™Â„Ã™Â‚Ã˜Â§Ã˜Â¦Ã™Â…Ã˜Â©" data-astro-cid-353qvbhl> <i class="fas fa-hand-paper text-sm" id="hand-switch-icon" data-astro-cid-353qvbhl></i> </button> <button id="mobile-close" class="text-gray-400 hover:text-white" data-astro-cid-353qvbhl> <i class="fas fa-times text-xl" data-astro-cid-353qvbhl></i> </button> </div> </div> <div class="flex-1 overflow-y-auto px-4 pb-4 no-scrollbar" data-astro-cid-353qvbhl> <nav class="flex flex-col gap-1 mb-4" data-astro-cid-353qvbhl> <a href="/" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium transition-all group text-gray-400 hover:text-white hover:bg-zinc-800" style data-astro-cid-353qvbhl> <span class="w-7 h-7 rounded-md flex items-center justify-center transition-colors bg-zinc-900/50 text-gray-500 group-hover:bg-zinc-800 group-hover:text-gray-300" data-astro-cid-353qvbhl> <!-- Assuming icons are mapped or using a default. Using text fallback if icon missing locally, but user req confirms same structure. 
+                  Mangatek navLinks usually have icon property. --> <i class="fas fa-home text-[11px]" data-astro-cid-353qvbhl></i> </span> Ã˜Â§Ã™Â„Ã˜Â±Ã˜Â¦Ã™ÂŠÃ˜Â³Ã™ÂŠÃ˜Â© </a><a href="/manga-list" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium transition-all group text-gray-400 hover:text-white hover:bg-zinc-800" style data-astro-cid-353qvbhl> <span class="w-7 h-7 rounded-md flex items-center justify-center transition-colors bg-zinc-900/50 text-gray-500 group-hover:bg-zinc-800 group-hover:text-gray-300" data-astro-cid-353qvbhl> <!-- Assuming icons are mapped or using a default. Using text fallback if icon missing locally, but user req confirms same structure. 
+                  Mangatek navLinks usually have icon property. --> <i class="fas fa-book text-[11px]" data-astro-cid-353qvbhl></i> </span> Ã˜Â§Ã™Â„Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§ </a><a href="/latest" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium transition-all group text-gray-400 hover:text-white hover:bg-zinc-800" style data-astro-cid-353qvbhl> <span class="w-7 h-7 rounded-md flex items-center justify-center transition-colors bg-zinc-900/50 text-gray-500 group-hover:bg-zinc-800 group-hover:text-gray-300" data-astro-cid-353qvbhl> <!-- Assuming icons are mapped or using a default. Using text fallback if icon missing locally, but user req confirms same structure. 
+                  Mangatek navLinks usually have icon property. --> <i class="fas fa-clock text-[11px]" data-astro-cid-353qvbhl></i> </span> Ã˜Â£Ã˜Â­Ã˜Â¯Ã˜Â« Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™ÂˆÃ™Â„ </a><a href="/genres" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium transition-all group text-gray-400 hover:text-white hover:bg-zinc-800" style data-astro-cid-353qvbhl> <span class="w-7 h-7 rounded-md flex items-center justify-center transition-colors bg-zinc-900/50 text-gray-500 group-hover:bg-zinc-800 group-hover:text-gray-300" data-astro-cid-353qvbhl> <!-- Assuming icons are mapped or using a default. Using text fallback if icon missing locally, but user req confirms same structure. 
+                  Mangatek navLinks usually have icon property. --> <i class="fas fa-tag text-[11px]" data-astro-cid-353qvbhl></i> </span> Ã˜Â§Ã™Â„Ã˜ÂªÃ˜ÂµÃ™Â†Ã™ÂŠÃ™ÂÃ˜Â§Ã˜Âª </a><a href="/store" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium transition-all group text-gray-400 hover:text-white hover:bg-zinc-800" style data-astro-cid-353qvbhl> <span class="w-7 h-7 rounded-md flex items-center justify-center transition-colors bg-zinc-900/50 text-gray-500 group-hover:bg-zinc-800 group-hover:text-gray-300" data-astro-cid-353qvbhl> <!-- Assuming icons are mapped or using a default. Using text fallback if icon missing locally, but user req confirms same structure. 
+                  Mangatek navLinks usually have icon property. --> <i class="fas fa-store text-[11px]" data-astro-cid-353qvbhl></i> </span> Ã˜Â§Ã™Â„Ã™Â…Ã˜ÂªÃ˜Â¬Ã˜Â± </a> </nav> <a href="/donate" class="flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-xs font-bold text-white mb-3 hover:brightness-110 transition-all shadow-lg" style="background: linear-gradient(to right, var(--color-brand-primary, #E50914), #ff4b5c);" data-astro-cid-353qvbhl> <i class="fas fa-heart text-[10px]" data-astro-cid-353qvbhl></i> <span data-astro-cid-353qvbhl>Ã˜Â§Ã˜Â¯Ã˜Â¹Ã™Â…Ã™Â†Ã˜Â§ Ã™ÂˆÃ˜Â§Ã˜Â­Ã˜ÂµÃ™Â„ Ã˜Â¹Ã™Â„Ã™Â‰ Ã™Â†Ã™Â‚Ã˜Â§Ã˜Â·</span> </a> <div class="border-t border-zinc-800 pt-4 mt-2" data-astro-cid-353qvbhl> <div id="mobile-auth-buttons" class="space-y-2" data-astro-cid-353qvbhl> <a href="/login" class="flex items-center justify-center w-full px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 bg-zinc-800 hover:bg-zinc-700 transition-all border border-zinc-700" data-astro-cid-353qvbhl>
+Ã˜ÂªÃ˜Â³Ã˜Â¬Ã™ÂŠÃ™Â„ Ã˜Â§Ã™Â„Ã˜Â¯Ã˜Â®Ã™ÂˆÃ™Â„
+</a> <a href="/register" class="flex items-center justify-center w-full px-4 py-2.5 rounded-lg text-sm font-bold text-white transition-all shadow-lg hover:brightness-110" style="background-color: var(--color-brand-primary, #E50914);" data-astro-cid-353qvbhl>
+Ã˜Â¥Ã™Â†Ã˜Â´Ã˜Â§Ã˜Â¡ Ã˜Â­Ã˜Â³Ã˜Â§Ã˜Â¨ Ã˜Â¬Ã˜Â¯Ã™ÂŠÃ˜Â¯
+</a> </div> </div> <div class="border-t border-zinc-800 p-4 pb-8 mt-4 bg-zinc-900/30 -mx-4 mb-4" data-astro-cid-353qvbhl> <p class="text-xs font-bold text-gray-500 mb-3 px-1 uppercase tracking-wider" data-astro-cid-353qvbhl>Ã˜Â§Ã™Â„Ã™Â…Ã˜Â¸Ã™Â‡Ã˜Â±</p> <div class="grid grid-cols-7 gap-2" id="mobile-color-picker" data-astro-cid-353qvbhl> <button class="color-option h-8 w-full rounded-md transition-all hover:scale-105 border border-white/10" data-color="#E50914" data-dark="#B20710" style="background-color: #E50914" data-astro-cid-353qvbhl></button> <button class="color-option h-8 w-full rounded-md transition-all hover:scale-105 border border-white/10" data-color="#0EA5E9" data-dark="#0284C7" style="background-color: #0EA5E9" data-astro-cid-353qvbhl></button> <button class="color-option h-8 w-full rounded-md transition-all hover:scale-105 border border-white/10" data-color="#10B981" data-dark="#059669" style="background-color: #10B981" data-astro-cid-353qvbhl></button> <button class="color-option h-8 w-full rounded-md transition-all hover:scale-105 border border-white/10" data-color="#8B5CF6" data-dark="#7C3AED" style="background-color: #8B5CF6" data-astro-cid-353qvbhl></button> <button class="color-option h-8 w-full rounded-md transition-all hover:scale-105 border border-white/10" data-color="#EC4899" data-dark="#DB2777" style="background-color: #EC4899" data-astro-cid-353qvbhl></button> <button class="color-option h-8 w-full rounded-md transition-all hover:scale-105 border border-white/10" data-color="#F97316" data-dark="#EA580C" style="background-color: #F97316" data-astro-cid-353qvbhl></button> <label class="relative h-8 w-full rounded-md transition-all hover:scale-105 cursor-pointer overflow-hidden group border border-white/10" data-astro-cid-353qvbhl> <div class="absolute inset-0 rounded-md" style="background: linear-gradient(135deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080);" data-astro-cid-353qvbhl></div> <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition-colors rounded-md" data-astro-cid-353qvbhl> <i class="fas fa-pencil-alt text-white text-[8px] drop-shadow-md" data-astro-cid-353qvbhl></i> </div> <input type="color" id="mobile-custom-color-input" class="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer z-[100]" value="#E50914" data-astro-cid-353qvbhl> </label> </div> </div> </div> </div></aside> <script type="50a303a1e3b15701ab8156ec-module" src="/_astro/Navbar.astro_astro_type_script_index_0_lang.MNIOOUXv.js"></script>   <main class="flex-grow "> <div id="reader-container" class="min-h-screen bg-black text-white" data-id="25631" data-mid="575" data-allow="true" data-next-url="/reader/white-dragon-duke-pendragon/125" data-prev-url="/reader/white-dragon-duke-pendragon/123" data-manga-slug="white-dragon-duke-pendragon" data-chapter-number="124"><header id="reader-top-nav" class="reader-nav reader-nav-top backdrop-blur-md bg-black/80 border-b border-white/5"><div class="h-14 px-4 max-w-4xl mx-auto flex items-center justify-between gap-4" dir="rtl"><a href="/manga/white-dragon-duke-pendragon" class="flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm font-medium"><i class="fas fa-arrow-right text-xs"></i><span class="hidden sm:inline">Ã˜Â§Ã™Â„Ã˜Â¹Ã™ÂˆÃ˜Â¯Ã˜Â© Ã™Â„Ã™Â„Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§</span></a><div class="flex items-center gap-3"><a href="/reader/white-dragon-duke-pendragon/123" class="w-9 h-9 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-colors" title="Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ Ã˜Â§Ã™Â„Ã˜Â³Ã˜Â§Ã˜Â¨Ã™Â‚"><i class="fas fa-chevron-right text-sm"></i></a><div class="relative" id="chapter-dropdown-container"><button id="chapter-dropdown-btn" class="flex items-center gap-3 px-4 py-2 rounded-full bg-[#181818] hover:bg-[#252525] border border-zinc-800 transition-all text-sm font-bold shadow-sm"><span class="text-white">Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 124</span><i class="fas fa-chevron-down text-xs text-gray-500"></i></button><div id="chapter-dropdown-menu" class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 bg-[#181818] border border-zinc-700 rounded-lg shadow-2xl z-50 hidden max-h-80 overflow-y-auto custom-scrollbar"><a href="/reader/white-dragon-duke-pendragon/1" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 1</a><a href="/reader/white-dragon-duke-pendragon/2" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 2</a><a href="/reader/white-dragon-duke-pendragon/3" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 3</a><a href="/reader/white-dragon-duke-pendragon/4" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 4</a><a href="/reader/white-dragon-duke-pendragon/5" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 5</a><a href="/reader/white-dragon-duke-pendragon/6" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 6</a><a href="/reader/white-dragon-duke-pendragon/7" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 7</a><a href="/reader/white-dragon-duke-pendragon/8" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 8</a><a href="/reader/white-dragon-duke-pendragon/9" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 9</a><a href="/reader/white-dragon-duke-pendragon/10" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 10</a><a href="/reader/white-dragon-duke-pendragon/11" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 11</a><a href="/reader/white-dragon-duke-pendragon/12" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 12</a><a href="/reader/white-dragon-duke-pendragon/13" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 13</a><a href="/reader/white-dragon-duke-pendragon/14" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 14</a><a href="/reader/white-dragon-duke-pendragon/15" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 15</a><a href="/reader/white-dragon-duke-pendragon/16" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 16</a><a href="/reader/white-dragon-duke-pendragon/17" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 17</a><a href="/reader/white-dragon-duke-pendragon/18" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 18</a><a href="/reader/white-dragon-duke-pendragon/19" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 19</a><a href="/reader/white-dragon-duke-pendragon/20" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 20</a><a href="/reader/white-dragon-duke-pendragon/21" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 21</a><a href="/reader/white-dragon-duke-pendragon/22" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 22</a><a href="/reader/white-dragon-duke-pendragon/23" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 23</a><a href="/reader/white-dragon-duke-pendragon/24" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 24</a><a href="/reader/white-dragon-duke-pendragon/25" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 25</a><a href="/reader/white-dragon-duke-pendragon/26" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 26</a><a href="/reader/white-dragon-duke-pendragon/27" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 27</a><a href="/reader/white-dragon-duke-pendragon/28" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 28</a><a href="/reader/white-dragon-duke-pendragon/29" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 29</a><a href="/reader/white-dragon-duke-pendragon/30" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 30</a><a href="/reader/white-dragon-duke-pendragon/31" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 31</a><a href="/reader/white-dragon-duke-pendragon/32" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 32</a><a href="/reader/white-dragon-duke-pendragon/33" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 33</a><a href="/reader/white-dragon-duke-pendragon/34" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 34</a><a href="/reader/white-dragon-duke-pendragon/35" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 35</a><a href="/reader/white-dragon-duke-pendragon/36" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 36</a><a href="/reader/white-dragon-duke-pendragon/37" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 37</a><a href="/reader/white-dragon-duke-pendragon/38" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 38</a><a href="/reader/white-dragon-duke-pendragon/39" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 39</a><a href="/reader/white-dragon-duke-pendragon/40" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 40</a><a href="/reader/white-dragon-duke-pendragon/41" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 41</a><a href="/reader/white-dragon-duke-pendragon/42" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 42</a><a href="/reader/white-dragon-duke-pendragon/43" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 43</a><a href="/reader/white-dragon-duke-pendragon/44" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 44</a><a href="/reader/white-dragon-duke-pendragon/45" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 45</a><a href="/reader/white-dragon-duke-pendragon/46" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 46</a><a href="/reader/white-dragon-duke-pendragon/47" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 47</a><a href="/reader/white-dragon-duke-pendragon/48" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 48</a><a href="/reader/white-dragon-duke-pendragon/49" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 49</a><a href="/reader/white-dragon-duke-pendragon/50" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 50</a><a href="/reader/white-dragon-duke-pendragon/51" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 51</a><a href="/reader/white-dragon-duke-pendragon/52" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 52</a><a href="/reader/white-dragon-duke-pendragon/53" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 53</a><a href="/reader/white-dragon-duke-pendragon/54" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 54</a><a href="/reader/white-dragon-duke-pendragon/55" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 55</a><a href="/reader/white-dragon-duke-pendragon/56" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 56</a><a href="/reader/white-dragon-duke-pendragon/57" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 57</a><a href="/reader/white-dragon-duke-pendragon/58" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 58</a><a href="/reader/white-dragon-duke-pendragon/59" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 59</a><a href="/reader/white-dragon-duke-pendragon/60" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 60</a><a href="/reader/white-dragon-duke-pendragon/61" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 61</a><a href="/reader/white-dragon-duke-pendragon/62" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 62</a><a href="/reader/white-dragon-duke-pendragon/63" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 63</a><a href="/reader/white-dragon-duke-pendragon/64" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 64</a><a href="/reader/white-dragon-duke-pendragon/65" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 65</a><a href="/reader/white-dragon-duke-pendragon/66" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 66</a><a href="/reader/white-dragon-duke-pendragon/67" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 67</a><a href="/reader/white-dragon-duke-pendragon/68" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 68</a><a href="/reader/white-dragon-duke-pendragon/69" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 69</a><a href="/reader/white-dragon-duke-pendragon/70" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 70</a><a href="/reader/white-dragon-duke-pendragon/71" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 71</a><a href="/reader/white-dragon-duke-pendragon/72" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 72</a><a href="/reader/white-dragon-duke-pendragon/73" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 73</a><a href="/reader/white-dragon-duke-pendragon/74" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 74</a><a href="/reader/white-dragon-duke-pendragon/75" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 75</a><a href="/reader/white-dragon-duke-pendragon/76" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 76</a><a href="/reader/white-dragon-duke-pendragon/77" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 77</a><a href="/reader/white-dragon-duke-pendragon/78" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 78</a><a href="/reader/white-dragon-duke-pendragon/79" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 79</a><a href="/reader/white-dragon-duke-pendragon/80" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 80</a><a href="/reader/white-dragon-duke-pendragon/81" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 81</a><a href="/reader/white-dragon-duke-pendragon/82" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 82</a><a href="/reader/white-dragon-duke-pendragon/83" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 83</a><a href="/reader/white-dragon-duke-pendragon/84" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 84</a><a href="/reader/white-dragon-duke-pendragon/85" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 85</a><a href="/reader/white-dragon-duke-pendragon/86" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 86</a><a href="/reader/white-dragon-duke-pendragon/87" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 87</a><a href="/reader/white-dragon-duke-pendragon/88" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 88</a><a href="/reader/white-dragon-duke-pendragon/89" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 89</a><a href="/reader/white-dragon-duke-pendragon/90" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 90</a><a href="/reader/white-dragon-duke-pendragon/91" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 91</a><a href="/reader/white-dragon-duke-pendragon/92" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 92</a><a href="/reader/white-dragon-duke-pendragon/93" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 93</a><a href="/reader/white-dragon-duke-pendragon/94" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 94</a><a href="/reader/white-dragon-duke-pendragon/95" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 95</a><a href="/reader/white-dragon-duke-pendragon/96" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 96</a><a href="/reader/white-dragon-duke-pendragon/97" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 97</a><a href="/reader/white-dragon-duke-pendragon/98" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 98</a><a href="/reader/white-dragon-duke-pendragon/99" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 99</a><a href="/reader/white-dragon-duke-pendragon/100" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 100</a><a href="/reader/white-dragon-duke-pendragon/101" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 101</a><a href="/reader/white-dragon-duke-pendragon/102" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 102</a><a href="/reader/white-dragon-duke-pendragon/103" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 103</a><a href="/reader/white-dragon-duke-pendragon/104" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 104</a><a href="/reader/white-dragon-duke-pendragon/105" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 105</a><a href="/reader/white-dragon-duke-pendragon/106" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 106</a><a href="/reader/white-dragon-duke-pendragon/107" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 107</a><a href="/reader/white-dragon-duke-pendragon/108" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 108</a><a href="/reader/white-dragon-duke-pendragon/109" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 109</a><a href="/reader/white-dragon-duke-pendragon/110" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 110</a><a href="/reader/white-dragon-duke-pendragon/111" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 111</a><a href="/reader/white-dragon-duke-pendragon/112" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 112</a><a href="/reader/white-dragon-duke-pendragon/113" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 113</a><a href="/reader/white-dragon-duke-pendragon/114" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 114</a><a href="/reader/white-dragon-duke-pendragon/115" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 115</a><a href="/reader/white-dragon-duke-pendragon/116" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 116</a><a href="/reader/white-dragon-duke-pendragon/117" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 117</a><a href="/reader/white-dragon-duke-pendragon/118" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 118</a><a href="/reader/white-dragon-duke-pendragon/119" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 119</a><a href="/reader/white-dragon-duke-pendragon/120" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 120</a><a href="/reader/white-dragon-duke-pendragon/121" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 121</a><a href="/reader/white-dragon-duke-pendragon/122" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 122</a><a href="/reader/white-dragon-duke-pendragon/123" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 123</a><a href="/reader/white-dragon-duke-pendragon/124" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-[var(--color-brand-primary,#E50914)] font-bold bg-white/5">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 124</a><a href="/reader/white-dragon-duke-pendragon/125" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 125</a><a href="/reader/white-dragon-duke-pendragon/126" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 126</a><a href="/reader/white-dragon-duke-pendragon/127" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 127</a><a href="/reader/white-dragon-duke-pendragon/128" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 128</a><a href="/reader/white-dragon-duke-pendragon/129" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 129</a><a href="/reader/white-dragon-duke-pendragon/130" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 130</a><a href="/reader/white-dragon-duke-pendragon/131" class="block px-4 py-3 text-sm border-b border-white/5 hover:bg-white/5 last:border-0 transition-colors text-gray-300">
+Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 131</a></div></div><a href="/reader/white-dragon-duke-pendragon/125" class="w-9 h-9 rounded-full flex items-center justify-center bg-[var(--color-brand-primary,#E50914)] hover:bg-[var(--color-brand-primary-dark,#b20710)] text-white shadow-lg transition-colors" title="Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ Ã˜Â§Ã™Â„Ã˜ÂªÃ˜Â§Ã™Â„Ã™ÂŠ"><i class="fas fa-chevron-left text-sm"></i></a></div><button id="settings-open-btn" class="w-9 h-9 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-colors"><i class="fas fa-cog text-lg"></i></button></div></header><main id="reader-content" class="reader-vertical pt-16 pb-20"><div id="chapter-header" class="w-full max-w-xl mx-auto p-6 text-center mb-8"><h1 class="text-xl md:text-2xl font-black text-white mb-2 leading-snug">White Dragon Duke: Pendragon</h1><div class="flex items-center justify-center gap-3 text-sm"><span class="text-[var(--color-brand-primary,#E50914)] font-bold">Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„ 124</span></div></div><astro-island uid="2u2GRa" prefix="r0" component-url="/_astro/ChapterImageViewer.DrUFC8lA.js" component-export="default" renderer-url="/_astro/client.Di_8Mrau.js" props="{&quot;imageUrls&quot;:[1,[[0,&quot;/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/080ee583c4f4390040508ec49dbb3b68?v=1&quot;],[0,&quot;/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/e2fb2fac7d41376cf5e01f9a5cf20da1?v=1&quot;],[0,&quot;/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/33455ee5468b04935091fde95560e26e?v=1&quot;],[0,&quot;/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/fd6937bc5c568c1067900d0de62a1bc6?v=1&quot;],[0,&quot;/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/1088928f06d84e91e4a3d18809ac108c?v=1&quot;],[0,&quot;/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/b088efb71921f041ec76cb720b9eca65?v=1&quot;],[0,&quot;/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/4053114433e52080447dea8b56be7d01?v=1&quot;],[0,{&quot;url&quot;:[0,&quot;/api/chapters/stream/646d2b04776369d179b8b7f4c031deadbeefcec6fec8dd8e02921215b3955c81/72f24eefe24da88db58ebac3836aa8e6?v=1&quot;],&quot;isTrap&quot;:[0,true],&quot;id&quot;:[0,&quot;img-1cceb313&quot;]}],[0,&quot;/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/d7b8cb740e77bf261a1c8dc3198ae4d4?v=1&quot;],[0,&quot;/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/36ef2b871cac9520a469eedcff6eb24e?v=1&quot;],[0,&quot;/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/d02165df57812b34343f8fb5505905c8?v=1&quot;],[0,&quot;/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/60329864ce57fdb376bfc72d4e7b1bc8?v=1&quot;],[0,&quot;/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/08d3062d0058494546842c540a6d1065?v=1&quot;],[0,&quot;/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/0837fc0851121aea845bd66c1762d31f?v=1&quot;],[0,&quot;/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/f897c94c88cc7bba0ee830734e24de56?v=1&quot;]]],&quot;error&quot;:[0,null],&quot;mangaSlug&quot;:[0,&quot;white-dragon-duke-pendragon&quot;],&quot;chapterNumber&quot;:[0,&quot;124&quot;]}" ssr client="load" opts="{&quot;name&quot;:&quot;ChapterImageViewer&quot;,&quot;value&quot;:true}" await-children><div class="select-none flex flex-col items-center w-full"><div class="manga-page w-full max-w-[800px] relative min-h-[50vh] bg-[#111]" data-page="1"><div class="skeleton absolute inset-0 z-10" aria-hidden="true"></div><img class="w-full h-auto block relative z-20 opacity-0 transition-opacity duration-500 ease-in-out" alt="Ã˜ÂµÃ™ÂÃ˜Â­Ã˜Â© 1" src="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/080ee583c4f4390040508ec49dbb3b68?v=1" data-url="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/080ee583c4f4390040508ec49dbb3b68?v=1" loading="eager" decoding="async" fetchpriority="high" draggable="false"/></div><div class="manga-page w-full max-w-[800px] relative min-h-[50vh] bg-[#111]" data-page="2"><div class="skeleton absolute inset-0 z-10" aria-hidden="true"></div><img class="w-full h-auto block relative z-20 opacity-0 transition-opacity duration-500 ease-in-out" alt="Ã˜ÂµÃ™ÂÃ˜Â­Ã˜Â© 2" src="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/e2fb2fac7d41376cf5e01f9a5cf20da1?v=1" data-url="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/e2fb2fac7d41376cf5e01f9a5cf20da1?v=1" loading="eager" decoding="async" fetchpriority="high" draggable="false"/></div><div class="manga-page w-full max-w-[800px] relative min-h-[50vh] bg-[#111]" data-page="3"><div class="skeleton absolute inset-0 z-10" aria-hidden="true"></div><img class="w-full h-auto block relative z-20 opacity-0 transition-opacity duration-500 ease-in-out" alt="Ã˜ÂµÃ™ÂÃ˜Â­Ã˜Â© 3" src="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/33455ee5468b04935091fde95560e26e?v=1" data-url="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/33455ee5468b04935091fde95560e26e?v=1" loading="eager" decoding="async" fetchpriority="high" draggable="false"/></div><div class="manga-page w-full max-w-[800px] relative min-h-[50vh] bg-[#111]" data-page="4"><div class="skeleton absolute inset-0 z-10" aria-hidden="true"></div><img class="w-full h-auto block relative z-20 opacity-0 transition-opacity duration-500 ease-in-out" alt="Ã˜ÂµÃ™ÂÃ˜Â­Ã˜Â© 4" data-src="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/fd6937bc5c568c1067900d0de62a1bc6?v=1" data-url="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/fd6937bc5c568c1067900d0de62a1bc6?v=1" loading="lazy" decoding="async" draggable="false"/></div><div class="manga-page w-full max-w-[800px] relative min-h-[50vh] bg-[#111]" data-page="5"><div class="skeleton absolute inset-0 z-10" aria-hidden="true"></div><img class="w-full h-auto block relative z-20 opacity-0 transition-opacity duration-500 ease-in-out" alt="Ã˜ÂµÃ™ÂÃ˜Â­Ã˜Â© 5" data-src="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/1088928f06d84e91e4a3d18809ac108c?v=1" data-url="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/1088928f06d84e91e4a3d18809ac108c?v=1" loading="lazy" decoding="async" draggable="false"/></div><div class="manga-page w-full max-w-[800px] relative min-h-[50vh] bg-[#111]" data-page="6"><div class="skeleton absolute inset-0 z-10" aria-hidden="true"></div><img class="w-full h-auto block relative z-20 opacity-0 transition-opacity duration-500 ease-in-out" alt="Ã˜ÂµÃ™ÂÃ˜Â­Ã˜Â© 6" data-src="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/b088efb71921f041ec76cb720b9eca65?v=1" data-url="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/b088efb71921f041ec76cb720b9eca65?v=1" loading="lazy" decoding="async" draggable="false"/></div><div class="manga-page w-full max-w-[800px] relative min-h-[50vh] bg-[#111]" data-page="7"><div class="skeleton absolute inset-0 z-10" aria-hidden="true"></div><img class="w-full h-auto block relative z-20 opacity-0 transition-opacity duration-500 ease-in-out" alt="Ã˜ÂµÃ™ÂÃ˜Â­Ã˜Â© 7" data-src="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/4053114433e52080447dea8b56be7d01?v=1" data-url="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/4053114433e52080447dea8b56be7d01?v=1" loading="lazy" decoding="async" draggable="false"/></div><div class="manga-page w-full max-w-[800px] relative min-h-[50vh] bg-[#111]" data-page="8" style="position:absolute;top:-99999px;left:-99999px;opacity:0;z-index:-1;pointer-events:none"><div class="skeleton absolute inset-0 z-10" aria-hidden="true"></div><img class="w-full h-auto block relative z-20 opacity-0 transition-opacity duration-500 ease-in-out" alt="Ã˜ÂµÃ™ÂÃ˜Â­Ã˜Â© 8" data-zoom-src="https://api.mangatek.com/api/chapters/stream/646d2b04776369d179b8b7f4c031deadbeefcec6fec8dd8e02921215b3955c81/72f24eefe24da88db58ebac3836aa8e6?v=1" data-url="https://api.mangatek.com/api/chapters/stream/646d2b04776369d179b8b7f4c031deadbeefcec6fec8dd8e02921215b3955c81/72f24eefe24da88db58ebac3836aa8e6?v=1" data-ix="1" loading="lazy" decoding="async" draggable="false"/></div><div class="manga-page w-full max-w-[800px] relative min-h-[50vh] bg-[#111]" data-page="9"><div class="skeleton absolute inset-0 z-10" aria-hidden="true"></div><img class="w-full h-auto block relative z-20 opacity-0 transition-opacity duration-500 ease-in-out" alt="Ã˜ÂµÃ™ÂÃ˜Â­Ã˜Â© 9" data-src="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/d7b8cb740e77bf261a1c8dc3198ae4d4?v=1" data-url="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/d7b8cb740e77bf261a1c8dc3198ae4d4?v=1" loading="lazy" decoding="async" draggable="false"/></div><div class="manga-page w-full max-w-[800px] relative min-h-[50vh] bg-[#111]" data-page="10"><div class="skeleton absolute inset-0 z-10" aria-hidden="true"></div><img class="w-full h-auto block relative z-20 opacity-0 transition-opacity duration-500 ease-in-out" alt="Ã˜ÂµÃ™ÂÃ˜Â­Ã˜Â© 10" data-src="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/36ef2b871cac9520a469eedcff6eb24e?v=1" data-url="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/36ef2b871cac9520a469eedcff6eb24e?v=1" loading="lazy" decoding="async" draggable="false"/></div><div class="manga-page w-full max-w-[800px] relative min-h-[50vh] bg-[#111]" data-page="11"><div class="skeleton absolute inset-0 z-10" aria-hidden="true"></div><img class="w-full h-auto block relative z-20 opacity-0 transition-opacity duration-500 ease-in-out" alt="Ã˜ÂµÃ™ÂÃ˜Â­Ã˜Â© 11" data-src="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/d02165df57812b34343f8fb5505905c8?v=1" data-url="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/d02165df57812b34343f8fb5505905c8?v=1" loading="lazy" decoding="async" draggable="false"/></div><div class="manga-page w-full max-w-[800px] relative min-h-[50vh] bg-[#111]" data-page="12"><div class="skeleton absolute inset-0 z-10" aria-hidden="true"></div><img class="w-full h-auto block relative z-20 opacity-0 transition-opacity duration-500 ease-in-out" alt="Ã˜ÂµÃ™ÂÃ˜Â­Ã˜Â© 12" data-src="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/60329864ce57fdb376bfc72d4e7b1bc8?v=1" data-url="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/60329864ce57fdb376bfc72d4e7b1bc8?v=1" loading="lazy" decoding="async" draggable="false"/></div><div class="manga-page w-full max-w-[800px] relative min-h-[50vh] bg-[#111]" data-page="13"><div class="skeleton absolute inset-0 z-10" aria-hidden="true"></div><img class="w-full h-auto block relative z-20 opacity-0 transition-opacity duration-500 ease-in-out" alt="Ã˜ÂµÃ™ÂÃ˜Â­Ã˜Â© 13" data-src="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/08d3062d0058494546842c540a6d1065?v=1" data-url="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/08d3062d0058494546842c540a6d1065?v=1" loading="lazy" decoding="async" draggable="false"/></div><div class="manga-page w-full max-w-[800px] relative min-h-[50vh] bg-[#111]" data-page="14"><div class="skeleton absolute inset-0 z-10" aria-hidden="true"></div><img class="w-full h-auto block relative z-20 opacity-0 transition-opacity duration-500 ease-in-out" alt=" Ã˜ÂµÃ™ÂÃ˜Â­Ã˜Â© 14" data-src="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/0837fc0851121aea845bd66c1762d31f?v=1" data-url="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/0837fc0851121aea845bd66c1762d31f?v=1" loading="lazy" decoding="async" draggable="false"/></div><div class="manga-page w-full max-w-[800px] relative min-h-[50vh] bg-[#111]" data-page="15"><div class="skeleton absolute inset-0 z-10" aria-hidden="true"></div><img class="w-full h-auto block relative z-20 opacity-0 transition-opacity duration-500 ease-in-out" alt="Ã˜ÂµÃ™ÂÃ˜Â­Ã˜Â© 15" data-src="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/f897c94c88cc7bba0ee830734e24de56?v=1" data-url="https://api.mangatek.com/api/chapters/stream/01f7247a2293f149c90ea9fa3f1d4485/f897c94c88cc7bba0ee830734e24de56?v=1" loading="lazy" decoding="async" draggable="false"/></div></div><!--astro:end--></astro-island><!-- 
+  Trap Image
+  Hidden from users but visible in DOM for scrapers.
+  Identical class to real pages.
+--><script type="50a303a1e3b15701ab8156ec-text/javascript">(function(){const fpEndpoint = "https://api.mangatek.com/api/media/analytics";
+const selectedTrapUrl = "/api/chapters/stream/646d2b04776369d179b8b7f4c031deadbeefcec6fec8dd8e02921215b3955c81/72f24eefe24da88db58ebac3836aa8e6?v=1";
+const trapId = "img-1cceb313";
+
+(function() {
+  'use strict';
+  
+  // Fingerprint collection
+  async function collectFingerprint() {
+    const fp = {};
+    
+    try {
+      // Basic browser info
+      fp.screenResolution = `${screen.width}x${screen.height}`;
+      fp.colorDepth = screen.colorDepth;
+      fp.timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      fp.timezoneOffset = new Date().getTimezoneOffset();
+      fp.language = navigator.language || navigator.userLanguage;
+      fp.languages = navigator.languages ? navigator.languages.join(',') : '';
+      fp.platform = navigator.platform;
+      fp.hardwareConcurrency = navigator.hardwareConcurrency || 0;
+      fp.deviceMemory = navigator.deviceMemory || 0;
+      fp.maxTouchPoints = navigator.maxTouchPoints || 0;
+      fp.cookieEnabled = navigator.cookieEnabled;
+      fp.doNotTrack = navigator.doNotTrack || 'unknown';
+      
+      // WebGL fingerprint
+      try {
+        const canvas = document.createElement('canvas');
+        const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+        if (gl) {
+          const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+          if (debugInfo) {
+            fp.webglVendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
+            fp.webglRenderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
+          }
+        }
+      } catch (e) {}
+      
+      // Canvas fingerprint (hash)
+      try {
+        const canvas = document.createElement('canvas');
+        canvas.width = 200;
+        canvas.height = 50;
+        const ctx = canvas.getContext('2d');
+        ctx.textBaseline = 'top';
+        ctx.font = '14px Arial';
+        ctx.fillStyle = '#f60';
+        ctx.fillRect(125, 1, 62, 20);
+        ctx.fillStyle = '#069';
+        ctx.fillText('Mangatek FP', 2, 15);
+        ctx.fillStyle = 'rgba(102, 204, 0, 0.7)';
+        ctx.fillText('Mangatek FP', 4, 17);
+        fp.canvasHash = hashCode(canvas.toDataURL());
+      } catch (e) {}
+      
+      // Audio context fingerprint
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (AudioContext) {
+          const audioCtx = new AudioContext();
+          fp.audioSampleRate = audioCtx.sampleRate;
+          fp.audioChannels = audioCtx.destination.maxChannelCount;
+          audioCtx.close();
+        }
+      } catch (e) {}
+      
+      // Headless browser detection
+      fp.isHeadless = detectHeadless();
+      fp.isBot = detectBot();
+      
+      // Plugins
+      try {
+        const plugins = [];
+        for (let i = 0; i < navigator.plugins.length && i < 5; i++) {
+          plugins.push(navigator.plugins[i].name);
+        }
+        fp.plugins = plugins.join(',');
+      } catch (e) {}
+      
+      // Generate hash of all components
+      fp.hash = generateFpHash(fp);
+      
+    } catch (e) {
+      console.error('[FP] Error collecting fingerprint:', e);
+    }
+    
+    return fp;
+  }
+  
+  // Simple hash function
+  function hashCode(str) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      const char = str.charCodeAt(i);
+      hash = ((hash << 5) - hash) + char;
+      hash = hash & hash;
+    }
+    return Math.abs(hash).toString(16);
+  }
+  
+  // Generate fingerprint hash
+  function generateFpHash(fp) {
+    const components = [
+      fp.screenResolution,
+      fp.colorDepth,
+      fp.timezone,
+      fp.language,
+      fp.platform,
+      fp.webglRenderer,
+      fp.canvasHash,
+      fp.audioSampleRate
+    ].filter(Boolean).join('|');
+    
+    return hashCode(components);
+  }
+  
+  // Headless browser detection
+  function detectHeadless() {
+    const checks = [];
+    
+    // Check for headless Chrome
+    if (navigator.webdriver) checks.push('webdriver');
+    
+    // Check for PhantomJS
+    if (window._phantom || window.callPhantom) checks.push('phantom');
+    
+    // Check for Nightmare
+    if (window.__nightmare) checks.push('nightmare');
+    
+    // Check for Selenium
+    if (window.document.__selenium_unwrapped ||
+        window.document.__webdriver_evaluate ||
+        window.document.__driver_evaluate) checks.push('selenium');
+    
+    // Check for missing plugins in headless
+    if (navigator.plugins.length === 0) checks.push('no-plugins');
+    
+    // Check for missing languages
+    if (!navigator.languages || navigator.languages.length === 0) checks.push('no-languages');
+    
+    // Chrome headless specific
+    if (/HeadlessChrome/.test(navigator.userAgent)) checks.push('headless-chrome');
+    
+    // Check for automation flags
+    if (navigator.webdriver === true) checks.push('webdriver-flag');
+    
+    return checks.length > 0;
+  }
+  
+  // Bot detection
+  function detectBot() {
+    const ua = navigator.userAgent.toLowerCase();
+    const botPatterns = [
+      'bot', 'crawl', 'spider', 'scrape', 'wget', 'curl',
+      'python', 'java', 'perl', 'ruby', 'go-http', 'nodejs',
+      'puppeteer', 'playwright', 'selenium', 'headless',
+      'phantom', 'nightmare', 'splash', 'webdriver',
+      'scrapy', 'beautifulsoup', 'aiohttp', 'httpx',
+      'axios', 'node-fetch', 'got/', 'request/'
+    ];
+    
+    return botPatterns.some(pattern => ua.includes(pattern));
+  }
+  
+  // Store fingerprint in cookie for cloaking middleware
+  function storeFingerprintCookie(fpHash) {
+    try {
+      document.cookie = `_fp=${fpHash};path=/;max-age=31536000;SameSite=Lax`;
+    } catch (e) {}
+  }
+  
+  // Initialize
+  async function init() {
+    try {
+      // Collect fingerprint
+      const fp = await collectFingerprint();
+      
+      // Store hash in cookie for cloaking checks
+      if (fp.hash) {
+        storeFingerprintCookie(fp.hash);
+      }
+      
+      // Encode fingerprint for URL
+      const fpEncoded = btoa(JSON.stringify(fp));
+      
+      // Update trap image URL with fingerprint
+      const trapImg = document.getElementById(trapId);
+      if (trapImg) {
+        const trapUrl = trapImg.dataset.trapUrl;
+        // Only update src if we have a valid trap URL
+        if (trapUrl && trapUrl !== 'undefined') {
+          trapImg.src = `${trapUrl}&fp=${fpEncoded}`;
+        }
+      }
+      
+      // Also send to fingerprint collection endpoint (for cases where trap isn't triggered)
+      try {
+        fetch(fpEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(fp),
+          credentials: 'include',
+          keepalive: true
+        }).catch(() => {});
+      } catch (e) {}
+      
+    } catch (error) {
+      // Silent fail - don't alert scrapers
+    }
+  }
+  
+  // Run when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    // Small delay to avoid blocking main thread
+    setTimeout(init, 100);
+  }
+})();
+})();</script></main><footer id="reader-bottom-nav" class="reader-nav reader-nav-bottom safe-area-inset backdrop-blur-md bg-black/80 border-t border-white/5"><div class="h-16 px-4 max-w-4xl mx-auto flex items-center justify-between gap-4" dir="rtl"><div class="flex-1"><a href="/reader/white-dragon-duke-pendragon/123" class="flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm font-medium"><i class="fas fa-arrow-right text-xs"></i><span class="hidden sm:inline">Ã˜Â§Ã™Â„Ã˜Â³Ã˜Â§Ã˜Â¨Ã™Â‚</span></a></div><div class="flex items-center justify-center gap-3"><button id="report-btn-overlay" class="w-8 h-8 rounded-full bg-red-500/10 text-red-500 hover:bg-red-500 hover:text-white flex items-center justify-center transition-colors border border-red-500/20" title="Ã˜Â¥Ã˜Â¨Ã™Â„Ã˜Â§Ã˜Âº Ã˜Â¹Ã™Â† Ã™Â…Ã˜Â´Ã™ÂƒÃ™Â„Ã˜Â©"><i class="fas fa-exclamation-triangle text-xs"></i></button><div class="flex items-center gap-2 bg-[#181818] rounded-full p-1 pr-3 border border-zinc-800 shadow-lg"><button id="quick-play-btn" class="w-8 h-8 rounded-full bg-[var(--color-brand-primary,#E50914)] text-white flex items-center justify-center hover:bg-[var(--color-brand-primary-dark,#b20710)] transition-colors"><i class="fas fa-play text-xs ml-0.5"></i></button><div id="quick-speed-container" class="flex items-center gap-2 transition-all overflow-hidden" style="max-width: 0px; opacity: 0;"><input type="range" id="speed-slider" min="1" max="100" value="50" class="w-24 h-1.5 bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-[var(--color-brand-primary,#E50914)]"><span class="text-[10px] text-zinc-400 w-6 text-center" id="speed-value">50%</span></div><button id="quick-speed-btn" class="text-zinc-400 hover:text-white px-2 transition-colors"><i class="fas fa-tachometer-alt"></i></button></div><div class="hidden sm:flex items-center gap-2 text-xs font-bold text-zinc-500 bg-[#181818] px-3 py-1.5 rounded-full border border-zinc-800"><span class="text-[var(--color-brand-primary,#E50914)]" id="current-page">1</span><span>/</span><span class="text-white" id="total-pages">15</span></div></div><div class="flex-1 text-left"><a href="/reader/white-dragon-duke-pendragon/125" class="inline-flex items-center gap-2 bg-[var(--color-brand-primary,#E50914)] hover:bg-[var(--color-brand-primary-dark,#b20710)] text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg transition-colors"><span>Ã˜Â§Ã™Â„Ã˜ÂªÃ˜Â§Ã™Â„Ã™ÂŠ</span><i class="fas fa-arrow-left text-xs"></i></a></div></div></footer><div id="settings-overlay" class="reader-settings-overlay"><div id="settings-backdrop" class="reader-settings-backdrop"></div><div id="settings-panel" class="reader-settings-panel"><div class="reader-settings-handle sm:hidden"></div><div class="flex items-center justify-between px-4 py-3 border-b border-white/[0.06]"><span class="text-sm font-medium text-white">Ã˜Â§Ã™Â„Ã˜Â¥Ã˜Â¹Ã˜Â¯Ã˜Â§Ã˜Â¯Ã˜Â§Ã˜Âª</span><button id="settings-close-btn" class="w-8 h-8 rounded-lg flex items-center justify-center text-zinc-500 hover:text-white hover:bg-white/5"><i class="fas fa-times"></i></button></div><div class="reader-settings-section"><div class="flex items-center justify-between mb-2"><span class="text-xs text-zinc-500">Ã˜Â§Ã™Â„Ã˜ÂªÃ™Â‚Ã˜Â¯Ã™Â…</span><span class="text-xs text-white"><span id="settings-current-page">1</span> / 15</span></div><div class="progress-bar"><div id="settings-progress-bar" class="progress-bar-fill" style="width: 0%"></div></div></div><div class="reader-settings-section"><label class="reader-settings-label">Ã™Â…Ã™Â„Ã˜Â§Ã˜Â¡Ã™Â…Ã˜Â© Ã˜Â§Ã™Â„Ã˜ÂµÃ™ÂˆÃ˜Â±Ã˜Â©</label><div class="reader-settings-button-group"><button id="btn-fit-width" class="active">Ã˜Â¹Ã˜Â±Ã˜Â¶</button></div></div><div class="reader-settings-section"><label class="reader-settings-label">Ã˜Â§Ã™Â„Ã™Â…Ã˜Â³Ã˜Â§Ã™ÂÃ˜Â© Ã˜Â¨Ã™ÂŠÃ™Â† Ã˜Â§Ã™Â„Ã˜ÂµÃ™ÂÃ˜Â­Ã˜Â§Ã˜Âª</label><div class="reader-settings-button-group"><button id="btn-gap-none" class="active">Ã˜Â¨Ã˜Â¯Ã™ÂˆÃ™Â†</button><button id="btn-gap-small">Ã˜ÂµÃ˜ÂºÃ™ÂŠÃ˜Â±Ã˜Â©</button><button id="btn-gap-medium">Ã™Â…Ã˜ÂªÃ™ÂˆÃ˜Â³Ã˜Â·Ã˜Â©</button></div></div><div class="reader-settings-section"><div class="flex items-center justify-between"><label class="reader-settings-label mb-0">Ã˜Â§Ã™Â„Ã˜ÂªÃ™Â…Ã˜Â±Ã™ÂŠÃ˜Â± Ã˜Â§Ã™Â„Ã˜ÂªÃ™Â„Ã™Â‚Ã˜Â§Ã˜Â¦Ã™ÂŠ</label><button id="btn-auto-scroll-toggle" class="relative w-11 h-6 rounded-full bg-zinc-700 transition-colors"><span class="absolute top-0.5 right-0.5 w-5 h-5 rounded-full bg-white transition-transform"></span></button></div></div><div class="reader-settings-section"><div class="flex gap-2"><a href="/reader/white-dragon-duke-pendragon/123" class="flex-1 btn btn-secondary text-center text-sm"><i class="fas fa-arrow-right ml-1"></i>Ã˜Â§Ã™Â„Ã˜Â³Ã˜Â§Ã˜Â¨Ã™Â‚
+</a><a href="/reader/white-dragon-duke-pendragon/125" class="flex-1 btn btn-primary text-center text-sm">
+Ã˜Â§Ã™Â„Ã˜ÂªÃ˜Â§Ã™Â„Ã™ÂŠ<i class="fas fa-arrow-left mr-1"></i></a></div></div></div></div></div><div class="w-full max-w-4xl mx-auto px-4 py-6 flex flex-wrap gap-4 items-center justify-center"><button id="report-btn-static" class="flex items-center gap-2 text-sm font-bold text-red-500 hover:text-white transition-colors bg-red-500/10 hover:bg-red-500 px-6 py-3 rounded-full border border-red-500/20 shadow-lg shadow-red-900/10"><i class="fas fa-exclamation-triangle"></i><span>Ã˜Â§Ã™Â„Ã˜Â¥Ã˜Â¨Ã™Â„Ã˜Â§Ã˜Âº Ã˜Â¹Ã™Â† Ã™Â…Ã˜Â´Ã™ÂƒÃ™Â„Ã˜Â© Ã™ÂÃ™ÂŠ Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™Â„</span></button><a href="https://discord.gg/YU35cXTVej" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-2 text-sm font-bold text-white transition-colors bg-[#5865F2]/10 hover:bg-[#5865F2] px-6 py-3 rounded-full border border-[#5865F2]/20 shadow-lg shadow-[#5865F2]/10"><i class="fab fa-discord text-[#5865F2] group-hover:text-white transition-colors"></i><span>Ã˜Â§Ã™Â†Ã˜Â¶Ã™Â… Ã˜Â¥Ã™Â„Ã™Â‰ Ã˜Â¯Ã™ÂŠÃ˜Â³Ã™ÂƒÃ™ÂˆÃ˜Â±Ã˜Â¯</span></a></div><div class="w-full max-w-4xl mx-auto px-4 py-4"><div class="bg-zinc-900/60 border border-zinc-800 rounded-lg p-4 flex flex-wrap items-center justify-center gap-4"><a href="https://64tools.com/" target="_blank" rel="noopener" class="flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition-colors group"><i class="fas fa-external-link-alt text-xs opacity-50 group-hover:opacity-100"></i><span>64tools</span></a></div></div><div class="my-8 px-4 max-w-4xl mx-auto" data-astro-cid-7bghifin> <h2 class="text-2xl font-bold text-white mb-4 flex items-center" data-astro-cid-7bghifin> <i class="fas fa-comments text-brand ml-2" data-astro-cid-7bghifin></i>
+Ã˜Â§Ã™Â„Ã˜ÂªÃ˜Â¹Ã™Â„Ã™ÂŠÃ™Â‚Ã˜Â§Ã˜Âª (0)
+</h2> <div class="bg-[#181818] backdrop-blur-sm rounded-xl p-4 border border-zinc-700/50 mb-6 text-center" data-astro-cid-7bghifin> <p class="text-gray-300 mb-3" data-astro-cid-7bghifin>Ã˜Â³Ã˜Â¬Ã™Â„ Ã˜Â§Ã™Â„Ã˜Â¯Ã˜Â®Ã™ÂˆÃ™Â„ Ã™Â„Ã˜ÂªÃ˜ÂªÃ™Â…Ã™ÂƒÃ™Â† Ã™Â…Ã™Â† Ã˜Â¥Ã˜Â¶Ã˜Â§Ã™ÂÃ˜Â© Ã˜ÂªÃ˜Â¹Ã™Â„Ã™ÂŠÃ™Â‚</p> <a href="/login" class="bg-brand text-white px-6 py-2 rounded-lg transition-colors duration-300 font-medium inline-block shadow-lg hover:opacity-90" data-astro-cid-7bghifin>Ã˜ÂªÃ˜Â³Ã˜Â¬Ã™ÂŠÃ™Â„ Ã˜Â¯Ã˜Â®Ã™ÂˆÃ™Â„</a> </div> <div id="commentsContainer" class="space-y-4" data-astro-cid-7bghifin> <div class="bg-[#181818] backdrop-blur-sm rounded-xl p-4 border border-zinc-700/50 text-center" data-astro-cid-7bghifin> <p class="text-gray-400" data-astro-cid-7bghifin>Ã™Â„Ã˜Â§ Ã˜ÂªÃ™ÂˆÃ˜Â¬Ã˜Â¯ 
+ Ã˜ÂªÃ˜Â¹Ã™Â„Ã™ÂŠÃ™Â‚Ã˜Â§Ã˜Âª Ã˜Â­Ã˜ÂªÃ™Â‰ Ã˜Â§Ã™Â„Ã˜Â¢Ã™Â†.
+ Ã™ÂƒÃ™Â† Ã˜Â£Ã™ÂˆÃ™Â„ Ã™Â…Ã™Â† Ã™ÂŠÃ˜Â¹Ã™Â„Ã™Â‚!</p> </div> </div>  </div> <script type="50a303a1e3b15701ab8156ec-module" src="/_astro/Comments.astro_astro_type_script_index_0_lang.BzLdBHpM.js"></script> <div class="w-full py-8 pb-32 flex flex-col items-center justify-center text-zinc-700 gap-2" dir="rtl"><div class="flex items-center gap-2"><img src="/Logo/mangatek_logo.png" alt="Logo" class="w-6 h-6 opacity-50 grayscale"><span class="text-sm font-bold opacity-50">Ã™Â‚Ã˜Â§Ã˜Â±Ã˜Â¦ Ã™Â…Ã˜Â§Ã™Â†Ã˜Â¬Ã˜Â§Ã˜ÂªÃ™Âƒ</span></div><p class="text-xs opacity-30">Ã™Â…Ã˜ÂµÃ™Â…Ã™Â… Ã™Â„Ã˜ÂªÃ˜Â¬Ã˜Â±Ã˜Â¨Ã˜Â© Ã™Â‚Ã˜Â±Ã˜Â§Ã˜Â¡Ã˜Â© Ã™Â…Ã˜Â«Ã˜Â§Ã™Â„Ã™ÂŠÃ˜Â©</p></div><div id="report-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 opacity-0 transition-opacity duration-300" role="dialog" aria-modal="true"><div class="w-full max-w-md bg-[#181818] rounded-xl border border-zinc-700 shadow-2xl overflow-hidden transform scale-95 transition-transform duration-300" dir="rtl"><div class="px-6 py-4 border-b border-zinc-700/50 flex items-center justify-between"><h3 class="text-lg font-bold text-white flex items-center gap-2"><i class="fas fa-flag text-red-500"></i>
+Ã˜Â§Ã™Â„Ã˜Â¥Ã˜Â¨Ã™Â„Ã˜Â§Ã˜Âº Ã˜Â¹Ã™Â† Ã™Â…Ã˜Â´Ã™ÂƒÃ™Â„Ã˜Â©
+</h3><button id="report-close-btn" class="text-zinc-400 hover:text-white transition-colors w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white/5"><i class="fas fa-times"></i></button></div><form id="report-form" class="p-6 space-y-4"><div class="space-y-2"><label for="report-reason" class="block text-xs font-bold text-gray-400 uppercase tracking-wider">Ã™Â†Ã™ÂˆÃ˜Â¹ Ã˜Â§Ã™Â„Ã™Â…Ã˜Â´Ã™ÂƒÃ™Â„Ã˜Â©</label><div class="relative"><select id="report-reason" required class="w-full bg-[#0a0a0a] border border-zinc-700 rounded-lg pl-3 pr-10 py-3 text-white focus:outline-none focus:border-[var(--color-brand-primary,#E50914)] focus:ring-1 focus:ring-[var(--color-brand-primary,#E50914)] appearance-none cursor-pointer transition-colors text-sm"><option value="" disabled selected>Ã˜Â§Ã˜Â®Ã˜ÂªÃ˜Â± Ã˜Â§Ã™Â„Ã™Â…Ã˜Â´Ã™ÂƒÃ™Â„Ã˜Â©...</option><option value="missing_pages">Ã˜ÂµÃ™ÂˆÃ˜Â± Ã™Â†Ã˜Â§Ã™Â‚Ã˜ÂµÃ˜Â© / Ã™Â„Ã˜Â§ Ã˜ÂªÃ˜Â¹Ã™Â…Ã™Â„</option><option value="wrong_chapter">Ã™ÂÃ˜ÂµÃ™Â„ Ã˜Â®Ã˜Â§Ã˜Â·Ã™ÂŠÃ˜Â¡ / Ã™Â…Ã™ÂƒÃ˜Â±Ã˜Â±</option><option value="bad_quality">Ã˜Â¬Ã™ÂˆÃ˜Â¯Ã˜Â© Ã˜Â³Ã™ÂŠÃ˜Â¦Ã˜Â© / Ã˜ÂºÃ™ÂŠÃ˜Â± Ã™Â…Ã™Â‚Ã˜Â±Ã™ÂˆÃ˜Â¡Ã˜Â©</option><option value="translation_errors">Ã˜Â£Ã˜Â®Ã˜Â·Ã˜Â§Ã˜Â¡ Ã™ÂÃ™ÂŠ Ã˜Â§Ã™Â„Ã˜ÂªÃ˜Â±Ã˜Â¬Ã™Â…Ã˜Â©</option><option value="out_of_order">Ã˜ÂµÃ™ÂÃ˜Â­Ã˜Â§Ã˜Âª Ã˜ÂºÃ™ÂŠÃ˜Â± Ã™Â…Ã˜Â±Ã˜ÂªÃ˜Â¨Ã˜Â©</option><option value="other">Ã˜Â³Ã˜Â¨Ã˜Â¨ Ã˜Â¢Ã˜Â®Ã˜Â±</option></select><div class="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none text-zinc-500"><i class="fas fa-chevron-down text-xs"></i></div></div></div><div class="space-y-2"><label for="report-desc" class="block text-xs font-bold text-gray-400 uppercase tracking-wider">Ã˜ÂªÃ™ÂÃ˜Â§Ã˜ÂµÃ™ÂŠÃ™Â„ (Ã˜Â§Ã˜Â®Ã˜ÂªÃ™ÂŠÃ˜Â§Ã˜Â±Ã™ÂŠ)</label><textarea id="report-desc" rows="3" class="w-full bg-[#0a0a0a] border border-zinc-700 rounded-lg px-3 py-3 text-white focus:outline-none focus:border-[var(--color-brand-primary,#E50914)] focus:ring-1 focus:ring-[var(--color-brand-primary,#E50914)] placeholder-zinc-700 text-sm resize-none transition-colors" placeholder="Ã˜Â§Ã˜Â´Ã˜Â±Ã˜Â­ Ã˜Â§Ã™Â„Ã™Â…Ã˜Â´Ã™ÂƒÃ™Â„Ã˜Â©..."></textarea></div><div id="report-feedback" class="hidden p-3 rounded-lg text-xs font-bold text-center"></div><div class="pt-2"><button type="submit" id="report-submit-btn" class="w-full py-3 rounded-lg text-sm font-bold text-white bg-[var(--color-brand-primary,#E50914)] hover:bg-[var(--color-brand-primary-dark,#b20710)] transition-all flex items-center justify-center gap-2 shadow-lg shadow-red-900/20 active:scale-[0.98]"><span>Ã˜Â¥Ã˜Â±Ã˜Â³Ã˜Â§Ã™Â„ Ã˜Â§Ã™Â„Ã˜Â¨Ã™Â„Ã˜Â§Ã˜Âº</span><i class="fas fa-paper-plane text-xs"></i></button></div></form></div></div> <div id="cookie-consent" class="fixed bottom-0 left-0 right-0 z-50 bg-[var(--color-bg-elevated,#141414)] border-t border-[var(--color-border-main,#333)] shadow-[0_-10px_40px_rgba(0,0,0,0.5)] transform translate-y-full transition-transform duration-500 ease-in-out backdrop-blur-md bg-opacity-95"> <div class="max-w-7xl mx-auto px-6 py-6 md:py-8"> <div class="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-12"> <div class="flex-1 text-right w-full" dir="rtl"> <div class="flex items-center gap-3 mb-4"> <i class="fas fa-cookie-bite text-[var(--color-brand-primary,#E50914)] text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]"></i> <h3 class="text-white text-xl font-bold">Ã˜ÂªÃ˜Â¬Ã˜Â±Ã˜Â¨Ã˜Â© Ã™Â‚Ã˜Â±Ã˜Â§Ã˜Â¡Ã˜Â© Ã˜Â£Ã™ÂÃ˜Â¶Ã™Â„</h3> </div> <p class="text-gray-400 text-sm leading-relaxed mb-6 lg:max-w-3xl">
+Ã™Â†Ã˜Â³Ã˜ÂªÃ˜Â®Ã˜Â¯Ã™Â… Ã™Â…Ã™Â„Ã™ÂÃ˜Â§Ã˜Âª Ã˜ÂªÃ˜Â¹Ã˜Â±Ã™ÂŠÃ™Â Ã˜Â§Ã™Â„Ã˜Â§Ã˜Â±Ã˜ÂªÃ˜Â¨Ã˜Â§Ã˜Â· Ã™Â„Ã˜Â¶Ã™Â…Ã˜Â§Ã™Â† Ã˜Â­Ã˜ÂµÃ™ÂˆÃ™Â„Ã™Âƒ Ã˜Â¹Ã™Â„Ã™Â‰ Ã˜Â£Ã™ÂÃ˜Â¶Ã™Â„ Ã˜ÂªÃ˜Â¬Ã˜Â±Ã˜Â¨Ã˜Â© Ã™Â‚Ã˜Â±Ã˜Â§Ã˜Â¡Ã˜Â© Ã™Â…Ã™Â…Ã™ÂƒÃ™Â†Ã˜Â©Ã˜ÂŒ Ã™Â…Ã™Â† Ã˜Â­Ã™ÂÃ˜Â¸ Ã˜Â§Ã™Â„Ã™ÂÃ˜ÂµÃ™ÂˆÃ™Â„ Ã˜Â§Ã™Â„Ã˜ÂªÃ™ÂŠ Ã™Â‚Ã˜Â±Ã˜Â£Ã˜ÂªÃ™Â‡Ã˜Â§ Ã˜Â¥Ã™Â„Ã™Â‰ Ã˜ÂªÃ˜Â®Ã˜ÂµÃ™ÂŠÃ˜Âµ Ã˜Â§Ã™Â„Ã˜Â¥Ã˜Â¹Ã˜Â¯Ã˜Â§Ã˜Â¯Ã˜Â§Ã˜Âª Ã˜Â¨Ã™Â…Ã˜Â§ Ã™ÂŠÃ™Â†Ã˜Â§Ã˜Â³Ã˜Â¨Ã™Âƒ. Ã˜Â§Ã˜Â³Ã˜ÂªÃ™Â…Ã˜Â±Ã˜Â§Ã˜Â±Ã™Âƒ Ã™ÂÃ™ÂŠ Ã˜Â§Ã™Â„Ã˜ÂªÃ˜ÂµÃ™ÂÃ˜Â­ Ã™ÂŠÃ˜Â¹Ã™Â†Ã™ÂŠ Ã™Â…Ã™ÂˆÃ˜Â§Ã™ÂÃ™Â‚Ã˜ÂªÃ™Âƒ Ã˜Â¹Ã™Â„Ã™Â‰ Ã˜Â°Ã™Â„Ã™Âƒ.
+</p> <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-gray-300 text-xs font-medium"> <li class="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-md"> <i class="fas fa-check text-[var(--color-brand-primary,#E50914)]"></i> <span>Ã˜Â­Ã™ÂÃ˜Â¸ Ã˜ÂªÃ™Â‚Ã˜Â¯Ã™Â…Ã™Âƒ Ã˜ÂªÃ™Â„Ã™Â‚Ã˜Â§Ã˜Â¦Ã™ÂŠÃ˜Â§Ã™Â‹</span> </li> <li class="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-md"> <i class="fas fa-check text-[var(--color-brand-primary,#E50914)]"></i> <span>Ã˜Â­Ã™ÂÃ˜Â¸ Ã˜Â¥Ã˜Â¹Ã˜Â¯Ã˜Â§Ã˜Â¯Ã˜Â§Ã˜Âª Ã˜Â§Ã™Â„Ã™Â‚Ã˜Â±Ã˜Â§Ã˜Â¡Ã˜Â©</span> </li> <li class="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-md"> <i class="fas fa-check text-[var(--color-brand-primary,#E50914)]"></i> <span>Ã˜Â¬Ã™Â„Ã˜Â³Ã˜Â© Ã˜ÂªÃ˜Â³Ã˜Â¬Ã™ÂŠÃ™Â„ Ã˜Â¯Ã˜Â®Ã™ÂˆÃ™Â„ Ã˜Â£Ã˜Â·Ã™ÂˆÃ™Â„</span> </li> <li class="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-md"> <i class="fas fa-check text-[var(--color-brand-primary,#E50914)]"></i> <span>Ã˜ÂªÃ˜Â²Ã˜Â§Ã™Â…Ã™Â† Ã˜Â§Ã™Â„Ã™Â…Ã™ÂÃ˜Â¶Ã™Â„Ã˜Â§Ã˜Âª</span> </li> </ul> </div> <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto shrink-0"> <button id="accept-cookies" class="flex-1 lg:flex-none bg-[var(--color-brand-primary,#E50914)] hover:bg-[var(--color-brand-primary-dark,#b20710)] text-white px-8 py-3.5 rounded font-bold transition-all shadow-lg hover:shadow-[0_0_20px_rgba(229,9,20,0.4)] flex items-center justify-center gap-2 min-w-[160px]"> <i class="fas fa-check"></i> <span>Ã™Â…Ã™ÂˆÃ˜Â§Ã™ÂÃ™Â‚</span> </button> <button id="decline-cookies" class="flex-1 lg:flex-none bg-transparent hover:bg-white/5 text-gray-400 hover:text-white px-6 py-3.5 rounded border border-gray-600 hover:border-white transition-all flex items-center justify-center gap-2 min-w-[100px]"> <span>Ã˜Â±Ã™ÂÃ˜Â¶</span> </button> </div> </div> </div> </div> <script type="50a303a1e3b15701ab8156ec-module">document.addEventListener("DOMContentLoaded",function(){const e=localStorage.getItem("cookieConsent"),t=document.getElementById("cookie-consent");!e&&t&&setTimeout(()=>{t.classList.remove("translate-y-full")},500)});document.getElementById("accept-cookies")?.addEventListener("click",function(){localStorage.setItem("cookieConsent","accepted"),localStorage.setItem("cookieConsentDate",new Date().toISOString()),o(),console.log("Cookies accepted - Enhanced manga reading experience enabled"),typeof gtag<"u"&&gtag("consent","update",{analytics_storage:"granted",ad_storage:"granted"})});document.getElementById("decline-cookies")?.addEventListener("click",function(){localStorage.setItem("cookieConsent","declined"),localStorage.setItem("cookieConsentDate",new Date().toISOString()),o(),console.log("Cookies declined - Basic functionality only")});function o(){const e=document.getElementById("cookie-consent");e&&(e.classList.add("translate-y-full"),setTimeout(()=>{e.style.display="none"},500))}window.areCookiesAccepted=function(){return localStorage.getItem("cookieConsent")==="accepted"};window.resetCookieConsent=function(){localStorage.removeItem("cookieConsent"),localStorage.removeItem("cookieConsentDate"),location.reload()};</script> </main>  <button id="scroll-to-top" class="fixed bottom-24 right-6 w-11 h-11 rounded-full text-white shadow-lg opacity-0 transition-all duration-300 z-40 flex items-center justify-center translate-y-2 hover:translate-y-0" style="background-color: var(--color-brand-primary, #E50914);" aria-label="Ã˜Â§Ã™Â„Ã˜Â¹Ã™ÂˆÃ˜Â¯Ã˜Â© Ã˜Â¥Ã™Â„Ã™Â‰ Ã˜Â§Ã™Â„Ã˜Â£Ã˜Â¹Ã™Â„Ã™Â‰"> <i class="fas fa-chevron-up text-sm"></i> </button> <script type="50a303a1e3b15701ab8156ec-module">let o=0,l=0;document.addEventListener("scroll",()=>{const t=document.getElementById("scroll-to-top");if(!t)return;const e=window.pageYOffset||document.documentElement.scrollTop;e<o?l+=o-e:l=0,e>300&&l>500?(t.style.opacity="1",t.style.pointerEvents="auto"):(t.style.opacity="0",t.style.pointerEvents="none"),o=Math.max(0,e)},{passive:!0});document.getElementById("scroll-to-top")?.addEventListener("click",()=>{window.scrollTo({top:0,behavior:"smooth"})});</script> <script type="50a303a1e3b15701ab8156ec-text/javascript">
+    (function() {
+      // Track if overlay is shown to prevent duplicates
+      var rateLimitOverlayActive = false;
+      var rateLimitTimer = null;
+      
+      // Inject styles once
+      var style = document.createElement('style');
+      style.id = 'rate-limit-global-styles';
+      style.textContent = `
+        #rate-limit-overlay {
+          position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+          background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(10px);
+          display: flex; align-items: center; justify-content: center;
+          z-index: 999999; animation: rlFadeIn 0.3s ease;
+        }
+        @keyframes rlFadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .rate-limit-modal {
+          background: linear-gradient(145deg, #1a1a1a, #252525);
+          border: 1px solid var(--color-brand-primary, #E50914);
+          border-radius: 20px; padding: 40px 50px;
+          max-width: 420px; text-align: center; direction: rtl;
+          box-shadow: 0 25px 80px rgba(229, 9, 20, 0.4);
+          animation: rlSlideUp 0.4s ease;
+        }
+        @keyframes rlSlideUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        .rate-limit-icon { font-size: 56px; color: var(--color-brand-primary, #E50914); margin-bottom: 20px; animation: rlPulse 2s infinite; }
+        @keyframes rlPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.15); } }
+        .rate-limit-title { color: #fff; font-size: 26px; font-weight: bold; margin: 0 0 15px 0; font-family: 'Tajawal', sans-serif; }
+        .rate-limit-body { color: #aaa; font-size: 16px; line-height: 1.7; margin: 0 0 25px 0; font-family: 'Tajawal', sans-serif; }
+        .rate-limit-timer { background: rgba(229, 9, 20, 0.15); border: 1px solid rgba(229, 9, 20, 0.3); border-radius: 12px; padding: 15px 30px; display: inline-flex; gap: 10px; margin-bottom: 25px; }
+        .rate-limit-timer span { color: var(--color-brand-primary, #E50914); font-size: 20px; font-weight: bold; }
+        #rate-limit-countdown { font-size: 32px; min-width: 50px; }
+        .rate-limit-close { background: transparent; border: 2px solid #444; color: #777; padding: 12px 35px; border-radius: 10px; cursor: pointer; font-size: 15px; font-family: 'Tajawal', sans-serif; transition: all 0.3s; }
+        .rate-limit-close:hover { border-color: var(--color-brand-primary, #E50914); color: var(--color-brand-primary, #E50914); }
+      `;
+      document.head.appendChild(style);
+      
+      function showRateLimitOverlay(data) {
+        if (rateLimitOverlayActive) return;
+        rateLimitOverlayActive = true;
+        
+        var retrySeconds = (data && data.retryAfterSeconds) || 60;
+        var minutes = Math.ceil(retrySeconds / 60);
+        var title = (data && data.overlayMessage && data.overlayMessage.title) || 'Ã˜Â§Ã™Â†Ã˜ÂªÃ˜Â¸Ã˜Â± Ã™Â‚Ã™Â„Ã™ÂŠÃ™Â„Ã˜Â§Ã™Â‹';
+        var body = (data && data.overlayMessage && data.overlayMessage.body) || 
+                   'Ã™Â„Ã™Â‚Ã˜Â¯ Ã™Â‚Ã™Â…Ã˜Âª Ã˜Â¨Ã˜Â¥Ã˜Â±Ã˜Â³Ã˜Â§Ã™Â„ Ã˜Â·Ã™Â„Ã˜Â¨Ã˜Â§Ã˜Âª Ã™ÂƒÃ˜Â«Ã™ÂŠÃ˜Â±Ã˜Â© Ã™ÂÃ™ÂŠ Ã™ÂˆÃ™Â‚Ã˜Âª Ã™Â‚Ã˜ÂµÃ™ÂŠÃ˜Â±. Ã™ÂŠÃ˜Â±Ã˜Â¬Ã™Â‰ Ã˜Â§Ã™Â„Ã˜Â§Ã™Â†Ã˜ÂªÃ˜Â¸Ã˜Â§Ã˜Â± ' + minutes + ' Ã˜Â¯Ã™Â‚Ã™ÂŠÃ™Â‚Ã˜Â©.';
+        
+        var overlay = document.createElement('div');
+        overlay.id = 'rate-limit-overlay';
+        overlay.innerHTML = '<div class="rate-limit-modal">' +
+          '<div class="rate-limit-icon"><i class="fas fa-hourglass-half"></i></div>' +
+          '<h2 class="rate-limit-title">' + title + '</h2>' +
+          '<p class="rate-limit-body">' + body + '</p>' +
+          '<div class="rate-limit-timer"><span id="rate-limit-countdown">' + retrySeconds + '</span><span>Ã˜Â«Ã˜Â§Ã™Â†Ã™ÂŠÃ˜Â©</span></div>' +
+          '<button class="rate-limit-close" onclick="window.hideRateLimitOverlay()">Ã˜Â¥Ã˜ÂºÃ™Â„Ã˜Â§Ã™Â‚</button>' +
+          '</div>';
+        document.body.appendChild(overlay);
+        
+        var countdown = retrySeconds;
+        rateLimitTimer = setInterval(function() {
+          countdown--;
+          var el = document.getElementById('rate-limit-countdown');
+          if (el) el.textContent = countdown;
+          if (countdown <= 0) {
+            window.hideRateLimitOverlay();
+          }
+        }, 1000);
+      }
+      
+      window.hideRateLimitOverlay = function() {
+        if (rateLimitTimer) { clearInterval(rateLimitTimer); rateLimitTimer = null; }
+        var overlay = document.getElementById('rate-limit-overlay');
+        if (overlay) overlay.remove();
+        rateLimitOverlayActive = false;
+      };
+      
+      // Intercept all fetch requests
+      var originalFetch = window.fetch;
+      window.fetch = function() {
+        return originalFetch.apply(this, arguments).then(function(response) {
+          if (response.status === 429) {
+            response.clone().json().then(function(data) {
+              if (data && data.showOverlay) {
+                showRateLimitOverlay(data);
+              }
+            }).catch(function() {
+              showRateLimitOverlay({});
+            });
+          }
+          return response;
+        });
+      };
+    })();
+    </script> <script type="50a303a1e3b15701ab8156ec-module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","G-W8MD69ZT8X");</script> <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="50a303a1e3b15701ab8156ec-|49" defer></script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e66497adac9fb98',t:'MTc3NTIwMDU3Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"90218bd7c68a42319fec2de56e9b1a38","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body> </html><script type="50a303a1e3b15701ab8156ec-module" src="/_astro/_chapter_.astro_astro_type_script_index_0_lang.Bv4MdGib.js"></script>
+

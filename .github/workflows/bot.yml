@@ -1,0 +1,38 @@
+name: Nexus Auto-Updater Bot
+
+on:
+  schedule:
+    # سيقوم بالعمل كل 6 ساعات (4 مرات في اليوم)
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # زر يسمح لك بتشغيل البوت يدويا من واجهة جيت هاب متى شئت
+
+permissions:
+  contents: write
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: تحميل ملفات الموقع
+        uses: actions/checkout@v3
+
+      - name: تجهيز بيئة العمل (Python)
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: تثبيت المكتبات المطلوبة
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: تشغيل البوت لجلب الفصول الجديدة
+        run: |
+          python bot/run_once.py
+
+      - name: حفظ التغييرات ورفع الفصول الجديدة للموقع
+        run: |
+          git config --global user.name "Nexus Auto Bot"
+          git config --global user.email "bot@nexus.com"
+          git add data.js assets/covers/
+          git commit -m "تحديث تلقائي: جلب فصول وأغلفة جديدة [skip ci]" || echo "لا توجد تحديثات جديدة"
+          git push

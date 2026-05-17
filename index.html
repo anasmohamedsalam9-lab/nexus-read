@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nexus | اقرأ أقوى المانها والمانجا</title>
+    
+    <meta name="theme-color" content="#111111">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css?v=2.4">
+</head>
+<body class="dark-theme">
+
+    <div class="app-wrapper">
+        
+        <!-- Sticky Header Container -->
+        <header class="sticky-header" id="stickyHeader">
+            <!-- Navbar (Asura Style) -->
+            <nav class="asura-nav">
+                <div class="nav-container">
+                    
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+
+                    <a href="index.html" class="brand-logo" style="display:flex;align-items:center;">
+                        <img src="images/logo.png?v=2.6" alt="Nexus Logo" style="height: 35px; width: 35px; margin-right: 10px; border-radius: 5px;">
+                        <span class="logo-primary" style="color:#00ff88;">Nexus</span>
+                    </a>
+
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="index.html" class="active">الرئيسية <span class="en-sub">Home</span></a></li>
+                        <li><a href="browse.html">تصفح <span class="en-sub">Browse</span></a></li>
+                        <li><a href="shop.html">المتجر <span class="en-sub">Shop</span></a></li>
+                        <li><a href="#" class="cat-nav-btn" data-category="manhwa">المنهوا <span class="en-sub">Manhwa</span></a></li>
+                        <li><a href="#" class="cat-nav-btn" data-category="manga">المانجا <span class="en-sub">Manga</span></a></li>
+                        <li><a href="#" class="cat-nav-btn" data-category="comics">كوميكس <span class="en-sub">Comics</span></a></li>
+                        <li><a href="#" class="cat-nav-btn" data-category="novels">الروايات <span class="en-sub">Novels</span></a></li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <div class="nav-search-bar">
+                            <input type="text" placeholder="ابحث...">
+                            <button class="search-submit"><i class="fas fa-search"></i></button>
+                        </div>
+                        
+                        <button class="btn btn-login btn-sm">
+                            <i class="fas fa-sign-in-alt"></i> تسجيل الدخول
+                        </button>
+                        <!-- Mobile Search Trigger -->
+                        <button class="action-btn search-btn-mobile hidden-desktop" id="mobileSearchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Mobile Search Overlay -->
+                <div class="search-overlay" id="searchOverlay">
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" placeholder="ابحث عن مانها، مانجا..." id="searchInput">
+                        <button class="close-search" id="closeSearch"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Top Dynamic Hero Banner -->
+        <section class="premium-hero" id="dynamicHeroContainer" style="min-height: 400px; display: flex; align-items: center;">
+            <!-- Injected by JS -->
+            <div class="hero-blur-bg"><img src="images/default-cover.jpg" alt="Background Placeholder"></div>
+            <div class="hero-content container">
+                <h1 class="hero-title" style="color:var(--text-muted);">جاري التحميل...</h1>
+            </div>
+        </section>
+
+        <!-- Collections Section (Vortex Style) -->
+        <section class="collections-section container" id="collectionsSection">
+            <div class="collections-grid" id="collectionsGrid">
+                <!-- Injected by JS -->
+            </div>
+        </section>
+
+        <!-- Continue Reading Section -->
+        <section class="continue-reading-section container" id="continueReadingSection" style="display:none;">
+            <div class="section-header">
+                <h2><i class="fas fa-history text-accent"></i> متابعة القراءة <span class="ar-title">Continue Reading</span></h2>
+            </div>
+            <div class="continue-grid" id="continueReadingGrid">
+                <!-- Injected by JS -->
+            </div>
+        </section>
+
+        <!-- Premium Exclusive Coverflow Carousel -->
+        <section class="premium-carousel-section" id="premiumCarouselSection">
+            <div class="section-header container" style="margin-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                <h2><i class="fas fa-crown text-accent"></i> الأكثر شعبية <span class="ar-title" style="font-size:0.7em;">Must Read</span></h2>
+
+            </div>
+            <div class="premium-carousel-track" id="premiumCarouselTrack">
+                <!-- Premium coverflow cards injected here -->
+            </div>
+        </section>
+
+        <!-- Top Horizontal Bar (Mini Slider) -->
+        <section class="top-horizontal-bar">
+            <div class="top-slider-container" id="topSlider">
+                <!-- Mini Cards Injected by JS -->
+            </div>
+        </section>
+
+        <!-- Main Content Area -->
+        <main class="asura-home container">
+            
+            <!-- Trending Today Slider -->
+            <section class="trending-section" id="trending">
+                <div class="section-header">
+                    <h2><i class="fas fa-random text-accent"></i> أعمال أخرى <span class="ar-title">Other Works</span></h2>
+                </div>
+                
+                <div class="trending-slider-wrapper">
+                    <button class="scroll-btn scroll-prev" id="trendPrev"><i class="fas fa-chevron-right"></i></button>
+                    
+                    <div class="trending-grid" id="trendingGrid">
+                        <!-- Big Cards injected by JS -->
+                    </div>
+                    
+                    <button class="scroll-btn scroll-next" id="trendNext"><i class="fas fa-chevron-left"></i></button>
+                </div>
+            </section>
+
+            <!-- Split Layout (Latest Left, Popular Right) -->
+            <div class="split-layout">
+                
+                <!-- Left Column: Latest Updates -->
+                <div class="latest-col" id="updates">
+                    <div class="section-header">
+                        <h2><span class="ar-title">أحدث التحديثات</span> <span class="en-part">Latest Updates</span> <i class="fas fa-bolt"></i></h2>
+                    </div>
+                    
+                    <div class="latest-list" id="latestUpdatesList">
+                        <!-- Latest Rows injected by JS -->
+                    </div>
+                    
+                    <div class="load-more-container mt-2">
+                        <button class="btn btn-secondary btn-full-width" id="loadMoreUpdatesBtn">إظهار المزيد من التحديثات <i class="fas fa-chevron-down"></i></button>
+                    </div>
+                </div>
+
+                <!-- Right Column: Popular Sidebar -->
+                <aside class="popular-sidebar" id="popular">
+                    <div class="section-header">
+                        <h2><i class="fas fa-star text-accent"></i> الأكثر قراءة <span class="ar-title">Most Read</span></h2>
+                    </div>
+                    
+                    <!-- Sidebar Tabs -->
+                    <div class="popular-tabs">
+                        <button class="pop-tab active" data-range="weekly">Weekly</button>
+                        <button class="pop-tab" data-range="monthly">Monthly</button>
+                        <button class="pop-tab" data-range="alltime">All Time</button>
+                    </div>
+
+                    <!-- Numbered List Container -->
+                    <div class="popular-list" id="popularList">
+                        <!-- Top 20 list injected by JS -->
+                    </div>
+
+                    <!-- New Section: Random Recommendations -->
+                    <div class="section-header" style="margin-top: 2rem;">
+                        <h2><i class="fas fa-random text-accent"></i> ترشيحات عشوائية</h2>
+                    </div>
+                    <div class="popular-list" id="randomRecsList">
+                        <!-- Top 10 random list injected by JS -->
+                    </div>
+                </aside>
+
+            </div>
+
+            <!-- Genres Section -->
+            <section class="genres-section mt-2" id="genres-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-tags text-accent"></i> Genres <span class="ar-title">التصنيفات</span></h2>
+                </div>
+                <div class="genres-grid">
+                    <a href="browse.html?genre=action" class="genre-btn neon-box">Action</a>
+                    <a href="browse.html?genre=fantasy" class="genre-btn neon-box">Fantasy</a>
+                    <a href="browse.html?genre=romance" class="genre-btn neon-box">Romance</a>
+                    <a href="browse.html?genre=isekai" class="genre-btn neon-box">Isekai</a>
+                    <a href="browse.html?genre=horror" class="genre-btn neon-box">Horror</a>
+                    <a href="browse.html?genre=martial-arts" class="genre-btn neon-box">Martial Arts</a>
+                    <a href="browse.html?genre=sci-fi" class="genre-btn neon-box">Sci-Fi</a>
+                    <a href="browse.html?genre=drama" class="genre-btn neon-box">Drama</a>
+                    <a href="browse.html?genre=comedy" class="genre-btn neon-box">Comedy</a>
+                    <a href="browse.html?genre=mystery" class="genre-btn neon-box">Mystery</a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer asura-footer">
+            <!-- Simplified, clean footer similar to Asura -->
+            <div class="footer-content container">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo" style="display:flex;align-items:center;color:#fff;">
+                        <img src="images/logo.png" alt="Nexus Logo" style="height: 30px; width: 30px; margin-left: 10px; border-radius: 5px;">
+                        Nexus
+                    </a>
+                    <p class="footer-desc">المنصة العربية الأولى לקراءَة المانها والمانجا بدقة فائقة وبدون إعلانات مزعجة.</p>
+                </div>
+                <div class="footer-links-inline">
+                    <a href="index.html">الرئيسية</a>
+                    <a href="browse.html">المكتبة</a>
+                    <a href="admin.html" class="text-accent hover-glow"><i class="fas fa-user-shield"></i> لوحة التحكم</a>
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">تواصل معنا</a>
+                    <a href="#">Discord</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Nexus Network. All rights reserved.
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Series Details Modal Overlay -->
+    <div class="series-modal" id="seriesModal">
+        <div class="series-modal-backdrop" id="seriesModalBackdrop"></div>
+        <div class="series-modal-content">
+            <button class="close-modal-btn" id="closeSeriesModal"><i class="fas fa-times"></i></button>
+            <div class="series-header-info">
+                <div class="series-cover-wrapper">
+                    <img id="smCover" src="" alt="Cover">
+                </div>
+                <div class="series-meta-info">
+                    <h2 id="smTitle">Title</h2>
+                    <div class="sm-rating-status">
+                        <span class="sm-rating"><i class="fas fa-star"></i> <span id="smRating">9.9</span></span>
+                        <span class="sm-status" id="smStatus">Ongoing</span>
+                    </div>
+                    <div class="sm-genres" id="smGenres">
+                        <!-- Genres injected here -->
+                    </div>
+                    <div class="sm-synopsis" id="smSynopsis">
+                        <!-- Description injected here -->
+                    </div>
+                    <div class="sm-actions">
+                        <button class="btn btn-primary btn-glow" id="smStartReadingBtn"><i class="fas fa-book-open"></i> ابدأ القراءة</button>
+                        <button class="btn btn-secondary neon-box" id="smBookmarkBtn"><i class="fas fa-bookmark"></i> أضف لقائمتي</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="series-chapters-section">
+                <h3><i class="fas fa-list text-accent"></i> الفصول <span class="en-sub">Chapters</span></h3>
+                <div class="chapters-list" id="smChaptersList">
+                    <!-- Chapters injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pro Reader Engine Overlay (Unchanged functionally) -->
+    <div class="reader-engine" id="readerEngine">
+        <div class="reader-hud reader-hud-top" id="readerHudTop">
+            <button class="hud-btn" id="closeReader"><i class="fas fa-times"></i></button>
+            <div class="reader-title-info">
+                <h3 id="readerMangaTitle">العنوان</h3>
+                <p id="readerChapterNumber" class="text-accent">الفصل</p>
+            </div>
+            <div class="hud-actions"><button class="hud-btn" id="settingsBtn"><i class="fas fa-cog"></i></button></div>
+        </div>
+
+        <div class="reader-settings-panel" id="readerSettingsPanel">
+            <h4>إعدادات القراءة</h4>
+            <div class="setting-group">
+                <label>نمط القراءة</label>
+                <div class="segmented-control">
+                    <button class="seg-btn active" id="modeVertical" data-mode="vertical"><i class="fas fa-arrows-alt-v"></i> طولي</button>
+                    <button class="seg-btn" id="modeHorizontal" data-mode="horizontal"><i class="fas fa-arrows-alt-h"></i> عرضي</button>
+                </div>
+            </div>
+            <div class="setting-group">
+                <label>السطوع (الوضع الليلي)</label>
+                <input type="range" id="brightnessSlider" class="range-slider" min="30" max="100" value="100">
+            </div>
+        </div>
+
+        <div class="reader-progress-wrapper" id="readerProgressWrapper">
+            <div class="reader-progress-fill" id="readerProgressFill"></div>
+        </div>
+        <div class="reader-viewport mode-vertical" id="readerViewport"></div>
+        <div class="reader-hud reader-hud-bottom" id="readerHudBottom">
+            <button class="hud-btn prev-chapter-btn"><i class="fas fa-step-forward"></i> السابق</button>
+            <div class="chapter-selector-wrapper">
+                <select class="chapter-selector" id="chapterSelector"></select><i class="fas fa-chevron-up select-icon"></i>
+            </div>
+            <button class="hud-btn next-chapter-btn text-accent">التالي <i class="fas fa-step-backward"></i></button>
+        </div>
+    </div>
+
+    <script src="data.js?v=2.6"></script>
+    <script src="script.js?v=2.6"></script>
+
+</body>
+</html>
+
+
+
+

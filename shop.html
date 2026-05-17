@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر النيل | Nexus Shop</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css?v=2.1">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body class="dark-theme shop-page">
+
+    <div class="app-wrapper">
+        <!-- Header -->
+        <header class="sticky-header" id="stickyHeader">
+            <nav class="asura-nav">
+                <div class="nav-container container">
+                    <a href="index.html" class="brand-logo">
+                        <img src="images/logo.png" alt="Logo">
+                        <span class="logo-primary">Nexus</span>
+                    </a>
+
+                    <ul class="nav-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="browse.html">تصفح</a></li>
+                        <li><a href="shop.html" class="active">المتجر</a></li>
+                    </ul>
+
+                    <div class="nav-actions" id="navActions">
+                        <!-- Injected by script.js -->
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Shop Hero -->
+        <section class="shop-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>متجر النيل <span class="en">Nile Shop</span></h1>
+                    <p>استخدم الكونز لتخصيص ملفك الشخصي ومنشوراتك بأفخم التأثيرات</p>
+                </div>
+            </div>
+        </section>
+
+        <main class="shop-container container">
+            
+            <!-- Coins Section -->
+            <section class="shop-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-coins text-accent"></i> شحن الكونز <span class="ar-title">Top Up Coins</span></h2>
+                </div>
+                <div class="shop-grid topup-grid">
+                    <div class="shop-card coin-package" data-amount="50" data-price="2.99">
+                        <div class="card-icon"><i class="fas fa-coins" style="color:#FFD700;"></i></div>
+                        <div class="card-title">50 كـونز</div>
+                        <div class="card-price">$2.99</div>
+                        <button class="btn btn-primary buy-btn">شراء الآن</button>
+                    </div>
+                    <div class="shop-card coin-package" data-amount="200" data-price="9.99">
+                        <div class="card-badge">الأكثر طلباً</div>
+                        <div class="card-icon"><i class="fas fa-coins" style="color:#C0C0C0;"></i> <i class="fas fa-coins" style="color:#FFD700;"></i></div>
+                        <div class="card-title">200 كـونز</div>
+                        <div class="card-price">$9.99</div>
+                        <button class="btn btn-primary buy-btn">شراء الآن</button>
+                    </div>
+                    <div class="shop-card coin-package" data-amount="1000" data-price="39.99">
+                        <div class="card-badge">قيمة ممتازة</div>
+                        <div class="card-icon"><i class="fas fa-gem" style="color:#00e676;"></i></div>
+                        <div class="card-title">1000 كـونز</div>
+                        <div class="card-price">$39.99</div>
+                        <button class="btn btn-primary buy-btn">شراء الآن</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Decorations Section -->
+            <section class="shop-section">
+                <div class="shop-grid">
+                    <div class="shop-card deco-card" style="border: 1px solid #ff4757; box-shadow: 0 0 15px rgba(255, 71, 87, 0.2);" data-id="deco-wings" data-cost="8000">
+                        <div class="preview-box"><div class="deco-overlay deco-wings"></div><img src="https://api.dicebear.com/7.x/bottts/svg?seed=Wings" alt="Preview"></div>
+                        <div class="card-title" style="color: #ff4757;">أجنحة شيطانية (Demon Wings) <span style="font-size:0.7rem;background:#ff4757;color:#fff;padding:2px 5px;border-radius:4px;margin-right:5px;">جديد</span></div>
+                        <div class="card-cost" style="color: #ff4757;"><i class="fas fa-coins"></i> 8000</div>
+                        <button class="btn btn-secondary buy-deco-btn" style="background:#222;">شراء الآن</button>
+                    </div>
+                    
+                    <div class="shop-card deco-card" style="border: 1px solid #ff9f43; box-shadow: 0 0 15px rgba(255, 159, 67, 0.2);" data-id="deco-pumpkin" data-cost="4000">
+                        <div class="preview-box"><div class="deco-overlay deco-pumpkin"></div><img src="https://api.dicebear.com/7.x/bottts/svg?seed=Spooky" alt="Preview"></div>
+                        <div class="card-title" style="color: #ff9f43;">إطار هالوين (Halloween Ring) <span style="font-size:0.7rem;background:#ff9f43;color:#fff;padding:2px 5px;border-radius:4px;margin-right:5px;">جديد</span></div>
+                        <div class="card-cost" style="color: #ff9f43;"><i class="fas fa-coins"></i> 4000</div>
+                        <button class="btn btn-secondary buy-deco-btn" style="background:#222;">شراء الآن</button>
+                    </div>
+
+                    <div class="shop-card deco-card" style="border: 1px solid #70a1ff; box-shadow: 0 0 15px rgba(112, 161, 255, 0.2);" data-id="deco-headphones" data-cost="5000">
+                        <div class="preview-box"><div class="deco-overlay deco-headphones"></div><img src="https://api.dicebear.com/7.x/bottts/svg?seed=Beats" alt="Preview"></div>
+                        <div class="card-title" style="color: #70a1ff;">سماعات نيون (Neon Headphones) <span style="font-size:0.7rem;background:#70a1ff;color:#fff;padding:2px 5px;border-radius:4px;margin-right:5px;">جديد</span></div>
+                        <div class="card-cost" style="color: #70a1ff;"><i class="fas fa-coins"></i> 5000</div>
+                        <button class="btn btn-secondary buy-deco-btn" style="background:#222;">شراء الآن</button>
+                    </div>
+
+                    <div class="shop-card deco-card" data-id="deco-nile-aura" data-cost="2000">
+                        <div class="preview-box"><div class="deco-overlay deco-nile-aura"></div><img src="https://api.dicebear.com/7.x/bottts/svg?seed=Aura" alt="Preview"></div>
+                        <div class="card-title">هالة النيل (Nile Aura)</div>
+                        <div class="card-cost"><i class="fas fa-coins"></i> 2000</div>
+                        <button class="btn btn-secondary buy-deco-btn">شراء الآن</button>
+                    </div>
+                    <div class="shop-card deco-card" data-id="deco-cyber-glitch" data-cost="1800">
+                        <div class="preview-box"><div class="deco-preview deco-cyber-glitch"></div><img src="https://api.dicebear.com/7.x/bottts/svg?seed=Glitch" alt="Preview"></div>
+                        <div class="card-title">اضطراب سيبراني (Cyber)</div>
+                        <div class="card-cost"><i class="fas fa-coins"></i> 1800</div>
+                        <button class="btn btn-secondary buy-deco-btn">شراء الآن</button>
+                    </div>
+                    <div class="shop-card deco-card" data-id="deco-solar-flare" data-cost="2500">
+                        <div class="preview-box"><div class="deco-preview deco-solar-flare"></div><img src="https://api.dicebear.com/7.x/bottts/svg?seed=Sun" alt="Preview"></div>
+                        <div class="card-title">توهج شمسي (Solar Flare)</div>
+                        <div class="card-cost"><i class="fas fa-coins"></i> 2500</div>
+                        <button class="btn btn-secondary buy-deco-btn">شراء الآن</button>
+                    </div>
+                    <div class="shop-card deco-card" data-id="deco-void-rift" data-cost="3000">
+                        <div class="preview-box"><div class="deco-preview deco-void-rift"></div><img src="https://api.dicebear.com/7.x/bottts/svg?seed=Void" alt="Preview"></div>
+                        <div class="card-title">صدع الفراغ (Void Rift)</div>
+                        <div class="card-cost"><i class="fas fa-coins"></i> 3000</div>
+                        <button class="btn btn-secondary buy-deco-btn">شراء الآن</button>
+                    </div>
+                    <div class="shop-card deco-card" data-id="deco-pharaoh" data-cost="2200">
+                        <div class="preview-box"><div class="deco-preview deco-pharaoh"></div><img src="https://api.dicebear.com/7.x/bottts/svg?seed=Gold" alt="Preview"></div>
+                        <div class="card-title">تاج الفرعون (Pharaoh)</div>
+                        <div class="card-cost"><i class="fas fa-coins"></i> 2200</div>
+                        <button class="btn btn-secondary buy-deco-btn">شراء الآن</button>
+                    </div>
+                    <div class="shop-card deco-card" data-id="deco-crescent" data-cost="1500">
+                        <div class="preview-box"><div class="deco-preview deco-crescent"></div><img src="https://api.dicebear.com/7.x/bottts/svg?seed=Moon" alt="Preview"></div>
+                        <div class="card-title">شفرة الهلال (Crescent)</div>
+                        <div class="card-cost"><i class="fas fa-coins"></i> 1500</div>
+                        <button class="btn btn-secondary buy-deco-btn">شراء الآن</button>
+                    </div>
+                    <div class="shop-card deco-card" data-id="deco-ethereal" data-cost="1800">
+                        <div class="preview-box"><div class="deco-preview deco-ethereal"></div><img src="https://api.dicebear.com/7.x/bottts/svg?seed=Mist" alt="Preview"></div>
+                        <div class="card-title">ضباب أثيري (Ethereal)</div>
+                        <div class="card-cost"><i class="fas fa-coins"></i> 1800</div>
+                        <button class="btn btn-secondary buy-deco-btn">شراء الآن</button>
+                    </div>
+                    <div class="shop-card deco-card" data-id="deco-circuit" data-cost="1600">
+                        <div class="preview-box"><div class="deco-preview deco-circuit"></div><img src="https://api.dicebear.com/7.x/bottts/svg?seed=Tech" alt="Preview"></div>
+                        <div class="card-title">لوحة دوائر (Circuit)</div>
+                        <div class="card-cost"><i class="fas fa-coins"></i> 1600</div>
+                        <button class="btn btn-secondary buy-deco-btn">شراء الآن</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Badges Section -->
+            <section class="shop-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-award text-accent"></i> الشعارات والأوسمة <span class="ar-title">Badges</span></h2>
+                </div>
+                <div class="shop-grid badge-grid">
+                    <div class="shop-card badge-card" data-id="badge-vip" data-cost="1000">
+                        <div class="badge-icon" style="color:#FFD700;"><i class="fas fa-crown"></i></div>
+                        <div class="card-title">عضوية VIP</div>
+                        <div class="card-cost"><i class="fas fa-coins"></i> 1000</div>
+                        <button class="btn btn-secondary buy-badge-btn">امتلاك الشعار</button>
+                    </div>
+                    <div class="shop-card badge-card" data-id="badge-supporter" data-cost="200">
+                        <div class="badge-icon" style="color:#00FF9F;"><i class="fas fa-heart text-accent"></i></div>
+                        <div class="card-title">داعم المنهوا</div>
+                        <div class="card-cost"><i class="fas fa-coins"></i> 200</div>
+                        <button class="btn btn-secondary buy-badge-btn">امتلاك الشعار</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer container" style="margin-top: 5rem; border-top: 1px solid var(--border-subtle); padding: 2rem 0;">
+             <p>© 2026 Nexus - Premium Shop System</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data.js?v=2.1"></script>
+    <script src="script.js?v=2.1"></script>
+    <script>
+        // Shop Interaction Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            // Top-up simulation
+            document.querySelectorAll('.buy-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const card = e.target.closest('.coin-package');
+                    const amount = parseInt(card.dataset.amount);
+                    if(confirm(`هل تريد شحن ${amount} كونز؟ (محاكاة)`)) {
+                        addCoins(amount);
+                        alert(`تمت إضافة ${amount} كونز إلى رصيدك بنجاح!`);
+                    }
+                });
+            });
+
+            // Decoration Purchase
+            document.querySelectorAll('.buy-deco-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const card = e.target.closest('.deco-card');
+                    const id = card.dataset.id;
+                    const cost = parseInt(card.dataset.cost);
+                    
+                    if(spendCoins(cost)) {
+                        addOwnedDecoration(id);
+                        alert('تم شراء الزينة! يمكنك تفعيلها من ملفك الشخصي.');
+                    } else {
+                        alert('رصيدك من الكونز غير كافٍ!');
+                    }
+                });
+            });
+
+            // Badge Purchase
+            document.querySelectorAll('.buy-badge-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const card = e.target.closest('.badge-card');
+                    const id = card.dataset.id;
+                    const cost = parseInt(card.dataset.cost);
+                    
+                    if(spendCoins(cost)) {
+                        addOwnedBadge(id);
+                        alert('مبروك! حصلت على الشعار، سيظهر بجوار اسمك الآن.');
+                    } else {
+                        alert('رصيدك من الكونز غير كافٍ!');
+                    }
+                });
+            });
+        });
+
+        // Helper functions for coins & items
+        function getCoins() {
+            return parseInt(localStorage.getItem('nile_coins')) || 0;
+        }
+
+        function addCoins(amount) {
+            const newBal = getCoins() + amount;
+            localStorage.setItem('nile_coins', newBal);
+            // Refresh nav balance if it exists
+            if(window.refreshNavBalance) window.refreshNavBalance();
+        }
+
+        function spendCoins(amount) {
+            const current = getCoins();
+            if(current >= amount) {
+                localStorage.setItem('nile_coins', current - amount);
+                if(window.refreshNavBalance) window.refreshNavBalance();
+                return true;
+            }
+            return false;
+        }
+
+        function addOwnedDecoration(id) {
+            let owned = JSON.parse(localStorage.getItem('nile_decorations')) || [];
+            if(!owned.includes(id)) {
+                owned.push(id);
+                localStorage.setItem('nile_decorations', JSON.stringify(owned));
+                // Automatically apply it for demo
+                localStorage.setItem('nile_active_decoration', id);
+            }
+        }
+
+        function addOwnedBadge(id) {
+            let owned = JSON.parse(localStorage.getItem('nile_badges')) || [];
+            if(!owned.includes(id)) {
+                owned.push(id);
+                localStorage.setItem('nile_badges', JSON.stringify(owned));
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+

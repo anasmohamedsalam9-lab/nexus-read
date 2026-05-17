@@ -1,0 +1,383 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>تفاصيل العمل | Nexus</title>
+    
+    <meta name="theme-color" content="#0f0f11">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css?v=2.6">
+    
+    <style>
+        /* =========================================
+           Vortex-Scans Inspired Premium Layout (AR)
+           ========================================= */
+        body { background-color: #0d0d0f; color: #fff; font-family: 'Cairo', sans-serif; margin: 0; padding-top: 60px; overflow-x: hidden; }
+
+        /* Blurred Banner */
+        .vx-banner {
+            position: absolute; top: 0; left: 0; right: 0; height: 350px;
+            background-size: cover; background-position: center 20%;
+            filter: blur(15px) brightness(0.25);
+            z-index: 1; transform: scale(1.05); /* hide blur edges */
+        }
+        .vx-banner-gradient {
+            position: absolute; top: 0; left: 0; right: 0; height: 350px;
+            background: linear-gradient(to bottom, transparent 0%, #0d0d0f 100%);
+            z-index: 2;
+        }
+
+        /* Container */
+        .vx-container {
+            max-width: 1350px; margin: 0 auto; padding: 40px 20px;
+            position: relative; z-index: 3; display: grid;
+            grid-template-columns: 280px 1fr 300px; gap: 40px;
+        }
+
+        @media (max-width: 1200px) {
+            .vx-container { grid-template-columns: 250px 1fr; }
+            .vx-sidebar-left { display: none; } /* Hide similar series on smaller screens */
+        }
+        @media (max-width: 800px) {
+            .vx-container { grid-template-columns: 1fr; }
+            .vx-sidebar-right { max-width: 350px; margin: 0 auto; }
+        }
+
+        /* ================= RIGHT SIDEBAR (Cover & Meta) ================= */
+        .vx-cover-wrapper {
+            position: relative; border-radius: 12px; overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8); margin-bottom: 20px;
+        }
+        .vx-cover-wrapper img { width: 100%; display: block; }
+        
+        .vx-primary-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px; }
+        .vx-btn-read { background: #00b259; color: #fff; border: none; padding: 12px; border-radius: 6px; font-weight: 700; cursor: pointer; transition: 0.2s; font-family: inherit; }
+        .vx-btn-read:hover { background: #008f47; }
+        .vx-btn-bookmark { background: #1d4ed8; color: #fff; border: none; padding: 12px; border-radius: 6px; font-weight: 700; cursor: pointer; transition: 0.2s; font-family: inherit; }
+        .vx-btn-bookmark:hover { background: #1e3a8a; }
+        .vx-btn-report { background: #222; color: #aaa; border: 1px solid #333; padding: 10px; border-radius: 6px; width: 100%; cursor: pointer; font-family: inherit; font-size: 0.85rem; margin-bottom: 20px; transition: 0.2s; }
+        .vx-btn-report:hover { background: #333; color: #fff; }
+
+        .vx-stats { display: flex; justify-content: space-around; background: #151518; padding: 15px; border-radius: 8px; margin-bottom: 25px; border: 1px solid #222; }
+        .vx-stat-col { text-align: center; }
+        .vx-stat-val { font-size: 1.1rem; font-weight: 800; color: #fff; display: block; }
+        .vx-stat-label { font-size: 0.75rem; color: #888; display: block; margin-top: 2px; }
+        .vx-stat-col i.text-warn { color: #8a2be2; margin-left: 5px; }
+        .vx-stat-col i.text-info { color: #00FF9F; margin-left: 5px; }
+
+        .vx-meta-list { display: flex; flex-direction: column; gap: 12px; font-size: 0.85rem; }
+        .vx-meta-item { display: flex; justify-content: space-between; border-bottom: 1px dashed #222; padding-bottom: 8px; }
+        .vx-meta-label { color: #888; display: flex; align-items: center; gap: 8px; }
+        .vx-meta-value { color: #ddd; font-weight: 600; text-align: left; }
+        .vx-meta-value.status-on { color: #10b981; }
+
+        /* ================= CENTER (Main Content) ================= */
+        .vx-title { font-size: 2.2rem; font-weight: 900; margin: 0 0 5px 0; line-height: 1.2; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+        .vx-alt-title { color: #888; font-size: 0.95rem; margin-bottom: 25px; font-weight: 500; font-family: 'Outfit'; }
+
+        /* Tabs */
+        .vx-tabs { display: flex; gap: 15px; margin-bottom: 20px; border-bottom: 1px solid #222; padding-bottom: 10px; }
+        .vx-tab-btn { background: transparent; color: #888; border: none; padding: 8px 15px; font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: 0.2s; border-radius: 6px; font-family: inherit; }
+        .vx-tab-btn:hover { color: #fff; }
+        .vx-tab-btn.active { background: #00b259; color: #fff; }
+
+        /* Search */
+        .vx-search-wrap { position: relative; margin-bottom: 20px; }
+        .vx-search-wrap i { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); color: #666; }
+        .vx-search-input { width: 100%; background: #151518; border: 1px solid #2a2a2a; color: #fff; padding: 12px 40px 12px 15px; border-radius: 6px; font-family: inherit; outline: none; transition: 0.2s; }
+        .vx-search-input:focus { border-color: #555; }
+
+        .vx-mark-read { background: #062a1b; border: 1px solid #0f5132; color: #75b798; padding: 12px 20px; border-radius: 6px; display: flex; align-items: center; gap: 10px; cursor: pointer; margin-bottom: 25px; transition: 0.2s; }
+        .vx-mark-read:hover { background: #0f5132; color: #fff; }
+        .vx-mark-read i { background: #10b981; color: #000; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; }
+
+        /* Chapter List */
+        .vx-chapters { display: flex; flex-direction: column; gap: 8px; }
+        .vx-chapter-row { background: #151518; border-radius: 8px; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; border: 1px solid #1f1f23; cursor: pointer; transition: 0.2s; }
+        .vx-chapter-row:hover { background: #1e1e23; border-color: #333; }
+        /* Green highlight for Latest/Reading chapter */
+        .vx-chapter-row.highlight { background: linear-gradient(90deg, #0f271d 0%, #151518 100%); border-right: 3px solid #10b981; border-color: #1a4231; }
+
+        .vx-ch-left { display: flex; align-items: center; gap: 15px; }
+        .vx-ch-thumb { width: 40px; height: 40px; border-radius: 6px; object-fit: cover; }
+        .vx-ch-info { display: flex; flex-direction: column; }
+        .vx-ch-num { font-weight: 700; font-size: 0.95rem; color: #fff; }
+        .vx-ch-meta { font-size: 0.8rem; color: #666; margin-top: 3px; display: flex; align-items: center; gap: 8px; }
+        .vx-badge-new { color: #00ff88; font-weight: 700; font-size: 0.75rem; }
+        
+        .vx-ch-actions { display: flex; gap: 15px; color: #555; font-size: 0.85rem; }
+        .vx-ch-actions i { margin-left: 5px; }
+
+        /* Synopsis Section */
+        .vx-synopsis-content { line-height: 1.8; color: #ddd; font-size: 0.95rem; background: #151518; padding: 25px; border-radius: 8px; border: 1px solid #222; display: none; }
+
+        /* ================= LEFT SIDEBAR (Similar) ================= */
+        .vx-similar-header { font-size: 0.9rem; font-weight: 800; color: #aaa; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px; }
+        .vx-similar-list { display: flex; flex-direction: column; gap: 12px; }
+        .vx-similar-item { background: #151518; border-radius: 8px; display: flex; align-items: stretch; border: 1px solid #1f1f23; overflow: hidden; height: 90px; cursor: pointer; transition: 0.2s; }
+        .vx-similar-item:hover { background: #1e1e23; border-color: #333; }
+        .vx-sim-thumb { width: 65px; height: 100%; object-fit: cover; }
+        .vx-sim-info { padding: 10px 12px; display: flex; flex-direction: column; justify-content: center; }
+        .vx-sim-title { font-size: 0.85rem; font-weight: 700; color: #fff; margin-bottom: 5px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.3; }
+        .vx-sim-meta { font-size: 0.75rem; color: #888; font-family: 'Outfit'; }
+        .vx-sim-meta .star { color: #eab308; }
+
+    </style>
+</head>
+<body>
+
+    <div class="app-wrapper">
+        <!-- Reusing Navbar -->
+        <header class="sticky-header" id="stickyHeader">
+            <nav class="asura-nav">
+                <div class="nav-container">
+                    <a href="index.html" class="brand-logo" style="display:flex;align-items:center;">
+                        <img src="images/logo.png" alt="Logo" style="height: 35px; margin-left: 10px; border-radius: 5px;" onerror="this.style.display='none'">
+                        <span class="logo-primary" style="color:#00ff88;">Manhwa</span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Dynamic Content injected here -->
+        <div id="seriesPageContent">
+            <div style="text-align: center; padding: 150px; color: #666;">
+                <i class="fas fa-circle-notch fa-spin fa-3x"></i>
+                <h3 style="margin-top: 20px;">جاري تحميل العمل...</h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js?v=2.6"></script>
+    <script src="script.js?v=2.6"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const titleSlug = params.get('title');
+            
+            if (!titleSlug) {
+                document.getElementById('seriesPageContent').innerHTML = '<div style="padding:100px;text-align:center;"><h2>العمل غير موجود</h2><a href="index.html" style="color:#00ff88;">العودة للرئيسية</a></div>';
+                return;
+            }
+
+            let checkDB = setInterval(() => {
+                if (typeof findSeriesBySlug === 'function') {
+                    clearInterval(checkDB);
+                    loadSeriesDetails(titleSlug);
+                }
+            }, 50);
+        });
+
+        function loadSeriesDetails(slug) {
+            const seriesWrapper = findSeriesBySlug(slug);
+            if (!seriesWrapper || !seriesWrapper.item) {
+                document.getElementById('seriesPageContent').innerHTML = '<div style="padding:100px;text-align:center;"><h2>العمل غير موجود</h2><a href="index.html" style="color:#00ff88;">العودة للرئيسية</a></div>';
+                return;
+            }
+
+            const series = seriesWrapper.item;
+            const cover = series.cover || 'images/default-cover.jpg';
+            const title = series.title;
+            const desc = series.desc || 'الوصف غير متوفر حالياً لهذا العمل عبر المنصة.';
+            const genres = Array.isArray(series.genres) ? series.genres : (series.genres || '').split(',');
+            const chs = [ ...(series.chapters || []) ].sort((a,b) => parseFloat(b.n) - parseFloat(a.n));
+            const rating = series.rating || '9.5';
+            
+            const randViews = Math.floor(Math.random() * 500) + 100;
+            const randOngoing = 'مستمر';
+            const releaseYear = '2023';
+
+            let chaptersHTML = '';
+            
+            if (chs.length > 0) {
+                chaptersHTML = chs.map((c, idx) => {
+                    // Make the top 1 or 2 highlighted like the screenshot
+                    const isHighlight = idx < 2 ? 'highlight' : '';
+                    const newBadge = idx < 2 ? `<span class="vx-badge-new"><i class="fas fa-fire"></i> جديد</span>` : '';
+                    return `
+                        <div class="vx-chapter-row ${isHighlight}" onclick="window.openReader('${title.replace(/'/g, "\\'")}', '${c.n}')">
+                            <div class="vx-ch-left">
+                                <img src="${cover}" class="vx-ch-thumb">
+                                <div class="vx-ch-info">
+                                    <div class="vx-ch-num">الفصل ${c.n} ${newBadge}</div>
+                                    <div class="vx-ch-meta">${c.d || 'قبل يومين'}</div>
+                                </div>
+                            </div>
+                            <div class="vx-ch-actions" dir="ltr">
+                                <span><i class="far fa-comment"></i> 0</span>
+                                <span><i class="far fa-heart"></i> 0</span>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            } else {
+                chaptersHTML = '<div style="padding:20px;text-align:center;color:#666;">لا توجد فصول متوفرة</div>';
+            }
+
+            // Generate Similar Series artificially for Left Sidebar
+            let similarHTML = '';
+            if (typeof SITE_DATA !== 'undefined' && SITE_DATA.manhwa && SITE_DATA.manhwa.popular) {
+                const similar = [...SITE_DATA.manhwa.popular].sort(() => 0.5 - Math.random()).slice(0, 7);
+                similarHTML = similar.map(s => `
+                    <div class="vx-similar-item" onclick="window.goToSeries('${s.title.replace(/'/g, "\\'")}', 'manhwa')">
+                        <img src="${s.img}" class="vx-sim-thumb">
+                        <div class="vx-sim-info">
+                            <div class="vx-sim-title">${s.title}</div>
+                            <div class="vx-sim-meta"><i class="fas fa-star star"></i> ${s.rating} • ${s.ch}</div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            const pageHTML = `
+                <div class="vx-banner" style="background-image: url('${cover}');"></div>
+                <div class="vx-banner-gradient"></div>
+
+                <div class="vx-container">
+                    <!-- Right Sidebar (Meta) -->
+                    <div class="vx-sidebar-right">
+                        <div class="vx-cover-wrapper">
+                            <img src="${cover}" alt="${title}">
+                        </div>
+                        <div class="vx-primary-actions">
+                            <button class="vx-btn-read" onclick="window.openReader('${title.replace(/'/g, "\\'")}', '${chs[0] ? chs[0].n : 1}')">
+                                اقرأ الفصل ${chs[chs.length-1] ? chs[chs.length-1].n : 1}
+                            </button>
+                            <button class="vx-btn-bookmark"><i class="far fa-bookmark"></i> إشارة</button>
+                        </div>
+                        <button class="vx-btn-report"><i class="far fa-flag"></i> الإبلاغ عن مشكلة</button>
+                        
+                        <div class="vx-stats">
+                            <div class="vx-stat-col">
+                                <span class="vx-stat-val"><i class="fas fa-star text-warn"></i> ${rating}</span>
+                                <span class="vx-stat-label">التقييم</span>
+                            </div>
+                            <div class="vx-stat-col">
+                                <span class="vx-stat-val"><i class="fas fa-bookmark text-info"></i> ${randViews}K</span>
+                                <span class="vx-stat-label">المتابعين</span>
+                            </div>
+                        </div>
+
+                        <div class="vx-meta-list">
+                            <div class="vx-meta-item">
+                                <span class="vx-meta-label"><i class="fas fa-signal"></i> الحالة</span>
+                                <span class="vx-meta-value status-on">${randOngoing}</span>
+                            </div>
+                            <div class="vx-meta-item">
+                                <span class="vx-meta-label"><i class="fas fa-book"></i> النوع</span>
+                                <span class="vx-meta-value">مانهوا</span>
+                            </div>
+                            <div class="vx-meta-item">
+                                <span class="vx-meta-label"><i class="fas fa-pen-nib"></i> المؤلف</span>
+                                <span class="vx-meta-value">مجهول</span>
+                            </div>
+                            <div class="vx-meta-item">
+                                <span class="vx-meta-label"><i class="fas fa-calendar-alt"></i> الإصدار</span>
+                                <span class="vx-meta-value">${releaseYear}</span>
+                            </div>
+                            <div class="vx-meta-item">
+                                <span class="vx-meta-label"><i class="fas fa-list-ol"></i> الفصول</span>
+                                <span class="vx-meta-value">${chs.length}</span>
+                            </div>
+                            <div class="vx-meta-item">
+                                <span class="vx-meta-label"><i class="fas fa-clock"></i> التحديث</span>
+                                <span class="vx-meta-value">قبل يومين</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Center Area (Chapters/Info) -->
+                    <div class="vx-main-col">
+                        <h1 class="vx-title">${title}</h1>
+                        <p class="vx-alt-title">${titleToSlug(title)} / 리메이크 / 리메이크</p>
+
+                        <div class="vx-tabs">
+                            <button class="vx-tab-btn active" id="tabChBtn"><i class="fas fa-list"></i> الفصول ( ${chs.length} )</button>
+                            <button class="vx-tab-btn" id="tabSynBtn"><i class="fas fa-info-circle"></i> القصة</button>
+                            <button class="vx-tab-btn"><i class="far fa-comments"></i> المراجعات ( 0 )</button>
+                        </div>
+
+                        <!-- Synopsis View -->
+                        <div class="vx-synopsis-content" id="synopsisView">
+                            <h3 style="margin-top:0; color:#fff; border-bottom:1px solid #333; padding-bottom:10px;">عن العمل</h3>
+                            ${desc}
+                        </div>
+
+                        <!-- Chapters View -->
+                        <div id="chaptersView">
+                            <div class="vx-search-wrap">
+                                <i class="fas fa-search"></i>
+                                <input type="text" class="vx-search-input" id="chSearchInput" placeholder="البحث برقم الفصل أو عنوانه...">
+                            </div>
+
+                            <div class="vx-mark-read">
+                                <i><i class="fas fa-check"></i></i>
+                                <div>
+                                    <div style="font-weight:700; color:#fff;">تحديد الكل كمقروء</div>
+                                    <div style="font-size:0.8rem;">وضع علامة مقروء على كافة الفصول</div>
+                                </div>
+                            </div>
+
+                            <div class="vx-chapters" id="chapterListContainer">
+                                ${chaptersHTML}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Left Sidebar (Similar Series) -->
+                    <div class="vx-sidebar-left">
+                        <div class="vx-similar-header">أعمال مشابهة</div>
+                        <div class="vx-similar-list">
+                            ${similarHTML}
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('seriesPageContent').innerHTML = pageHTML;
+
+            // Tab logic
+            const tabSyn = document.getElementById('tabSynBtn');
+            const tabCh = document.getElementById('tabChBtn');
+            const viewSyn = document.getElementById('synopsisView');
+            const viewCh = document.getElementById('chaptersView');
+
+            tabSyn.addEventListener('click', () => {
+                tabSyn.classList.add('active');
+                tabCh.classList.remove('active');
+                viewSyn.style.display = 'block';
+                viewCh.style.display = 'none';
+            });
+
+            tabCh.addEventListener('click', () => {
+                tabCh.classList.add('active');
+                tabSyn.classList.remove('active');
+                viewCh.style.display = 'block';
+                viewSyn.style.display = 'none';
+            });
+
+            // Search logic
+            document.getElementById('chSearchInput').addEventListener('keyup', (e) => {
+                const term = e.target.value.toLowerCase();
+                const rows = document.querySelectorAll('.vx-chapter-row');
+                rows.forEach(row => {
+                    const text = row.innerText.toLowerCase();
+                    row.style.display = text.includes(term) ? 'flex' : 'none';
+                });
+            });
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+

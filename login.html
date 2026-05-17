@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول | ManhwaNile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="login-page">
+
+    <!-- Background Posters Masonry -->
+    <div class="login-bg-overlay"></div>
+    <div class="login-posters-grid" id="loginPosters">
+        <!-- Will be populated by JS -->
+    </div>
+
+    <!-- Main Content Wrapper -->
+    <div class="login-wrapper">
+        <div class="login-container">
+            <!-- Logo Section -->
+            <div class="login-header">
+                <a href="index.html" class="login-logo-link">
+                    <img src="images/logo.png" alt="Logo" class="login-logo" onerror="this.src='https://api.dicebear.com/7.x/bottts/svg?seed=Nile'; this.style.borderRadius='50%'">
+                </a>
+            </div>
+
+            <!-- Social Logins -->
+            <div class="social-logins">
+                <button class="social-btn discord">
+                    <i class="fab fa-discord"></i> الاستمرار باستخدام Discord
+                </button>
+                <button class="social-btn google" id="googleLoginBtn">
+                    <i class="fab fa-google" style="color: #4285F4;"></i>
+                    <span>Google</span>
+                </button>
+            </div>
+
+            <div class="auth-divider">
+                <span>أو تابع باستخدام</span>
+            </div>
+
+            <!-- Email Form -->
+            <form class="login-form" onsubmit="return false;">
+                <div class="input-group">
+                    <label>البريد الإلكتروني <span class="en">Email</span></label>
+                    <div class="input-wrapper">
+                        <i class="far fa-envelope"></i>
+                        <input type="email" placeholder="username@domain.com" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>كلمة المرور <span class="en">Password</span></label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="passwordInput" placeholder="••••••••••••" required>
+                        <button type="button" class="toggle-password" onclick="togglePassword()">
+                            <i class="far fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-meta">
+                    <a href="#" class="forgot-link">نسيت كلمة المرور؟</a>
+                </div>
+
+                <button type="submit" class="btn-login-main" id="emailLoginBtn">تسجيل الدخول</button>
+            </form>
+
+            <div class="login-footer">
+                <p>ليس لديك حساب؟ <a href="#">إنشاء حساب جديد</a></p>
+                <div class="trouble-box">
+                    <button class="btn-trouble">
+                        <i class="fas fa-exclamation-triangle"></i> تواجه مشكلة في تسجيل الدخول؟
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script>
+        // Populate Background
+        // Populate Background with Columns for Animation
+        function initPosters() {
+            const grid = document.getElementById('loginPosters');
+            if(!grid || !window.DB) return;
+
+            // Find valid images
+            const images = window.DB.map(s => {
+                if (s.cover && s.cover.trim() !== "") return s.cover;
+                if (s.chapters && s.chapters[0] && s.chapters[0].pages && s.chapters[0].pages[0]) {
+                    return s.chapters[0].pages[0];
+                }
+                return null;
+            }).filter(Boolean);
+
+            const columnCount = 6;
+            let html = '';
+
+            for (let i = 0; i < columnCount; i++) {
+                // Shuffle and pick a random set for each column
+                const colImgs = [...images].sort(() => Math.random() - 0.5).slice(0, 15);
+                // Duplicate images to create seamless loop
+                const tripledImgs = [...colImgs, ...colImgs, ...colImgs];
+                
+                html += `<div class="poster-column">
+                    ${tripledImgs.map(img => `
+                        <div class="poster-item">
+                            <img src="${img}" alt="poster">
+                        </div>
+                    `).join('')}
+                </div>`;
+            }
+            
+            grid.innerHTML = html;
+        }
+
+        function togglePassword() {
+            const input = document.getElementById('passwordInput');
+            const icon = document.querySelector('.toggle-password i');
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.replace('fa-eye', 'fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.replace('fa-eye-slash', 'fa-eye');
+            }
+        }
+
+        // Mock Login Logic
+        document.getElementById('googleLoginBtn').addEventListener('click', () => {
+             const btn = document.getElementById('googleLoginBtn');
+             btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري التحقق...';
+             setTimeout(() => {
+                const mockUser = {
+                    name: "متابع النيل المميز",
+                    email: "fan@nilemanhwa.com",
+                    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=Hero"
+                };
+                localStorage.setItem('nile_user', JSON.stringify(mockUser));
+                window.location.href = 'index.html';
+             }, 1000);
+        });
+
+        document.getElementById('emailLoginBtn').addEventListener('click', () => {
+             const btn = document.getElementById('emailLoginBtn');
+             btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الدخول...';
+             setTimeout(() => {
+                const mockUser = {
+                    name: "زائر النيل",
+                    email: "guest@nile.com",
+                    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=Guest"
+                };
+                localStorage.setItem('nile_user', JSON.stringify(mockUser));
+                window.location.href = 'index.html';
+             }, 1000);
+        });
+
+        window.onload = initPosters;
+    </script>
+</body>
+</html>
+
+
+
+

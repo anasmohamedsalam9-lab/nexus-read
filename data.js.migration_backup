@@ -1,0 +1,225 @@
+var DB = [
+  {
+    "id": "nm_",
+    "title": "سولو ليفيلنغ",
+    "cover": "assets/covers/.webp",
+    "desc": "قبل 10 سنوات، بعد فتح \"البوابة\" التي تربط العالم الحقيقي بعالم الوحوش، حصل بعض الأشخاص العاديين على القدرة على اصطياد الوحوش داخل البوابة. ويعرفون باسم \"الصيادين\". ومع ذلك، ليس كل الصيادين أقوياء. اسمي سونغ جين وو، صياد من الرتبة E. أنا شخص عليه أن يخاطر بحياته في أدنى الزنزانات، \"الأضعف في العالم\". نظرًا لعدم وجود أي مهارات على الإطلاق لعرضها، بالكاد حصلت على المال المطلوب من خلال القتال في زنزانات منخفضة المستوى... على الأقل حتى وجدت زنزانة مخفية بها أصعب صعوبة داخل الزنزانات ذات الرتبة D! في النهاية، بينما كنت أتقبل الموت، تلقيت فجأة قوة غريبة، سجل مهام لا يمكن لأحد سواي رؤيته، وسرًا للارتقاء بالمستوى لا يعرفه أحد سواي! إذا تدربت وفقًا لمهماتي ومطاردة الوحوش، فسيرتفع مستواي. التغيير من أضعف صياد إلى أقوى صياد من الرتبة S!\n\n---\n**الروابط:**\n\n- الترجمة الإنجليزية الرسمية [<Pocket Comics>](https://www.pocketcomics.com/comic/320) | [<WebNovel>](https://www.webnovel.com/comic/only-i-level-up-(solo-leveling)_15227640605485101) | [<Tapas>](https://tapas.io/series/solo-leveling-comic/info)\n- الخام الرسمي البديل - [Kakao Webtoon](https://webtoon.kakao.com/content/나-혼자만-레벨업/2320)",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [
+      "Award Winning",
+      "Monsters",
+      "Action",
+      "Long Strip",
+      "Adventure",
+      "Magic",
+      "Drama",
+      "Fantasy",
+      "Web Comic",
+      "Supernatural",
+      "Adaptation",
+      "Full Color"
+    ],
+    "chapters": []
+  },
+  {
+    "id": "nm_the-beginning-after-the-end",
+    "title": "The Beginning After The End",
+    "cover": "",
+    "desc": "اكتشف العناصر الحصرية والجديدة التي تمت إضافتها للتو. لا تفوت الفرصة!",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [],
+    "chapters": [
+      {
+        "n": "1",
+        "d": "2026-04-18",
+        "pages": [
+          "https://api.mangatek.com/api/chapters/stream/ac2b2537e7db6aedfa0ce12438bf1433/44e5a1fdebc0d6edfe03224f798689be?v=1",
+          "https://api.mangatek.com/api/chapters/stream/ac2b2537e7db6aedfa0ce12438bf1433/91dc4e34f52a58cd3dee45a0befa6431?v=1",
+          "https://api.mangatek.com/api/chapters/stream/ac2b2537e7db6aedfa0ce12438bf1433/02ee7e0c307936110e5966c1fdb0d7e4?v=1",
+          "https://api.mangatek.com/api/chapters/stream/ac2b2537e7db6aedfa0ce12438bf1433/387c8c196b049a3321cb3751ec097902?v=1",
+          "https://api.mangatek.com/api/chapters/stream/ac2b2537e7db6aedfa0ce12438bf1433/291768c15b7fa19f3cf24f116ecda7e4?v=1",
+          "https://api.mangatek.com/api/chapters/stream/ac2b2537e7db6aedfa0ce12438bf1433/f33d6e62e2800dd0511d689d393fde4c?v=1",
+          "https://api.mangatek.com/api/chapters/stream/ac2b2537e7db6aedfa0ce12438bf1433/d139bd756c28d7a271decefb08120c4f?v=1",
+          "https://api.mangatek.com/api/chapters/stream/ac2b2537e7db6aedfa0ce12438bf1433/0b7ebbebdc49a109a6948fe71e9f3c8e?v=1",
+          "https://api.mangatek.com/api/chapters/stream/ac2b2537e7db6aedfa0ce12438bf1433/83db4ae7cd31ee52edddf990d63b8f4f?v=1",
+          "https://api.mangatek.com/api/chapters/stream/ac2b2537e7db6aedfa0ce12438bf1433/ccc205adc13cfd89a3465fa1594fd308?v=1",
+          "https://api.mangatek.com/api/chapters/stream/ac2b2537e7db6aedfa0ce12438bf1433/df19c8d9c435f26652087c5d61976db9?v=1",
+          "https://api.mangatek.com/api/chapters/stream/ac2b2537e7db6aedfa0ce12438bf1433/3bc8f6b140897243bb7dca7494d5c99a?v=1",
+          "https://api.mangatek.com/api/chapters/stream/ac2b2537e7db6aedfa0ce12438bf1433/6b25c0a6fcc998474ee275ab168548cb?v=1",
+          "https://api.mangatek.com/api/chapters/stream/ac2b2537e7db6aedfa0ce12438bf1433/a39c148e37830c9bc163af88a9f5dfc7?v=1",
+          "https://api.mangatek.com/api/chapters/stream/ac2b2537e7db6aedfa0ce12438bf1433/820b00c368055895c1594b7b27e6db14?v=1",
+          "https://api.mangatek.com/api/chapters/stream/ac2b2537e7db6aedfa0ce12438bf1433/b9c3c9753172e15afe8bb70bec50dfd9?v=1",
+          "https://api.mangatek.com/api/chapters/stream/ac2b2537e7db6aedfa0ce12438bf1433/5871288f63e686b55466c806c14281b9?v=1",
+          "https://api.mangatek.com/decorations/yunara.png",
+          "https://api.mangatek.com/decorations/marvel_snap_venom.png",
+          "https://api.mangatek.com/decorations/fire.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "nm_solo-leveling",
+    "title": "Solo leveling",
+    "cover": "",
+    "desc": "اكتشف العناصر الحصرية والجديدة التي تمت إضافتها للتو. لا تفوت الفرصة!",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [],
+    "chapters": [
+      {
+        "n": "1",
+        "d": "2026-04-18",
+        "pages": [
+          "https://api.mangatek.com/api/chapters/stream/2e033cd0678309cb65bbd2a07e0cbf4a/44e5a1fdebc0d6edfe03224f798689be?v=1",
+          "https://api.mangatek.com/api/chapters/stream/2e033cd0678309cb65bbd2a07e0cbf4a/91dc4e34f52a58cd3dee45a0befa6431?v=1",
+          "https://api.mangatek.com/api/chapters/stream/2e033cd0678309cb65bbd2a07e0cbf4a/02ee7e0c307936110e5966c1fdb0d7e4?v=1",
+          "https://api.mangatek.com/api/chapters/stream/2e033cd0678309cb65bbd2a07e0cbf4a/387c8c196b049a3321cb3751ec097902?v=1",
+          "https://api.mangatek.com/api/chapters/stream/2e033cd0678309cb65bbd2a07e0cbf4a/291768c15b7fa19f3cf24f116ecda7e4?v=1",
+          "https://api.mangatek.com/api/chapters/stream/2e033cd0678309cb65bbd2a07e0cbf4a/f33d6e62e2800dd0511d689d393fde4c?v=1",
+          "https://api.mangatek.com/api/chapters/stream/2e033cd0678309cb65bbd2a07e0cbf4a/d139bd756c28d7a271decefb08120c4f?v=1",
+          "https://api.mangatek.com/api/chapters/stream/2e033cd0678309cb65bbd2a07e0cbf4a/0b7ebbebdc49a109a6948fe71e9f3c8e?v=1",
+          "https://api.mangatek.com/api/chapters/stream/2e033cd0678309cb65bbd2a07e0cbf4a/83db4ae7cd31ee52edddf990d63b8f4f?v=1",
+          "https://api.mangatek.com/api/chapters/stream/2e033cd0678309cb65bbd2a07e0cbf4a/ccc205adc13cfd89a3465fa1594fd308?v=1",
+          "https://api.mangatek.com/api/chapters/stream/2e033cd0678309cb65bbd2a07e0cbf4a/df19c8d9c435f26652087c5d61976db9?v=1",
+          "https://api.mangatek.com/api/chapters/stream/2e033cd0678309cb65bbd2a07e0cbf4a/3bc8f6b140897243bb7dca7494d5c99a?v=1",
+          "https://api.mangatek.com/api/chapters/stream/2e033cd0678309cb65bbd2a07e0cbf4a/a39c148e37830c9bc163af88a9f5dfc7?v=1",
+          "https://api.mangatek.com/decorations/fire.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "nm_one-piece",
+    "title": "ون بيس",
+    "cover": "assets/covers/one-piece.webp",
+    "desc": "من المقرر أن يتم إعدام غول دي روجر، الرجل الذي يشار إليه باسم \"ملك القراصنة\"، من قبل الحكومة العالمية. ولكن قبل وفاته مباشرة، أكد وجود كنز عظيم، قطعة واحدة، يقع في مكان ما داخل المحيط الشاسع المعروف باسم الخط الكبير. مع الإعلان عن إمكانية المطالبة بالقطعة الواحدة من قبل أي شخص يستحق الوصول إليها، يتم إعدام ملك القراصنة ويبدأ عصر القراصنة العظيم.  \n  \nبعد مرور اثنين وعشرين عامًا، أصبح شاب اسمه مونكي دي لوفي مستعدًا لبدء مغامرته الخاصة، والبحث عن One Piece والسعي ليصبح ملك القراصنة الجديد. مسلحًا بقبعة من القش وقارب صغير وجسم مرن، ينطلق في رحلة رائعة لجمع طاقمه الخاص وسفينة جديرة ستأخذهم عبر الخط الكبير للمطالبة بأعظم مكانة في أعالي البحار.\n\n---\n\n**ملاحظة:**  \n** نظرًا لإرسال إشعار الإزالة إلى MangaDex من مالكي هذه السلسلة، لا يمكن نشر ترجمات المعجبين باللغة الإنجليزية لـ One Piece في الوقت الحالي. يمكن قراءة السلسلة بأكملها على [موقع Shonen Jump الرسمي] (https://www.viz.com/shonenjump/chapters/one-piece) مع توفر الفصول الثلاثة الأولى والأخيرة في أي وقت ويمكن الوصول إلى الباقي من خلال عضوية Shonen Jump (التي تكلف حوالي 2 دولار شهريًا ويمكن الوصول إليها عبر VPN إذا كنت خارج الولايات المتحدة). يمكن أيضًا قراءة أحدث ثلاثة فصول على MangaPlus مجانًا من خلال النقر على روابط الفصول أدناه.**\n\n---\n- ** المانجا الأكثر مبيعا في التاريخ **\n- **فاز بالجائزة الكبرى لجائزة جمعية رسامي الكاريكاتير اليابانية الحادية والأربعين إلى جانب نيكو داراكي في عام 2012** \n- **حصل على الجائزة الفخرية لمحافظة كوماموتو في عام 2018**",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [
+      "Award Winning",
+      "Sci-Fi",
+      "Monsters",
+      "Action",
+      "Animals",
+      "Comedy",
+      "Martial Arts",
+      "Adventure",
+      "Gore",
+      "Fantasy"
+    ],
+    "chapters": [
+      {
+        "n": "1",
+        "title": "المغامرة تبدأ",
+        "pages": [
+          "assets/chapters/one-piece-official-colored/ch-1/1.webp",
+          "assets/chapters/one-piece-official-colored/ch-1/2.webp",
+          "assets/chapters/one-piece-official-colored/ch-1/3.webp",
+          "assets/chapters/one-piece-official-colored/ch-1/4.webp",
+          "assets/chapters/one-piece-official-colored/ch-1/5.webp",
+          "assets/chapters/one-piece-official-colored/ch-1/6.webp",
+          "assets/chapters/one-piece-official-colored/ch-1/7.webp",
+          "assets/chapters/one-piece-official-colored/ch-1/8.webp",
+          "assets/chapters/one-piece-official-colored/ch-1/9.webp",
+          "assets/chapters/one-piece-official-colored/ch-1/10.webp",
+          "assets/chapters/one-piece-official-colored/ch-1/11.webp",
+          "assets/chapters/one-piece-official-colored/ch-1/12.webp",
+          "assets/chapters/one-piece-official-colored/ch-1/13.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "nm_tower-of-god-book-version",
+    "title": "برج الإله (نسخة الرواية)",
+    "cover": "assets/covers/tower-of-god-book-version.webp",
+    "desc": "يجب على الخامس والعشرون بام أن يسافر نحو السماء في برج غامض إذا كان لديه أي فرصة للم شمله مع صديقته المفضلة راشيل، حتى لو كان ذلك يعني مواجهة موته.\n\nقبل أن تختفي بشكل غامض في بوابات البرج أمام عينيه، تحذر راشيل بام من نسيان كل شيء عنها. غير راغب في خسارتها، يدخل بام إلى البرج محاطًا بالكامل بشينسو - وهو ماء إلهي وسحري، على مسؤوليته الخاصة.\n\nيحتوي البرج نفسه على العديد من الطوابق الشاسعة مثل القارات، ولكل منها جغرافيتها ولغتها وثقافتها الفريدة. في مواجهة اختبارات ماهرة في كل خطوة على الطريق، يلتقي بام بحراس أقوياء وبيئات أخرى، مما يجعل سعيه إلى القمة ليس بالأمر السهل.\n\nفي بداية رحلته، التقى بام من قبل هيدون، حارس الطابق الأول والمشرف على البرج الذي يشرح قواعد البرج. في كل مستوى، يتم اختبار بام باستمرار لقوته وبراعته وذكائه. بمساعدة زملائه المسافرين والأشرار غير المحتملين، يصنع بام حلفاء وأعداء من أجل العثور على راشيل؛ لكن نواياها في إعادة الاتصال به أصبحت غير واضحة لأن المعلومات الخاطئة حول مكان وجودها لا تضيف شيئًا. وراء كل صعود هناك كشف عن صداقتهم، ويكشف عن سر أعمق بكثير وأكثر قتامة.\n\n---\n\nملاحظة هامة:\n-\n\n** نظرًا لإرسال إشعار الإزالة إلى MangaDex من مالكي هذه السلسلة، لا يمكن نشر ترجمات المعجبين لـ Tower of God في الوقت الحالي. يمكن قراءة النسخة الأصلية من السلسلة [Long Strip version](https://mangadex.org/title/c0ee660b-f9f2-45c3-8068-5123ff53f84a) رسميًا بالكامل مجانًا على [WEBTOON](https://www.webtoons.com/en/fantasy/tower-of-god/list?title_no=95) باللغة الإنجليزية، أو باستخدام العديد من الترجمات الكاملة للمعجبين بلغات أخرى.**",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [
+      "Action",
+      "Psychological",
+      "Comedy",
+      "Adventure",
+      "Drama",
+      "Fantasy",
+      "Supernatural",
+      "Mystery",
+      "Full Color"
+    ],
+    "chapters": []
+  },
+  {
+    "id": "nm_jeonjijeok-dokja-sijeom",
+    "title": "وجهة نظر القارئ العليم",
+    "cover": "assets/covers/jeonjijeok-dokja-sijeom.webp",
+    "desc": "كان دوكجا موظفًا عاديًا في المكتب وكان اهتمامه الوحيد هو قراءة روايته المفضلة على الويب \"ثلاث طرق للنجاة من نهاية العالم\". ولكن عندما تصبح الرواية حقيقة فجأة، فهو الشخص الوحيد الذي يعرف كيف سينتهي العالم. مسلحًا بهذا الإدراك، يستخدم دوكجا فهمه لتغيير مسار القصة والعالم كما يعرفه.",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [
+      "Award Winning",
+      "Reincarnation",
+      "Monsters",
+      "Action",
+      "Long Strip",
+      "Survival",
+      "Adventure",
+      "Post-Apocalyptic",
+      "Magic",
+      "Fantasy",
+      "Web Comic",
+      "Supernatural",
+      "Adaptation",
+      "Full Color"
+    ],
+    "chapters": []
+  },
+  {
+    "id": "nm_na-honjaman-level-up",
+    "title": "سولو ليفلينج (الارتقاء بالمستوى منفرداً)",
+    "cover": "assets/covers/na-honjaman-level-up.webp",
+    "desc": "قبل 10 سنوات، بعد فتح \"البوابة\" التي تربط العالم الحقيقي بعالم الوحوش، حصل بعض الأشخاص العاديين على القدرة على اصطياد الوحوش داخل البوابة. ويعرفون باسم \"الصيادين\". ومع ذلك، ليس كل الصيادين أقوياء. اسمي سونغ جين وو، صياد من الرتبة E. أنا شخص عليه أن يخاطر بحياته في أدنى الزنزانات، \"الأضعف في العالم\". نظرًا لعدم وجود أي مهارات على الإطلاق لعرضها، بالكاد حصلت على المال المطلوب من خلال القتال في زنزانات منخفضة المستوى... على الأقل حتى وجدت زنزانة مخفية بها أصعب صعوبة داخل الزنزانات ذات الرتبة D! في النهاية، بينما كنت أتقبل الموت، تلقيت فجأة قوة غريبة، سجل مهام لا يمكن لأحد سواي رؤيته، وسرًا للارتقاء بالمستوى لا يعرفه أحد سواي! إذا تدربت وفقًا لمهماتي ومطاردة الوحوش، فسيرتفع مستواي. التغيير من أضعف صياد إلى أقوى صياد من الرتبة S!\n\n---\n**الروابط:**\n\n- الترجمة الإنجليزية الرسمية [<Pocket Comics>](https://www.pocketcomics.com/comic/320) | [<WebNovel>](https://www.webnovel.com/comic/only-i-level-up-(solo-leveling)_15227640605485101) | [<Tapas>](https://tapas.io/series/solo-leveling-comic/info)\n- الخام الرسمي البديل - [Kakao Webtoon](https://webtoon.kakao.com/content/나-혼자만-레벨업/2320)",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [
+      "Award Winning",
+      "Monsters",
+      "Action",
+      "Long Strip",
+      "Adventure",
+      "Magic",
+      "Drama",
+      "Fantasy",
+      "Web Comic",
+      "Supernatural",
+      "Adaptation",
+      "Full Color"
+    ],
+    "chapters": []
+  },
+  {
+    "id": "nm_sinui-tap",
+    "title": "برج الإله",
+    "cover": "assets/covers/sinui-tap.webp",
+    "desc": "بام، الذي كان وحيدًا طوال حياته، دخل البرج لمطاردة صديقته الوحيدة راشيل، لكن كيف سينجو دون أن يمتلك أي قوة أو قوة خاصة؟  \n  \n\"ماذا ترغب؟ المال والثروة؟ الشرف والكبرياء؟ السلطة والسلطة؟ الانتقام؟ أو شيء يتجاوزهم جميعًا؟ أيًا كان ما تريده، فهو هنا.\"",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [
+      "Award Winning",
+      "Action",
+      "Psychological",
+      "Long Strip",
+      "Comedy",
+      "Adventure",
+      "Drama",
+      "Fantasy",
+      "Web Comic",
+      "Supernatural",
+      "Mystery",
+      "Full Color"
+    ],
+    "chapters": []
+  }
+];

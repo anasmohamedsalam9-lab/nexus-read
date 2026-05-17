@@ -1,0 +1,413 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>تصفح المكتبة | Nexus</title>
+    <meta name="theme-color" content="#0a0a0f">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css?v=2.1">
+    <style>
+        body { background: #0c0c14; }
+
+        /* Nav */
+        .browse-nav {
+            background: rgba(12,12,20,0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            padding: 0.7rem 2rem;
+            display: flex; align-items: center; justify-content: space-between;
+            position: sticky; top: 0; z-index: 100;
+        }
+        .bn-logo { font-family: var(--font-en); font-size: 1.4rem; font-weight: 900; color: #fff; text-decoration: none; }
+        .bn-logo span { color: var(--accent-nile); }
+        .bn-links { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+        .bn-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-weight: 600; font-size: 0.88rem; transition: color 0.2s; }
+        .bn-links a:hover, .bn-links a.active { color: var(--accent-nile); }
+        .bn-search-wrap { position: relative; flex: 0 0 260px; }
+        .bn-search-wrap input {
+            width: 100%; padding: 0.5rem 1rem 0.5rem 2.3rem;
+            background: rgba(255,255,255,0.06); border: 2px solid var(--accent-nile);
+            border-radius: 25px; color: #fff; font-size: 0.82rem; outline: none; font-family: var(--font-en);
+        }
+        .bn-search-wrap input::placeholder { color: rgba(255,255,255,0.35); }
+        .bn-search-wrap i { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--accent-nile); font-size: 0.85rem; }
+
+        /* Filters */
+        .browse-header { max-width: 1250px; margin: 1.5rem auto 0; padding: 0 1.5rem; }
+        .filters-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.7rem; margin-bottom: 0.8rem; }
+        .filter-select {
+            width: 100%; padding: 0.65rem 1rem; background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1); border-radius: 22px; color: #fff;
+            font-size: 0.82rem; font-weight: 600; font-family: var(--font-en);
+            appearance: none; cursor: pointer; outline: none; text-align: center; transition: border-color 0.3s;
+        }
+        .filter-select:focus { border-color: var(--accent-nile); }
+        .filter-select option { background: #1a1a2e; color: #fff; }
+        .filter-search-btn {
+            width: 100%; padding: 0.7rem; background: linear-gradient(135deg, #00FF9F, #00cc7a);
+            border: none; border-radius: 22px; color: #000; font-weight: 800; font-size: 0.9rem;
+            cursor: pointer; font-family: var(--font-en); transition: all 0.3s;
+            display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+        }
+        .filter-search-btn:hover { box-shadow: 0 0 20px rgba(0, 255, 159, 0.4); transform: translateY(-2px); }
+
+        /* Section Title */
+        .section-title {
+            font-family: var(--font-en); font-size: 1.4rem; font-weight: 800; color: #fff;
+            margin: 1.5rem 0 1rem; padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(255,255,255,0.06);
+        }
+
+        /* ====== Latest Update Grid (ThunderScans style) ====== */
+        .browse-main { max-width: 1250px; margin: 0 auto; padding: 0 1.5rem 3rem; }
+
+        .lu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.8rem;
+        }
+
+        .lu-card {
+            display: flex;
+            gap: 0.8rem;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 10px;
+            padding: 0.8rem;
+            transition: all 0.25s;
+            min-height: 200px;
+        }
+        .lu-card:hover {
+            border-color: rgba(0, 255, 159, 0.2);
+            background: rgba(255,255,255,0.05);
+        }
+
+        /* Cover */
+        .lu-cover {
+            flex: 0 0 120px;
+            width: 120px;
+            position: relative;
+            cursor: pointer;
+        }
+        .lu-cover img {
+            width: 100%; height: 170px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .lu-cover-badge {
+            position: absolute;
+            bottom: 6px; right: 6px;
+            background: var(--accent-nile);
+            color: #000;
+            font-size: 0.58rem;
+            font-weight: 900;
+            padding: 0.12rem 0.45rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Right Info */
+        .lu-info {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .lu-title {
+            font-family: var(--font-en);
+            font-size: 0.88rem;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.25;
+            margin-bottom: 0.4rem;
+            cursor: pointer;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            transition: color 0.2s;
+        }
+        .lu-title:hover { color: var(--accent-nile); }
+
+        .lu-meta {
+            display: flex; align-items: center; gap: 0.8rem;
+            margin-bottom: 0.6rem;
+        }
+        .lu-rating { color: #fbbf24; font-weight: 800; font-size: 0.78rem; }
+        .lu-rating i { font-size: 0.7rem; }
+        .lu-status {
+            display: flex; align-items: center; gap: 0.3rem;
+            color: #4ade80; font-weight: 700; font-size: 0.72rem;
+        }
+        .lu-status .dot { width: 6px; height: 6px; background: #4ade80; border-radius: 50%; }
+
+        /* Chapter rows */
+        .lu-chapters { flex: 1; display: flex; flex-direction: column; gap: 0; }
+        .lu-ch-row {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.4rem 0;
+            border-top: 1px solid rgba(255,255,255,0.04);
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .lu-ch-row:hover { background: rgba(0, 255, 159, 0.04); padding-right: 0.3rem; }
+        .lu-ch-name {
+            font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.75);
+        }
+        .lu-ch-right { display: flex; align-items: center; gap: 0.5rem; }
+        .lu-ch-badge {
+            background: var(--accent-nile);
+            color: #000;
+            font-size: 0.55rem;
+            font-weight: 900;
+            padding: 0.08rem 0.4rem;
+            border-radius: 3px;
+            text-transform: uppercase;
+        }
+        .lu-ch-badge.hot {
+            background: #f97316;
+            color: #fff;
+        }
+        .lu-ch-time { font-size: 0.68rem; color: rgba(255,255,255,0.35); }
+
+        /* All Chapters Button */
+        .lu-all-btn {
+            display: block; width: 100%; margin-top: auto; padding: 0.45rem;
+            background: rgba(0, 255, 159, 0.08);
+            border: 1px solid rgba(0, 255, 159, 0.2);
+            border-radius: 6px;
+            color: var(--accent-nile);
+            font-size: 0.75rem; font-weight: 700;
+            text-align: center; cursor: pointer;
+            transition: all 0.2s;
+            font-family: var(--font-en);
+        }
+        .lu-all-btn:hover {
+            background: var(--accent-nile);
+            color: #000;
+        }
+
+        /* No results */
+        .no-results {
+            grid-column: 1 / -1; text-align: center; padding: 4rem 2rem;
+            color: rgba(255,255,255,0.4); font-size: 1.1rem;
+        }
+
+        @media (max-width: 1000px) { .lu-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 650px) {
+            .lu-grid { grid-template-columns: 1fr; }
+            .filters-row { grid-template-columns: repeat(2, 1fr); }
+            .bn-links { display: none; }
+            .bn-search-wrap { flex: 1; margin-right: 1rem; }
+        }
+    </style>
+</head>
+<body class="dark-theme">
+
+    <!-- Nav -->
+    <nav class="browse-nav">
+        <a href="index.html" class="bn-logo">Nile <span>Manhwa</span></a>
+        <ul class="bn-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="browse.html" class="active">Comics</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="index.html#trending">Trending</a></li>
+        </ul>
+        <div class="bn-search-wrap">
+            <i class="fas fa-search"></i>
+            <input type="text" id="liveSearch" placeholder="Search...">
+        </div>
+    </nav>
+
+    <!-- Filters -->
+    <div class="browse-header">
+        <div class="filters-row">
+            <select class="filter-select" id="fGenre">
+                <option value="all">Genre All</option>
+                <option value="action">Action</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="martial-arts">Martial Arts</option>
+                <option value="comedy">Comedy</option>
+                <option value="romance">Romance</option>
+                <option value="drama">Drama</option>
+                <option value="mystery">Mystery</option>
+                <option value="horror">Horror</option>
+                <option value="sci-fi">Sci-Fi</option>
+                <option value="sports">Sports</option>
+            </select>
+            <select class="filter-select" id="fStatus">
+                <option value="all">Status All</option>
+                <option value="ongoing">Ongoing</option>
+                <option value="completed">Completed</option>
+            </select>
+            <select class="filter-select" id="fType">
+                <option value="all">Type All</option>
+                <option value="manhwa">Manhwa</option>
+                <option value="manga">Manga</option>
+                <option value="comics">Comics</option>
+                <option value="novels">Novels</option>
+            </select>
+            <select class="filter-select" id="fOrder">
+                <option value="default">Order by Default</option>
+                <option value="rating">Top Rating</option>
+                <option value="az">A-Z</option>
+                <option value="za">Z-A</option>
+            </select>
+        </div>
+        <button class="filter-search-btn" id="applyFiltersBtn"><i class="fas fa-search"></i> Search</button>
+    </div>
+
+    <!-- Main Grid -->
+    <div class="browse-main">
+        <h2 class="section-title">Latest Update</h2>
+        <div class="lu-grid" id="browseGrid"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="app-footer asura-footer" style="margin-top: 2rem;">
+        <div class="footer-content container">
+            <div class="footer-brand">
+                <a href="index.html" class="brand-logo">Manhwa <span class="text-accent">Nile</span></a>
+                <p class="footer-desc">المنصة العربية الأولى لقراءة المانها والمانجا بدقة فائقة وبدون إعلانات مزعجة.</p>
+            </div>
+            <div class="footer-links-inline">
+                <a href="index.html">الرئيسية</a>
+                <a href="#">سياسة الخصوصية</a>
+                <a href="#">DMCA</a>
+                <a href="#">شروط الاستخدام</a>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 Nexus Network. All rights reserved.</div>
+    </footer>
+
+    <script src="data.js?v=2.1"></script>
+    <script src="script.js?v=2.1"></script>
+    <script>
+
+        function buildBrowseList() {
+            const list = [];
+            const seen = new Set();
+            Object.keys(SITE_DATA).forEach(catKey => {
+                const catData = SITE_DATA[catKey];
+                ['latest'].forEach(sec => {
+                    if (catData[sec]) {
+                        catData[sec].forEach(item => {
+                            if (!seen.has(item.title)) {
+                                seen.add(item.title);
+                                let genresList = [];
+                                if (Array.isArray(item.genres)) genresList = item.genres;
+                                else if (typeof item.genres === 'string') genresList = item.genres.split(', ');
+                                list.push({
+                                    title: item.title,
+                                    img: item.img,
+                                    rating: item.rating || '9.0',
+                                    status: item.status || 'مستمر',
+                                    genres: genresList,
+                                    category: catKey,
+                                    chapters: item.chapters || [],
+                                });
+                            }
+                        });
+                    }
+                });
+            });
+            return list;
+        }
+
+        const ALL_ITEMS = buildBrowseList();
+
+        // Time labels for chapters
+        const timeTags = ['', '3 days', '1 week', '2 weeks', '1 month'];
+
+        function renderGrid(items) {
+            const grid = document.getElementById('browseGrid');
+            if (items.length === 0) {
+                grid.innerHTML = '<div class="no-results"><i class="fas fa-search" style="font-size:2rem;display:block;margin-bottom:1rem;"></i>لا توجد نتائج تطابق البحث</div>';
+                return;
+            }
+
+            grid.innerHTML = items.map(item => {
+                const ch = item.chapters.slice(0, 3); // Show top 3 chapters
+                const chHTML = ch.map((c, i) => {
+                    const isNew = i < 2;
+                    const timeLabel = timeTags[i] || '';
+                    return `
+                        <div class="lu-ch-row" onclick="goToSeries('${item.title.replace(/'/g, "\\'")}', '${item.category}')">
+                            <span class="lu-ch-name">${c.n}</span>
+                            <span class="lu-ch-right">
+                                ${isNew ? `<span class="lu-ch-badge ${i === 0 ? 'hot' : ''}">NEW</span>` : ''}
+                                ${timeLabel ? `<span class="lu-ch-time">${timeLabel}</span>` : ''}
+                            </span>
+                        </div>
+                    `;
+                }).join('');
+
+                return `
+                    <div class="lu-card">
+                        <div class="lu-cover" onclick="goToSeries('${item.title.replace(/'/g, "\\'")}', '${item.category}')">
+                            <img src="${item.img}" alt="${item.title}" loading="lazy">
+                            <span class="lu-cover-badge">${item.category}</span>
+                        </div>
+                        <div class="lu-info">
+                            <div class="lu-title" onclick="goToSeries('${item.title.replace(/'/g, "\\'")}', '${item.category}')">${item.title}</div>
+                            <div class="lu-meta">
+                                <span class="lu-rating"><i class="fas fa-star"></i> ${item.rating}</span>
+                                <span class="lu-status"><span class="dot"></span> Ongoing</span>
+                            </div>
+                            <div class="lu-chapters">${chHTML}</div>
+                            <button class="lu-all-btn" onclick="goToSeries('${item.title.replace(/'/g, "\\'")}', '${item.category}')">All Chapters</button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function applyFilters() {
+            const genre = document.getElementById('fGenre').value;
+            const status = document.getElementById('fStatus').value;
+            const type = document.getElementById('fType').value;
+            const order = document.getElementById('fOrder').value;
+            const search = document.getElementById('liveSearch').value.toLowerCase().trim();
+
+            let filtered = ALL_ITEMS.filter(item => {
+                if (type !== 'all' && item.category !== type) return false;
+                if (status === 'ongoing' && item.status !== 'مستمر') return false;
+                if (status === 'completed' && item.status === 'مستمر') return false;
+                if (genre !== 'all') {
+                    const gs = item.genres.join(' ').toLowerCase();
+                    if (!gs.includes(genre.replace('-', ' '))) return false;
+                }
+                if (search && !item.title.toLowerCase().includes(search)) return false;
+                return true;
+            });
+
+            if (order === 'rating') filtered.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating));
+            else if (order === 'az') filtered.sort((a, b) => a.title.localeCompare(b.title));
+            else if (order === 'za') filtered.sort((a, b) => b.title.localeCompare(a.title));
+
+            renderGrid(filtered);
+        }
+
+        document.getElementById('applyFiltersBtn').addEventListener('click', applyFilters);
+        document.getElementById('liveSearch').addEventListener('input', applyFilters);
+        document.getElementById('fGenre').addEventListener('change', applyFilters);
+        document.getElementById('fStatus').addEventListener('change', applyFilters);
+        document.getElementById('fType').addEventListener('change', applyFilters);
+        document.getElementById('fOrder').addEventListener('change', applyFilters);
+
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('genre')) document.getElementById('fGenre').value = urlParams.get('genre');
+        if (urlParams.get('type')) document.getElementById('fType').value = urlParams.get('type');
+
+        renderGrid(ALL_ITEMS);
+    </script>
+</body>
+</html>
+
+
+

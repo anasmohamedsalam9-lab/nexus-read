@@ -1,0 +1,12 @@
+beautifulsoup4
+requests
+cloudscraper
+flask
+flask-cors
+Pillow
+python-dotenv
+lxml
+easyocr
+deep-translator
+arabic-reshaper
+python-bidi

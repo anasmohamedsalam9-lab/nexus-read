@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympus Scraper Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap');
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #0c0c14;
+            color: #fff;
+        }
+        .nile-accent { color: #00FF9F; }
+        .bg-nile-accent { background: linear-gradient(135deg, #00FF9F, #00cc7a); }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(10px);
+        }
+        
+        .log-container {
+            height: 300px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #00FF9F rgba(255, 255, 255, 0.05);
+        }
+        .log-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        .log-container::-webkit-scrollbar-thumb {
+            background-color: #00FF9F;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <div class="glass-panel w-full max-w-4xl p-8 rounded-2xl shadow-2xl">
+        <div class="flex items-center justify-between mb-8 pb-4 border-b border-gray-700">
+            <div>
+                <h1 class="text-3xl font-bold"><span class="nile-accent">Nexus</span> Scraper</h1>
+                <p class="text-gray-400 mt-2">سحب جميع المانهوا من موقع Olympus Staff تلقائياً</p>
+            </div>
+            <div class="text-5xl nile-accent">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div class="glass-panel p-6 rounded-xl">
+                <h2 class="text-xl font-semibold mb-4 text-white"><i class="fa-solid fa-play nile-accent mr-2"></i> التحكم بالبوت</h2>
+                <p class="text-sm text-gray-400 mb-6">سيقوم البوت بجلب جميع الفصول والصور، وحفظها في المسار الصحيح، وتحديث ملف data.js تلقائياً لتعمل مباشرة على موقعك.</p>
+                
+                <button id="startBtn" class="w-full bg-nile-accent text-black font-bold py-3 px-4 rounded-lg shadow-[0_0_15px_rgba(0,255,159,0.4)] hover:scale-105 transition-all text-lg mb-4">
+                    <i class="fa-solid fa-bolt"></i> ابدأ جلب المانهوا الآن
+                </button>
+                <button id="stopBtn" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg transition-all text-lg hidden">
+                    <i class="fa-solid fa-stop"></i> إيقاف السحب
+                </button>
+            </div>
+
+            <div class="glass-panel p-6 rounded-xl">
+                <h2 class="text-xl font-semibold mb-4 text-white"><i class="fa-solid fa-chart-line nile-accent mr-2"></i> الإحصائيات الحالية</h2>
+                
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center border-b border-gray-700 pb-2">
+                        <span class="text-gray-400">المانهوا الحالية:</span>
+                        <span id="currentManga" class="font-bold nile-accent">-</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-gray-700 pb-2">
+                        <span class="text-gray-400">الفصل الحالي:</span>
+                        <span id="currentChapter" class="font-bold">-</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-gray-700 pb-2">
+                        <span class="text-gray-400">حالة التقدم (المانهوا):</span>
+                        <span id="mangaProgress" class="font-bold">0 / 0</span>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <div class="flex justify-between text-xs text-gray-400 mb-1">
+                        <span>التقدم الكلي</span>
+                        <span id="progressBarText">0%</span>
+                    </div>
+                    <div class="w-full bg-gray-800 rounded-full h-2.5">
+                        <div id="progressBar" class="bg-nile-accent h-2.5 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-panel p-4 rounded-xl">
+            <h3 class="text-sm uppercase tracking-wider text-gray-500 mb-3 font-bold"><i class="fa-solid fa-terminal mr-2"></i> Console Logs</h3>
+            <div id="logArea" class="log-container bg-black bg-opacity-50 p-4 rounded-lg font-mono text-sm text-gray-300">
+                <div class="text-gray-500">>> في انتظار الأوامر...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const startBtn = document.getElementById('startBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        const logArea = document.getElementById('logArea');
+        const currentManga = document.getElementById('currentManga');
+        const currentChapter = document.getElementById('currentChapter');
+        const mangaProgress = document.getElementById('mangaProgress');
+        const progressBar = document.getElementById('progressBar');
+        const progressBarText = document.getElementById('progressBarText');
+
+        let eventSource = null;
+
+        function addLog(message, type = 'info') {
+            const div = document.createElement('div');
+            div.className = 'mb-1 ' + (type === 'error' ? 'text-red-400' : type === 'success' ? 'text-[#00FF9F]' : type === 'warning' ? 'text-yellow-400' : 'text-gray-300');
+            
+            const time = new Date().toLocaleTimeString('ar-EG', { hour12: false });
+            div.innerHTML = `<span class="text-gray-600">[${time}]</span> ${message}`;
+            
+            logArea.appendChild(div);
+            logArea.scrollTop = logArea.scrollHeight;
+        }
+
+        startBtn.addEventListener('click', async () => {
+            try {
+                startBtn.disabled = true;
+                startBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> جاري البدء...';
+                
+                const res = await fetch('/api/start', { method: 'POST' });
+                const data = await res.json();
+                
+                if(data.success || data.message === "السحب يعمل حالياً!") {
+                    startBtn.classList.add('hidden');
+                    stopBtn.classList.remove('hidden');
+                    addLog("🚀 بدأ جلب البيانات المتكاملة...", 'success');
+                    
+                    connectSource();
+                } else {
+                    addLog("❌ " + data.message, 'error');
+                }
+            } catch (e) {
+                addLog("❌ خطأ في الاتصال بالخادم", 'error');
+            } finally {
+                startBtn.disabled = false;
+                startBtn.innerHTML = '<i class="fa-solid fa-bolt"></i> ابدأ جلب المانهوا الآن';
+            }
+        });
+
+        stopBtn.addEventListener('click', async () => {
+             try {
+                await fetch('/api/stop', { method: 'POST' });
+                addLog("🛑 تم إرسال طلب إيقاف...", 'warning');
+                if(eventSource) {
+                    eventSource.close();
+                }
+                startBtn.classList.remove('hidden');
+                stopBtn.classList.add('hidden');
+            } catch (e) {
+                addLog("❌ خطأ في الاتصال", 'error');
+            }
+        });
+
+        function connectSource() {
+            if(eventSource) eventSource.close();
+            
+            eventSource = new EventSource('/stream');
+            
+            eventSource.onmessage = function(event) {
+                const data = JSON.parse(event.data);
+                
+                if(data.type === 'log') {
+                    addLog(data.msg, data.level || 'info');
+                } else if(data.type === 'progress') {
+                    if(data.manga_title) currentManga.innerText = data.manga_title;
+                    if(data.chapter) currentChapter.innerText = data.chapter;
+                    if(data.manga_current && data.manga_total) {
+                        mangaProgress.innerText = \`\${data.manga_current} / \${data.manga_total}\`;
+                        let percent = Math.round((data.manga_current / data.manga_total) * 100);
+                        progressBar.style.width = percent + '%';
+                        progressBarText.innerText = percent + '%';
+                    }
+                } else if(data.type === 'done') {
+                    addLog("🎉 انتهى السحب بالكامل بنجاح!", 'success');
+                    startBtn.classList.remove('hidden');
+                    stopBtn.classList.add('hidden');
+                    eventSource.close();
+                } else if(data.type === 'error') {
+                     addLog("❌ خطأ: " + data.msg, 'error');
+                }
+            };
+            
+            eventSource.onerror = function() {
+                addLog("⚠️ انقطع الاتصال المباشر مع الخادم. جاري إعادة الاتصال...", "warning");
+            }
+        }
+
+        // --- Auto Sync on Load ---
+        async function checkStatus() {
+            try {
+                const res = await fetch('/api/status');
+                const data = await res.json();
+                if(data.is_running) {
+                    addLog("📊 وجدنا عملية سحب تعمل حالياً، جاري المزامنة...", "info");
+                    startBtn.classList.add('hidden');
+                    stopBtn.classList.remove('hidden');
+                    connectSource();
+                }
+            } catch (e) {
+                console.error("Status check failed", e);
+            }
+        }
+        
+        // Initial call
+        window.addEventListener('DOMContentLoaded', checkStatus);
+    </script>
+</body>
+</html>
+
+
+

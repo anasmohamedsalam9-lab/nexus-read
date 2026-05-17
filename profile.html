@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي | Nexus</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body class="dark-theme profile-page">
+
+    <div class="app-wrapper">
+        <!-- Header (Shared) -->
+        <header class="sticky-header" id="stickyHeader">
+            <nav class="asura-nav">
+                <div class="nav-container container">
+                    <a href="index.html" class="brand-logo">
+                        <img src="images/logo.png" alt="Logo">
+                        <span class="logo-primary">Nexus</span>
+                    </a>
+
+                    <ul class="nav-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="browse.html">تصفح</a></li>
+                        <li><a href="shop.html">المتجر</a></li>
+                    </ul>
+
+                    <div class="nav-actions" id="navActions">
+                        <!-- Injected by script.js -->
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Profile Hero Section -->
+        <div class="profile-hero">
+            <div class="profile-banner">
+                <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80" alt="Banner" class="banner-img">
+                <div class="banner-overlay"></div>
+            </div>
+
+            <div class="profile-info-container container">
+                <div class="profile-main-info">
+                    <div class="profile-avatar-wrapper">
+                        <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Nile" alt="Avatar" id="profileAvatar">
+                        <label for="avatarUpload" class="avatar-edit-btn"><i class="fas fa-camera"></i></label>
+                        <input type="file" id="avatarUpload" style="display:none">
+                    </div>
+                    <div class="profile-text-content">
+                        <h1 class="profile-name" id="profileName">اسم المستخدم</h1>
+                        <div class="profile-handle" id="profileHandle">@username_nile</div>
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <span class="stat-val" id="countReading">0</span>
+                                <span class="stat-label">Currently Reading</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-val">0</span>
+                                <span class="stat-label">To Read</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-val">0</span>
+                                <span class="stat-label">Finished</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs Navigation -->
+        <div class="profile-tabs-wrapper container">
+            <div class="profile-tabs">
+                <button class="tab-btn active" data-tab="history">
+                    <i class="fas fa-history"></i> تاريخ القراءة
+                </button>
+                <button class="tab-btn" data-tab="bookmarks">
+                    <i class="fas fa-bookmark"></i> المفضلات
+                </a>
+                <button class="tab-btn" data-tab="settings">
+                    <i class="fas fa-user-cog"></i> الإعدادات
+                </button>
+            </div>
+        </div>
+
+        <!-- Tab Content -->
+        <main class="tab-content-area container">
+            <!-- Reading History Tab -->
+            <div class="tab-pane active" id="tab-history">
+                <div class="pane-header">
+                    <h2><i class="fas fa-book-reader text-accent"></i> متابعة القراءة</h2>
+                    <p>أكمل من حيث توقفت في مغامراتك</p>
+                </div>
+                <div class="history-grid" id="historyGrid">
+                    <!-- Loaded dynamically -->
+                    <div class="empty-state">
+                        <i class="fas fa-ghost"></i>
+                        <p>لا يوجد تاريخ قراءة حالياً</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other panes will be empty for now -->
+            <div class="tab-pane" id="tab-bookmarks">
+                <div class="empty-state"><i class="fas fa-bookmark"></i><p>المفضلات قادمة قريباً</p></div>
+            </div>
+            <div class="tab-pane" id="tab-settings">
+                <div class="pane-header">
+                    <h2><i class="fas fa-cog text-accent"></i> إعدادات الملف الشخصي</h2>
+                    <p>قم بتخصيص مظهرك وتعديل معلوماتك</p>
+                </div>
+                
+                <div class="settings-section">
+                    <h3><i class="fas fa-paint-brush"></i> زينة الأفاتار (Avatar Decorations)</h3>
+                    <p class="settings-desc">اختر زينة لتمييز صورتك الشخصية. يتم تطبيق الزينة عبر الموقع بأكمله.</p>
+                    
+                    <div class="owned-decos-grid" id="ownedDecosGrid">
+                        <!-- Loaded dynamically from profile.js based on purchases -->
+                        <div class="empty-state" style="grid-column: 1/-1;">
+                            <i class="fas fa-box-open"></i>
+                            <p>لم تقم بشراء أي زينة حتى الآن. قم بزيارة <a href="shop.html" class="text-accent">المتجر</a> لاقتناء أروع التصاميم!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="main-footer container">
+            <p>© 2026 Nexus - All Rights Reserved</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>
+
+
+
+
+

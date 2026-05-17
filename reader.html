@@ -1,0 +1,643 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nexus | جاري التحميل...</title>
+    <meta name="theme-color" content="#000000">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css?v=2.1">
+    <style>
+        /* ============================================
+           Manga Reader Page - Clean Minimal Layout
+           ============================================ */
+        :root {
+            --reader-bg: #000;
+            --accent-nile: #00FF9F;
+            --bar-bg: #0d0d0d;
+        }
+
+        body {
+            background: var(--reader-bg);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: 'Cairo', 'Outfit', sans-serif;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        /* --- Global Loader --- */
+        #globalLoader {
+            position: fixed; inset: 0;
+            background: var(--reader-bg);
+            z-index: 10000;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+        
+        /* Force hide global scroll-to-top in reader */
+        .scroll-to-top, #scrollToTopBtn { display: none !important; opacity: 0 !important; pointer-events: none !important; z-index: -100 !important; }
+        #globalLoader.hidden { opacity: 0; visibility: hidden; }
+        .loader-spinner {
+            width: 50px; height: 50px;
+            border: 4px solid rgba(0, 255, 159, 0.1);
+            border-top: 4px solid var(--accent-nile);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        /* --- Header / Top Bar --- */
+        .reader-header {
+            position: fixed; top: 0; left: 0; right: 0;
+            height: 55px;
+            background: var(--bar-bg);
+            backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+            z-index: 1000;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 1.5rem;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .reader-header.hidden { transform: translateY(-100%); opacity: 0; pointer-events: none; }
+
+        .rh-btn {
+            background: transparent; border: none; color: #ccc;
+            font-size: 1.2rem; cursor: pointer; transition: color 0.3s;
+            display: flex; align-items: center; justify-content: center;
+            width: 40px; height: 40px;
+        }
+        .rh-btn:hover { color: #fff; }
+
+        .rh-info { text-align: center; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .rh-title {
+            font-size: 1rem; font-weight: 700;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+            max-width: 200px; margin: 0; color: #fff;
+        }
+        .rh-meta { font-size: 0.8rem; color: var(--accent-nile); margin: 0; font-weight: 700; font-family: 'Outfit'; }
+
+        /* --- Main Viewport --- */
+        .reader-container {
+            padding-top: 55px; /* header height */
+            padding-bottom: 65px; /* footer height */
+            display: flex; flex-direction: column;
+            align-items: center;
+            width: 100%;
+            min-height: 100vh;
+        }
+        .reader-image-stack {
+            max-width: 800px; /* Standard webtoon width */
+            width: 100%;
+        }
+        .reader-page {
+            display: block; width: 100%;
+            margin: 0; padding: 0;
+            background: #111;
+            min-height: 300px;
+        }
+
+        /* --- Navigation Footer / Bottom Bar --- */
+        .reader-footer {
+            position: fixed; bottom: 0; left: 0; right: 0;
+            background: var(--bar-bg);
+            height: 60px;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 1.5rem;
+            z-index: 1000;
+            transition: transform 0.3s;
+        }
+        .reader-footer.hidden { transform: translateY(100%); }
+
+        .rf-nav-btn {
+            background: none; border: none; font-size: 0.9rem; font-weight: 600;
+            color: #aaa; cursor: pointer; display: flex; align-items: center; gap: 8px;
+            transition: color 0.3s;
+        }
+        .rf-nav-btn:hover:not(:disabled) { color: #fff; }
+        .rf-nav-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+        .rf-nav-btn i { font-size: 0.8rem; }
+
+        /* Custom Chapter Dropdown */
+        .custom-dropdown { position: relative; }
+        .cb-trigger {
+            background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 4px;
+            color: #fff; font-size: 0.9rem; font-weight: 600; cursor: pointer;
+            display: flex; align-items: center; gap: 10px; border: 1px solid rgba(255,255,255,0.1);
+        }
+        .cb-trigger i { font-size: 0.7rem; color: #fff; }
+        .cb-menu {
+            display: none; position: absolute; bottom: calc(100% + 5px); left: 50%; transform: translateX(-50%);
+            background: #fff; color: #000; width: 220px; max-height: 300px; overflow-y: auto;
+            border-radius: 4px; box-shadow: 0 -5px 15px rgba(0,0,0,0.3); z-index: 2000;
+        }
+        .cb-menu.active { display: block; }
+        .cb-item {
+            padding: 10px 15px; text-align: center; border-bottom: 1px solid #f0f0f0; cursor: pointer;
+            font-size: 0.95rem; font-weight: 600; color: #bbb;
+        }
+        .cb-item:hover { background: #f9f9f9; color: #666; }
+        .cb-item.selected { background: #1d4ed8; color: #fff; border-bottom: none; }
+
+        /* Scrollbar for dropdown */
+        .cb-menu::-webkit-scrollbar { width: 5px; }
+        .cb-menu::-webkit-scrollbar-track { background: #f1f1f1; }
+        .cb-menu::-webkit-scrollbar-thumb { background: #888; border-radius: 5px; }
+
+        /* --- Pro Settings Panel --- */
+        .reader-settings-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); z-index: 10001; display: none; align-items: center; justify-content: center; opacity: 0; transition: 0.2s; }
+        .reader-settings-overlay.active { display: flex; opacity: 1; }
+        .pro-settings-panel { background: #111112; border: 1px solid #2a2a2a; border-radius: 12px; padding: 25px; color: #ccc; font-family: inherit; width: 750px; max-width: 95vw; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+        .pro-settings-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; padding-bottom: 15px; margin-bottom: 25px; }
+        .pro-settings-header h3 { font-size: 1.1rem; color: #fff; margin:0; font-weight: 600; display: flex; align-items: center; gap: 10px; }
+        .pro-settings-header .close-pro { background: transparent; color: #888; border: none; font-size: 1.2rem; cursor: pointer; transition: 0.3s; }
+        .pro-settings-header .close-pro:hover { color: #fff; }
+        .pro-settings-body { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        @media (max-width: 700px) { .pro-settings-body { grid-template-columns: 1fr; gap: 20px; } }
+        .pro-slider-group { margin-bottom: 25px; }
+        .pro-slider-label { display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; margin-bottom: 12px; color: #bbb; }
+        .pro-slider-label span:first-child i { margin-left: 8px; font-size: 1rem; color: #666; }
+        .pro-slider-val { background: #1e1e1e; padding: 2px 8px; border-radius: 4px; color: #fff; font-size: 0.8rem; font-weight: 600; min-width: 50px; text-align: center; }
+        .pro-range { width: 100%; appearance: none; height: 4px; border-radius: 2px; background: #333; outline: none; margin:0; }
+        .pro-range::-webkit-slider-thumb { appearance: none; width: 18px; height: 18px; border-radius: 50%; background: #fff; cursor: pointer; box-shadow: 0 0 5px rgba(0,0,0,0.5); transition: 0.2s; }
+        .pro-range::-webkit-slider-thumb:hover { transform: scale(1.2); }
+        .pro-mode-group h5 { color: #aaa; font-size: 0.9rem; margin: 0 0 15px 0; font-weight: normal; }
+        .pro-modes { display: flex; gap: 10px; }
+        .pro-mode-btn { flex: 1; background: #18181A; display:flex; flex-direction: column; align-items:center; justify-content:center; padding: 15px 5px; border: 1px solid #2a2a2a; border-radius: 8px; cursor: pointer; color: #888; transition: 0.2s; font-size: 0.85rem; font-family: inherit; font-weight: 600; }
+        .pro-mode-btn i { font-size: 1.5rem; margin-bottom: 8px; font-weight: 300; }
+        .pro-mode-btn:hover { background: #222; color: #ddd; }
+        .pro-mode-btn.active { background: rgba(59, 130, 246, 0.1); border-color: #3b82f6; color: #3b82f6; }
+
+        /* --- Error Screen --- */
+        .error-screen {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            height: 100vh; text-align: center; padding: 2rem;
+        }
+        .error-screen i { font-size: 4rem; color: #ff4757; margin-bottom: 1rem; }
+        
+    </style>
+</head>
+<body>
+
+    <div id="globalLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Top Progress Bar -->
+    <div class="reader-progress-wrapper" id="readerProgressWrapper" style="position:fixed; top:0; left:0; width:100%; height:4px; background:rgba(255,255,255,0.05); z-index:2001; transition: transform 0.3s ease, opacity 0.3s ease;">
+        <div id="readerProgressFill" style="height:100%; width:0%; background:var(--accent-nile); box-shadow:0 0 10px var(--accent-nile); transition:width 0.1s linear;"></div>
+    </div>
+
+    <!-- Top Bar -->
+    <header class="reader-header" id="readerHud">
+        <button class="rh-btn" id="openSettings" title="الإعدادات"><i class="fas fa-cog"></i></button>
+        <div class="rh-info" id="toggleHudArea">
+            <h1 id="mangaTitle" class="rh-title">Title</h1>
+            <p id="chapterLabel" class="rh-meta">1</p>
+        </div>
+        <button class="rh-btn" id="closeReader" title="إغلاق"><i class="fas fa-times"></i></button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="reader-container" id="readerBody">
+        <div class="reader-image-stack" id="imageStack">
+            <!-- Images injected here -->
+        </div>
+    </main>
+
+    <!-- Bottom Bar -->
+    <footer class="reader-footer" id="readerFooter">
+        <!-- Next Chapter is on the left in the screenshot (التالي is left) -->
+        <button class="rf-nav-btn" id="nextChapterBtn">
+            التالي <i class="fas fa-step-forward"></i>
+        </button>
+        
+        <div class="custom-dropdown">
+            <div class="cb-trigger" id="dropdownTrigger">
+                <span id="currentChDisplay">الفصل 1</span>
+                <i class="fas fa-chevron-up"></i>
+            </div>
+            <div class="cb-menu" id="dropdownMenu">
+                <!-- Chapters injected here -->
+            </div>
+        </div>
+
+        <!-- Prev Chapter is on the right in the screenshot (السابق is right) -->
+        <button class="rf-nav-btn" id="prevChapterBtn">
+            <i class="fas fa-step-backward"></i> السابق
+        </button>
+    </footer>
+
+    <!-- Settings Overlay -->
+    <div class="reader-settings-overlay" id="settingsOverlay">
+        <div class="pro-settings-panel">
+            <div class="pro-settings-header">
+                <h3><i class="fas fa-sliders-h"></i> إعدادات القراءة</h3>
+                <button class="close-pro" id="closeSettingsBtn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="pro-settings-body">
+                <!-- Right column (in RTL): Sliders -->
+                <div class="pro-sliders">
+                    <div class="pro-slider-group">
+                        <div class="pro-slider-label"><span><i class="fas fa-desktop"></i> عرض حاوية القراءة</span><span class="pro-slider-val" id="valContW">800px</span></div>
+                        <input type="range" class="pro-range" id="slipContW" min="500" max="1200" value="800" step="50">
+                    </div>
+                    <div class="pro-slider-group">
+                        <div class="pro-slider-label"><span><i class="fas fa-expand-arrows-alt"></i> عرض الصورة</span><span class="pro-slider-val" id="valImgW">100%</span></div>
+                        <input type="range" class="pro-range" id="slipImgW" min="40" max="100" value="100" step="1">
+                    </div>
+                    <div class="pro-slider-group">
+                        <div class="pro-slider-label"><span><i class="far fa-sun"></i> السطوع</span><span class="pro-slider-val" id="valBri">100%</span></div>
+                        <input type="range" class="pro-range" id="slipBri" min="30" max="100" value="100" step="1">
+                    </div>
+                    <div class="pro-slider-group">
+                        <div class="pro-slider-label"><span><i class="fas fa-grip-lines"></i> الفراغ بين الصور</span><span class="pro-slider-val" id="valGap">0px</span></div>
+                        <input type="range" class="pro-range" id="slipGap" min="0" max="50" value="0" step="5">
+                    </div>
+                </div>
+                <!-- Left column (in RTL): Modes -->
+                <div class="pro-modes-container">
+                    <div class="pro-mode-group">
+                        <h5>وضع القراءة (Reading Mode)</h5>
+                        <div class="pro-modes">
+                            <button class="pro-mode-btn active" id="modeLongStrip"><i class="fas fa-list"></i> شريط طولي</button>
+                            <button class="pro-mode-btn" id="modeSingle"><i class="far fa-square"></i> مفردة</button>
+                            <button class="pro-mode-btn" id="modeDouble"><i class="fas fa-book-open"></i> مزدوجة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data.js?v=2.1"></script>
+    <script>
+        let currentSeriesTitle = '';
+        let availableChapters = [];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Force remove the global scroll to top button if any script injected it
+            const scrollBtn = document.getElementById('scrollToTopBtn') || document.querySelector('.scroll-to-top');
+            if (scrollBtn) scrollBtn.remove();
+            
+            // Watch for future injections and remove them
+            const observer = new MutationObserver(() => {
+                const asyncBtn = document.getElementById('scrollToTopBtn') || document.querySelector('.scroll-to-top');
+                if (asyncBtn) asyncBtn.remove();
+            });
+            observer.observe(document.body, { childList: true, subtree: true });
+
+            const params = new URLSearchParams(window.location.search);
+            const titleSlug = params.get('title') || params.get('id');
+            const chNum = params.get('ch');
+
+            if (!titleSlug || !chNum) {
+                renderError("حدث خطأ في تحديد الفصل.");
+                return;
+            }
+
+            loadReader(titleSlug, chNum);
+            initReaderUI();
+        });
+
+        function titleToSlug(title) {
+            if (!title) return "";
+            // Use ID if title looks like an internal ID
+            if (title.startsWith('nm_')) return title;
+            return title.toLowerCase()
+                .replace(/[^\u0600-\u06FFa-z0-9]+/g, '-') // Support Arabic characters in slugs
+                .replace(/^-+|-+$/g, '');
+        }
+
+        function findSeriesBySlug(slug) {
+            if (!slug) return null;
+            const decodedSlug = decodeURIComponent(slug).toLowerCase().trim();
+            if (typeof DB !== 'undefined') {
+                // Try matching ID first, then title, then slug
+                const found = DB.find(s => 
+                    s.id === slug || 
+                    s.id === decodedSlug ||
+                    s.title.toLowerCase().trim() === decodedSlug ||
+                    titleToSlug(s.title) === titleToSlug(decodedSlug)
+                );
+                if (found) return found;
+            }
+            return null;
+        }
+
+        function loadReader(titleSlug, chapterNum) {
+            const series = findSeriesBySlug(titleSlug);
+            if (!series) {
+                renderError("العمل غير متوفر.");
+                return;
+            }
+
+            currentSeriesTitle = series.title;
+            const chapters = series.chapters || [];
+            const chapter = chapters.find(c => String(c.n) === String(chapterNum));
+
+            if (!chapter) {
+                renderError(`الفصل ${chapterNum} غير متوفر.`);
+                return;
+            }
+
+            // Update Header
+            document.title = `${series.title} - الفصل ${chapterNum}`;
+            document.getElementById('mangaTitle').textContent = series.title;
+            document.getElementById('chapterLabel').textContent = chapterNum;
+            document.getElementById('currentChDisplay').textContent = `الفصل ${chapterNum}`;
+
+            // Inject Images
+            const container = document.getElementById('imageStack');
+            const pages = chapter.pages || [];
+            
+            if (pages.length === 0) return renderError("لا توجد صور لهذا الفصل.");
+
+            container.innerHTML = pages.map((src, i) => `
+                <img data-src="${src}" class="reader-page" alt="Page ${i+1}" 
+                     loading="lazy" 
+                     onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';">
+            `).join('');
+
+            // Lazy Load
+            const obs = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                        }
+                    }
+                });
+            }, { rootMargin: '800px' });
+            
+            document.querySelectorAll('.reader-page').forEach(img => obs.observe(img));
+
+            // Hide Loader
+            setTimeout(() => {
+                document.getElementById('globalLoader').classList.add('hidden');
+            }, 500);
+
+            // Apply Persistent Settings
+            applyReaderSettings();
+
+            // Progress tracking
+            window.addEventListener('scroll', () => {
+                const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = (window.pageYOffset / totalHeight) * 100;
+                const fill = document.getElementById('readerProgressFill');
+                if (fill) fill.style.width = progress + "%";
+            });
+        }
+
+        function applyReaderSettings() {
+            const viewport = document.getElementById('imageStack');
+            if(!viewport) return;
+
+            const settings = {
+                brightness: localStorage.getItem('nile_bri') || '100',
+                contWidth: localStorage.getItem('nile_contw') || '800',
+                imgWidth: localStorage.getItem('nile_imgw') || '100',
+                gap: localStorage.getItem('nile_gap') || '0',
+                mode: localStorage.getItem('nile_mode') || 'rm-longstrip'
+            };
+
+            // Apply to UI
+            viewport.style.filter = `brightness(${settings.brightness}%)`;
+            viewport.style.maxWidth = settings.contWidth + 'px';
+            
+            const images = viewport.querySelectorAll('.reader-page');
+            images.forEach(img => {
+                img.style.width = settings.imgWidth + '%';
+                img.style.marginBottom = settings.gap + 'px';
+            });
+
+            // Update Sliders if active
+            const slips = {
+                bri: document.getElementById('slipBri'),
+                contw: document.getElementById('slipContW'),
+                imgw: document.getElementById('slipImgW'),
+                gap: document.getElementById('slipGap')
+            };
+            if(slips.bri) slips.bri.value = settings.brightness;
+            if(slips.contw) slips.contw.value = settings.contWidth;
+            if(slips.imgw) slips.imgw.value = settings.imgWidth;
+            if(slips.gap) slips.gap.value = settings.gap;
+
+            const vals = {
+                bri: document.getElementById('valBri'),
+                contw: document.getElementById('valContW'),
+                imgw: document.getElementById('valImgW'),
+                gap: document.getElementById('valGap')
+            };
+            if(vals.bri) vals.bri.textContent = settings.brightness + '%';
+            if(vals.contw) vals.contw.textContent = settings.contWidth + 'px';
+            if(vals.imgw) vals.imgw.textContent = settings.imgWidth + '%';
+            if(vals.gap) vals.gap.textContent = settings.gap + 'px';
+
+            // Update Mode Buttons
+            const modeBtns = {
+                'rm-longstrip': document.getElementById('modeLongStrip'),
+                'rm-single': document.getElementById('modeSingle'),
+                'rm-double': document.getElementById('modeDouble')
+            };
+            // Note: standalone reader IDs are different but match the buttons
+            const btnsList = [
+                { id: 'modeLongStrip', key: 'rm-longstrip' },
+                { id: 'modeSingle', key: 'rm-single' },
+                { id: 'modeDouble', key: 'rm-double' }
+            ];
+            btnsList.forEach(b => {
+                const el = document.getElementById(b.id);
+                if(el) el.classList.toggle('active', b.key === settings.mode);
+            });
+        }
+
+        function setupNavigation(chapters, currentCh) {
+            // Sort chapters descending (130, 129, ... 1)
+            availableChapters = [...chapters].sort((a,b) => parseFloat(b.n) - parseFloat(a.n));
+            const currentIndex = availableChapters.findIndex(c => String(c.n) === String(currentCh));
+
+            const prevBtn = document.getElementById('prevChapterBtn');
+            const nextBtn = document.getElementById('nextChapterBtn');
+            const menu = document.getElementById('dropdownMenu');
+
+            // Build Dropdown menu Items
+            menu.innerHTML = availableChapters.map(c => `
+                <div class="cb-item ${String(c.n) === String(currentCh) ? 'selected' : ''}" data-ch="${c.n}">
+                    الفصل ${c.n}
+                </div>
+            `).join('');
+
+            // Click handling for dropdown items
+            document.querySelectorAll('.cb-item').forEach(item => {
+                item.addEventListener('click', (e) => {
+                    const ch = e.target.getAttribute('data-ch');
+                    goToChapter(ch);
+                });
+            });
+
+            // Logic: Index 0 is newest (highest chapter). 
+            // Next chapter is the one before in the array (e.g., from 127 to 128)
+            // Previous chapter is the one after in the array (e.g., from 127 to 126)
+            const hasNewer = currentIndex > 0;
+            const hasOlder = currentIndex < availableChapters.length - 1;
+
+            nextBtn.disabled = !hasNewer;
+            prevBtn.disabled = !hasOlder;
+
+            nextBtn.onclick = () => { if(hasNewer) goToChapter(availableChapters[currentIndex - 1].n); };
+            prevBtn.onclick = () => { if(hasOlder) goToChapter(availableChapters[currentIndex + 1].n); };
+
+            // Scroll the selected item into view within the dropdown
+            setTimeout(() => {
+                const selected = menu.querySelector('.selected');
+                if (selected) {
+                    menu.scrollTop = selected.offsetTop - (menu.offsetHeight / 2) + (selected.offsetHeight / 2);
+                }
+            }, 100);
+        }
+
+        function goToChapter(ch) {
+            window.location.href = `reader.html?title=${encodeURIComponent(titleToSlug(currentSeriesTitle))}&ch=${ch}`;
+        }
+
+        function renderError(msg) {
+            document.getElementById('readerBody').innerHTML = `
+                <div class="error-screen">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <h2>${msg}</h2>
+                    <br>
+                    <button class="cb-trigger" onclick="window.close()">العودة</button>
+                </div>
+            `;
+            document.getElementById('globalLoader').classList.add('hidden');
+        }
+
+        function initReaderUI() {
+            // Close Button
+            document.getElementById('closeReader').onclick = () => {
+                window.history.back();
+            };
+
+            // Toggle Dropdown
+            const trigger = document.getElementById('dropdownTrigger');
+            const menu = document.getElementById('dropdownMenu');
+            trigger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menu.classList.toggle('active');
+            });
+
+            // Close dropdown if clicked outside
+            document.addEventListener('click', () => {
+                menu.classList.remove('active');
+            });
+
+            // Hide/Show HUD on click center
+            const header = document.getElementById('readerHud');
+            const footer = document.getElementById('readerFooter');
+            const progress = document.getElementById('readerProgressWrapper');
+            const settings = document.getElementById('settingsOverlay');
+
+            const toggleHUD = () => {
+                header.classList.toggle('hidden');
+                footer.classList.toggle('hidden');
+                if(progress) progress.classList.toggle('hidden');
+                // Ensure settings close if we hide HUD
+                if (header.classList.contains('hidden')) {
+                    settings.classList.remove('active');
+                }
+            };
+
+            document.getElementById('toggleHudArea').addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggleHUD();
+            });
+
+            // Also allow screen tap (images or background) to toggle HUD
+            document.getElementById('readerBody').addEventListener('click', (e) => {
+                if (e.target.closest('.rh-btn, .pro-settings-panel, .cb-trigger, .cb-menu')) return;
+                toggleHUD();
+                menu.classList.remove('active'); // ensure menu closes
+            });
+
+            // Settings UI Logic
+            const settingsOverlay = document.getElementById('settingsOverlay');
+            document.getElementById('openSettings').onclick = () => settingsOverlay.classList.add('active');
+            
+            const closeBtn = document.getElementById('closeSettingsBtn');
+            if(closeBtn) closeBtn.onclick = () => settingsOverlay.classList.remove('active');
+            
+            settingsOverlay.addEventListener('click', (e) => {
+                if(e.target === settingsOverlay) settingsOverlay.classList.remove('active');
+            });
+
+            // Logic for Pro Sliders
+            const viewport = document.getElementById('imageStack');
+            
+            const slipContW = document.getElementById('slipContW');
+            if(slipContW) {
+                slipContW.addEventListener('input', (e) => {
+                    localStorage.setItem('nile_contw', e.target.value);
+                    applyReaderSettings();
+                });
+            }
+
+            const slipImgW = document.getElementById('slipImgW');
+            if(slipImgW) {
+                slipImgW.addEventListener('input', (e) => {
+                    localStorage.setItem('nile_imgw', e.target.value);
+                    applyReaderSettings();
+                });
+            }
+
+            const slipBri = document.getElementById('slipBri');
+            if(slipBri) {
+                slipBri.addEventListener('input', (e) => {
+                    localStorage.setItem('nile_bri', e.target.value);
+                    applyReaderSettings();
+                });
+            }
+
+            const slipGap = document.getElementById('slipGap');
+            if(slipGap) {
+                slipGap.addEventListener('input', (e) => {
+                    localStorage.setItem('nile_gap', e.target.value);
+                    applyReaderSettings();
+                });
+                
+                // Ensure gap is applied to dynamic pages
+                const observer = new MutationObserver(() => {
+                    applyReaderSettings();
+                });
+                observer.observe(viewport, {childList: true, subtree: true});
+            }
+
+            // Logic for Reading Modes
+            const btns = [
+                { id: 'modeLongStrip', key: 'rm-longstrip' },
+                { id: 'modeSingle', key: 'rm-single' },
+                { id: 'modeDouble', key: 'rm-double' }
+            ];
+            btns.forEach(b => {
+                const btnEl = document.getElementById(b.id);
+                if(!btnEl) return;
+                btnEl.addEventListener('click', () => {
+                    localStorage.setItem('nile_mode', b.key);
+                    applyReaderSettings();
+                });
+            });
+        }
+    </script>
+</body>
+</html>
+
+
+
