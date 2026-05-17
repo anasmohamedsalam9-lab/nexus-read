@@ -3,6 +3,43 @@
    Uses data.js for shared SITE_DATA
    ========================================================= */
 
+// Safe LocalStorage Interceptor to prevent SecurityError on file:/// protocol
+(function() {
+    try {
+        const x = '__storage_test__';
+        window.localStorage.setItem(x, x);
+        window.localStorage.removeItem(x);
+    } catch (e) {
+        console.warn('[SafeStorage] localStorage is blocked or insecure in this environment. Using memory fallback.');
+        const mockStore = {};
+        const mockStorage = {
+            getItem: function(key) {
+                return key in mockStore ? mockStore[key] : null;
+            },
+            setItem: function(key, val) {
+                mockStore[key] = String(val);
+            },
+            removeItem: function(key) {
+                delete mockStore[key];
+            },
+            clear: function() {
+                for (let key in mockStore) delete mockStore[key];
+            },
+            key: function(i) {
+                const keys = Object.keys(mockStore);
+                return keys[i] || null;
+            },
+            get length() {
+                return Object.keys(mockStore).length;
+            }
+        };
+        Object.defineProperty(window, 'localStorage', {
+            value: mockStorage,
+            writable: true
+        });
+    }
+})();
+
 let currentCategory = 'manhwa';
 
 // API Configuration
