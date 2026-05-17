@@ -58,7 +58,33 @@
                                            "assets/chapters/one-piece-official-colored/ch-1/40.webp",
                                            "assets/chapters/one-piece-official-colored/ch-1/41.webp"
                                        ]
-                         }
+                         },
+                          {
+                              "n":  "2",
+                              "d":  "2026-05-17",
+                              "pages":  [
+                                            "assets/chapters/one-piece-official-colored/ch-2/1.webp",
+                                            "assets/chapters/one-piece-official-colored/ch-2/2.webp",
+                                            "assets/chapters/one-piece-official-colored/ch-2/3.webp",
+                                            "assets/chapters/one-piece-official-colored/ch-2/4.webp",
+                                            "assets/chapters/one-piece-official-colored/ch-2/5.webp",
+                                            "assets/chapters/one-piece-official-colored/ch-2/6.webp",
+                                            "assets/chapters/one-piece-official-colored/ch-2/7.webp",
+                                            "assets/chapters/one-piece-official-colored/ch-2/8.webp",
+                                            "assets/chapters/one-piece-official-colored/ch-2/9.webp",
+                                            "assets/chapters/one-piece-official-colored/ch-2/10.webp",
+                                            "assets/chapters/one-piece-official-colored/ch-2/11.webp",
+                                            "assets/chapters/one-piece-official-colored/ch-2/12.webp",
+                                            "assets/chapters/one-piece-official-colored/ch-2/13.webp",
+                                            "assets/chapters/one-piece-official-colored/ch-2/14.webp",
+                                            "assets/chapters/one-piece-official-colored/ch-2/15.webp",
+                                            "assets/chapters/one-piece-official-colored/ch-2/16.webp",
+                                            "assets/chapters/one-piece-official-colored/ch-2/17.webp",
+                                            "assets/chapters/one-piece-official-colored/ch-2/18.webp",
+                                            "assets/chapters/one-piece-official-colored/ch-2/19.webp",
+                                            "assets/chapters/one-piece-official-colored/ch-2/20.webp"
+                                        ]
+                          }
                      ],
         "type":  "manga",
         "rating":  "9.5"
