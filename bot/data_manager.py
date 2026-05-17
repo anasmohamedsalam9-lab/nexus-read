@@ -66,7 +66,7 @@ def get_max_chapter(entry):
     return max_ch
 
 
-def upsert_manga(title, cover='', desc='', genres=None, status='Ongoing', chapters=None):
+def upsert_manga(title, cover='', desc='', genres=None, status='Ongoing', chapters=None, category='manhwa'):
     """
     Add or update a manga entry in data.js.
     - If exists: merges new chapters into existing ones.
@@ -104,6 +104,10 @@ def upsert_manga(title, cover='', desc='', genres=None, status='Ongoing', chapte
             existing['desc'] = desc
         if genres and not existing.get('genres'):
             existing['genres'] = genres
+        
+        # Save type
+        if category:
+            existing['type'] = category
 
         db[idx] = existing
         print(f"[DataManager] Updated '{title}': +{new_count} new chapters (total: {len(merged)})")
@@ -118,10 +122,11 @@ def upsert_manga(title, cover='', desc='', genres=None, status='Ongoing', chapte
             "status": status,
             "author": "Nile Bot",
             "genres": genres,
+            "type": category,
             "chapters": sorted(chapters, key=lambda c: float(c.get('n', 0)), reverse=True)
         }
         db.insert(0, new_entry)  # Add to top
-        print(f"[DataManager] Added new manga '{title}' with {len(chapters)} chapters")
+        print(f"[DataManager] Added new manga '{title}' with {len(chapters)} chapters (type: {category})")
 
     save_db(db)
     return True

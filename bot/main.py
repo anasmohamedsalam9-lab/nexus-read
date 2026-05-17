@@ -1,4 +1,4 @@
-﻿"""
+"""
 main.py - Nexus Scraper Bot (Cloud-Only Mode + Translation)
 ====================================================
 يقوم بسحب فصول المانهوا من مواقع عربية وأجنبية.
@@ -125,13 +125,14 @@ async def scrape_manga(url, start_ch=1, end_ch=None, translate=None):
     desc = manga_data.get('description', '')
     genres = manga_data.get('genres', [])
     source_lang = manga_data.get('lang', scraper.detect_source_language(url))
+    category = manga_data.get('category', 'manhwa')
 
     if not all_chapters:
         add_log(f"⚠️ لم يتم العثور على فصول لـ '{title}'", 'warning')
         # Still save the manga entry with cover
         if cover:
             cover = await _download_cover(scraper, title, cover)
-            upsert_manga(title, cover=cover, desc=desc, genres=genres)
+            upsert_manga(title, cover=cover, desc=desc, genres=genres, category=category)
         return
 
     # NSFW Filter
@@ -191,7 +192,7 @@ async def scrape_manga(url, start_ch=1, end_ch=None, translate=None):
 
     if not chapters_to_scrape:
         add_log(f"✅ لا توجد فصول جديدة لسحبها", 'success')
-        upsert_manga(title, cover=local_cover, desc=desc, genres=genres)
+        upsert_manga(title, cover=local_cover, desc=desc, genres=genres, category=category)
         return
 
     add_log(f"📥 سيتم سحب {len(chapters_to_scrape)} فصل...", 'info')
@@ -294,7 +295,8 @@ async def scrape_manga(url, start_ch=1, end_ch=None, translate=None):
             cover=local_cover,
             desc=desc,
             genres=genres,
-            chapters=scraped_chapters
+            chapters=scraped_chapters,
+            category=category
         )
         add_log(f"🎉 اكتمل سحب '{title}': {len(scraped_chapters)} فصل جديد", 'success')
     else:

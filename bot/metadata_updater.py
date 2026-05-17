@@ -79,7 +79,8 @@ def update_metadata(batch_size=10):
                     cover=details.get('cover', ''),
                     desc=details.get('description', ''),
                     genres=details.get('genres', []),
-                    status=details.get('status', 'Ongoing')
+                    status=details.get('status', 'Ongoing'),
+                    category=details.get('category', 'manhwa')
                 )
                 print(f"[Updater] SUCCESS: Updated '{title}'")
                 processed += 1

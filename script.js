@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    Nexus - Homepage Logic (2026)
    Uses data.js for shared SITE_DATA
    ========================================================= */
@@ -37,8 +37,21 @@ function findSeriesBySlug(slug) {
 function generateSiteDataFromDB(db) {
     if (!db || db.length === 0) return null;
 
-    const withChapters = db.filter(s => s.chapters && s.chapters.length > 0);
-    const allEntries = db;
+    function getEntriesByType(type) {
+        return db.filter(entry => {
+            const entryType = entry.type || 'manhwa';
+            if (type === 'manhwa') {
+                return entryType === 'manhwa';
+            } else if (type === 'manga') {
+                return entryType === 'manga';
+            } else if (type === 'comics') {
+                return entryType === 'comics' || entryType === 'manhua';
+            } else if (type === 'novels') {
+                return entryType === 'novels';
+            }
+            return false;
+        });
+    }
 
     function toDisplayItem(entry, rank) {
         if (!entry) return null;
@@ -51,7 +64,7 @@ function generateSiteDataFromDB(db) {
             title: entry.title || 'بدون عنوان',
             img: (typeof entry.cover === 'string' && entry.cover.trim() !== "") ? entry.cover.trim() : 'https://via.placeholder.com/300x450/111111/00FF9F?text=No+Cover',
             desc: entry.desc || 'الوصف غير متاح.',
-            rating: (8.0 + Math.random() * 1.9).toFixed(1),
+            rating: entry.rating || (8.0 + Math.random() * 1.9).toFixed(1),
             genres: Array.isArray(entry.genres) ? entry.genres.join(', ') : (typeof entry.genres === 'string' ? entry.genres : 'Action, Fantasy'),
             rank: rank || 1,
             ch: latestCh ? `فصل ${latestCh.n}` : 'قريباً',
@@ -63,25 +76,30 @@ function generateSiteDataFromDB(db) {
         };
     }
 
-    // Sort by number of chapters (most chapters first = more content)
-    const sortedWithChapters = [...withChapters].sort((a, b) => (b.chapters?.length || 0) - (a.chapters?.length || 0));
+    const categoriesData = {};
+    const categories = ['manhwa', 'manga', 'comics', 'novels'];
 
-    const trending = sortedWithChapters.slice(0, 10).map((e, i) => toDisplayItem(e, i + 1));
-    const topSlider = sortedWithChapters.slice(0, 8).map((e, i) => toDisplayItem(e, i + 1));
-    const latest = sortedWithChapters.map((e, i) => toDisplayItem(e, i + 1));
-    const popular = allEntries.slice(0, 20).map((e, i) => toDisplayItem(e, i + 1)); // Changed to 20 per request
-    
-    // Pick random suggestions
-    const shuffled = [...allEntries].sort(() => 0.5 - Math.random());
-    const randomHero = shuffled.length > 0 ? [toDisplayItem(shuffled[0], 1)] : [];
-    const randomRecs = shuffled.slice(1, 11).map((e, i) => toDisplayItem(e, i + 1)); // 10 randoms
+    categories.forEach(cat => {
+        const catEntries = getEntriesByType(cat);
+        const withChapters = catEntries.filter(s => s.chapters && s.chapters.length > 0);
+        
+        // Sort by chapter count (most chapters first = more content)
+        const sortedWithChapters = [...withChapters].sort((a, b) => (b.chapters?.length || 0) - (a.chapters?.length || 0));
 
-    return {
-        manhwa: { trending, topSlider, latest, popular, randomHero, randomRecs },
-        manga: { trending: trending.slice(0, 5), topSlider: topSlider.slice(0, 4), latest: latest.slice(0, 4), popular: popular.slice(0, 10), randomHero, randomRecs },
-        comics: { trending: [], topSlider: [], latest: [], popular: [], randomHero: [], randomRecs: [] },
-        novels: { trending: [], topSlider: [], latest: [], popular: [], randomHero: [], randomRecs: [] }
-    };
+        const trending = sortedWithChapters.slice(0, 10).map((e, i) => toDisplayItem(e, i + 1));
+        const topSlider = sortedWithChapters.slice(0, 8).map((e, i) => toDisplayItem(e, i + 1));
+        const latest = sortedWithChapters.map((e, i) => toDisplayItem(e, i + 1));
+        const popular = catEntries.slice(0, 20).map((e, i) => toDisplayItem(e, i + 1));
+        
+        // Pick random suggestions
+        const shuffled = [...catEntries].sort(() => 0.5 - Math.random());
+        const randomHero = shuffled.length > 0 ? [toDisplayItem(shuffled[0], 1)] : [];
+        const randomRecs = shuffled.slice(1, 11).map((e, i) => toDisplayItem(e, i + 1));
+
+        categoriesData[cat] = { trending, topSlider, latest, popular, randomHero, randomRecs };
+    });
+
+    return categoriesData;
 }
 
 // Generate SITE_DATA from DB if not already defined
