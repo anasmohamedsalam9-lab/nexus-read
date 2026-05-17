@@ -439,22 +439,22 @@ function renderRandomHero(heroData) {
             <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 40%, #0a0a0f 80%);"></div>
             <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 120px; background: linear-gradient(0deg, var(--bg-main) 0%, transparent 100%);"></div>
         </div>
-        <div class="hero-content" style="position: relative; z-index: 2; width: 100%; padding: 0 5%; display: flex; align-items: center; justify-content: space-between; min-height: 500px; gap: 3rem;">
-            <div class="hero-poster-side" style="flex: 0 0 280px; text-align: left; position: relative;">
-                <img src="${item.img}" style="width:100%; height: 400px; object-fit: cover; border-radius:12px; box-shadow: 0 20px 50px rgba(0,0,0,0.9); border: 2px solid rgba(255,255,255,0.05); transform: perspective(800px) rotateY(-5deg); transition: transform 0.3s;" onmouseover="this.style.transform='perspective(800px) rotateY(0deg) scale(1.05)'" onmouseout="this.style.transform='perspective(800px) rotateY(-5deg)'">
+        <div class="hero-content" style="position: relative; z-index: 2; width: 100%; padding: 0 5%; display: flex; align-items: center; justify-content: space-between; min-height: 420px; gap: 3rem;">
+            <div class="hero-poster-side" style="flex: 0 0 240px; text-align: left; position: relative;">
+                <img src="${item.img}" style="width:100%; height: 350px; object-fit: cover; border-radius:12px; box-shadow: 0 20px 50px rgba(0,0,0,0.9); border: 2px solid rgba(255,255,255,0.05); transform: perspective(800px) rotateY(-5deg); transition: transform 0.3s;" onmouseover="this.style.transform='perspective(800px) rotateY(0deg) scale(1.05)'" onmouseout="this.style.transform='perspective(800px) rotateY(-5deg)'">
             </div>
             <div class="hero-text-side" style="flex: 1; max-width: 650px; text-align: right;">
-                <div style="display:inline-block; background:transparent; color: var(--accent-nile); font-weight:800; font-family:var(--font-ar); font-size:1rem; margin-bottom:1rem; letter-spacing: 1px;">أقوى الترشيحات <i class="fas fa-fire"></i></div>
-                <h1 class="hero-title" style="font-size:3.5rem; font-weight: 900; line-height:1.1; margin-bottom:1.5rem; font-family: var(--font-en); color: #fff; text-shadow: 0 5px 20px rgba(0,0,0,0.8);">${item.title}</h1>
-                <div style="margin-bottom: 1.5rem; color: #ccc; font-weight: 700; font-size: 1rem; display: flex; justify-content: flex-end; align-items: center; gap: 0.8rem;">
+                <div style="display:inline-block; background:transparent; color: var(--accent-nile); font-weight:800; font-family:var(--font-ar); font-size:1rem; margin-bottom:0.8rem; letter-spacing: 1px;">أقوى الترشيحات <i class="fas fa-fire"></i></div>
+                <h1 class="hero-title" style="font-size:3rem; font-weight: 900; line-height:1.2; margin-bottom:1rem; font-family: var(--font-en); color: #fff; text-shadow: 0 5px 20px rgba(0,0,0,0.8);">${item.title}</h1>
+                <div style="margin-bottom: 1.2rem; color: #ccc; font-weight: 700; font-size: 0.95rem; display: flex; justify-content: flex-end; align-items: center; gap: 0.8rem;">
                     2026 <span style="color:#666;">|</span> ${item.genres.split(',').join(' <span style="color:#666;">·</span> ')}
                 </div>
-                <p class="hero-subtitle" style="font-size:1.15rem; color:#ccc; line-height:1.8; margin-bottom:2.5rem; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;">${item.desc}</p>
+                <p class="hero-subtitle" style="font-size:1.05rem; color:#bbb; line-height:1.7; margin-bottom:2rem; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;">${item.desc}</p>
                 <div class="hero-actions" style="display:flex; gap:1.5rem; justify-content: flex-end;">
-                    <button onclick="goToSeries('${item.title.replace(/'/g, "\\'")}', '${currentCategory}')" style="background: rgba(255,255,255,0.15); color: #fff; padding: 0.8rem 2rem; border-radius: 4px; font-weight: 700; font-size: 1.1rem; border: none; cursor: pointer; display: flex; align-items: center; gap: 0.8rem; transition: background 0.2s; font-family: var(--font-ar);">
+                    <button onclick="goToSeries('${item.title.replace(/'/g, "\\'")}', '${currentCategory}')" style="background: rgba(255,255,255,0.15); color: #fff; padding: 0.7rem 1.8rem; border-radius: 4px; font-weight: 700; font-size: 1rem; border: none; cursor: pointer; display: flex; align-items: center; gap: 0.8rem; transition: background 0.2s; font-family: var(--font-ar);">
                         المزيد <i class="fas fa-info-circle"></i>
                     </button>
-                    <button onclick="window.openReader('${item.title.replace(/'/g, "\\'")}', '${item.chapters && item.chapters[0] ? item.chapters[item.chapters.length-1].n : '1'}')" style="background: #ffffff; color: #000; padding: 0.8rem 3rem; border-radius: 4px; font-weight: 800; font-size: 1.2rem; border: none; cursor: pointer; display: flex; align-items: center; gap: 0.8rem; transition: transform 0.2s; font-family: var(--font-ar);">
+                    <button onclick="window.openReader('${item.title.replace(/'/g, "\\'")}', '${item.chapters && item.chapters[0] ? item.chapters[item.chapters.length-1].n : '1'}')" style="background: #ffffff; color: #000; padding: 0.7rem 2.5rem; border-radius: 4px; font-weight: 800; font-size: 1.1rem; border: none; cursor: pointer; display: flex; align-items: center; gap: 0.8rem; transition: transform 0.2s; font-family: var(--font-ar);">
                         قراءة <i class="fas fa-play" style="font-size: 0.8em;"></i>
                     </button>
                 </div>

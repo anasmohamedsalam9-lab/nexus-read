@@ -60,18 +60,15 @@
                                        ]
                          }
                      ],
-        "type":  "manga"
+        "type":  "manga",
+        "rating":  "9.5"
     },
     {
         "id":  "nm_max-level-player",
         "title":  "Max Level Player",
         "cover":  "assets/covers/max-level-player.webp",
-        "desc":  "اكتشف العناصر الحصرية والجديدة التي تمت إضافتها للتو. لا تفوت الفرصة!",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
-        "genres":  [
-
-                   ],
         "chapters":  [
                          {
                              "n":  "50",
@@ -302,7 +299,16 @@
                                        ]
                          }
                      ],
-        "type":  "manhwa"
+        "type":  "manhwa",
+        "desc":  "في عالم حيث تحولت لعبة الواقع الافتراضي الأكثر شعبية إلى حقيقة مرعبة، يستيقظ هان سيو-جون ليكتشف أنه قد احتفظ بكل قدراته ومستواه الأقصى كأقوى لاعب في اللعبة! برتبة الإله وقدرات لا حدود لها، يبدأ رحلته الملحمية لحماية البشرية والسيطرة على الأبراج المحصنة الشيطانية.",
+        "genres":  [
+                       "أكشن",
+                       "خيال",
+                       "ألعاب",
+                       "مغامرة",
+                       "قوة خارقة"
+                   ],
+        "rating":  "9.8"
     },
     {
         "id":  "nm_genius-midfielder-s-pass-is-special",
@@ -311,9 +317,6 @@
         "desc":  "اكتشف العناصر الحصرية والجديدة التي تمت إضافتها للتو. لا تفوت الفرصة!",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
-        "genres":  [
-
-                   ],
         "chapters":  [
                          {
                              "n":  "50",
@@ -734,7 +737,13 @@
                                        ]
                          }
                      ],
-        "type":  "manhwa"
+        "type":  "manhwa",
+        "genres":  [
+                       "أكشن",
+                       "مغامرة",
+                       "خيال"
+                   ],
+        "rating":  "9.5"
     },
     {
         "id":  "nm_powerful-confession",
@@ -743,9 +752,6 @@
         "desc":  "اكتشف العناصر الحصرية والجديدة التي تمت إضافتها للتو. لا تفوت الفرصة!",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
-        "genres":  [
-
-                   ],
         "chapters":  [
                          {
                              "n":  "73",
@@ -1102,7 +1108,13 @@
                                        ]
                          }
                      ],
-        "type":  "manhwa"
+        "type":  "manhwa",
+        "genres":  [
+                       "أكشن",
+                       "مغامرة",
+                       "خيال"
+                   ],
+        "rating":  "9.5"
     },
     {
         "id":  "nm_the-archmage-s-restaurant",
@@ -1111,9 +1123,6 @@
         "desc":  "اكتشف العناصر الحصرية والجديدة التي تمت إضافتها للتو. لا تفوت الفرصة!",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
-        "genres":  [
-
-                   ],
         "chapters":  [
                          {
                              "n":  "125",
@@ -1353,13 +1362,18 @@
                                        ]
                          }
                      ],
-        "type":  "manhwa"
+        "type":  "manhwa",
+        "genres":  [
+                       "أكشن",
+                       "مغامرة",
+                       "خيال"
+                   ],
+        "rating":  "9.5"
     },
     {
         "id":  "nm_villain-is-here",
         "title":  "Villain Is Here",
         "cover":  "assets/covers/villain-is-here.webp",
-        "desc":  "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
         "genres":  [
@@ -2968,13 +2982,14 @@
                                        ]
                          }
                      ],
-        "type":  "manhwa"
+        "type":  "manhwa",
+        "desc":  "قصة شيقة ومليئة بالإثارة والمغامرات، تابع فصول هذا العمل الممتع لتستكشف مصير الأبطال في مواجهة التحديات والأخطار الكبرى!",
+        "rating":  "9.5"
     },
     {
         "id":  "nm_god-of-martial-arts",
         "title":  "God Of Martial Arts",
         "cover":  "assets/covers/god-of-martial-arts.webp",
-        "desc":  "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
         "genres":  [
@@ -4070,20 +4085,16 @@
                                        ]
                          }
                      ],
-        "type":  "manhwa"
+        "type":  "manhwa",
+        "desc":  "قصة شيقة ومليئة بالإثارة والمغامرات، تابع فصول هذا العمل الممتع لتستكشف مصير الأبطال في مواجهة التحديات والأخطار الكبرى!",
+        "rating":  "9.5"
     },
     {
         "id":  "nm_the-world-s-best-engineer",
         "title":  "The World\u0027s Best Engineer",
         "cover":  "assets/covers/the-world-s-best-engineer.webp",
-        "desc":  "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
-        "genres":  [
-                       "بطل غير إعتيادي",
-                       "خيال",
-                       "اعمار"
-                   ],
         "chapters":  [
                          {
                              "n":  "222",
@@ -6005,7 +6016,16 @@
                                        ]
                          }
                      ],
-        "type":  "manhwa"
+        "type":  "manhwa",
+        "desc":  "عندما يستيقظ طالب الهندسة المدنية كيم سو-هو في جسد لوريد فرونتيرا، النبيل الكسول السكير الذي تعاني عائلته من ديون هائلة على وشك الإفلاس، يقرر استخدام معرفته الهندسية والإنشائية الحديثة لتصميم الجسور والقنوات وتطوير الأراضي لإنقاذ نفسه وعائلته بطرق عبقرية ومضحكة لا تخطر على بال!",
+        "genres":  [
+                       "كوميديا",
+                       "خيال",
+                       "أكشن",
+                       "تناسخ",
+                       "بناء"
+                   ],
+        "rating":  "9.9"
     },
     {
         "id":  "nm_global-horror-start-with-trillions-of-coins",
@@ -6014,9 +6034,6 @@
         "desc":  "اكتشف العناصر الحصرية والجديدة التي تمت إضافتها للتو. لا تفوت الفرصة!",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
-        "genres":  [
-
-                   ],
         "chapters":  [
                          {
                              "n":  "155",
@@ -6334,23 +6351,20 @@
                                        ]
                          }
                      ],
-        "type":  "comics"
+        "type":  "comics",
+        "genres":  [
+                       "أكشن",
+                       "مغامرة",
+                       "خيال"
+                   ],
+        "rating":  "9.5"
     },
     {
         "id":  "nm_the-beginning-after-the-end",
         "title":  "The Beginning After The End",
         "cover":  "assets/covers/the-beginning-after-the-end.webp",
-        "desc":  "اكتشف العناصر الحصرية والجديدة التي تمت إضافتها للتو. لا تفوت الفرصة!",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
-        "genres":  [
-                       "أكشن",
-                       "إثارة",
-                       "إيسيكاي",
-                       "رومانسي",
-                       "شياطين",
-                       "فانتازيا"
-                   ],
         "chapters":  [
                          {
                              "n":  "231",
@@ -6575,7 +6589,16 @@
                                        ]
                          }
                      ],
-        "type":  "manhwa"
+        "type":  "manhwa",
+        "desc":  "الملك غري، القائد الذي لا مثيل له في عالم يحكمه القوة العسكرية، يولد مجدداً في عالم جديد مليء بالسحر والوحوش الأسطورية كطفل يدعى آرثر ليدوين. تحت المظهر الهادئ لطفل صغير، تكمن عقلية ملك محارب يسعى لتصحيح أخطاء ماضيه وحماية أحبائه الجدد من تهديد غامض يلوح في الأفق.",
+        "genres":  [
+                       "أكشن",
+                       "خيال",
+                       "مغامرة",
+                       "تناسخ",
+                       "سحر"
+                   ],
+        "rating":  "9.8"
     },
     {
         "id":  "nm_one-piece",
@@ -6584,9 +6607,6 @@
         "desc":  "اكتشف العناصر الحصرية والجديدة التي تمت إضافتها للتو. لا تفوت الفرصة!",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
-        "genres":  [
-
-                   ],
         "chapters":  [
                          {
                              "n":  "1179",
@@ -6839,7 +6859,13 @@
                                        ]
                          }
                      ],
-        "type":  "manga"
+        "type":  "manga",
+        "genres":  [
+                       "أكشن",
+                       "مغامرة",
+                       "خيال"
+                   ],
+        "rating":  "9.5"
     },
     {
         "id":  "nm_catastrophic-necromancer",
@@ -6848,9 +6874,6 @@
         "desc":  "اكتشف العناصر الحصرية والجديدة التي تمت إضافتها للتو. لا تفوت الفرصة!",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
-        "genres":  [
-
-                   ],
         "chapters":  [
                          {
                              "n":  "265",
@@ -7097,7 +7120,13 @@
                                        ]
                          }
                      ],
-        "type":  "comics"
+        "type":  "comics",
+        "genres":  [
+                       "أكشن",
+                       "مغامرة",
+                       "خيال"
+                   ],
+        "rating":  "9.5"
     },
     {
         "id":  "nm_logging-10-000-years-into-the-future",
@@ -7106,9 +7135,6 @@
         "desc":  "اكتشف العناصر الحصرية والجديدة التي تمت إضافتها للتو. لا تفوت الفرصة!",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
-        "genres":  [
-
-                   ],
         "chapters":  [
                          {
                              "n":  "312",
@@ -7392,18 +7418,20 @@
                                        ]
                          }
                      ],
-        "type":  "comics"
+        "type":  "comics",
+        "genres":  [
+                       "أكشن",
+                       "مغامرة",
+                       "خيال"
+                   ],
+        "rating":  "9.5"
     },
     {
         "id":  "nm_magic-emperor",
         "title":  "Magic emperor",
         "cover":  "assets/covers/magic-emperor.webp",
-        "desc":  "اكتشف العناصر الحصرية والجديدة التي تمت إضافتها للتو. لا تفوت الفرصة!",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
-        "genres":  [
-
-                   ],
         "chapters":  [
                          {
                              "n":  "844",
@@ -7528,7 +7556,16 @@
                                        ]
                          }
                      ],
-        "type":  "comics"
+        "type":  "comics",
+        "desc":  "بعد أن خانه أقرب تلاميذه وقتل، يستيقظ إمبراطور الشياطين الأسطوري تشو ييفان في جسد خادم شاب ضعيف لعائلة نبيلة متدهورة. بروح الشياطين وقدراته السابقة، يقرر حماية الفتاة الشابة والارتقاء بالعائلة مجدداً للانتقام وتطهير كل من وقف في طريقه!",
+        "genres":  [
+                       "أكشن",
+                       "خيال",
+                       "فنون قتالية",
+                       "دراما",
+                       "تناسخ"
+                   ],
+        "rating":  "9.9"
     },
     {
         "id":  "nm_trait-hoarder",
@@ -7537,9 +7574,6 @@
         "desc":  "اكتشف العناصر الحصرية والجديدة التي تمت إضافتها للتو. لا تفوت الفرصة!",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
-        "genres":  [
-
-                   ],
         "chapters":  [
                          {
                              "n":  "66",
@@ -7923,7 +7957,13 @@
                                        ]
                          }
                      ],
-        "type":  "manhwa"
+        "type":  "manhwa",
+        "genres":  [
+                       "أكشن",
+                       "مغامرة",
+                       "خيال"
+                   ],
+        "rating":  "9.5"
     },
     {
         "id":  "nm_reincarnated-escort-warrior",
@@ -7932,9 +7972,6 @@
         "desc":  "اكتشف العناصر الحصرية والجديدة التي تمت إضافتها للتو. لا تفوت الفرصة!",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
-        "genres":  [
-
-                   ],
         "chapters":  [
                          {
                              "n":  "148",
@@ -8241,7 +8278,13 @@
                                        ]
                          }
                      ],
-        "type":  "manhwa"
+        "type":  "manhwa",
+        "genres":  [
+                       "أكشن",
+                       "مغامرة",
+                       "خيال"
+                   ],
+        "rating":  "9.5"
     },
     {
         "id":  "nm_player",
@@ -8250,9 +8293,6 @@
         "desc":  "اكتشف العناصر الحصرية والجديدة التي تمت إضافتها للتو. لا تفوت الفرصة!",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
-        "genres":  [
-
-                   ],
         "chapters":  [
                          {
                              "n":  "254",
@@ -8583,7 +8623,13 @@
                                        ]
                          }
                      ],
-        "type":  "manhwa"
+        "type":  "manhwa",
+        "genres":  [
+                       "أكشن",
+                       "مغامرة",
+                       "خيال"
+                   ],
+        "rating":  "9.5"
     },
     {
         "id":  "nm_white-dragon-duke-pendragon",
@@ -8592,9 +8638,6 @@
         "desc":  "اكتشف العناصر الحصرية والجديدة التي تمت إضافتها للتو. لا تفوت الفرصة!",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
-        "genres":  [
-
-                   ],
         "chapters":  [
                          {
                              "n":  "131",
@@ -8799,27 +8842,20 @@
                                        ]
                          }
                      ],
-        "type":  "manhwa"
+        "type":  "manhwa",
+        "genres":  [
+                       "أكشن",
+                       "مغامرة",
+                       "خيال"
+                   ],
+        "rating":  "9.5"
     },
     {
         "id":  "nm_eleceed",
         "title":  "Eleceed",
         "cover":  "assets/covers/eleceed.webp",
-        "desc":  "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
-        "genres":  [
-                       "أكشن",
-                       "إثارة",
-                       "إيسيكاي",
-                       "بطل غير إعتيادي",
-                       "صقل",
-                       "قوة خارقة",
-                       "فنون قتال",
-                       "سحر",
-                       "فانتازيا",
-                       "إعادة إحياء"
-                   ],
         "chapters":  [
                          {
                              "n":  "397",
@@ -10655,21 +10691,23 @@
                                        ]
                          }
                      ],
-        "type":  "manhwa"
+        "type":  "manhwa",
+        "desc":  "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
+        "genres":  [
+                       "أكشن",
+                       "كوميديا",
+                       "قوة خارقة",
+                       "خيال",
+                       "حيوانات"
+                   ],
+        "rating":  "9.8"
     },
     {
         "id":  "nm_demonic-emperor",
         "title":  "Demonic Emperor",
         "cover":  "assets/covers/demonic-emperor.webp",
-        "desc":  "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
-        "genres":  [
-                       "أكشن",
-                       "إثارة",
-                       "فنون قتال",
-                       "زمكاني"
-                   ],
         "chapters":  [
                          {
                              "n":  "844",
@@ -11809,13 +11847,21 @@
                                        ]
                          }
                      ],
-        "type":  "comics"
+        "type":  "comics",
+        "desc":  "بعد أن خانه أقرب تلاميذه وقتل، يستيقظ إمبراطور الشياطين الأسطوري تشو ييفان في جسد خادم شاب ضعيف لعائلة نبيلة متدهورة. بروح الشياطين وقدراته السابقة، يقرر حماية الفتاة الشابة والارتقاء بالعائلة مجدداً للانتقام وتطهير كل من وقف في طريقه!",
+        "genres":  [
+                       "أكشن",
+                       "خيال",
+                       "فنون قتالية",
+                       "دراما",
+                       "تناسخ"
+                   ],
+        "rating":  "9.9"
     },
     {
         "id":  "nm_the-demon-king-overrun-by-heroes",
         "title":  "The Demon King Overrun by Heroes",
         "cover":  "assets/covers/the-demon-king-overrun-by-heroes.webp",
-        "desc":  "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
         "genres":  [
@@ -12386,13 +12432,14 @@
                                        ]
                          }
                      ],
-        "type":  "manhwa"
+        "type":  "manhwa",
+        "desc":  "قصة شيقة ومليئة بالإثارة والمغامرات، تابع فصول هذا العمل الممتع لتستكشف مصير الأبطال في مواجهة التحديات والأخطار الكبرى!",
+        "rating":  "9.5"
     },
     {
         "id":  "nm_my-simulated-path-to-immortality",
         "title":  "My Simulated Path To Immortality",
         "cover":  "assets/covers/my-simulated-path-to-immortality.webp",
-        "desc":  "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
         "genres":  [
@@ -13288,13 +13335,14 @@
                                        ]
                          }
                      ],
-        "type":  "comics"
+        "type":  "comics",
+        "desc":  "قصة شيقة ومليئة بالإثارة والمغامرات، تابع فصول هذا العمل الممتع لتستكشف مصير الأبطال في مواجهة التحديات والأخطار الكبرى!",
+        "rating":  "9.5"
     },
     {
         "id":  "nm_demonic-beast-hunter-survival-guide",
         "title":  "Demonic Beast Hunter Survival Guide",
         "cover":  "images/logo.png",
-        "desc":  "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
         "genres":  [
@@ -13566,13 +13614,14 @@
                                        ]
                          }
                      ],
-        "type":  "manhwa"
+        "type":  "manhwa",
+        "desc":  "قصة شيقة ومليئة بالإثارة والمغامرات، تابع فصول هذا العمل الممتع لتستكشف مصير الأبطال في مواجهة التحديات والأخطار الكبرى!",
+        "rating":  "9.5"
     },
     {
         "id":  "nm_maxed-strength-necromancer",
         "title":  "Maxed strength necromancer",
         "cover":  "assets/covers/maxed-strength-necromancer.webp",
-        "desc":  "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
         "genres":  [
@@ -15108,13 +15157,14 @@
                                        ]
                          }
                      ],
-        "type":  "manhwa"
+        "type":  "manhwa",
+        "desc":  "قصة شيقة ومليئة بالإثارة والمغامرات، تابع فصول هذا العمل الممتع لتستكشف مصير الأبطال في مواجهة التحديات والأخطار الكبرى!",
+        "rating":  "9.5"
     },
     {
         "id":  "nm_the-divine-eyed-grimoire-mage",
         "title":  "The Divine-Eyed Grimoire Mage",
         "cover":  "assets/covers/the-divine-eyed-grimoire-mage.webp",
-        "desc":  "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
         "status":  "Ongoing",
         "author":  "Nexus Bot",
         "genres":  [
@@ -15441,6 +15491,8 @@
                                        ]
                          }
                      ],
-        "type":  "manhwa"
+        "type":  "manhwa",
+        "desc":  "قصة شيقة ومليئة بالإثارة والمغامرات، تابع فصول هذا العمل الممتع لتستكشف مصير الأبطال في مواجهة التحديات والأخطار الكبرى!",
+        "rating":  "9.5"
     }
 ];

@@ -1,4 +1,4 @@
-﻿"""
+"""
 translator.py - Nexus Image Translator (CPU-Friendly)
 ============================================================
 يترجم صور المانهوا من الإنجليزية إلى العربية بدون الحاجة لـ GPU.
@@ -68,6 +68,74 @@ def _reshape_arabic(text):
     except ImportError:
         # Fallback: return as-is (may display incorrectly)
         return text
+
+
+import re
+
+def _contains_english(text):
+    """Check if a string contains any English alphabetical characters."""
+    if not text:
+        return False
+    return bool(re.search(r'[a-zA-Z]', text))
+
+
+def _clean_and_translate_fallback(text):
+    """Fallback translation dictionary for common manga/comic exclamations and names."""
+    if not text:
+        return ""
+    
+    t_clean = text.strip().upper().replace("!", "").replace("?", "").replace(".", "").replace(",", "")
+    
+    fallbacks = {
+        "FREEDOM": "حرية!",
+        "SHANKS": "شانكس",
+        "LUFFY": "لوفي",
+        "ZORO": "زورو",
+        "NAMI": "نامي",
+        "USOPP": "يوسوب",
+        "SANJI": "سانجي",
+        "CHOPPER": "تشوبر",
+        "ROBIN": "روبين",
+        "FRANKY": "فرانكي",
+        "BROOK": "بروك",
+        "JINBE": "جينبي",
+        "ONE PIECE": "ون بيس",
+        "GOL D ROGER": "غول دي روجر",
+        "MARINES": "البحرية",
+        "PIRATES": "القراصنة",
+        "HUH": "هاه؟",
+        "WHAT": "ماذا؟",
+        "YEAH": "أجل!",
+        "YES": "نعم!",
+        "NO": "لا!",
+        "OH": "أوه!",
+        "HEY": "مهلاً!",
+        "WAIT": "انتظر!",
+        "HELP": "النجدة!",
+        "REALLY": "حقاً؟",
+        "SERIOUSLY": "بجدية؟",
+        "IMPOSSIBLE": "مستحيل!",
+        "DAMN": "سحقاً!",
+        "SHIT": "تباً!",
+        "DIE": "مت!",
+        "FIRE": "نار!",
+        "WATER": "ماء!",
+        "ATTACK": "هجوم!",
+        "STOP": "توقف!",
+        "GO": "اذهب!",
+        "RUN": "اركض!",
+        "LOOK": "انظر!"
+    }
+    
+    for k, v in fallbacks.items():
+        if k in t_clean:
+            return v
+            
+    # If it is pure English sound effect/word, return clean or empty to erase from the bubble
+    if re.match(r'^[A-Za-z\s\!\?\.\,]+$', text):
+        return ""
+        
+    return text
 
 
 def _find_arabic_font(size=20):
@@ -153,10 +221,13 @@ def _estimate_bg_color(img_array, bbox):
     return (int(avg[0]), int(avg[1]), int(avg[2]))
 
 
-def _fit_text_in_box(draw, text, font_func, box_width, box_height, min_size=12, max_size=28):
-    """Find the best font size and wrap text to fit in a bounding box."""
+def _fit_text_in_box(draw, text, font_func, box_width, box_height, min_size=10, max_size=28):
+    """Find the best font size and wrap text to fit in a bounding box (unreshaped raw text)."""
     best_size = min_size
     best_lines = [text]
+
+    # Bubble-safe horizontal padding to fit beautifully in curved speech bubbles
+    usable_width = max(15, box_width - 12)
 
     for size in range(max_size, min_size - 1, -1):
         font = font_func(size)
@@ -166,10 +237,12 @@ def _fit_text_in_box(draw, text, font_func, box_width, box_height, min_size=12, 
 
         for word in words:
             test_line = current_line + (" " if current_line else "") + word
-            bbox = draw.textbbox((0, 0), test_line, font=font)
+            # Measure using reshaped line so width estimates are extremely accurate
+            reshaped_test = _reshape_arabic(test_line)
+            bbox = draw.textbbox((0, 0), reshaped_test, font=font)
             line_width = bbox[2] - bbox[0]
 
-            if line_width <= box_width - 6:
+            if line_width <= usable_width:
                 current_line = test_line
             else:
                 if current_line:
@@ -180,8 +253,8 @@ def _fit_text_in_box(draw, text, font_func, box_width, box_height, min_size=12, 
             lines.append(current_line)
 
         # Check total height
-        total_height = len(lines) * (size + 4)
-        if total_height <= box_height - 4:
+        total_height = len(lines) * (size + 6)
+        if total_height <= box_height - 2:
             best_size = size
             best_lines = lines
             break
@@ -307,8 +380,11 @@ class MangaTranslator:
                     break
 
                 translated = translated_texts[i]
-                if not translated or translated == original_text:
-                    continue
+                
+                # Check if it was not translated, or if it still contains English
+                if not translated or translated == original_text or _contains_english(translated):
+                    # Try a fallback clean/translate
+                    translated = _clean_and_translate_fallback(original_text)
 
                 # Calculate bounding box
                 pts = np.array(bbox)
@@ -326,24 +402,35 @@ class MangaTranslator:
 
                 # Choose text color (dark on light bg, light on dark bg)
                 brightness = (bg_color[0] * 299 + bg_color[1] * 587 + bg_color[2] * 114) / 1000
+                
+                # Clamping Background: if it's very light, it's a white speech bubble! Make it pure white!
+                if brightness > 190:
+                    bg_color = (255, 255, 255)
+                    brightness = 255
+                # If it's very dark, make it pure black!
+                elif brightness < 65:
+                    bg_color = (0, 0, 0)
+                    brightness = 0
+
                 text_color = (0, 0, 0) if brightness > 128 else (255, 255, 255)
 
-                # Fill original text area with background color
+                # ALWAYS fill original text area with background color to wipe the original English!
                 padding = 2
                 draw.rectangle(
                     [x_min - padding, y_min - padding, x_max + padding, y_max + padding],
                     fill=bg_color
                 )
 
-                # Reshape Arabic text
-                display_text = _reshape_arabic(translated)
+                # If after fallback we still have English or empty text, do NOT draw any text, keeping the bubble cleanly erased!
+                if not translated or _contains_english(translated):
+                    continue
 
-                # Fit text in box
+                # Fit text in box (passing RAW translated text now!)
                 font_size, lines = _fit_text_in_box(
-                    draw, display_text, self.get_font,
+                    draw, translated, self.get_font,
                     box_w, box_h,
-                    min_size=max(10, box_h // 3),
-                    max_size=min(28, box_h - 2)
+                    min_size=max(8, box_h // 4),
+                    max_size=min(26, box_h - 2)
                 )
 
                 font = self.get_font(font_size)
@@ -353,16 +440,19 @@ class MangaTranslator:
                 y_start = y_min + (box_h - total_text_height) // 2
 
                 for line_idx, line in enumerate(lines):
-                    line_bbox = draw.textbbox((0, 0), line, font=font)
+                    # Reshape each line individually right before drawing to preserve bidirectional connectivity!
+                    display_line = _reshape_arabic(line)
+                    
+                    line_bbox = draw.textbbox((0, 0), display_line, font=font)
                     line_w = line_bbox[2] - line_bbox[0]
                     x_pos = x_min + (box_w - line_w) // 2
                     y_pos = y_start + line_idx * (font_size + 4)
 
-                    # Draw text with slight outline for readability
-                    outline_color = bg_color
-                    for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
-                        draw.text((x_pos + dx, y_pos + dy), line, fill=outline_color, font=font)
-                    draw.text((x_pos, y_pos), line, fill=text_color, font=font)
+                    # Draw text with elegant 8-way outline sweep for 100% legibility (white outline for black text, black for white)
+                    outline_color = (255, 255, 255) if text_color == (0, 0, 0) else (0, 0, 0)
+                    for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1), (-1, -1), (1, 1), (-1, 1), (1, -1)]:
+                        draw.text((x_pos + dx, y_pos + dy), display_line, fill=outline_color, font=font)
+                    draw.text((x_pos, y_pos), display_line, fill=text_color, font=font)
 
             # Save translated image
             os.makedirs(os.path.dirname(output_path), exist_ok=True)
