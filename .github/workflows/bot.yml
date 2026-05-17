@@ -33,6 +33,6 @@ jobs:
         run: |
           git config --global user.name "Nexus Auto Bot"
           git config --global user.email "bot@nexus.com"
-          git add data.js assets/covers/
-          git commit -m "تحديث تلقائي: جلب فصول وأغلفة جديدة [skip ci]" || echo "لا توجد تحديثات جديدة"
+          git add data.js assets/covers/ assets/chapters/
+          git commit -m "تحديث تلقائي: جلب وترجمة فصول وأغلفة جديدة [skip ci]" || echo "لا توجد تحديثات جديدة"
           git push
