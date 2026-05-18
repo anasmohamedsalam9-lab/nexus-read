@@ -1,6 +1,32 @@
 var DB = [
   {
     "id": "nm_",
+    "title": "دیدگاه خواننده‌ی همه‌چی‌دون",
+    "cover": "assets/covers/.webp",
+    "desc": "Dokja was an average office worker whose sole interest was reading his favorite web novel 'Three Ways to Survive the Apocalypse.' But when the novel suddenly becomes reality, he is the only person who knows how the world will end. Armed with this realization, Dokja uses his understanding to change the course of the story, and the world, as he knows it.",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [
+      "Award Winning",
+      "Reincarnation",
+      "Monsters",
+      "Action",
+      "Long Strip",
+      "Survival",
+      "Adventure",
+      "Post-Apocalyptic",
+      "Magic",
+      "Fantasy",
+      "Web Comic",
+      "Supernatural",
+      "Adaptation",
+      "Full Color"
+    ],
+    "type": "manhwa",
+    "chapters": []
+  },
+  {
+    "id": "nm_",
     "title": "سولو ليفيلنغ",
     "cover": "assets/covers/.webp",
     "desc": "10 years ago, after “the Gate” that connected the real world with the monster world opened, some of the ordinary, everyday people received the power to hunt monsters within the Gate. They are known as “Hunters”. However, not all Hunters are powerful. My name is Sung Jin-Woo, an E-rank Hunter. I’m someone who has to risk his life in the lowliest of dungeons, the “World’s Weakest”. Having no skills whatsoever to display, I barely earned the required money by fighting in low-leveled dungeons… at least until I found a hidden dungeon with the hardest difficulty within the D-rank dungeons! In the end, as I was accepting death, I suddenly received a strange power, a quest log that only I could see, a secret to leveling up that only I know about! If I trained in accordance with my quests and hunted monsters, my level would rise. Changing from the weakest Hunter to the strongest S-rank Hunter!\n\n---\n**Links:**\n\n- Official English Translation [<Pocket Comics>](https://www.pocketcomics.com/comic/320) | [<WebNovel>](https://www.webnovel.com/comic/only-i-level-up-(solo-leveling)_15227640605485101) | [<Tapas>](https://tapas.io/series/solo-leveling-comic/info)\n- Alternate Official Raw - [Kakao Webtoon](https://webtoon.kakao.com/content/나-혼자만-레벨업/2320)",
