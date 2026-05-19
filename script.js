@@ -1882,3 +1882,132 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 });
 
+
+/* =========================================================
+   Phase 2: Epic Features JS (Infinite Scroll, Manga Mode, Report, Custom Lists)
+   ========================================================= */
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Report Button
+    const reportBtnHTML = `<button class="report-btn" onclick="window.location.href='mailto:admin@nexus.com?subject=????? ?? ????? ?? ???&body=??????? ????? ????? ?? ?????? ??????: ' + window.location.href" title="????? ?? ????? ?? ?????"><i class="fas fa-flag"></i></button>`;
+    document.body.insertAdjacentHTML("beforeend", reportBtnHTML);
+
+    // 2. Manga Mode & Infinite Scroll Injection
+    const origOpenReaderPhase2 = window.openReader;
+    window.openReader = function(...args) {
+        origOpenReaderPhase2.apply(this, args);
+        
+        setTimeout(() => {
+            let toolbar = document.getElementById("epicReaderToolbar");
+            if (toolbar && !document.getElementById("btnMangaMode")) {
+                toolbar.insertAdjacentHTML("afterbegin", `<button class="toolbar-btn" id="btnMangaMode" title="??? ??????? (????? ?????)"><i class="fas fa-book-open"></i></button>`);
+                
+                document.getElementById("btnMangaMode").addEventListener("click", function() {
+                    document.body.classList.toggle("manga-mode");
+                    this.classList.toggle("active");
+                });
+            }
+
+            // Infinite Scroll Setup
+            const viewport = document.getElementById("readerViewport");
+            const seriesSlug = titleToSlug(args[0]);
+            const series = findSeriesBySlug(seriesSlug);
+            
+            if (viewport && series && series.item && series.item.chapters) {
+                // Remove old observer if exists
+                if (window._currentObserver) {
+                    window._currentObserver.disconnect();
+                }
+
+                const chapters = [...series.item.chapters].sort((a,b) => parseFloat(a.n) - parseFloat(b.n)); // Ascending
+                let currentCh = args[1];
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const currIdx = chapters.findIndex(c => String(c.n) === String(currentCh));
+                            if (currIdx !== -1 && currIdx < chapters.length - 1) {
+                                const nextCh = chapters[currIdx + 1];
+                                loadNextChapterInline(series.item.title, nextCh, viewport);
+                                currentCh = nextCh.n; 
+                                observer.unobserve(entry.target); 
+                            } else if (currIdx === chapters.length - 1) {
+                                observer.unobserve(entry.target);
+                                viewport.insertAdjacentHTML("beforeend", `<div class="next-chapter-loader" style="animation:none; color:#888;">??? ???? ??? ??? ???? ??????! ??</div>`);
+                            }
+                        }
+                    });
+                }, { root: viewport, rootMargin: "200px", threshold: 0 });
+                window._currentObserver = observer;
+
+                function attachObserver() {
+                    let trigger = viewport.querySelector(".infinite-scroll-trigger");
+                    if (!trigger) {
+                        viewport.insertAdjacentHTML("beforeend", `<div class="infinite-scroll-trigger" style="height: 1px; width:100%;"></div>`);
+                        trigger = viewport.querySelector(".infinite-scroll-trigger");
+                    }
+                    observer.observe(trigger);
+                }
+
+                function loadNextChapterInline(title, chapterObj, container) {
+                    const pagesHTML = chapterObj.pages.map(p => `
+                        <img src="${p}" class="reader-image-page skeleton-img" loading="lazy" onload="this.classList.remove('skeleton-img');" onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='; this.classList.remove('skeleton-img'); this.classList.add('broken-img');">
+                    `).join("");
+
+                    const divider = `<div class="next-chapter-loader">--- ???? ????? ????? ${chapterObj.n} ---</div>`;
+                    
+                    const trig = container.querySelector(".infinite-scroll-trigger");
+                    if (trig) trig.remove();
+
+                    container.insertAdjacentHTML("beforeend", divider + pagesHTML);
+                    
+                    const slug = titleToSlug(title);
+                    const newUrl = `${window.location.pathname}?reader=true&title=${encodeURIComponent(slug)}&ch=${encodeURIComponent(chapterObj.n)}`;
+                    window.history.replaceState({reader: true, title: slug, ch: chapterObj.n}, "", newUrl);
+                    document.title = `Nexus | ${title} - ????? ${chapterObj.n}`;
+                    document.getElementById("readerChapterNumber").textContent = `????? ${chapterObj.n}`;
+                    
+                    saveToHistory(title, chapterObj.n);
+                    
+                    setTimeout(() => {
+                        const loaders = container.querySelectorAll(".next-chapter-loader");
+                        if(loaders.length > 0) loaders[loaders.length-1].innerHTML = `--- ????? ????? ${chapterObj.n} ---`;
+                        attachObserver();
+                    }, 500);
+                }
+
+                setTimeout(attachObserver, 1500);
+            }
+        }, 350);
+    };
+
+    // 3. Custom Lists Logic (Migration & Hook)
+    // Migrate old flat bookmarks to "reading" list objects
+    let bookmarks = JSON.parse(localStorage.getItem("nile_bookmarks")) || [];
+    if (bookmarks.length > 0 && typeof bookmarks[0] === "string") {
+        bookmarks = bookmarks.map(title => ({ title: title, list: "reading" }));
+        localStorage.setItem("nile_bookmarks", JSON.stringify(bookmarks));
+    }
+});
+
+// Override toggleBookmark to support lists
+window.toggleBookmarkList = function(title, listType = "reading") {
+    let bookmarks = JSON.parse(localStorage.getItem("nile_bookmarks")) || [];
+    const index = bookmarks.findIndex(b => b.title === title);
+    
+    if (index > -1) {
+        if (bookmarks[index].list === listType) {
+            bookmarks.splice(index, 1); // remove if same list
+            localStorage.setItem("nile_bookmarks", JSON.stringify(bookmarks));
+            return false;
+        } else {
+            bookmarks[index].list = listType; // move to new list
+            localStorage.setItem("nile_bookmarks", JSON.stringify(bookmarks));
+            return true;
+        }
+    } else {
+        bookmarks.push({ title: title, list: listType });
+        localStorage.setItem("nile_bookmarks", JSON.stringify(bookmarks));
+        return true;
+    }
+}
+

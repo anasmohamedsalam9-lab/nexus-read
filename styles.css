@@ -2857,3 +2857,53 @@ body.cinema-mode .reader-image-page {
   color: var(--accent-nile);
 }
 
+
+/* =========================================================
+   Phase 2: Epic Features CSS (Infinite Scroll, Manga Mode, Report)
+   ========================================================= */
+.next-chapter-loader {
+  text-align: center;
+  padding: 40px;
+  color: var(--accent-nile);
+  font-family: var(--font-en);
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  animation: pulse-glow 1.5s infinite;
+}
+.report-btn {
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+  width: 50px; height: 50px;
+  background: #f43f5e;
+  border: none;
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px rgba(244, 63, 94, 0.4);
+  transition: all 0.3s;
+}
+.report-btn:hover {
+  background: #e11d48;
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(244, 63, 94, 0.6);
+}
+
+/* Manga Pagination Mode overrides */
+body.manga-mode .reader-viewport {
+  flex-direction: row-reverse !important; /* Right to Left */
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+}
+body.manga-mode .reader-image-page {
+  height: 100vh !important;
+  width: 100vw !important;
+  object-fit: contain;
+  scroll-snap-align: center;
+}
+
