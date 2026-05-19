@@ -2725,3 +2725,135 @@ body.theme-arctic-ice ::-webkit-scrollbar-thumb { background: #06b6d4; }
   90% { text-shadow: -3px 0 0 rgba(0, 255, 255, 0.8), 2px 0 0 rgba(255, 100, 0, 0.8); }
 }
 
+
+/* =========================================================
+   Epic Feature: Custom Cursor & Scroll to Top
+   ========================================================= */
+
+/* Hide default cursor on desktop */
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
+  a, button, input, select, textarea {
+    cursor: none !important;
+  }
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  position: fixed;
+  top: 0; left: 0;
+  width: 20px; height: 20px;
+  border: 2px solid var(--accent-nile);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, background 0.2s;
+  box-shadow: 0 0 10px rgba(0, 255, 159, 0.5);
+  display: none; /* Hidden on mobile */
+}
+
+.custom-cursor.hovering {
+  width: 40px; height: 40px;
+  background: rgba(0, 255, 159, 0.1);
+  border-width: 1px;
+}
+
+@media (pointer: fine) {
+  .custom-cursor {
+    display: block;
+  }
+}
+
+/* Scroll to Top Button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px; height: 50px;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--accent-nile);
+  color: var(--accent-nile);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 9999;
+  opacity: 0; visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 159, 0.2);
+}
+.scroll-top-btn.visible {
+  opacity: 1; visibility: visible;
+}
+.scroll-top-btn:hover {
+  background: var(--accent-nile);
+  color: #000;
+  box-shadow: 0 0 25px var(--accent-nile);
+  transform: translateY(-5px);
+}
+
+/* =========================================================
+   Epic Feature: Cinema Mode
+   ========================================================= */
+body.cinema-mode {
+  background: #000 !important;
+}
+body.cinema-mode .asura-nav,
+body.cinema-mode .site-footer,
+body.cinema-mode .theme-fab,
+body.cinema-mode .scroll-top-btn {
+  display: none !important;
+}
+body.cinema-mode .reader-image-page {
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* =========================================================
+   Epic Feature: Skeleton Loading
+   ========================================================= */
+.skeleton-img {
+  background: linear-gradient(90deg, #111 25%, #222 50%, #111 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  min-height: 500px;
+  width: 100%;
+}
+@keyframes skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Reader Toolbar */
+.reader-toolbar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(10, 10, 10, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 30px;
+  padding: 10px 20px;
+  display: flex;
+  gap: 15px;
+  z-index: 99999;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  transition: all 0.3s;
+}
+.toolbar-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  display: flex; align-items: center; gap: 8px;
+}
+.toolbar-btn:hover, .toolbar-btn.active {
+  color: var(--accent-nile);
+}
+

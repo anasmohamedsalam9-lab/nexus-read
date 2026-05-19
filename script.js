@@ -744,7 +744,7 @@ window.openReader = function(title = "العنوان", chapterStr = "الفصل"
         const chapter = series.item.chapters.find(c => c.n === chapterStr || c.n == chapterStr);
         if (chapter && chapter.pages && chapter.pages.length > 0) {
             pagesHTML = chapter.pages.map(p => `
-                <img src="${p}" class="reader-image-page" loading="lazy" onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='; this.classList.add('broken-img');">
+                <img src="${p}" class="reader-image-page skeleton-img" loading="lazy" onload="this.classList.remove('skeleton-img');" onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='; this.classList.remove('skeleton-img'); this.classList.add('broken-img');">
             `).join('');
         }
     }
@@ -1773,5 +1773,112 @@ window.addEventListener("load", () => {
             .then(reg => console.log("[PWA] Service Worker ???? ?????", reg.scope))
             .catch(err => console.error("[PWA] ??? ????? Service Worker:", err));
     }
+});
+
+
+/* =========================================================
+   Epic Features JS (Cursor & Scroll to Top)
+   ========================================================= */
+document.addEventListener("DOMContentLoaded", () => {
+    // Custom Cursor Logic
+    const cursor = document.getElementById("customCursor");
+    if (cursor) {
+        document.addEventListener("mousemove", (e) => {
+            cursor.style.left = e.clientX + "px";
+            cursor.style.top = e.clientY + "px";
+        });
+        
+        const interactables = document.querySelectorAll("a, button, input, select, textarea, .logo, .latest-card-v2");
+        interactables.forEach(el => {
+            el.addEventListener("mouseenter", () => cursor.classList.add("hovering"));
+            el.addEventListener("mouseleave", () => cursor.classList.remove("hovering"));
+        });
+    }
+
+    // Scroll to Top Logic
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    if (scrollTopBtn) {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.add("visible");
+            } else {
+                scrollTopBtn.classList.remove("visible");
+            }
+        });
+        
+        scrollTopBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    }
+});
+
+
+/* =========================================================
+   Epic Features: Reader Toolbar (Cinema & Auto Scroll)
+   ========================================================= */
+document.addEventListener("DOMContentLoaded", () => {
+    let scrollInterval = null;
+    let autoScrollSpeed = 1;
+
+    // We will wait for openReader to be called to attach the toolbar if not exists
+    const originalOpenReader = window.openReader;
+    window.openReader = function(...args) {
+        originalOpenReader.apply(this, args);
+        
+        setTimeout(() => {
+            let engine = document.getElementById("readerEngine");
+            if (engine && !document.getElementById("epicReaderToolbar")) {
+                const toolbarHTML = `
+                    <div id="epicReaderToolbar" class="reader-toolbar">
+                        <button class="toolbar-btn" id="btnCinemaMode" title="??? ???????"><i class="fas fa-film"></i></button>
+                        <button class="toolbar-btn" id="btnAutoScroll" title="???? ??????"><i class="fas fa-angle-double-down"></i></button>
+                        <button class="toolbar-btn" id="btnSpeedUp" title="????? ??????" style="display:none;"><i class="fas fa-plus"></i></button>
+                        <button class="toolbar-btn" id="btnSpeedDown" title="????? ??????" style="display:none;"><i class="fas fa-minus"></i></button>
+                    </div>
+                `;
+                engine.insertAdjacentHTML("beforeend", toolbarHTML);
+
+                // Cinema Mode Logic
+                const btnCinema = document.getElementById("btnCinemaMode");
+                btnCinema.addEventListener("click", () => {
+                    document.body.classList.toggle("cinema-mode");
+                    btnCinema.classList.toggle("active");
+                });
+
+                // Auto Scroll Logic
+                const btnAutoScroll = document.getElementById("btnAutoScroll");
+                const btnSpeedUp = document.getElementById("btnSpeedUp");
+                const btnSpeedDown = document.getElementById("btnSpeedDown");
+                const viewport = document.getElementById("readerViewport");
+
+                btnAutoScroll.addEventListener("click", () => {
+                    if (scrollInterval) {
+                        clearInterval(scrollInterval);
+                        scrollInterval = null;
+                        btnAutoScroll.classList.remove("active");
+                        btnSpeedUp.style.display = "none";
+                        btnSpeedDown.style.display = "none";
+                    } else {
+                        btnAutoScroll.classList.add("active");
+                        btnSpeedUp.style.display = "block";
+                        btnSpeedDown.style.display = "block";
+                        
+                        scrollInterval = setInterval(() => {
+                            if (viewport) viewport.scrollBy(0, autoScrollSpeed);
+                        }, 20);
+                    }
+                });
+
+                btnSpeedUp.addEventListener("click", () => { autoScrollSpeed = Math.min(autoScrollSpeed + 0.5, 5); });
+                btnSpeedDown.addEventListener("click", () => { autoScrollSpeed = Math.max(autoScrollSpeed - 0.5, 0.5); });
+                
+                // Clear on close
+                document.getElementById("closeReader").addEventListener("click", () => {
+                    if (scrollInterval) clearInterval(scrollInterval);
+                    document.body.classList.remove("cinema-mode");
+                });
+            }
+        }, 300);
+    };
 });
 
