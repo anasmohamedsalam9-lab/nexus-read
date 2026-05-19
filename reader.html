@@ -102,52 +102,7 @@
             min-height: 300px;
         }
 
-        /* --- Navigation Footer / Bottom Bar --- */
-        .reader-footer {
-            position: fixed; bottom: 0; left: 0; right: 0;
-            background: var(--bar-bg);
-            height: 60px;
-            display: flex; align-items: center; justify-content: space-between;
-            padding: 0 1.5rem;
-            z-index: 1000;
-            transition: transform 0.3s;
-        }
-        .reader-footer.hidden { transform: translateY(100%); }
 
-        .rf-nav-btn {
-            background: none; border: none; font-size: 0.9rem; font-weight: 600;
-            color: #aaa; cursor: pointer; display: flex; align-items: center; gap: 8px;
-            transition: color 0.3s;
-        }
-        .rf-nav-btn:hover:not(:disabled) { color: #fff; }
-        .rf-nav-btn:disabled { opacity: 0.3; cursor: not-allowed; }
-        .rf-nav-btn i { font-size: 0.8rem; }
-
-        /* Custom Chapter Dropdown */
-        .custom-dropdown { position: relative; }
-        .cb-trigger {
-            background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 4px;
-            color: #fff; font-size: 0.9rem; font-weight: 600; cursor: pointer;
-            display: flex; align-items: center; gap: 10px; border: 1px solid rgba(255,255,255,0.1);
-        }
-        .cb-trigger i { font-size: 0.7rem; color: #fff; }
-        .cb-menu {
-            display: none; position: absolute; bottom: calc(100% + 5px); left: 50%; transform: translateX(-50%);
-            background: #fff; color: #000; width: 220px; max-height: 300px; overflow-y: auto;
-            border-radius: 4px; box-shadow: 0 -5px 15px rgba(0,0,0,0.3); z-index: 2000;
-        }
-        .cb-menu.active { display: block; }
-        .cb-item {
-            padding: 10px 15px; text-align: center; border-bottom: 1px solid #f0f0f0; cursor: pointer;
-            font-size: 0.95rem; font-weight: 600; color: #bbb;
-        }
-        .cb-item:hover { background: #f9f9f9; color: #666; }
-        .cb-item.selected { background: #1d4ed8; color: #fff; border-bottom: none; }
-
-        /* Scrollbar for dropdown */
-        .cb-menu::-webkit-scrollbar { width: 5px; }
-        .cb-menu::-webkit-scrollbar-track { background: #f1f1f1; }
-        .cb-menu::-webkit-scrollbar-thumb { background: #888; border-radius: 5px; }
 
         /* --- Pro Settings Panel --- */
         .reader-settings-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); z-index: 10001; display: none; align-items: center; justify-content: center; opacity: 0; transition: 0.2s; }

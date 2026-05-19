@@ -1137,17 +1137,177 @@ img.broken-img::after {
 .reader-engine.active { opacity: 1; pointer-events: auto; }
 .reader-hud { position: absolute; left: 0; width: 100%; background: var(--reader-hud-bg); padding: 1rem 1.5rem; color: var(--text-primary); display: flex; align-items: center; justify-content: space-between; z-index: 10; transition: transform 0.3s ease, opacity 0.3s ease; }
 .reader-engine.hud-hidden .reader-hud-top, .reader-hud.hidden.reader-hud-top { transform: translateY(-120%); opacity: 0; pointer-events: none; }
-.reader-engine.hud-hidden .reader-hud-bottom, .reader-hud.hidden.reader-hud-bottom { transform: translateY(120%); opacity: 0; pointer-events: none; }
+.reader-engine.hud-hidden .reader-hud-bottom, .reader-hud.hidden.reader-hud-bottom, .reader-footer.hidden { transform: translateX(-50%) translateY(150%) !important; opacity: 0 !important; pointer-events: none !important; }
 .reader-hud-top { top: 0; border-bottom: 1px solid var(--border-subtle); transform: translateY(0); opacity: 1; transition: all 0.3s ease; }
-.reader-hud-bottom { bottom: 0; border-top: 1px solid var(--border-subtle); transform: translateY(0); opacity: 1; transition: all 0.3s ease; }
+
+/* Dynamic Floating Control Deck for Manga Reader Navigation */
+.reader-hud-bottom, .reader-footer {
+  position: fixed !important;
+  left: 50% !important;
+  bottom: 24px !important;
+  transform: translateX(-50%) translateY(0);
+  width: 460px !important;
+  max-width: 90vw !important;
+  height: 56px !important;
+  background: rgba(15, 15, 15, 0.85) !important;
+  backdrop-filter: blur(12px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 28px !important;
+  padding: 0 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  z-index: 9999 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 255, 159, 0.05) !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease !important;
+}
+
+/* Navigation buttons styling */
+.reader-hud-bottom .hud-btn, .reader-footer .rf-nav-btn {
+  background: transparent !important;
+  border: none !important;
+  color: #fff !important;
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  font-family: inherit !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 16px !important;
+  border-radius: 20px !important;
+  transition: all 0.25s ease !important;
+}
+
+.reader-hud-bottom .hud-btn:hover:not(:disabled), .reader-footer .rf-nav-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: var(--accent-nile) !important;
+}
+
+.reader-hud-bottom .hud-btn:disabled, .reader-footer .rf-nav-btn:disabled {
+  opacity: 0.35 !important;
+  cursor: not-allowed !important;
+}
+
+/* Custom Dropdown Trigger inside Control Deck */
+.reader-hud-bottom .chapter-selector-wrapper, .reader-footer .custom-dropdown {
+  position: relative !important;
+  flex: 1 !important;
+  max-width: 180px !important;
+  margin: 0 12px !important;
+}
+
+/* Custom Dropdown Trigger Styling */
+.cb-trigger {
+  width: 100% !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 20px !important;
+  padding: 8px 16px !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+  transition: all 0.25s ease !important;
+}
+
+.cb-trigger:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: var(--accent-nile) !important;
+}
+
+.cb-trigger i {
+  font-size: 0.75rem !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  transition: transform 0.25s ease !important;
+}
+
+.cb-trigger.active i {
+  transform: rotate(180deg) !important;
+}
+
+/* Custom Dropdown Menu (Chapters List) Styling */
+.cb-menu {
+  display: none;
+  position: absolute !important;
+  bottom: calc(100% + 12px) !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 220px !important;
+  max-height: 280px !important;
+  overflow-y: auto !important;
+  background: rgba(15, 15, 15, 0.95) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 255, 159, 0.05) !important;
+  z-index: 2000 !important;
+  padding: 6px 0 !important;
+}
+
+.cb-menu.active {
+  display: block !important;
+  animation: slideUpFade 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+@keyframes slideUpFade {
+  from { opacity: 0; transform: translate(-50%, 8px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* Chapter item styling */
+.cb-item {
+  padding: 10px 16px !important;
+  text-align: center !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  color: #ccc !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03) !important;
+}
+
+.cb-item:last-child {
+  border-bottom: none !important;
+}
+
+.cb-item:hover {
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: var(--accent-nile) !important;
+}
+
+.cb-item.selected {
+  background: rgba(0, 255, 159, 0.1) !important;
+  color: var(--accent-nile) !important;
+  border-bottom: none !important;
+}
+
+/* Dropdown Scrollbar */
+.cb-menu::-webkit-scrollbar {
+  width: 6px !important;
+}
+.cb-menu::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+.cb-menu::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 3px !important;
+}
+.cb-menu::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-nile) !important;
+}
+
 .hud-btn { font-size: 1.2rem; color: var(--text-secondary); padding: 0.5rem; }
 .hud-btn:hover { color: var(--text-primary); }
 .reader-title-info { text-align: center; }
 .reader-title-info h3 { font-size: 1.1rem; font-weight: 700; }
 .reader-title-info p { font-size: 0.85rem; }
-.chapter-selector-wrapper { position: relative; background-color: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0 1rem; }
-.chapter-selector { appearance: none; padding: 0.6rem 2rem 0.6rem 0; font-weight: 600; font-size: 0.95rem; position: relative; z-index: 2; }
-.select-icon { position: absolute; left: 0.8rem; top: 0.8rem; font-size: 0.8rem; color: var(--text-muted); z-index: 1; }
 .reader-settings-panel { position: absolute; top: 80px; left: 1.5rem; background-color: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem; width: 280px; z-index: 15; opacity: 0; transform: translateY(-10px); pointer-events: none; transition: all 0.2s ease; }
 .reader-settings-panel.active { opacity: 1; transform: translateY(0); pointer-events: auto; }
 .reader-settings-panel h4 { margin-bottom: 1.5rem; font-size: 1rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem;}

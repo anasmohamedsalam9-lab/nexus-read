@@ -773,22 +773,44 @@ window.openReader = function(title = "العنوان", chapterStr = "الفصل"
     setTimeout(() => initComments(readerIdentifier, 'readerCommentsContainer'), 100);
     
     // --- Navigation Logic ---
-    const selector = document.getElementById('chapterSelector');
+    const trigger = document.getElementById('dropdownTrigger');
+    const menu = document.getElementById('dropdownMenu');
+    const currentChDisplay = document.getElementById('currentChDisplay');
     const prevBtn = document.querySelector('.prev-chapter-btn');
     const nextBtn = document.querySelector('.next-chapter-btn');
     
-    if (series && series.item && series.item.chapters && selector) {
+    if (series && series.item && series.item.chapters && trigger && menu && currentChDisplay) {
         const chapters = [...series.item.chapters].sort((a,b) => parseFloat(b.n) - parseFloat(a.n));
         const currentIndex = chapters.findIndex(c => String(c.n) === String(chapterStr));
         
-        selector.innerHTML = chapters.map(c => `
-            <option value="${c.n}" ${String(c.n) === String(chapterStr) ? 'selected' : ''}>الفصل ${c.n}</option>
-        `).join('');
-        selector.disabled = false;
-        selector.parentElement.style.opacity = '1';
+        currentChDisplay.textContent = `الفصل ${chapterStr}`;
         
-        // Unbind and Rebind
-        selector.onchange = (e) => window.openReader(title, e.target.value);
+        menu.innerHTML = chapters.map(c => `
+            <div class="cb-item ${String(c.n) === String(chapterStr) ? 'selected' : ''}" data-ch="${c.n}">
+                الفصل ${c.n}
+            </div>
+        `).join('');
+        
+        // Toggle menu
+        trigger.onclick = (e) => {
+            e.stopPropagation();
+            menu.classList.toggle('active');
+            trigger.classList.toggle('active');
+        };
+        
+        // Click items
+        menu.querySelectorAll('.cb-item').forEach(item => {
+            item.onclick = (e) => {
+                const ch = e.target.getAttribute('data-ch');
+                window.openReader(title, ch);
+            };
+        });
+        
+        // Close menu on click outside
+        document.addEventListener('click', () => {
+            menu.classList.remove('active');
+            trigger.classList.remove('active');
+        });
         
         const hasNewer = currentIndex > 0;
         const hasOlder = currentIndex < chapters.length - 1;
@@ -977,12 +999,17 @@ function initReaderEngine() {
             <div class="reader-viewport rm-longstrip" id="readerViewport"></div>
             
             <div class="reader-hud reader-hud-bottom" id="readerHudBottom">
-                <button class="hud-btn next-chapter-btn"><i class="fas fa-step-forward"></i> التالي</button>
-                <div class="chapter-selector-wrapper">
-                    <select class="chapter-selector" id="chapterSelector" disabled><option>الفصل الحالي</option></select>
-                    <i class="fas fa-chevron-up select-icon"></i>
+                <button class="hud-btn next-chapter-btn"><i class="fas fa-chevron-right"></i> التالي</button>
+                <div class="custom-dropdown">
+                    <div class="cb-trigger" id="dropdownTrigger">
+                        <span id="currentChDisplay">جاري التحميل...</span>
+                        <i class="fas fa-chevron-up"></i>
+                    </div>
+                    <div class="cb-menu" id="dropdownMenu">
+                        <!-- Chapters injected here -->
+                    </div>
                 </div>
-                <button class="hud-btn prev-chapter-btn">السابق <i class="fas fa-step-backward"></i></button>
+                <button class="hud-btn prev-chapter-btn">السابق <i class="fas fa-chevron-left"></i></button>
             </div>
         </div>`;
         document.body.insertAdjacentHTML('beforeend', readerHtml);
@@ -1013,7 +1040,7 @@ function initReaderEngine() {
         if (!viewport.dataset.clickBound) {
             viewport.dataset.clickBound = 'true';
             viewport.addEventListener('click', (e) => {
-                if (e.target.closest('.hud-btn, .reader-settings-panel, .chapter-selector-wrapper')) return;
+                if (e.target.closest('.hud-btn, .reader-settings-panel, .chapter-selector-wrapper, .custom-dropdown')) return;
                 
                 const head = document.getElementById('readerHudTop');
                 const foot = document.getElementById('readerHudBottom');
