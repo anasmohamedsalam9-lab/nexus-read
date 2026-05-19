@@ -2454,15 +2454,6 @@ body.theme-emerald-forest {
 }
 body.theme-emerald-forest ::-webkit-scrollbar-thumb { background: #10b981; }
 
-/* Theme 9: Golden Hour */
-body.theme-golden-hour {
-  --accent-nile: #eab308;
-  --accent-nile-glow: #facc15;
-  --accent-mystic: #eab308;
-}
-body.theme-golden-hour ::-webkit-scrollbar-thumb { background: #eab308; }
-body.theme-golden-hour .btn-primary { color: #000; }
-
 /* Theme 10: Arctic Ice */
 body.theme-arctic-ice {
   --accent-nile: #06b6d4;
@@ -2470,3 +2461,161 @@ body.theme-arctic-ice {
   --accent-mystic: #06b6d4;
 }
 body.theme-arctic-ice ::-webkit-scrollbar-thumb { background: #06b6d4; }
+
+/* =========================================================
+   Mobile Responsiveness (نسخة الهاتف)
+   ========================================================= */
+
+/* Tablets & Small Desktop */
+@media (max-width: 1024px) {
+  .asura-layout {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    margin-top: 30px;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 768px) {
+  /* Premium Hero Banner */
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 20px 15px;
+    min-height: auto;
+  }
+  .hero-poster-side {
+    flex: 0 0 200px;
+    margin: 0 auto;
+  }
+  .hero-poster-side img {
+    height: 280px;
+    transform: perspective(800px) rotateY(0deg) !important;
+  }
+  .hero-text-side {
+    text-align: center !important;
+  }
+  .hero-title {
+    font-size: 2rem !important;
+  }
+  .hero-subtitle {
+    font-size: 0.95rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  .hero-text-side > div {
+    justify-content: center !important;
+  }
+  .hero-actions {
+    justify-content: center !important;
+    gap: 1rem !important;
+  }
+  .hero-actions button {
+    padding: 0.6rem 1.2rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* Latest Chapters (آخر الفصول) */
+  .latest-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .latest-card-v2 {
+    min-height: 140px;
+  }
+  .lc-cover {
+    flex: 0 0 100px;
+    min-height: 140px;
+  }
+  .lc-info {
+    padding: 10px;
+    gap: 6px;
+  }
+  .lc-title {
+    font-size: 0.85rem;
+  }
+  .lc-meta {
+    font-size: 0.7rem;
+    gap: 8px;
+  }
+  .lc-ch-row {
+    padding: 3px 6px;
+    font-size: 0.75rem;
+  }
+  .lc-type-badge {
+    font-size: 0.55rem;
+    padding: 2px 6px;
+  }
+
+  /* Continue Reading Carousel */
+  .continue-grid {
+    gap: 12px;
+    padding-bottom: 5px;
+  }
+  .continue-card {
+    flex: 0 0 160px;
+  }
+  .continue-thumb {
+    height: 220px;
+  }
+  .cr-ch-current {
+    font-size: 0.9rem;
+  }
+  .cr-ch-total {
+    font-size: 0.7rem;
+  }
+  .continue-info {
+    padding: 8px 10px;
+  }
+  .continue-title {
+    font-size: 0.75rem;
+  }
+  .continue-ch {
+    font-size: 0.65rem;
+  }
+  .cr-left-info {
+    font-size: 0.6rem;
+    padding: 4px 10px;
+  }
+
+  /* Theme Panel */
+  .theme-panel {
+    padding: 20px;
+    width: 90vw;
+  }
+  .theme-panel-header h3 {
+    font-size: 1rem;
+  }
+  .theme-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .theme-option {
+    padding: 10px 12px;
+  }
+
+  /* Sections Headers */
+  .section-header h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 480px) {
+  .hero-poster-side {
+    flex: 0 0 160px;
+  }
+  .hero-poster-side img {
+    height: 220px;
+  }
+  .lc-cover {
+    flex: 0 0 90px;
+  }
+  .continue-card {
+    flex: 0 0 140px;
+  }
+  .continue-thumb {
+    height: 190px;
+  }
+}
