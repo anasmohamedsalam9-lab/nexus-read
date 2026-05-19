@@ -1786,12 +1786,30 @@ document.addEventListener("DOMContentLoaded", () => {
         document.addEventListener("mousemove", (e) => {
             cursor.style.left = e.clientX + "px";
             cursor.style.top = e.clientY + "px";
+            // Ensure cursor is visible when moving inside document
+            if (cursor.style.display === "none") {
+                cursor.style.display = "block";
+            }
         });
         
-        const interactables = document.querySelectorAll("a, button, input, select, textarea, .logo, .latest-card-v2");
-        interactables.forEach(el => {
-            el.addEventListener("mouseenter", () => cursor.classList.add("hovering"));
-            el.addEventListener("mouseleave", () => cursor.classList.remove("hovering"));
+        // Event delegation for all interactable elements (even dynamically added ones)
+        document.addEventListener("mouseover", (e) => {
+            const target = e.target;
+            if (target && (
+                target.closest("a, button, input, select, textarea, .logo, .latest-card-v2, .lc-ch-row, .chapter-row, .toolbar-btn, .scroll-top-btn, .pop-item, [role='button']")
+            )) {
+                cursor.classList.add("hovering");
+            } else {
+                cursor.classList.remove("hovering");
+            }
+        });
+
+        // Hide when mouse leaves the browser window
+        document.addEventListener("mouseleave", () => {
+            cursor.style.display = "none";
+        });
+        document.addEventListener("mouseenter", () => {
+            cursor.style.display = "block";
         });
     }
 
@@ -1887,13 +1905,38 @@ document.addEventListener("DOMContentLoaded", () => {
    Phase 2: Epic Features JS (Infinite Scroll, Manga Mode, Report, Custom Lists)
    ========================================================= */
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Report Button
-    const reportBtnHTML = `<button class="report-btn" onclick="window.location.href='mailto:admin@nexus.com?subject=????? ?? ????? ?? ???&body=??????? ????? ????? ?? ?????? ??????: ' + window.location.href" title="????? ?? ????? ?? ?????"><i class="fas fa-flag"></i></button>`;
+    // 1. Report Button (AI Self-Healer integration)
+    window.triggerAutoHealReport = function() {
+        const title = window.currentReaderManga;
+        const chapter = window.currentReaderChapter;
+        
+        if (!title || !chapter) {
+            alert("⚠️ التبليغ عن الأعطال متاح فقط أثناء قراءة الفصول.");
+            return;
+        }
+        
+        const confirmReport = confirm(`🤖 [بوت نيكسس الذكي]\n\nهل تواجه مشكلة في صور هذا الفصل؟\nسيقوم البوت بإعادة سحب وإصلاح الفصل تلقائياً خلال دقيقة بمجرد إرسال البلاغ!\n\nهل تريد المتابعة لفتح تذكرة الإصلاح؟`);
+        
+        if (confirmReport) {
+            const repoUrl = "https://github.com/anasmohamedsalam9-lab/nexus-read";
+            const issueTitle = encodeURIComponent(`[BUG] Broken Chapter: ${title} - Chapter ${chapter}`);
+            const issueBody = encodeURIComponent(`🤖 بلاغ تلقائي للإصلاح الذاتي:\n\nManga: ${title}\nChapter: ${chapter}\n\n(يرجى عدم تغيير عنوان البلاغ ليعمل البوت بشكل صحيح)`);
+            const targetUrl = `${repoUrl}/issues/new?title=${issueTitle}&body=${issueBody}`;
+            
+            window.open(targetUrl, "_blank");
+        }
+    };
+
+    const reportBtnHTML = `<button class="report-btn" onclick="window.triggerAutoHealReport()" title="تبليغ تلقائي عن مشكلة في الفصل"><i class="fas fa-flag"></i></button>`;
     document.body.insertAdjacentHTML("beforeend", reportBtnHTML);
 
     // 2. Manga Mode & Infinite Scroll Injection
     const origOpenReaderPhase2 = window.openReader;
     window.openReader = function(...args) {
+        // Store current details for report button
+        window.currentReaderManga = args[0];
+        window.currentReaderChapter = args[1];
+        
         origOpenReaderPhase2.apply(this, args);
         
         setTimeout(() => {
@@ -1963,8 +2006,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     const slug = titleToSlug(title);
                     const newUrl = `${window.location.pathname}?reader=true&title=${encodeURIComponent(slug)}&ch=${encodeURIComponent(chapterObj.n)}`;
                     window.history.replaceState({reader: true, title: slug, ch: chapterObj.n}, "", newUrl);
-                    document.title = `Nexus | ${title} - ????? ${chapterObj.n}`;
-                    document.getElementById("readerChapterNumber").textContent = `????? ${chapterObj.n}`;
+                    document.title = `Nexus | ${title} - الفصل ${chapterObj.n}`;
+                    document.getElementById("readerChapterNumber").textContent = `الفصل ${chapterObj.n}`;
+                    
+                    // Update global pointers for report button
+                    window.currentReaderManga = title;
+                    window.currentReaderChapter = chapterObj.n;
                     
                     saveToHistory(title, chapterObj.n);
                     

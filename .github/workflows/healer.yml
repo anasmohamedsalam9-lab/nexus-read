@@ -1,0 +1,47 @@
+name: Nexus Self-Healer AI Bot
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  heal-broken-chapter:
+    # Run only if the issue title starts with [BUG]
+    if: startsWith(github.event.issue.title, '[BUG]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          # install additional request dependencies if needed
+          pip install requests
+
+      - name: Run AI Healer Bot
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          python bot/issue_healer.py
+
+      - name: Commit and Push Database Fixes
+        run: |
+          git config --global user.name "Nexus-Healer-Bot"
+          git config --global user.email "healer-bot@nexus.com"
+          git add data.js
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🔧 Auto-Heal: Fixed chapter by AI Bot [skip ci]" && git push)
