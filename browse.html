@@ -2,417 +2,249 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>تصفح المكتبة | Nexus</title>
-    <meta name="theme-color" content="#0a0a0f">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تصفح المانهوا | Nexus Scans</title>
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="تصفح وابحث عن أفضل قصص المانهوا، المانجا، والمانهوا الكورية المترجمة بجودة عالية وتحديثات مستمرة.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=2.1">
-    <style>
-        body { background: #0c0c14; }
-
-        /* Nav */
-        .browse-nav {
-            background: rgba(12,12,20,0.97);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-            padding: 0.7rem 2rem;
-            display: flex; align-items: center; justify-content: space-between;
-            position: sticky; top: 0; z-index: 100;
-        }
-        .bn-logo { font-family: var(--font-en); font-size: 1.4rem; font-weight: 900; color: #fff; text-decoration: none; }
-        .bn-logo span { color: var(--accent-nile); }
-        .bn-links { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
-        .bn-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-weight: 600; font-size: 0.88rem; transition: color 0.2s; }
-        .bn-links a:hover, .bn-links a.active { color: var(--accent-nile); }
-        .bn-search-wrap { position: relative; flex: 0 0 260px; }
-        .bn-search-wrap input {
-            width: 100%; padding: 0.5rem 1rem 0.5rem 2.3rem;
-            background: rgba(255,255,255,0.06); border: 2px solid var(--accent-nile);
-            border-radius: 25px; color: #fff; font-size: 0.82rem; outline: none; font-family: var(--font-en);
-        }
-        .bn-search-wrap input::placeholder { color: rgba(255,255,255,0.35); }
-        .bn-search-wrap i { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--accent-nile); font-size: 0.85rem; }
-
-        /* Filters */
-        .browse-header { max-width: 1250px; margin: 1.5rem auto 0; padding: 0 1.5rem; }
-        .filters-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.7rem; margin-bottom: 0.8rem; }
-        .filter-select {
-            width: 100%; padding: 0.65rem 1rem; background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1); border-radius: 22px; color: #fff;
-            font-size: 0.82rem; font-weight: 600; font-family: var(--font-en);
-            appearance: none; cursor: pointer; outline: none; text-align: center; transition: border-color 0.3s;
-        }
-        .filter-select:focus { border-color: var(--accent-nile); }
-        .filter-select option { background: #1a1a2e; color: #fff; }
-        .filter-search-btn {
-            width: 100%; padding: 0.7rem; background: linear-gradient(135deg, #00FF9F, #00cc7a);
-            border: none; border-radius: 22px; color: #000; font-weight: 800; font-size: 0.9rem;
-            cursor: pointer; font-family: var(--font-en); transition: all 0.3s;
-            display: flex; align-items: center; justify-content: center; gap: 0.5rem;
-        }
-        .filter-search-btn:hover { box-shadow: 0 0 20px rgba(0, 255, 159, 0.4); transform: translateY(-2px); }
-
-        /* Section Title */
-        .section-title {
-            font-family: var(--font-en); font-size: 1.4rem; font-weight: 800; color: #fff;
-            margin: 1.5rem 0 1rem; padding-bottom: 0.5rem;
-            border-bottom: 2px solid rgba(255,255,255,0.06);
-        }
-
-        /* ====== Latest Update Grid (ThunderScans style) ====== */
-        .browse-main { max-width: 1250px; margin: 0 auto; padding: 0 1.5rem 3rem; }
-
-        .lu-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.8rem;
-        }
-
-        .lu-card {
-            display: flex;
-            gap: 0.8rem;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 10px;
-            padding: 0.8rem;
-            transition: all 0.25s;
-            min-height: 200px;
-        }
-        .lu-card:hover {
-            border-color: rgba(0, 255, 159, 0.2);
-            background: rgba(255,255,255,0.05);
-        }
-
-        /* Cover */
-        .lu-cover {
-            flex: 0 0 120px;
-            width: 120px;
-            position: relative;
-            cursor: pointer;
-        }
-        .lu-cover img {
-            width: 100%; height: 170px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-        .lu-cover-badge {
-            position: absolute;
-            bottom: 6px; right: 6px;
-            background: var(--accent-nile);
-            color: #000;
-            font-size: 0.58rem;
-            font-weight: 900;
-            padding: 0.12rem 0.45rem;
-            border-radius: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Right Info */
-        .lu-info {
-            flex: 1;
-            min-width: 0;
-            display: flex;
-            flex-direction: column;
-        }
-        .lu-title {
-            font-family: var(--font-en);
-            font-size: 0.88rem;
-            font-weight: 800;
-            color: #fff;
-            line-height: 1.25;
-            margin-bottom: 0.4rem;
-            cursor: pointer;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            transition: color 0.2s;
-        }
-        .lu-title:hover { color: var(--accent-nile); }
-
-        .lu-meta {
-            display: flex; align-items: center; gap: 0.8rem;
-            margin-bottom: 0.6rem;
-        }
-        .lu-rating { color: #fbbf24; font-weight: 800; font-size: 0.78rem; }
-        .lu-rating i { font-size: 0.7rem; }
-        .lu-status {
-            display: flex; align-items: center; gap: 0.3rem;
-            color: #4ade80; font-weight: 700; font-size: 0.72rem;
-        }
-        .lu-status .dot { width: 6px; height: 6px; background: #4ade80; border-radius: 50%; }
-
-        /* Chapter rows */
-        .lu-chapters { flex: 1; display: flex; flex-direction: column; gap: 0; }
-        .lu-ch-row {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 0.4rem 0;
-            border-top: 1px solid rgba(255,255,255,0.04);
-            cursor: pointer;
-            transition: all 0.15s;
-        }
-        .lu-ch-row:hover { background: rgba(0, 255, 159, 0.04); padding-right: 0.3rem; }
-        .lu-ch-name {
-            font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.75);
-        }
-        .lu-ch-right { display: flex; align-items: center; gap: 0.5rem; }
-        .lu-ch-badge {
-            background: var(--accent-nile);
-            color: #000;
-            font-size: 0.55rem;
-            font-weight: 900;
-            padding: 0.08rem 0.4rem;
-            border-radius: 3px;
-            text-transform: uppercase;
-        }
-        .lu-ch-badge.hot {
-            background: #f97316;
-            color: #fff;
-        }
-        .lu-ch-time { font-size: 0.68rem; color: rgba(255,255,255,0.35); }
-
-        /* All Chapters Button */
-        .lu-all-btn {
-            display: block; width: 100%; margin-top: auto; padding: 0.45rem;
-            background: rgba(0, 255, 159, 0.08);
-            border: 1px solid rgba(0, 255, 159, 0.2);
-            border-radius: 6px;
-            color: var(--accent-nile);
-            font-size: 0.75rem; font-weight: 700;
-            text-align: center; cursor: pointer;
-            transition: all 0.2s;
-            font-family: var(--font-en);
-        }
-        .lu-all-btn:hover {
-            background: var(--accent-nile);
-            color: #000;
-        }
-
-        /* No results */
-        .no-results {
-            grid-column: 1 / -1; text-align: center; padding: 4rem 2rem;
-            color: rgba(255,255,255,0.4); font-size: 1.1rem;
-        }
-
-        @media (max-width: 1000px) { .lu-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 650px) {
-            .lu-grid { grid-template-columns: 1fr; }
-            .filters-row { grid-template-columns: repeat(2, 1fr); }
-            .bn-links { display: none; }
-            .bn-search-wrap { flex: 1; margin-right: 1rem; }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="dark-theme">
 
-    <nav class="browse-nav">
-        <a href="index.html" class="brand-logo" style="display:flex;align-items:center;text-decoration:none;">
-            <img src="images/logo.png" alt="Logo" style="height: 35px; width: 35px; margin-right: 10px; background: transparent;">
-            <span class="logo-primary" style="color:#00ff88;font-weight:900;font-size:1.4rem;font-family:'Cairo',sans-serif;margin-left:10px;">Nexus</span>
-        </a>
-        <ul class="bn-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="browse.html" class="active">Comics</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="index.html#trending">Trending</a></li>
-        </ul>
-        <div class="bn-search-wrap">
-            <i class="fas fa-search"></i>
-            <input type="text" id="liveSearch" placeholder="Search...">
+    <!-- Top Horizontal Navbar (Premium Asura Style) -->
+    <nav class="asura-nav sticky-header" id="stickyHeader">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="logo">
+                    NEXUS <span class="fox-icon"><i class="fas fa-meteor"></i></span> SCANS
+                </a>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html">الرئيسية</a>
+                    <a href="browse.html" class="active">تصفح</a>
+                    <a href="#" onclick="alert('المتجر قيد التطوير!'); return false;">المتجر <i class="fas fa-lock" style="font-size:0.7em;"></i></a>
+                    <a href="browse.html?type=manhwa">المنهوا</a>
+                    <a href="browse.html?type=manga">المانجا</a>
+                    <a href="browse.html?genre=romance">رومانسي</a>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="nav-search-bar">
+                    <input type="text" id="searchInput" placeholder="ابحث عن مانهوا...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <button class="mobile-menu-btn" id="menuToggle"><i class="fas fa-bars"></i></button>
+            </div>
         </div>
     </nav>
 
-    <!-- Filters -->
-    <div class="browse-header">
-        <div class="filters-row">
-            <select class="filter-select" id="fGenre">
-                <option value="all">Genre All</option>
-                <option value="action">Action</option>
-                <option value="fantasy">Fantasy</option>
-                <option value="martial-arts">Martial Arts</option>
-                <option value="comedy">Comedy</option>
-                <option value="romance">Romance</option>
-                <option value="drama">Drama</option>
-                <option value="mystery">Mystery</option>
-                <option value="horror">Horror</option>
-                <option value="sci-fi">Sci-Fi</option>
-                <option value="sports">Sports</option>
-            </select>
-            <select class="filter-select" id="fStatus">
-                <option value="all">Status All</option>
-                <option value="ongoing">Ongoing</option>
-                <option value="completed">Completed</option>
-            </select>
-            <select class="filter-select" id="fType">
-                <option value="all">Type All</option>
-                <option value="manhwa">Manhwa</option>
-                <option value="manga">Manga</option>
-                <option value="comics">Comics</option>
-                <option value="novels">Novels</option>
-            </select>
-            <select class="filter-select" id="fOrder">
-                <option value="default">Order by Default</option>
-                <option value="rating">Top Rating</option>
-                <option value="az">A-Z</option>
-                <option value="za">Z-A</option>
-            </select>
+    <!-- Mobile Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <button class="close-search" id="closeSearch"><i class="fas fa-times"></i></button>
+        <div class="search-container">
+            <input type="text" id="mobileSearchInput" placeholder="اكتب للبحث...">
+            <button class="btn btn-primary" onclick="executeMobileSearch()"><i class="fas fa-search"></i> بحث</button>
         </div>
-        <button class="filter-search-btn" id="applyFiltersBtn"><i class="fas fa-search"></i> Search</button>
     </div>
 
-    <!-- Main Grid -->
-    <div class="browse-main">
-        <h2 class="section-title">Latest Update</h2>
-        <div class="lu-grid" id="browseGrid"></div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="app-footer asura-footer" style="margin-top: 2rem;">
-        <div class="footer-content container">
-            <div class="footer-brand">
-                <a href="index.html" class="brand-logo" style="display:flex;align-items:center;text-decoration:none;">
-                    <img src="images/logo.png" alt="Logo" style="height: 30px; width: 30px; margin-right: 10px; background: transparent;">
-                    <span class="logo-primary" style="color:#00ff88;font-weight:900;font-size:1.2rem;font-family:'Cairo',sans-serif;margin-left:10px;">Nexus</span>
-                </a>
-                <p class="footer-desc">المنصة العربية الأولى لقراءة المانها والمانجا بدقة فائقة وبدون إعلانات مزعجة.</p>
+    <!-- Main Browse Content -->
+    <main class="asura-home" style="margin-top: 30px;">
+        <div class="container">
+            <div class="section-header" style="justify-content: center; text-align: center; margin-bottom: 30px;">
+                <h1 style="font-size: 2.5rem; color: #fff; text-shadow: 0 0 20px rgba(0, 255, 159, 0.3); font-family: var(--font-ar);"><i class="fas fa-compass text-accent"></i> تصفح الأعمال</h1>
             </div>
-            <div class="footer-links-inline">
-                <a href="index.html">الرئيسية</a>
-                <a href="#">سياسة الخصوصية</a>
-                <a href="#">DMCA</a>
-                <a href="#">شروط الاستخدام</a>
+
+            <!-- Filters Area -->
+            <div style="background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); padding: 20px; border-radius: 12px; margin-bottom: 30px; display: flex; flex-wrap: wrap; gap: 15px; align-items: center;">
+                <div style="flex: 1; min-width: 200px;">
+                    <label style="color: #aaa; font-size: 0.8rem; margin-bottom: 5px; display: block;">النوع</label>
+                    <select id="filterType" style="width: 100%; background: #000; color: #fff; padding: 10px; border: 1px solid #333; border-radius: 6px;">
+                        <option value="all">الكل</option>
+                        <option value="manhwa">مانهوا (Manhwa)</option>
+                        <option value="manga">مانجا (Manga)</option>
+                    </select>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <label style="color: #aaa; font-size: 0.8rem; margin-bottom: 5px; display: block;">التصنيف</label>
+                    <select id="filterGenre" style="width: 100%; background: #000; color: #fff; padding: 10px; border: 1px solid #333; border-radius: 6px;">
+                        <option value="all">الكل</option>
+                        <option value="action">أكشن</option>
+                        <option value="fantasy">فانتازيا</option>
+                        <option value="romance">رومانسي</option>
+                        <option value="martial arts">فنون قتالية</option>
+                        <option value="isekai">إيسيكاي</option>
+                        <option value="system">نظام</option>
+                    </select>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <label style="color: #aaa; font-size: 0.8rem; margin-bottom: 5px; display: block;">الترتيب</label>
+                    <select id="filterSort" style="width: 100%; background: #000; color: #fff; padding: 10px; border: 1px solid #333; border-radius: 6px;">
+                        <option value="latest">الأحدث (حسب الفصول)</option>
+                        <option value="rating">الأعلى تقييماً</option>
+                        <option value="az">أبجدياً (A-Z)</option>
+                    </select>
+                </div>
+                <div style="flex: 0 0 auto; display: flex; align-items: flex-end;">
+                    <button onclick="applyFilters()" class="btn btn-primary" style="padding: 10px 20px; border-radius: 6px;"><i class="fas fa-filter"></i> تطبيق الفلاتر</button>
+                </div>
+            </div>
+
+            <!-- Results Count -->
+            <div style="margin-bottom: 20px; color: #aaa; font-size: 0.9rem;">
+                تم العثور على <span id="resultsCount" style="color: var(--accent-nile); font-weight: bold;">0</span> عمل.
+            </div>
+
+            <!-- Results Grid (Using Latest Chapters Cards) -->
+            <div class="latest-list" id="browseGrid" style="grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));">
+                <!-- Data injected here -->
+            </div>
+            
+            <!-- Load More (Pagination Mock) -->
+            <div style="text-align: center; margin-top: 40px; margin-bottom: 60px;">
+                <button id="loadMoreBtn" class="btn btn-secondary" style="display: none; padding: 12px 40px; border-radius: 8px; font-size: 1.1rem;"><i class="fas fa-chevron-down"></i> عرض المزيد</button>
             </div>
         </div>
-        <div class="footer-bottom">&copy; 2026 Nexus Network. All rights reserved.</div>
-    </footer>
+    </main>
 
-    <script src="data.js?v=2.1"></script>
-    <script src="script.js?v=2.1"></script>
+    <!-- Essential Scripts -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
     <script>
+        // Browse Logic
+        let browseData = [];
+        let currentPage = 1;
+        const ITEMS_PER_PAGE = 20;
 
-        function buildBrowseList() {
-            const list = [];
-            const seen = new Set();
-            Object.keys(SITE_DATA).forEach(catKey => {
-                const catData = SITE_DATA[catKey];
-                ['latest'].forEach(sec => {
-                    if (catData[sec]) {
-                        catData[sec].forEach(item => {
-                            if (!seen.has(item.title)) {
-                                seen.add(item.title);
-                                let genresList = [];
-                                if (Array.isArray(item.genres)) genresList = item.genres;
-                                else if (typeof item.genres === 'string') genresList = item.genres.split(', ');
-                                list.push({
-                                    title: item.title,
-                                    img: item.img,
-                                    rating: item.rating || '9.0',
-                                    status: item.status || 'مستمر',
-                                    genres: genresList,
-                                    category: catKey,
-                                    chapters: item.chapters || [],
-                                });
-                            }
-                        });
-                    }
-                });
-            });
-            return list;
-        }
-
-        const ALL_ITEMS = buildBrowseList();
-
-        // Time labels for chapters
-        const timeTags = ['', '3 days', '1 week', '2 weeks', '1 month'];
-
-        function renderGrid(items) {
-            const grid = document.getElementById('browseGrid');
-            if (items.length === 0) {
-                grid.innerHTML = '<div class="no-results"><i class="fas fa-search" style="font-size:2rem;display:block;margin-bottom:1rem;"></i>لا توجد نتائج تطابق البحث</div>';
+        function initBrowse() {
+            if (typeof DB === 'undefined') {
+                console.error("No Database Found");
                 return;
             }
+            
+            // Check URL parameters for initial filters
+            const params = new URLSearchParams(window.location.search);
+            const searchQ = params.get('search');
+            const typeQ = params.get('type');
+            const genreQ = params.get('genre');
 
-            grid.innerHTML = items.map(item => {
-                const ch = item.chapters.slice(0, 3); // Show top 3 chapters
-                const chHTML = ch.map((c, i) => {
-                    const isNew = i < 2;
-                    const timeLabel = timeTags[i] || '';
-                    return `
-                        <div class="lu-ch-row" onclick="goToSeries('${item.title.replace(/'/g, "\\'")}', '${item.category}')">
-                            <span class="lu-ch-name">${c.n}</span>
-                            <span class="lu-ch-right">
-                                ${isNew ? `<span class="lu-ch-badge ${i === 0 ? 'hot' : ''}">NEW</span>` : ''}
-                                ${timeLabel ? `<span class="lu-ch-time">${timeLabel}</span>` : ''}
-                            </span>
-                        </div>
-                    `;
-                }).join('');
+            if (searchQ) document.getElementById('searchInput').value = searchQ;
+            if (typeQ) document.getElementById('filterType').value = typeQ;
+            if (genreQ) document.getElementById('filterGenre').value = genreQ;
 
-                return `
-                    <div class="lu-card">
-                        <div class="lu-cover" onclick="goToSeries('${item.title.replace(/'/g, "\\'")}', '${item.category}')">
-                            <img src="${item.img}" alt="${item.title}" loading="lazy">
-                            <span class="lu-cover-badge">${item.category}</span>
-                        </div>
-                        <div class="lu-info">
-                            <div class="lu-title" onclick="goToSeries('${item.title.replace(/'/g, "\\'")}', '${item.category}')">${item.title}</div>
-                            <div class="lu-meta">
-                                <span class="lu-rating"><i class="fas fa-star"></i> ${item.rating}</span>
-                                <span class="lu-status"><span class="dot"></span> Ongoing</span>
-                            </div>
-                            <div class="lu-chapters">${chHTML}</div>
-                            <button class="lu-all-btn" onclick="goToSeries('${item.title.replace(/'/g, "\\'")}', '${item.category}')">All Chapters</button>
-                        </div>
-                    </div>
-                `;
-            }).join('');
+            applyFilters();
+
+            // Setup Load More
+            document.getElementById('loadMoreBtn').addEventListener('click', () => {
+                currentPage++;
+                renderBrowseGrid(false);
+            });
+            
+            // Search Input Event
+            document.getElementById('searchInput').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') applyFilters();
+            });
         }
 
         function applyFilters() {
-            const genre = document.getElementById('fGenre').value;
-            const status = document.getElementById('fStatus').value;
-            const type = document.getElementById('fType').value;
-            const order = document.getElementById('fOrder').value;
-            const search = document.getElementById('liveSearch').value.toLowerCase().trim();
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            const type = document.getElementById('filterType').value;
+            const genre = document.getElementById('filterGenre').value.toLowerCase();
+            const sort = document.getElementById('filterSort').value;
 
-            let filtered = ALL_ITEMS.filter(item => {
-                if (type !== 'all' && item.category !== type) return false;
-                if (status === 'ongoing' && item.status !== 'مستمر') return false;
-                if (status === 'completed' && item.status === 'مستمر') return false;
-                if (genre !== 'all') {
-                    const gs = item.genres.join(' ').toLowerCase();
-                    if (!gs.includes(genre.replace('-', ' '))) return false;
-                }
-                if (search && !item.title.toLowerCase().includes(search)) return false;
-                return true;
+            // Filter DB
+            browseData = DB.filter(item => {
+                const matchQuery = !query || (item.title && item.title.toLowerCase().includes(query)) || (item.desc && item.desc.toLowerCase().includes(query));
+                const matchType = type === 'all' || (item.type || 'manhwa').toLowerCase() === type;
+                const itemGenres = (Array.isArray(item.genres) ? item.genres : (item.genres || '').split(',')).map(g => g.trim().toLowerCase());
+                const matchGenre = genre === 'all' || itemGenres.some(g => g.includes(genre));
+
+                return matchQuery && matchType && matchGenre;
             });
 
-            if (order === 'rating') filtered.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating));
-            else if (order === 'az') filtered.sort((a, b) => a.title.localeCompare(b.title));
-            else if (order === 'za') filtered.sort((a, b) => b.title.localeCompare(a.title));
+            // Sort
+            if (sort === 'latest') {
+                browseData.sort((a, b) => {
+                    const aCh = a.chapters && a.chapters.length > 0 ? a.chapters.length : 0;
+                    const bCh = b.chapters && b.chapters.length > 0 ? b.chapters.length : 0;
+                    return bCh - aCh;
+                });
+            } else if (sort === 'rating') {
+                browseData.sort((a, b) => (parseFloat(b.rating) || 0) - (parseFloat(a.rating) || 0));
+            } else if (sort === 'az') {
+                browseData.sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+            }
 
-            renderGrid(filtered);
+            document.getElementById('resultsCount').textContent = browseData.length;
+            currentPage = 1;
+            renderBrowseGrid(true);
         }
 
-        document.getElementById('applyFiltersBtn').addEventListener('click', applyFilters);
-        document.getElementById('liveSearch').addEventListener('input', applyFilters);
-        document.getElementById('fGenre').addEventListener('change', applyFilters);
-        document.getElementById('fStatus').addEventListener('change', applyFilters);
-        document.getElementById('fType').addEventListener('change', applyFilters);
-        document.getElementById('fOrder').addEventListener('change', applyFilters);
+        function renderBrowseGrid(clear) {
+            const grid = document.getElementById('browseGrid');
+            if (clear) grid.innerHTML = '';
 
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get('genre')) document.getElementById('fGenre').value = urlParams.get('genre');
-        if (urlParams.get('type')) document.getElementById('fType').value = urlParams.get('type');
+            if (browseData.length === 0 && clear) {
+                grid.innerHTML = `
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 50px 20px; background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px dashed #333;">
+                        <i class="fas fa-ghost" style="font-size: 3rem; color: #444; margin-bottom: 15px;"></i>
+                        <h3 style="color: #ccc;">لم يتم العثور على أي نتائج مطابقة لبحثك.</h3>
+                    </div>`;
+                document.getElementById('loadMoreBtn').style.display = 'none';
+                return;
+            }
 
-        renderGrid(ALL_ITEMS);
+            const start = (currentPage - 1) * ITEMS_PER_PAGE;
+            const end = start + ITEMS_PER_PAGE;
+            const toRender = browseData.slice(start, end);
+
+            const html = toRender.map(item => {
+                const ch = (item.chapters || []).sort((a,b) => parseFloat(b.n) - parseFloat(a.n)).slice(0, 3);
+                const chHTML = ch.map((c, i) => {
+                    const isNew = i === 0;
+                    const dateLabel = timeAgo(c.d);
+                    return \`
+                        <div class="lc-ch-row" onclick="event.stopPropagation(); window.openReader('\${item.title.replace(/'/g, "\\\\'")}', '\${c.n}')">
+                            \${isNew ? '<i class="fas fa-lock-open lc-ch-icon lc-new"></i>' : '<i class="fas fa-eye lc-ch-icon"></i>'}
+                            <span class="lc-ch-name">Chapter \${c.n}</span>
+                            <span class="lc-ch-date">\${isNew ? '<span class="lc-new-badge">New</span>' : dateLabel}</span>
+                        </div>
+                    \`;
+                }).join('');
+
+                const cover = item.cover || item.img || 'images/default-cover.jpg';
+                const typeBadge = (item.type || 'manhwa').toLowerCase() === 'manga' ? 'Manga' : 'Manhwa';
+
+                return \`
+                    <div class="latest-card-v2" onclick="goToSeries('\${item.title.replace(/'/g, "\\\\'")}', 'manhwa')">
+                        <div class="lc-cover">
+                            <img src="\${cover}" alt="\${item.title}" loading="lazy">
+                            <span class="lc-type-badge">\${typeBadge}</span>
+                        </div>
+                        <div class="lc-info">
+                            <h3 class="lc-title">\${item.title}</h3>
+                            <div class="lc-meta">
+                                <span class="lc-rating">\${item.rating || '9.5'} <i class="fas fa-star"></i></span>
+                                <span class="lc-status"><i class="fas fa-circle"></i> Ongoing</span>
+                            </div>
+                            <div class="lc-chapters">
+                                \${chHTML}
+                            </div>
+                        </div>
+                    </div>
+                \`;
+            }).join('');
+
+            grid.insertAdjacentHTML('beforeend', html);
+
+            if (end >= browseData.length) {
+                document.getElementById('loadMoreBtn').style.display = 'none';
+            } else {
+                document.getElementById('loadMoreBtn').style.display = 'inline-block';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', initBrowse);
     </script>
 </body>
 </html>
-
-
-

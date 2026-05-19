@@ -1207,85 +1207,36 @@ function initComments(identifier, containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
-    // LocalStorage Key
-    const storageKey = `nile_comments_${identifier}`;
+    container.innerHTML = `
+        <div style="text-align: center; margin-bottom: 1rem;">
+            <i class="fas fa-comments text-accent" style="font-size: 2rem;"></i>
+            <h3 style="color: #fff; margin-top: 10px;">شارك برأيك في هذا الفصل</h3>
+        </div>
+        <div id="disqus_thread"></div>
+    `;
     
-    // Load initial comments or default
-    let comments = JSON.parse(localStorage.getItem(storageKey)) || [
-        {
-            id: 'c1',
-            author: 'زائر مميز',
-            avatar: 'https://api.dicebear.com/7.x/bottts/svg?seed=Nile',
-            text: 'شكراً لكم على هذا الجهد الرائع! الموقع يفتح النفس للقراءة والتصميم خيالي 💚.',
-            date: new Date(Date.now() - 86400000).toLocaleString()
-        }
-    ];
+    // Shortname user can configure later. Defaulting to a placeholder.
+    const disqus_shortname = 'nexus-scans-demo'; 
+    const pageUrl = window.location.origin + window.location.pathname + '#' + identifier;
 
-    function renderComments() {
-        container.innerHTML = `
-            <div class="comments-wrapper">
-                <div style="text-align: center; margin-bottom: 1.5rem;">
-                    <span style="font-size: 3rem; text-shadow: 0 0 15px rgba(0,255,159,0.4);">🐺</span>
-                </div>
-                <div class="cm-header">
-                    <i class="fas fa-comments"></i> التعليقات
-                    <span class="cm-count">${comments.length} تعليق</span>
-                </div>
-                
-                <div class="cm-form">
-                    <div class="cm-avatar">
-                        <img src="https://api.dicebear.com/7.x/bottts/svg?seed=${Math.random()}" alt="avatar">
-                    </div>
-                    <div class="cm-input-wrapper">
-                        <textarea id="cmInput_${identifier}" class="cm-textarea" placeholder="أضف تعليقك بصفتك زائر..."></textarea>
-                        <button id="cmSubmit_${identifier}" class="cm-submit">
-                            <i class="fas fa-paper-plane"></i> نشر التعليق
-                        </button>
-                    </div>
-                </div>
-
-                <div class="cm-list">
-                    ${comments.slice().reverse().map(c => `
-                        <div class="cm-item">
-                            <div class="cm-avatar">
-                                <img src="${c.avatar}" alt="avatar">
-                            </div>
-                            <div class="cm-content">
-                                <div class="cm-meta">
-                                    <span class="cm-author">${c.author}</span>
-                                    <span class="cm-date">${c.date}</span>
-                                </div>
-                                <div class="cm-text">${c.text}</div>
-                                <div class="cm-actions">
-                                    <button class="cm-btn"><i class="fas fa-heart"></i> إعجاب</button>
-                                    <button class="cm-btn"><i class="fas fa-reply"></i> رد</button>
-                                </div>
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
-            </div>
-        `;
-
-        // Attach event
-        document.getElementById(`cmSubmit_${identifier}`).addEventListener('click', () => {
-            const val = document.getElementById(`cmInput_${identifier}`).value.trim();
-            if (val) {
-                comments.push({
-                    id: 'c' + Date.now(),
-                    author: window.prompt("أدخل اسمك الكريم للتعليق (اختياري):", "زائر كريم") || "زائر كريم",
-                    avatar: `https://api.dicebear.com/7.x/bottts/svg?seed=${Date.now()}`,
-                    text: val,
-                    date: new Date().toLocaleString()
-                });
-                localStorage.setItem(storageKey, JSON.stringify(comments));
-                renderComments(); // Re-render
+    if (window.DISQUS) {
+        window.DISQUS.reset({
+            reload: true,
+            config: function () {
+                this.page.identifier = identifier;
+                this.page.url = pageUrl;
             }
         });
+    } else {
+        window.disqus_config = function () {
+            this.page.identifier = identifier;
+            this.page.url = pageUrl;
+        };
+        const d = document, s = d.createElement('script');
+        s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
     }
-
-    // Initial Render
-    renderComments();
 }
 
 /* =========================================================
