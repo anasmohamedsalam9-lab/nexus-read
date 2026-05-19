@@ -2277,21 +2277,25 @@ img.broken-img::after {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: var(--accent-nile);
-  color: #000;
+  background: rgba(18, 18, 18, 0.8) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
-  box-shadow: 0 4px 20px rgba(0, 255, 159, 0.4);
-  z-index: 999;
+  z-index: 99999;
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-  border: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid var(--accent-nile);
+  color: var(--accent-nile);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 .theme-fab:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 30px rgba(0, 255, 159, 0.6);
+  background: var(--accent-nile) !important;
+  color: #000;
+  box-shadow: 0 0 20px var(--accent-nile);
+  transform: translateY(-3px) scale(1.05);
 }
 
 .theme-panel-overlay {
@@ -2769,29 +2773,31 @@ body.theme-arctic-ice ::-webkit-scrollbar-thumb { background: #06b6d4; }
 /* Scroll to Top Button */
 .scroll-top-btn {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 50px; height: 50px;
-  background: var(--bg-surface-elevated);
+  bottom: 24px;
+  right: 24px;
+  width: 48px; height: 48px;
+  background: rgba(18, 18, 18, 0.8) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid var(--accent-nile);
   color: var(--accent-nile);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
-  z-index: 9999;
+  z-index: 99999;
   opacity: 0; visibility: hidden;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 15px rgba(0, 255, 159, 0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 .scroll-top-btn.visible {
   opacity: 1; visibility: visible;
 }
 .scroll-top-btn:hover {
-  background: var(--accent-nile);
+  background: var(--accent-nile) !important;
   color: #000;
-  box-shadow: 0 0 25px var(--accent-nile);
-  transform: translateY(-5px);
+  box-shadow: 0 0 20px var(--accent-nile);
+  transform: translateY(-3px) scale(1.05);
 }
 
 /* =========================================================
@@ -2803,7 +2809,8 @@ body.cinema-mode {
 body.cinema-mode .asura-nav,
 body.cinema-mode .site-footer,
 body.cinema-mode .theme-fab,
-body.cinema-mode .scroll-top-btn {
+body.cinema-mode .scroll-top-btn,
+body.cinema-mode .report-btn {
   display: none !important;
 }
 body.cinema-mode .reader-image-page {
@@ -2872,24 +2879,27 @@ body.cinema-mode .reader-image-page {
 }
 .report-btn {
   position: fixed;
-  bottom: 90px;
-  right: 30px;
-  width: 50px; height: 50px;
-  background: #f43f5e;
-  border: none;
-  color: #fff;
+  bottom: 84px;
+  right: 24px;
+  width: 48px; height: 48px;
+  background: rgba(18, 18, 18, 0.8) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid #f43f5e;
+  color: #f43f5e;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   cursor: pointer;
-  z-index: 9999;
-  box-shadow: 0 0 15px rgba(244, 63, 94, 0.4);
-  transition: all 0.3s;
+  z-index: 99999;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .report-btn:hover {
-  background: #e11d48;
-  transform: scale(1.1);
-  box-shadow: 0 0 25px rgba(244, 63, 94, 0.6);
+  background: #f43f5e !important;
+  color: #fff;
+  box-shadow: 0 0 20px #f43f5e;
+  transform: translateY(-3px) scale(1.05);
 }
 
 /* Manga Pagination Mode overrides */

@@ -16,19 +16,24 @@
 <body class="dark-theme profile-page">
 
     <div class="app-wrapper">
-        <!-- Header (Shared) -->
         <header class="sticky-header" id="stickyHeader">
             <nav class="asura-nav">
                 <div class="nav-container container">
-                    <a href="index.html" class="brand-logo" style="display:flex;align-items:center;">
-                        <img src="images/logo.png" alt="Logo" style="height: 35px; width: 35px; margin-right: 10px; background: transparent;">
-                        <span class="logo-primary" style="color:#00ff88;">Nexus</span>
+                    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a href="index.html" class="glitch-logo">
+                        <span class="glitch-text">NEXUS</span>
+                        <i class="fas fa-meteor glitch-icon"></i>
+                        <span class="glitch-text">SCANS</span>
                     </a>
 
-                    <ul class="nav-links">
-                        <li><a href="index.html">الرئيسية</a></li>
-                        <li><a href="browse.html">تصفح</a></li>
-                        <li><a href="shop.html">المتجر</a></li>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="index.html">الرئيسية <span class="en-sub">Home</span></a></li>
+                        <li><a href="browse.html">تصفح <span class="en-sub">Browse</span></a></li>
+                        <li><a href="#" class="cat-nav-btn" data-category="manhwa">المنهوا <span class="en-sub">Manhwa</span></a></li>
+                        <li><a href="#" class="cat-nav-btn" data-category="manga">المانجا <span class="en-sub">Manga</span></a></li>
+                        <li><a href="browse.html?genre=romance" class="cat-nav-btn" data-category="romance">رومانسي <span class="en-sub">Romance</span></a></li>
                     </ul>
 
                     <div class="nav-actions" id="navActions">
@@ -172,7 +177,7 @@
                     <div class="owned-decos-grid" id="ownedDecosGrid">
                         <div class="empty-state" style="grid-column: 1/-1;">
                             <i class="fas fa-box-open"></i>
-                            <p>لم تقم بشراء أي زينة حتى الآن. قم بزيارة <a href="shop.html" class="text-accent">المتجر</a> لاقتناء أروع التصاميم!</p>
+                             <p>نظام الزينة والهالات قيد التطوير حالياً. ترقبوا إطلاقه قريباً! ✨</p>
                         </div>
                     </div>
                 </div>

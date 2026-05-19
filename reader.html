@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -42,7 +42,7 @@
         }
         
         /* Force hide global scroll-to-top in reader */
-        .scroll-to-top, #scrollToTopBtn { display: none !important; opacity: 0 !important; pointer-events: none !important; z-index: -100 !important; }
+        .scroll-to-top, #scrollToTopBtn, .scroll-top-btn, #scrollTopBtn { display: none !important; opacity: 0 !important; pointer-events: none !important; z-index: -100 !important; }
         #globalLoader.hidden { opacity: 0; visibility: hidden; }
         .loader-spinner {
             width: 50px; height: 50px;
@@ -283,12 +283,12 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             // Force remove the global scroll to top button if any script injected it
-            const scrollBtn = document.getElementById('scrollToTopBtn') || document.querySelector('.scroll-to-top');
+            const scrollBtn = document.getElementById('scrollToTopBtn') || document.getElementById('scrollTopBtn') || document.querySelector('.scroll-to-top') || document.querySelector('.scroll-top-btn');
             if (scrollBtn) scrollBtn.remove();
             
             // Watch for future injections and remove them
             const observer = new MutationObserver(() => {
-                const asyncBtn = document.getElementById('scrollToTopBtn') || document.querySelector('.scroll-to-top');
+                const asyncBtn = document.getElementById('scrollToTopBtn') || document.getElementById('scrollTopBtn') || document.querySelector('.scroll-to-top') || document.querySelector('.scroll-top-btn');
                 if (asyncBtn) asyncBtn.remove();
             });
             observer.observe(document.body, { childList: true, subtree: true });
