@@ -85,9 +85,13 @@ def upsert_manga(title, cover='', desc='', genres=None, status='Ongoing', chapte
         # Merge chapters: keep existing + add new (by chapter number)
         existing_ch_nums = {str(ch.get('n', '')): ch for ch in existing.get('chapters', [])}
         new_count = 0
+        from datetime import datetime
+        today_str = datetime.now().strftime("%Y-%m-%d")
         for ch in chapters:
             ch_num = str(ch.get('n', ''))
             if ch_num not in existing_ch_nums:
+                if 'd' not in ch or not ch['d']:
+                    ch['d'] = today_str
                 existing_ch_nums[ch_num] = ch
                 new_count += 1
 
@@ -114,6 +118,11 @@ def upsert_manga(title, cover='', desc='', genres=None, status='Ongoing', chapte
     else:
         # Create new entry
         slug = slugify(title)
+        from datetime import datetime
+        today_str = datetime.now().strftime("%Y-%m-%d")
+        for ch in chapters:
+            if 'd' not in ch or not ch['d']:
+                ch['d'] = today_str
         new_entry = {
             "id": f"nm_{slug}",
             "title": title,

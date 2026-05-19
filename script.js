@@ -564,7 +564,31 @@ function renderTrendingSlider(data) {
     }
 }
 
-// Render Latest Updates
+// Time Ago Helper
+function timeAgo(dateStr) {
+    if (!dateStr || dateStr === 'اليوم') return 'اليوم';
+    try {
+        const date = new Date(dateStr);
+        if (isNaN(date.getTime())) return dateStr;
+        const now = new Date();
+        const diffMs = now - date;
+        const diffMins = Math.floor(diffMs / 60000);
+        const diffHours = Math.floor(diffMs / 3600000);
+        const diffDays = Math.floor(diffMs / 86400000);
+        const diffWeeks = Math.floor(diffDays / 7);
+        const diffMonths = Math.floor(diffDays / 30);
+        if (diffMins < 1) return 'الآن';
+        if (diffMins < 60) return `منذ ${diffMins} دقيقة`;
+        if (diffHours < 24) return `منذ ${diffHours} ساعة`;
+        if (diffDays === 1) return 'أمس';
+        if (diffDays < 7) return `منذ ${diffDays} أيام`;
+        if (diffWeeks < 5) return `منذ ${diffWeeks} أسبوع`;
+        if (diffMonths < 12) return `منذ ${diffMonths} شهر`;
+        return dateStr;
+    } catch(e) { return dateStr; }
+}
+
+// Render Latest Updates (آخر الفصول - Vortex Scans Style)
 function renderLatestUpdates(data) {
     const list = document.getElementById('latestUpdatesList');
     if(!list) return;
@@ -575,14 +599,12 @@ function renderLatestUpdates(data) {
         const ch = (item.chapters || []).slice(0, 3); 
         const chHTML = ch.map((c, i) => {
             const isNew = i === 0;
-            const timeLabel = c.d || 'اليوم'; 
+            const dateLabel = timeAgo(c.d);
             return `
-                <div class="vortex-ch-row" onclick="window.openReader('${item.title.replace(/'/g, "\\'")}', '${c.n}')">
-                    <div class="vortex-ch-left">
-                        <i class="fas ${isNew ? 'fa-fire text-accent' : 'fa-eye text-muted'}"></i>
-                        <span class="v-ch-name">فصل ${c.n}</span>
-                    </div>
-                    <span class="v-ch-date">${isNew ? '<span class="v-new-tag">جديد</span>' : timeLabel}</span>
+                <div class="lc-ch-row" onclick="event.stopPropagation(); window.openReader('${item.title.replace(/'/g, "\\'")}', '${c.n}')">
+                    ${isNew ? '<i class="fas fa-lock-open lc-ch-icon lc-new"></i>' : '<i class="fas fa-eye lc-ch-icon"></i>'}
+                    <span class="lc-ch-name">Chapter ${c.n}</span>
+                    <span class="lc-ch-date">${isNew ? '<span class="lc-new-badge">New</span>' : dateLabel}</span>
                 </div>
             `;
         }).join('');
@@ -595,21 +617,21 @@ function renderLatestUpdates(data) {
         }
 
         return `
-            <div class="latest-card vortex-style">
-                <div class="vortex-thumb" onclick="goToSeries('${item.title.replace(/'/g, "\\'")}', '${item.chapters && item.chapters[0] ? item.chapters[0].n : '1'}')">
+            <div class="latest-card-v2" onclick="goToSeries('${item.title.replace(/'/g, "\\'")}', '${currentCategory}')">
+                <div class="lc-cover">
                     <img src="${item.img || 'images/default-cover.jpg'}" alt="${item.title}" loading="lazy">
-                    <span class="v-type-badge">${typeBadge}</span>
+                    <span class="lc-type-badge">${typeBadge}</span>
+                    <div class="lc-pinned"><i class="fas fa-fire"></i> Pinned</div>
                 </div>
-                <div class="latest-details">
-                    <h3 class="vortex-title" onclick="goToSeries('${item.title.replace(/'/g, "\\'")}', '${item.chapters && item.chapters[0] ? item.chapters[0].n : '1'}')">${item.title}</h3>
-                    <div class="vortex-meta">
-                        <span class="v-rating">${item.rating || '9.5'} <i class="fas fa-star" style="color:#FFD700;"></i></span>
-                        <span class="v-status"><i class="fas fa-circle v-dot"></i> Ongoing</span>
+                <div class="lc-info">
+                    <h3 class="lc-title">${item.title}</h3>
+                    <div class="lc-meta">
+                        <span class="lc-rating">${item.rating || '9.5'} <i class="fas fa-star"></i></span>
+                        <span class="lc-status"><i class="fas fa-circle"></i> Ongoing</span>
                     </div>
-                    <div class="v-chapters-list">
+                    <div class="lc-chapters">
                         ${chHTML}
                     </div>
-                    <button class="v-read-btn" onclick="window.openReader('${item.title.replace(/'/g, "\\'")}', '${item.chapters && item.chapters[0] ? item.chapters[0].n : '1'}')">قراءة الفصل الأخير</button>
                 </div>
             </div>
         `;
@@ -1603,7 +1625,7 @@ function renderContinueReading() {
     }
     
     section.style.display = 'block';
-    container.innerHTML = history.slice(0, 6).map(item => {
+    container.innerHTML = history.slice(0, 10).map(item => {
         let cover = '';
         if (item.img && item.img !== 'undefined' && item.img !== 'null' && !item.img.includes('placeholder')) {
             cover = item.img;
@@ -1627,20 +1649,29 @@ function renderContinueReading() {
         // Calculate read percentage
         const currentCh = parseFloat(item.chapter) || 0;
         const readPercent = totalCh > 0 ? Math.min(Math.round((currentCh / totalCh) * 100), 100) : 0;
-        const percentColor = readPercent > 75 ? '#00ff88' : readPercent > 40 ? '#fbbf24' : '#ff6b6b';
+        const leftCh = totalCh > 0 ? Math.max(totalCh - currentCh, 0) : 0;
+        const relTime = timeAgo(new Date(item.timestamp).toISOString().split('T')[0]);
         
         return `
         <div class="continue-card" onclick="window.openReader('${item.title.replace(/'/g, "\\'")}', '${item.chapter}')">
             <div class="continue-thumb">
                 <img src="${cover}" alt="${item.title}" onerror="this.src='images/default-cover.jpg';">
                 <div class="continue-play"><i class="fas fa-play"></i></div>
-                ${totalCh > 0 ? `<span style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.8);color:${percentColor};padding:2px 8px;border-radius:4px;font-size:0.7rem;font-weight:800;border:1px solid ${percentColor}40;">تم ${readPercent}%</span>` : ''}
+                <div class="cr-ch-overlay">
+                    <span class="cr-ch-current">Chapter ${item.chapter}</span>
+                    ${totalCh > 0 ? `<span class="cr-ch-total">/ ${totalCh}</span>` : ''}
+                </div>
             </div>
             <div class="continue-info">
                 <div class="continue-title">${item.title}</div>
-                <div class="continue-ch">فصل ${item.chapter}${totalCh > 0 ? ` / ${totalCh}` : ''}</div>
+                <div class="continue-ch"><i class="fas fa-clock"></i> Chapter ${item.chapter} · ${relTime}</div>
             </div>
-            <div class="continue-progress"><div class="progress-bar" style="width: ${readPercent || 100}%;"></div></div>
+            ${totalCh > 0 ? `
+            <div class="cr-left-info">
+                <span>${currentCh} / ${totalCh} (${leftCh} left)</span>
+                <span class="cr-percent">${readPercent}%</span>
+            </div>` : ''}
+            <div class="continue-progress"><div class="progress-bar" style="width: ${readPercent || 5}%;"></div></div>
         </div>
     `}).join('');
 }
@@ -1674,5 +1705,101 @@ window.NileAPI = {
     baseURL: API_BASE_URL
 };
 
+/* =========================================================
+   Premium Theme System - 10 Themes
+   ========================================================= */
+const NEXUS_THEMES = [
+    { id: '', label: 'Nexus Default', labelAr: 'النيكسس الافتراضي', color: '#00FF9F' },
+    { id: 'theme-midnight-blue', label: 'Midnight Blue', labelAr: 'أزرق منتصف الليل', color: '#3b82f6' },
+    { id: 'theme-crimson-red', label: 'Crimson Red', labelAr: 'أحمر قرمزي', color: '#ef4444' },
+    { id: 'theme-royal-purple', label: 'Royal Purple', labelAr: 'بنفسجي ملكي', color: '#a855f7' },
+    { id: 'theme-ocean-teal', label: 'Ocean Teal', labelAr: 'أخضر محيطي', color: '#14b8a6' },
+    { id: 'theme-sunset-orange', label: 'Sunset Orange', labelAr: 'برتقالي الغروب', color: '#f97316' },
+    { id: 'theme-sakura-pink', label: 'Sakura Pink', labelAr: 'وردي ساكورا', color: '#ec4899' },
+    { id: 'theme-emerald-forest', label: 'Emerald Forest', labelAr: 'زمردي الغابة', color: '#10b981' },
+    { id: 'theme-golden-hour', label: 'Golden Hour', labelAr: 'الساعة الذهبية', color: '#eab308' },
+    { id: 'theme-arctic-ice', label: 'Arctic Ice', labelAr: 'جليد القطب', color: '#06b6d4' }
+];
 
+function initThemeSystem() {
+    // Load saved theme
+    const savedTheme = localStorage.getItem('nexus_theme') || '';
+    applyTheme(savedTheme);
 
+    // Inject FAB Button
+    const fab = document.createElement('button');
+    fab.className = 'theme-fab';
+    fab.id = 'themeFab';
+    fab.innerHTML = '<i class="fas fa-palette"></i>';
+    fab.title = 'تغيير الثيم';
+    document.body.appendChild(fab);
+
+    // Inject Panel Overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'theme-panel-overlay';
+    overlay.id = 'themePanelOverlay';
+    overlay.innerHTML = `
+        <div class="theme-panel">
+            <div class="theme-panel-header">
+                <h3><i class="fas fa-palette"></i> اختر الثيم</h3>
+                <button class="theme-panel-close" id="themeCloseBtn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="theme-grid" id="themeGrid">
+                ${NEXUS_THEMES.map(t => `
+                    <div class="theme-option ${savedTheme === t.id ? 'active' : ''}" data-theme="${t.id}">
+                        <div class="theme-preview" style="background: ${t.color};"></div>
+                        <div>
+                            <div class="theme-label">${t.label}</div>
+                            <div class="theme-label-ar">${t.labelAr}</div>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `;
+    document.body.appendChild(overlay);
+
+    // Events
+    fab.addEventListener('click', () => {
+        overlay.classList.add('active');
+    });
+
+    document.getElementById('themeCloseBtn').addEventListener('click', () => {
+        overlay.classList.remove('active');
+    });
+
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) overlay.classList.remove('active');
+    });
+
+    // Theme selection
+    document.getElementById('themeGrid').addEventListener('click', (e) => {
+        const option = e.target.closest('.theme-option');
+        if (!option) return;
+        const themeId = option.dataset.theme;
+        
+        // Update active state
+        document.querySelectorAll('.theme-option').forEach(o => o.classList.remove('active'));
+        option.classList.add('active');
+        
+        // Apply and save
+        applyTheme(themeId);
+        localStorage.setItem('nexus_theme', themeId);
+    });
+}
+
+function applyTheme(themeId) {
+    // Remove all theme classes
+    NEXUS_THEMES.forEach(t => {
+        if (t.id) document.body.classList.remove(t.id);
+    });
+    // Apply selected theme
+    if (themeId) {
+        document.body.classList.add(themeId);
+    }
+}
+
+// Initialize theme system on DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+    initThemeSystem();
+});
