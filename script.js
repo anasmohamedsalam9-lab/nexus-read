@@ -1044,11 +1044,13 @@ function initReaderEngine() {
                 
                 const head = document.getElementById('readerHudTop');
                 const foot = document.getElementById('readerHudBottom');
+                const toolbar = document.getElementById('epicReaderToolbar');
                 const settingsPanel = document.getElementById('readerSettingsPanel');
                 const progressBar = document.getElementById('readerProgressWrapper');
                 
                 if(head) head.classList.toggle('hidden');
                 if(foot) foot.classList.toggle('hidden');
+                if(toolbar) toolbar.classList.toggle('hidden');
                 if(progressBar) progressBar.classList.toggle('hidden');
                 
                 if (settingsPanel && head && head.classList.contains('hidden')) {
