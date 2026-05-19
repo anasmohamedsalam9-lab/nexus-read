@@ -2619,3 +2619,67 @@ body.theme-arctic-ice ::-webkit-scrollbar-thumb { background: #06b6d4; }
     height: 190px;
   }
 }
+
+/* =========================================================
+   Global Preloader (PWA & General)
+   ========================================================= */
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: #0a0a0a;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease, visibility 0.5s;
+}
+.preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.preloader-content {
+  text-align: center;
+}
+.preloader-icon {
+  font-size: 4rem;
+  color: var(--accent-nile);
+  animation: pulse-glow 1.5s infinite;
+  margin-bottom: 20px;
+}
+.preloader-text {
+  font-family: var(--font-en);
+  font-weight: 900;
+  font-size: 2rem;
+  color: #fff;
+  letter-spacing: 10px;
+  margin-bottom: 30px;
+  text-shadow: 0 0 20px rgba(0,255,159,0.5);
+}
+.preloader-bar {
+  width: 200px;
+  height: 4px;
+  background: #1a1a1a;
+  border-radius: 4px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.preloader-progress {
+  position: absolute;
+  left: -100%;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--accent-nile);
+  animation: loading-bar 1.5s infinite linear;
+}
+@keyframes pulse-glow {
+  0% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(0,255,159,0.5)); }
+  50% { transform: scale(1.1); filter: drop-shadow(0 0 30px rgba(0,255,159,0.8)); }
+  100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(0,255,159,0.5)); }
+}
+@keyframes loading-bar {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+

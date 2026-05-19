@@ -1754,3 +1754,24 @@ function applyTheme(themeId) {
 document.addEventListener('DOMContentLoaded', () => {
     initThemeSystem();
 });
+
+/* =========================================================
+   PWA & Preloader System
+   ========================================================= */
+window.addEventListener("load", () => {
+    // Hide Preloader
+    const preloader = document.getElementById("nexus-preloader");
+    if (preloader) {
+        setTimeout(() => {
+            preloader.classList.add("hidden");
+        }, 500); // 500ms delay to ensure smooth transition
+    }
+
+    // Register Service Worker for PWA
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js")
+            .then(reg => console.log("[PWA] Service Worker ???? ?????", reg.scope))
+            .catch(err => console.error("[PWA] ??? ????? Service Worker:", err));
+    }
+});
+

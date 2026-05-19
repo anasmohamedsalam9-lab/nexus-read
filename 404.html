@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة غير موجودة | Nexus Scans</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .error-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+            background: #0d0d0d;
+        }
+        .error-code {
+            font-size: 10rem;
+            font-weight: 900;
+            color: transparent;
+            -webkit-text-stroke: 2px var(--accent-nile);
+            text-shadow: 0 0 40px rgba(0, 255, 159, 0.4);
+            font-family: var(--font-en);
+            line-height: 1;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .error-code::after {
+            content: '404';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-nile);
+            opacity: 0.1;
+            filter: blur(10px);
+        }
+        .error-title {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .error-desc {
+            color: #888;
+            font-size: 1.1rem;
+            max-width: 500px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .fox-ghost {
+            font-size: 4rem;
+            color: var(--accent-nile);
+            animation: float 3s ease-in-out infinite;
+            margin-bottom: 20px;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="dark-theme">
+
+    <div class="error-page">
+        <div class="fox-ghost">
+            <i class="fas fa-ghost"></i>
+        </div>
+        <div class="error-code">404</div>
+        <h1 class="error-title">لقد ضعت في بوابة الأبعاد!</h1>
+        <p class="error-desc">الفصل أو الصفحة التي تبحث عنها غير موجودة أو تم حذفها بواسطة زعيم الطائفة الشيطانية.</p>
+        <a href="index.html" class="btn btn-primary" style="padding: 12px 30px; font-size: 1.1rem; border-radius: 8px;">
+            <i class="fas fa-home"></i> العودة إلى المعبد الرئيسي
+        </a>
+    </div>
+
+</body>
+</html>
