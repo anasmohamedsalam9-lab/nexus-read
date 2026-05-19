@@ -1,5 +1,36 @@
 var DB = [
   {
+    "id": "nm_how-to-live-as-a-villain",
+    "title": "How to Live as a Villain",
+    "cover": "",
+    "desc": "اكتشف العناصر الحصرية والجديدة التي تمت إضافتها للتو. لا تفوت الفرصة!",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [],
+    "type": "manga",
+    "chapters": [
+      {
+        "n": "1",
+        "d": "2026-05-19",
+        "pages": [
+          "https://api.mangatek.com/api/chapters/stream/58ac5a381babdb0d206a61d50433f83b/080ee583c4f4390040508ec49dbb3b68?v=1",
+          "https://api.mangatek.com/api/chapters/stream/58ac5a381babdb0d206a61d50433f83b/e2fb2fac7d41376cf5e01f9a5cf20da1?v=1",
+          "https://api.mangatek.com/api/chapters/stream/58ac5a381babdb0d206a61d50433f83b/33455ee5468b04935091fde95560e26e?v=1",
+          "https://api.mangatek.com/api/chapters/stream/58ac5a381babdb0d206a61d50433f83b/fd6937bc5c568c1067900d0de62a1bc6?v=1",
+          "https://api.mangatek.com/api/chapters/stream/58ac5a381babdb0d206a61d50433f83b/1088928f06d84e91e4a3d18809ac108c?v=1",
+          "https://api.mangatek.com/api/chapters/stream/58ac5a381babdb0d206a61d50433f83b/b088efb71921f041ec76cb720b9eca65?v=1",
+          "https://api.mangatek.com/api/chapters/stream/58ac5a381babdb0d206a61d50433f83b/4053114433e52080447dea8b56be7d01?v=1",
+          "https://api.mangatek.com/api/chapters/stream/58ac5a381babdb0d206a61d50433f83b/d7b8cb740e77bf261a1c8dc3198ae4d4?v=1",
+          "https://api.mangatek.com/api/chapters/stream/58ac5a381babdb0d206a61d50433f83b/36ef2b871cac9520a469eedcff6eb24e?v=1",
+          "https://api.mangatek.com/decorations/marvel_snap_venom.png",
+          "https://api.mangatek.com/decorations/cozy_headphones.png",
+          "https://api.mangatek.com/decorations/fire.png",
+          "https://api.mangatek.com/decorations/spirit_embers.png"
+        ]
+      }
+    ]
+  },
+  {
     "id": "demo_one-piece-translated",
     "title": "One Piece (Translated Demo)",
     "cover": "assets/covers/one-piece-official-colored.webp",

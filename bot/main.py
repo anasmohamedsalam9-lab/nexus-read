@@ -89,6 +89,39 @@ def is_nsfw(genres):
     return any(bl.lower() in genre_lower for bl in GENRE_BLACKLIST)
 
 
+def detect_and_report_gaps(title, chapters):
+    """Detect and log missing chapter sequences in the merged chapters list."""
+    if not chapters:
+        return
+    nums = []
+    for ch in chapters:
+        num_str = str(ch.get('number', ch.get('n', '0')))
+        try:
+            num_match = re.search(r'(\d+\.?\d*)', num_str)
+            if num_match:
+                nums.append(float(num_match.group(1)))
+        except:
+            pass
+    if not nums:
+        return
+        
+    nums = sorted(list(set(nums)))
+    gaps = []
+    for i in range(len(nums) - 1):
+        diff = nums[i+1] - nums[i]
+        if diff > 1.0:
+            start_gap = int(nums[i] + 1)
+            end_gap = int(nums[i+1] - 1)
+            if start_gap <= end_gap:
+                if end_gap - start_gap < 100:
+                    gaps.extend(list(range(start_gap, end_gap + 1)))
+                else:
+                    gaps.append(f"{start_gap}-{end_gap}")
+                    
+    if gaps:
+        add_log(f"⚠️ تنبيه فجوات في فصول '{title}': الفصول المفقودة هي {gaps}", 'warning')
+
+
 # ── Core Scraping Logic ───────────────────────────────────
 
 async def scrape_manga(url, start_ch=1, end_ch=None, translate=None):
@@ -120,7 +153,12 @@ async def scrape_manga(url, start_ch=1, end_ch=None, translate=None):
         return
 
     title = manga_data.get('title', 'Unknown')
-    all_chapters = manga_data.get('chapters', [])
+    try:
+        all_chapters = scraper.get_best_source_chapters(title, url)
+        detect_and_report_gaps(title, all_chapters)
+    except Exception as e:
+        add_log(f"⚠️ فشل البحث متعدد المصادر عن الفصول: {e}. سيتم استخدام الفصول الافتراضية.", 'warning')
+        all_chapters = manga_data.get('chapters', [])
     cover = manga_data.get('cover', '')
     desc = manga_data.get('description', '')
     genres = manga_data.get('genres', [])
@@ -221,12 +259,18 @@ async def scrape_manga(url, start_ch=1, end_ch=None, translate=None):
             add_log(f"  ⚠️ لم يتم العثور على صور بالفصل {ch_num}", 'warning')
             continue
 
+        # Determine current chapter language and translation needs
+        ch_lang = ch.get('lang', source_lang)
+        ch_should_translate = translate
+        if ch_should_translate is None:
+            ch_should_translate = (ch_lang == 'en')
+
         # Decide: translate + save locally OR store external URLs
-        if source_lang == 'en':
+        if ch_lang == 'en':
             # English source → download locally (with or without translation)
             chapter_dir = os.path.join(PROJECT_ROOT, 'assets', 'chapters', slug, f'ch-{ch_num}')
 
-            if should_translate:
+            if ch_should_translate:
                 add_log(f"  🔄 جاري ترجمة {len(image_urls)} صفحة...", 'info')
                 saved_paths = _translator.translate_chapter(
                     image_urls, chapter_dir, chapter_num=ch_num,
@@ -274,7 +318,7 @@ async def scrape_manga(url, start_ch=1, end_ch=None, translate=None):
                     "d": datetime.now().strftime("%Y-%m-%d"),
                     "pages": page_urls
                 })
-                add_log(f"  ✅ الفصل {ch_num}: {len(page_urls)} صفحة {'(مترجم)' if should_translate else '(إنجليزي)'}", 'success')
+                add_log(f"  ✅ الفصل {ch_num}: {len(page_urls)} صفحة {'(مترجم)' if ch_should_translate else '(إنجليزي)'}", 'success')
 
         else:
             # Arabic source → store external URLs directly (no download)

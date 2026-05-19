@@ -1003,3 +1003,99 @@ class MangaScraper:
             except: pass
 
         return ""
+
+    def get_best_source_chapters(self, title, primary_url):
+        """
+        Searches all sources for the manga title, fetches chapter list for matching sources,
+        and returns a merged list of chapters along with details.
+        """
+        print(f"[Multi-Source] Searching for best/complete chapters for '{title}'...")
+        
+        # 1. Search all sources
+        candidates = self.search_manga(title, include_english=True)
+        if not candidates:
+            candidates = []
+        
+        # Normalize search words for matching
+        q_words = set(re.sub(r'[^a-z0-9 ]', '', title.lower()).split())
+        
+        # Add primary URL as candidate
+        candidates.insert(0, {
+            "title": title,
+            "url": primary_url,
+            "source": "Primary",
+            "lang": self.detect_source_language(primary_url)
+        })
+        
+        # Remove duplicate candidate URLs to avoid repeating scraping
+        seen_candidate_urls = set()
+        unique_candidates = []
+        for c in candidates:
+            if c['url'] not in seen_candidate_urls:
+                seen_candidate_urls.add(c['url'])
+                unique_candidates.append(c)
+                
+        # 2. Iterate and get details
+        merged_chapters = {} # normalized_ch_number -> ch_dict
+        all_found_sources = []
+        
+        for cand in unique_candidates:
+            # Check title similarity
+            cand_title = cand.get('title', '')
+            c_words = set(re.sub(r'[^a-z0-9 ]', '', cand_title.lower()).split())
+            
+            # Simple word intersection matching
+            intersection = q_words.intersection(c_words)
+            if cand['source'] != "Primary" and len(intersection) / max(1, len(q_words)) < 0.6 and title.lower() not in cand_title.lower() and cand_title.lower() not in title.lower():
+                print(f"[Multi-Source] Skipping candidate '{cand_title}' on {cand['source']} - Title similarity too low.")
+                continue
+                
+            print(f"[Multi-Source] Fetching chapters from {cand['source']}: {cand['url']}")
+            try:
+                details = self.get_manga_details(cand['url'])
+                ch_list = details.get('chapters', [])
+                if ch_list:
+                    all_found_sources.append((cand['source'], len(ch_list), cand['url'], cand.get('lang', 'ar')))
+                    
+                    # Merge chapters: if chapter is already in merged_chapters, we prefer:
+                    # - Arabic source over English (lang == 'ar' vs 'en') because it doesn't need download/translation
+                    # - If same lang, keep the one we already have.
+                    for ch in ch_list:
+                        num_str = str(ch.get('number', ch.get('n', '0')))
+                        # Parse float number for indexing
+                        try:
+                            num_match = re.search(r'(\d+\.?\d*)', num_str)
+                            num_float = float(num_match.group(1)) if num_match else 0.0
+                        except:
+                            num_float = 0.0
+                            
+                        existing_ch = merged_chapters.get(num_float)
+                        if not existing_ch:
+                            ch['n'] = num_str # ensure 'n' is populated
+                            ch['source'] = cand['source']
+                            ch['lang'] = cand.get('lang', 'ar')
+                            merged_chapters[num_float] = ch
+                        elif existing_ch.get('lang') == 'en' and cand.get('lang') == 'ar':
+                            ch['n'] = num_str
+                            ch['source'] = cand['source']
+                            ch['lang'] = cand.get('lang', 'ar')
+                            merged_chapters[num_float] = ch
+            except Exception as e:
+                print(f"[Multi-Source] Error fetching from candidate {cand['source']}: {e}")
+                
+        # 3. Sort chapters numerically (descending, as needed by DB)
+        sorted_nums = sorted(merged_chapters.keys(), reverse=True)
+        final_chapters = [merged_chapters[n] for n in sorted_nums]
+        
+        # 4. Fill Gap Warning/Fixing: log if we still have huge gaps
+        if len(sorted_nums) > 1:
+            min_ch = sorted_nums[-1]
+            max_ch = sorted_nums[0]
+            expected_count = int(max_ch - min_ch + 1)
+            actual_count = len(sorted_nums)
+            if expected_count > actual_count * 2 and expected_count < 1000:
+                print(f"[Multi-Source] WARNING: Gaps detected! Expected ~{expected_count} chapters, but found only {actual_count}.")
+                
+        print(f"[Multi-Source] Completed. Found {len(final_chapters)} total merged chapters across sources: {all_found_sources}")
+        return final_chapters
+
