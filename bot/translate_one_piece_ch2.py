@@ -10,7 +10,7 @@ if bot_dir not in sys.path:
 from main import scrape_manga
 
 async def run():
-    url = "https://mangadex.org/title/a1c7c817-e785-4efb-9958-aab6123a5b4f"
+    url = "https://mangadex.org/title/a2c1d849-af05-4bbc-b2a7-866ebb10331f"
     print("==================================================")
     print("   Nexus - Translate One Piece Chapter 2          ")
     print("==================================================")

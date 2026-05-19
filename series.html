@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -138,10 +138,30 @@
         <header class="sticky-header" id="stickyHeader">
             <nav class="asura-nav">
                 <div class="nav-container">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+
                     <a href="index.html" class="brand-logo" style="display:flex;align-items:center;">
-                        <img src="images/logo.png" alt="Logo" style="height: 35px; margin-left: 10px; border-radius: 5px;" onerror="this.style.display='none'">
-                        <span class="logo-primary" style="color:#00ff88;">Manhwa</span>
+                        <img src="images/logo.png" alt="Nexus Logo" style="height: 35px; width: 35px; margin-right: 10px; background: transparent;">
+                        <span class="logo-primary" style="color:#00ff88;">Nexus</span>
                     </a>
+
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="index.html">الرئيسية <span class="en-sub">Home</span></a></li>
+                        <li><a href="browse.html">تصفح <span class="en-sub">Browse</span></a></li>
+                        <li><a href="shop.html">المتجر <span class="en-sub">Shop</span></a></li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <div class="nav-search-bar">
+                            <input type="text" placeholder="ابحث...">
+                            <button class="search-submit"><i class="fas fa-search"></i></button>
+                        </div>
+                        <button class="btn btn-login btn-sm">
+                            <i class="fas fa-sign-in-alt"></i> تسجيل الدخول
+                        </button>
+                    </div>
                 </div>
             </nav>
         </header>

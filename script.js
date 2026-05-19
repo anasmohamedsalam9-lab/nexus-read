@@ -71,8 +71,19 @@ function findSeriesBySlug(slug) {
     return null;
 }
 
+// NSFW tag filter - blocks adult content
+const NSFW_TAGS = ['adult','mature','smut','ecchi','hentai','pornographic','+18','18+','nsfw','إباحي','بالغين'];
+function isNSFW(entry) {
+    if (!entry || !entry.genres) return false;
+    const genres = Array.isArray(entry.genres) ? entry.genres : (typeof entry.genres === 'string' ? entry.genres.split(',') : []);
+    return genres.some(g => NSFW_TAGS.includes(g.trim().toLowerCase()));
+}
+
 function generateSiteDataFromDB(db) {
     if (!db || db.length === 0) return null;
+
+    // Filter out NSFW content globally
+    db = db.filter(entry => !isNSFW(entry));
 
     function getEntriesByType(type) {
         return db.filter(entry => {
@@ -81,10 +92,9 @@ function generateSiteDataFromDB(db) {
                 return entryType === 'manhwa';
             } else if (type === 'manga') {
                 return entryType === 'manga';
-            } else if (type === 'comics') {
-                return entryType === 'comics' || entryType === 'manhua';
-            } else if (type === 'novels') {
-                return entryType === 'novels';
+            } else if (type === 'romance') {
+                const genres = Array.isArray(entry.genres) ? entry.genres : (typeof entry.genres === 'string' ? entry.genres.split(',') : []);
+                return genres.some(g => g.trim().toLowerCase().includes('romance') || g.trim().includes('رومانسي'));
             }
             return false;
         });
@@ -114,7 +124,7 @@ function generateSiteDataFromDB(db) {
     }
 
     const categoriesData = {};
-    const categories = ['manhwa', 'manga', 'comics', 'novels'];
+    const categories = ['manhwa', 'manga', 'romance'];
 
     categories.forEach(cat => {
         const catEntries = getEntriesByType(cat);
@@ -367,10 +377,10 @@ function saveToHistory(title, chapter) {
     history.unshift({
         title: title,
         chapter: chapter,
-        img: seriesData ? seriesData.item.img : 'images/default-cover.jpg',
+        img: seriesData ? (seriesData.item.img || seriesData.item.cover || 'images/default-cover.jpg') : 'images/default-cover.jpg',
         timestamp: Date.now()
     });
-    if (history.length > 20) history.pop();
+    if (history.length > 50) history.pop();
     localStorage.setItem('nile_history', JSON.stringify(history));
     if (typeof renderContinueReading === 'function') renderContinueReading();
 }
@@ -449,17 +459,17 @@ function renderHomeContent(category) {
 }
 
 function renderOtherWorks(currentCat) {
-    const categories = ['manhwa', 'manga', 'comics', 'novels'];
+    const categories = ['manhwa', 'manga', 'romance'];
     const otherCats = categories.filter(c => c !== currentCat);
     const randomCat = otherCats[Math.floor(Math.random() * otherCats.length)];
+    const catNames = {manhwa: 'المنهوا', manga: 'المانجا', romance: 'الرومانسي'};
     
     const data = SITE_DATA[randomCat];
     if (data && data.trending) {
         renderTrendingSlider(data.trending);
-        // Rename section header to "Other Works" logic in HTML later, or here:
         const header = document.querySelector('#trending .section-header h2');
         if (header) {
-            header.innerHTML = `<i class="fas fa-random text-accent"></i> أعمال أخرى <span class="ar-title">Other ${randomCat}</span>`;
+            header.innerHTML = `<i class="fas fa-random text-accent"></i> أعمال أخرى - ${catNames[randomCat] || randomCat}`;
         }
     }
 }
@@ -470,6 +480,10 @@ function renderRandomHero(heroData) {
     if (!container || !heroData || heroData.length === 0) return;
     const item = heroData[0];
     
+    // Clean up or omit the description if it is the generic placeholder or empty
+    const isPlaceholder = !item.desc || item.desc.includes("اكتشف العناصر الحصرية والجديدة") || item.desc.trim() === "";
+    const descriptionHTML = isPlaceholder ? "" : `<p class="hero-subtitle" style="font-size:1.05rem; color:#bbb; line-height:1.7; margin-bottom:2rem; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;">${item.desc}</p>`;
+
     container.innerHTML = `
         <div class="hero-blur-bg" style="position: absolute; inset: 0; z-index: 0; opacity: 1;">
             <img src="${item.img}" alt="Background" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%; filter: blur(30px) brightness(0.35) saturate(1.5) !important; transform: scale(1.1) !important;">
@@ -486,7 +500,7 @@ function renderRandomHero(heroData) {
                 <div style="margin-bottom: 1.2rem; color: #ccc; font-weight: 700; font-size: 0.95rem; display: flex; justify-content: flex-end; align-items: center; gap: 0.8rem;">
                     2026 <span style="color:#666;">|</span> ${item.genres.split(',').join(' <span style="color:#666;">·</span> ')}
                 </div>
-                <p class="hero-subtitle" style="font-size:1.05rem; color:#bbb; line-height:1.7; margin-bottom:2rem; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;">${item.desc}</p>
+                ${descriptionHTML}
                 <div class="hero-actions" style="display:flex; gap:1.5rem; justify-content: flex-end;">
                     <button onclick="goToSeries('${item.title.replace(/'/g, "\\'")}', '${currentCategory}')" style="background: rgba(255,255,255,0.15); color: #fff; padding: 0.7rem 1.8rem; border-radius: 4px; font-weight: 700; font-size: 1rem; border: none; cursor: pointer; display: flex; align-items: center; gap: 0.8rem; transition: background 0.2s; font-family: var(--font-ar);">
                         المزيد <i class="fas fa-info-circle"></i>
@@ -573,15 +587,21 @@ function renderLatestUpdates(data) {
             `;
         }).join('');
 
+        // Determine type badge from DB
+        let typeBadge = 'Manhwa';
+        if (typeof DB !== 'undefined') {
+            const dbEntry = DB.find(s => s.title === item.title);
+            if (dbEntry) typeBadge = (dbEntry.type === 'manga') ? 'Manga' : 'Manhwa';
+        }
+
         return `
             <div class="latest-card vortex-style">
-                <div class="vortex-thumb" onclick="window.openReader('${item.title.replace(/'/g, "\\'")}', '${item.chapters && item.chapters[0] ? item.chapters[0].n : '1'}')">
+                <div class="vortex-thumb" onclick="goToSeries('${item.title.replace(/'/g, "\\'")}', '${item.chapters && item.chapters[0] ? item.chapters[0].n : '1'}')">
                     <img src="${item.img || 'images/default-cover.jpg'}" alt="${item.title}" loading="lazy">
-                    <span class="v-type-badge">Manhwa</span>
-                    <span class="v-pin-badge"><i class="fas fa-thumbtack"></i> مثبت</span>
+                    <span class="v-type-badge">${typeBadge}</span>
                 </div>
                 <div class="latest-details">
-                    <h3 class="vortex-title" onclick="window.openReader('${item.title.replace(/'/g, "\\'")}', '${item.chapters && item.chapters[0] ? item.chapters[0].n : '1'}')">${item.title}</h3>
+                    <h3 class="vortex-title" onclick="goToSeries('${item.title.replace(/'/g, "\\'")}', '${item.chapters && item.chapters[0] ? item.chapters[0].n : '1'}')">${item.title}</h3>
                     <div class="vortex-meta">
                         <span class="v-rating">${item.rating || '9.5'} <i class="fas fa-star" style="color:#FFD700;"></i></span>
                         <span class="v-status"><i class="fas fa-circle v-dot"></i> Ongoing</span>
@@ -650,8 +670,23 @@ function renderPopularSidebar(dataBase, randomRecs) {
 
 // --- Pro Reader Engine ---
 window.openReader = function(title = "العنوان", chapterStr = "الفصل") {
+    // AUTH WALL: Check if user is logged in
+    const user = JSON.parse(localStorage.getItem('nile_user'));
+    if (!user) {
+        window.location.href = 'login.html';
+        return;
+    }
+
     // Save to history
     saveToHistory(title, chapterStr);
+    
+    // URL State Persistence
+    const slug = titleToSlug(title);
+    const newUrl = `${window.location.pathname}?reader=true&title=${encodeURIComponent(slug)}&ch=${encodeURIComponent(chapterStr)}`;
+    window.history.replaceState({reader: true, title: slug, ch: chapterStr}, '', newUrl);
+    
+    // Dynamic Page Title
+    document.title = `Nexus | ${title} - الفصل ${chapterStr}`;
     
     let engine = document.getElementById('readerEngine');
     if(!engine) {
@@ -665,7 +700,19 @@ window.openReader = function(title = "العنوان", chapterStr = "الفصل"
     if(!engine || !titleEl || !viewport) return;
     
     titleEl.textContent = title;
-    if(chEl) chEl.textContent = chapterStr;
+    if(chEl) chEl.textContent = `الفصل ${chapterStr}`;
+    
+    // Return-to-Series button
+    const returnBtn = document.getElementById('returnToSeriesBtn');
+    if (returnBtn) {
+        returnBtn.onclick = () => {
+            engine.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            window.history.replaceState({}, '', window.location.pathname);
+            document.title = 'Nexus | اقرأ أقوى المانها والمانجا';
+            window.location.href = `series.html?title=${encodeURIComponent(slug)}`;
+        };
+    }
     
     // Find the real data
     const series = findSeriesBySlug(titleToSlug(title));
@@ -929,6 +976,10 @@ function initReaderEngine() {
             engine.classList.remove('active');
             document.body.style.overflow = 'auto'; 
             
+            // Clear URL state
+            window.history.replaceState({}, '', window.location.pathname);
+            document.title = 'Nexus | اقرأ أقوى المانها والمانجا';
+            
             // Restore scroll button when reader closes
             const topBtn = document.getElementById('scrollToTopBtn');
             if(topBtn) topBtn.style.display = 'flex';
@@ -1050,12 +1101,13 @@ function initReaderEngine() {
     });
 }
 
-// --- Premium Coverflow Carousel Logic ---
+// --- Premium Coverflow Carousel Logic (Infinite Loop) ---
 function renderPremiumCarousel(data) {
     const track = document.getElementById('premiumCarouselTrack');
     if(!track) return;
     
-    const richData = [...data, ...data, ...data].slice(0, 13);
+    // Triple the data for seamless infinite scrolling
+    const richData = [...data, ...data, ...data, ...data, ...data];
     
     track.innerHTML = richData.map(item => `
         <div class="premium-card ${document.body.classList.contains('novel-mode') ? 'novel-card' : ''}" onclick="goToSeries('${item.title.replace(/'/g, "\\'")}', '${currentCategory}')">
@@ -1064,6 +1116,12 @@ function renderPremiumCarousel(data) {
             <div class="premium-title">${item.title}</div>
         </div>
     `).join('');
+    
+    // Start at the middle set so we can scroll in both directions
+    requestAnimationFrame(() => {
+        const oneSetWidth = track.scrollWidth / 5;
+        track.scrollLeft = oneSetWidth * 2;
+    });
 }
 
 let premiumAutoplayInterval;
@@ -1074,14 +1132,22 @@ function initPremiumCarouselAutoplay() {
     const toggleBtn = document.getElementById('toggleAutoplayBtn');
     if(!track || !toggleBtn) return;
     
+    const oneSetWidth = track.scrollWidth / 5;
+    
+    // Seamless infinite loop: when scroll reaches edges, jump to middle silently
+    track.addEventListener('scroll', () => {
+        if (track.scrollLeft <= 10) {
+            track.scrollLeft += oneSetWidth * 2;
+        } else if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 10) {
+            track.scrollLeft -= oneSetWidth * 2;
+        }
+    });
+    
     function startAutoplay() {
         if (premiumAutoplayInterval) clearInterval(premiumAutoplayInterval);
         premiumAutoplayInterval = setInterval(() => {
             if (!isAutoplayPaused && track) {
                 track.scrollBy({ left: 162, behavior: 'smooth' });
-                if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 10) {
-                    track.scrollTo({ left: 0, behavior: 'smooth' });
-                }
             }
         }, 3000);
     }
@@ -1537,19 +1603,46 @@ function renderContinueReading() {
     }
     
     section.style.display = 'block';
-    container.innerHTML = history.slice(0, 10).map(item => `
+    container.innerHTML = history.slice(0, 6).map(item => {
+        let cover = '';
+        if (item.img && item.img !== 'undefined' && item.img !== 'null' && !item.img.includes('placeholder')) {
+            cover = item.img;
+        }
+        
+        let totalCh = 0;
+        if (typeof DB !== 'undefined') {
+            const dbEntry = DB.find(s => s.title === item.title) || DB.find(s => titleToSlug(s.title) === titleToSlug(item.title));
+            if (dbEntry && dbEntry.cover) {
+                cover = dbEntry.cover;
+            }
+            if (dbEntry && dbEntry.chapters) {
+                totalCh = dbEntry.chapters.length;
+            }
+        }
+        
+        if (!cover || cover === 'images/default-cover.jpg') {
+            cover = 'images/default-cover.jpg';
+        }
+        
+        // Calculate read percentage
+        const currentCh = parseFloat(item.chapter) || 0;
+        const readPercent = totalCh > 0 ? Math.min(Math.round((currentCh / totalCh) * 100), 100) : 0;
+        const percentColor = readPercent > 75 ? '#00ff88' : readPercent > 40 ? '#fbbf24' : '#ff6b6b';
+        
+        return `
         <div class="continue-card" onclick="window.openReader('${item.title.replace(/'/g, "\\'")}', '${item.chapter}')">
             <div class="continue-thumb">
-                <img src="${item.img}" alt="${item.title}">
+                <img src="${cover}" alt="${item.title}" onerror="this.src='images/default-cover.jpg';">
                 <div class="continue-play"><i class="fas fa-play"></i></div>
+                ${totalCh > 0 ? `<span style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.8);color:${percentColor};padding:2px 8px;border-radius:4px;font-size:0.7rem;font-weight:800;border:1px solid ${percentColor}40;">تم ${readPercent}%</span>` : ''}
             </div>
             <div class="continue-info">
                 <div class="continue-title">${item.title}</div>
-                <div class="continue-ch">فصل ${item.chapter}</div>
+                <div class="continue-ch">فصل ${item.chapter}${totalCh > 0 ? ` / ${totalCh}` : ''}</div>
             </div>
-            <div class="continue-progress"><div class="progress-bar" style="width: 100%;"></div></div>
+            <div class="continue-progress"><div class="progress-bar" style="width: ${readPercent || 100}%;"></div></div>
         </div>
-    `).join('');
+    `}).join('');
 }
 
 function renderCollections() {
@@ -1557,10 +1650,11 @@ function renderCollections() {
     if (!container) return;
     
     const collections = [
-        { title: 'Top Picks', ar: 'اختياراتنا', icon: 'fa-star', color: '#FFD700', genre: 'action' },
-        { title: 'Fantasy Worlds', ar: 'عوالم خيالية', icon: 'fa-dragon', color: '#9d50bb', genre: 'fantasy' },
-        { title: 'Romance Story', ar: 'قصص رومانسية', icon: 'fa-heart', color: '#ff4b2b', genre: 'romance' },
-        { title: 'New & Hot', ar: 'جديد وحصري', icon: 'fa-fire', color: '#f7971e', genre: 'shounen' }
+        { title: 'عالم السحر والتعاويذ', icon: 'fa-hat-wizard', color: '#9d50bb', genre: 'fantasy' },
+        { title: 'عوالم البوابات والنظام', icon: 'fa-dungeon', color: '#00d4ff', genre: 'action' },
+        { title: 'التناسخ والعودة بالزمن', icon: 'fa-history', color: '#f7971e', genre: 'isekai' },
+        { title: 'قوة خارقة وفنون قتالية', icon: 'fa-fist-raised', color: '#ff4b2b', genre: 'martial-arts' },
+        { title: 'قصص رومانسية', icon: 'fa-heart', color: '#ff69b4', genre: 'romance' }
     ];
     
     container.innerHTML = collections.map(col => `
@@ -1568,7 +1662,6 @@ function renderCollections() {
             <div class="collection-icon"><i class="fas ${col.icon}"></i></div>
             <div class="collection-text">
                 <span class="col-en">${col.title}</span>
-                <span class="col-ar">${col.ar}</span>
             </div>
         </a>
     `).join('');

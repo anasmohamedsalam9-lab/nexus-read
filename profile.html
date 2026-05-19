@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -20,9 +20,9 @@
         <header class="sticky-header" id="stickyHeader">
             <nav class="asura-nav">
                 <div class="nav-container container">
-                    <a href="index.html" class="brand-logo">
-                        <img src="images/logo.png" alt="Logo">
-                        <span class="logo-primary">Nexus</span>
+                    <a href="index.html" class="brand-logo" style="display:flex;align-items:center;">
+                        <img src="images/logo.png" alt="Logo" style="height: 35px; width: 35px; margin-right: 10px; background: transparent;">
+                        <span class="logo-primary" style="color:#00ff88;">Nexus</span>
                     </a>
 
                     <ul class="nav-links">
@@ -38,97 +38,169 @@
             </nav>
         </header>
 
-        <!-- Profile Hero Section -->
-        <div class="profile-hero">
-            <div class="profile-banner">
-                <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80" alt="Banner" class="banner-img">
-                <div class="banner-overlay"></div>
+        <!-- Profile Hero Section (Vortex Style) -->
+        <div class="vx-profile-hero">
+            <div class="vx-banner">
+                <div class="vx-banner-gradient"></div>
             </div>
 
-            <div class="profile-info-container container">
-                <div class="profile-main-info">
-                    <div class="profile-avatar-wrapper">
-                        <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Nile" alt="Avatar" id="profileAvatar">
-                        <label for="avatarUpload" class="avatar-edit-btn"><i class="fas fa-camera"></i></label>
-                        <input type="file" id="avatarUpload" style="display:none">
-                    </div>
-                    <div class="profile-text-content">
-                        <h1 class="profile-name" id="profileName">اسم المستخدم</h1>
-                        <div class="profile-handle" id="profileHandle">@username_nile</div>
-                        <div class="profile-stats">
-                            <div class="stat-item">
-                                <span class="stat-val" id="countReading">0</span>
-                                <span class="stat-label">Currently Reading</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-val">0</span>
-                                <span class="stat-label">To Read</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-val">0</span>
-                                <span class="stat-label">Finished</span>
-                            </div>
+            <div class="vx-profile-card container">
+                <div class="vx-avatar-ring">
+                    <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Nile" alt="Avatar" id="profileAvatar">
+                    <label for="avatarUpload" class="vx-avatar-edit"><i class="fas fa-camera"></i></label>
+                    <input type="file" id="avatarUpload" style="display:none" accept="image/*">
+                </div>
+                <div class="vx-user-info">
+                    <h1 class="vx-username" id="profileName">اسم المستخدم</h1>
+                    <div class="vx-handle" id="profileHandle">@username_nexus</div>
+                    <div class="vx-stats-row">
+                        <div class="vx-stat">
+                            <i class="fas fa-book-open"></i>
+                            <span class="vx-stat-num" id="countReading">0</span>
+                            <span class="vx-stat-label">قيد القراءة</span>
+                        </div>
+                        <div class="vx-stat">
+                            <i class="fas fa-bookmark"></i>
+                            <span class="vx-stat-num" id="countBookmarks">0</span>
+                            <span class="vx-stat-label">المفضلة</span>
+                        </div>
+                        <div class="vx-stat">
+                            <i class="fas fa-file-alt"></i>
+                            <span class="vx-stat-num" id="countChaptersRead">0</span>
+                            <span class="vx-stat-label">فصل مقروء</span>
+                        </div>
+                        <div class="vx-stat">
+                            <i class="fas fa-check-circle"></i>
+                            <span class="vx-stat-num" id="countFinished">0</span>
+                            <span class="vx-stat-label">مكتملة</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Tabs Navigation -->
-        <div class="profile-tabs-wrapper container">
-            <div class="profile-tabs">
-                <button class="tab-btn active" data-tab="history">
-                    <i class="fas fa-history"></i> تاريخ القراءة
-                </button>
-                <button class="tab-btn" data-tab="bookmarks">
-                    <i class="fas fa-bookmark"></i> المفضلات
-                </a>
-                <button class="tab-btn" data-tab="settings">
-                    <i class="fas fa-user-cog"></i> الإعدادات
-                </button>
+        <!-- Tabs Navigation (Vortex Style - Glassmorphism) -->
+        <div class="vx-tabs-bar">
+            <div class="container">
+                <div class="vx-tabs">
+                    <button class="vx-tab active" data-tab="history">
+                        <i class="fas fa-history"></i> سجل القراءة
+                    </button>
+                    <button class="vx-tab" data-tab="bookmarks">
+                        <i class="fas fa-bookmark"></i> المفضلة
+                    </button>
+                    <button class="vx-tab" data-tab="quests">
+                        <i class="fas fa-tasks"></i> المهام والجوائز
+                    </button>
+                    <button class="vx-tab" data-tab="settings">
+                        <i class="fas fa-cog"></i> الإعدادات
+                    </button>
+                    <div class="vx-tab-indicator" id="tabIndicator"></div>
+                </div>
             </div>
         </div>
 
         <!-- Tab Content -->
-        <main class="tab-content-area container">
-            <!-- Reading History Tab -->
-            <div class="tab-pane active" id="tab-history">
-                <div class="pane-header">
-                    <h2><i class="fas fa-book-reader text-accent"></i> متابعة القراءة</h2>
-                    <p>أكمل من حيث توقفت في مغامراتك</p>
+        <main class="vx-content container">
+
+            <!-- ===== Reading History Tab ===== -->
+            <div class="vx-pane active" id="tab-history">
+                <div class="vx-pane-head">
+                    <div>
+                        <h2><i class="fas fa-book-reader text-accent"></i> متابعة القراءة</h2>
+                        <p class="vx-pane-sub">أكمل من حيث توقفت في مغامراتك</p>
+                    </div>
+                    <button class="vx-clear-btn" id="clearHistoryBtn" title="مسح السجل">
+                        <i class="fas fa-trash-alt"></i> مسح الكل
+                    </button>
                 </div>
-                <div class="history-grid" id="historyGrid">
+                <div class="vx-history-grid" id="historyGrid">
                     <!-- Loaded dynamically -->
-                    <div class="empty-state">
-                        <i class="fas fa-ghost"></i>
-                        <p>لا يوجد تاريخ قراءة حالياً</p>
+                </div>
+            </div>
+
+            <!-- ===== Bookmarks Tab ===== -->
+            <div class="vx-pane" id="tab-bookmarks">
+                <div class="vx-pane-head">
+                    <div>
+                        <h2><i class="fas fa-heart text-accent"></i> قائمة المفضلة</h2>
+                        <p class="vx-pane-sub">الأعمال التي أضفتها إلى قائمتك الشخصية</p>
+                    </div>
+                </div>
+                <div class="vx-bookmarks-grid" id="bookmarksGrid">
+                    <!-- Loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- ===== Quests Tab ===== -->
+            <div class="vx-pane" id="tab-quests">
+                <div class="vx-pane-head">
+                    <div>
+                        <h2><i class="fas fa-tasks text-accent"></i> المهام والجوائز <span class="en">Quests & Rewards</span></h2>
+                        <p class="vx-pane-sub">أكمل المهام اليومية والأسبوعية لربح عملات نيكسس وشراء الهالات والشارات المميزة!</p>
+                    </div>
+                </div>
+                <div class="quests-container">
+                    <div class="quests-section">
+                        <h3><i class="fas fa-calendar-day" style="color: #00bfff;"></i> المهمة اليومية <span class="en">Daily Quest</span></h3>
+                        <div id="dailyQuestsList" class="quests-list">
+                            <!-- Injected dynamically by profile.js -->
+                        </div>
+                    </div>
+                    <div class="quests-section mt-4">
+                        <h3><i class="fas fa-calendar-week" style="color: var(--accent-nile, #00ff88);"></i> المهام الأسبوعية <span class="en">Weekly Quests (10 مهام)</span></h3>
+                        <div id="weeklyQuestsList" class="quests-list">
+                            <!-- Injected dynamically by profile.js -->
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Other panes will be empty for now -->
-            <div class="tab-pane" id="tab-bookmarks">
-                <div class="empty-state"><i class="fas fa-bookmark"></i><p>المفضلات قادمة قريباً</p></div>
-            </div>
-            <div class="tab-pane" id="tab-settings">
-                <div class="pane-header">
-                    <h2><i class="fas fa-cog text-accent"></i> إعدادات الملف الشخصي</h2>
-                    <p>قم بتخصيص مظهرك وتعديل معلوماتك</p>
+            <!-- ===== Settings Tab ===== -->
+            <div class="vx-pane" id="tab-settings">
+                <div class="vx-pane-head">
+                    <div>
+                        <h2><i class="fas fa-sliders-h text-accent"></i> إعدادات الحساب</h2>
+                        <p class="vx-pane-sub">خصّص حسابك ومظهرك</p>
+                    </div>
                 </div>
-                
-                <div class="settings-section">
-                    <h3><i class="fas fa-paint-brush"></i> زينة الأفاتار (Avatar Decorations)</h3>
-                    <p class="settings-desc">اختر زينة لتمييز صورتك الشخصية. يتم تطبيق الزينة عبر الموقع بأكمله.</p>
-                    
+
+                <!-- Avatar Decorations -->
+                <div class="vx-settings-card">
+                    <h3><i class="fas fa-paint-brush"></i> زينة الأفاتار</h3>
+                    <p class="vx-settings-desc">اختر زينة لتمييز صورتك الشخصية عبر الموقع.</p>
                     <div class="owned-decos-grid" id="ownedDecosGrid">
-                        <!-- Loaded dynamically from profile.js based on purchases -->
                         <div class="empty-state" style="grid-column: 1/-1;">
                             <i class="fas fa-box-open"></i>
                             <p>لم تقم بشراء أي زينة حتى الآن. قم بزيارة <a href="shop.html" class="text-accent">المتجر</a> لاقتناء أروع التصاميم!</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Theme Settings -->
+                <div class="vx-settings-card">
+                    <h3><i class="fas fa-palette"></i> المظهر</h3>
+                    <p class="vx-settings-desc">اختر مظهرك المفضل للقراءة.</p>
+                    <div class="vx-theme-options">
+                        <button class="vx-theme-btn active" data-theme="dark">
+                            <i class="fas fa-moon"></i> داكن
+                        </button>
+                        <button class="vx-theme-btn" data-theme="amoled">
+                            <i class="fas fa-adjust"></i> AMOLED
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Danger Zone -->
+                <div class="vx-settings-card vx-danger-zone">
+                    <h3><i class="fas fa-exclamation-triangle"></i> منطقة الخطر</h3>
+                    <p class="vx-settings-desc">حذف جميع البيانات المحفوظة محلياً (السجل والمفضلة).</p>
+                    <button class="vx-danger-btn" id="clearAllDataBtn">
+                        <i class="fas fa-skull-crossbones"></i> حذف جميع البيانات
+                    </button>
+                </div>
             </div>
+
         </main>
 
         <footer class="main-footer container">
@@ -142,8 +214,3 @@
     <script src="profile.js"></script>
 </body>
 </html>
-
-
-
-
-

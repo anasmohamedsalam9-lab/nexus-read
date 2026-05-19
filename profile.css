@@ -1,426 +1,722 @@
-/* =========================================================
-   Profile Page Dashboard (Vortex/Asura Style)
+h/* =========================================================
+   Profile Page - Vortex Scans Inspired (Nexus Neon Green)
    ========================================================= */
 
-.profile-page {
-    background-color: var(--bg-main);
-    color: var(--text-primary);
+/* ---- Hero & Banner ---- */
+.vx-profile-hero {
+    position: relative;
+    margin-bottom: 0;
 }
 
-/* Hero Section & Banner */
-.profile-hero {
+.vx-banner {
+    height: 280px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #0d1f15 40%, #061a0f 70%, #0a0a0a 100%);
     position: relative;
-    padding-bottom: 40px;
-}
-
-.profile-banner {
-    position: relative;
-    height: 300px;
-    width: 100%;
     overflow: hidden;
 }
 
-.banner-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.6);
+.vx-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 30% 50%, rgba(0,255,159,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 30%, rgba(0,255,159,0.05) 0%, transparent 50%);
+    animation: bannerPulse 8s ease-in-out infinite alternate;
 }
 
-.banner-overlay {
+.vx-banner::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--accent-nile, #00ff9f) 50%, transparent 100%);
+    box-shadow: 0 0 20px var(--accent-nile, #00ff9f), 0 0 60px rgba(0,255,159,0.3);
+}
+
+.vx-banner-gradient {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 150px;
-    background: linear-gradient(to top, var(--bg-main), transparent);
+    height: 120px;
+    background: linear-gradient(to top, var(--bg-main, #0a0a0a), transparent);
 }
 
-/* Main Profile Info Overlay */
-.profile-info-container {
-    margin-top: -80px;
-    position: relative;
-    z-index: 10;
+@keyframes bannerPulse {
+    0% { opacity: 0.6; }
+    100% { opacity: 1; }
 }
 
-.profile-main-info {
+/* ---- Profile Card ---- */
+.vx-profile-card {
     display: flex;
     align-items: flex-end;
-    gap: 30px;
-}
-
-.profile-avatar-wrapper {
+    gap: 28px;
+    margin-top: -70px;
     position: relative;
-    width: 160px;
-    height: 160px;
-    border-radius: 20px;
-    border: 5px solid var(--bg-main);
-    background: var(--bg-surface-elevated);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    overflow: hidden;
+    z-index: 10;
+    padding-bottom: 30px;
 }
 
-.profile-avatar-wrapper img {
+.vx-avatar-ring {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    min-width: 140px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, var(--accent-nile, #00ff9f), #00cc7a, #009960);
+    box-shadow:
+        0 0 25px rgba(0,255,159,0.35),
+        0 0 60px rgba(0,255,159,0.1),
+        inset 0 0 15px rgba(0,255,159,0.1);
+    animation: avatarGlow 4s ease-in-out infinite alternate;
+}
+
+.vx-avatar-ring img {
     width: 100%;
     height: 100%;
+    border-radius: 50%;
     object-fit: cover;
+    border: 4px solid var(--bg-main, #0a0a0a);
+    background: #111;
 }
 
-.avatar-edit-btn {
+.vx-avatar-edit {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background: var(--accent-nile);
-    color: #000;
-    width: 35px;
-    height: 35px;
+    bottom: 5px;
+    right: 5px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
+    background: var(--accent-nile, #00ff9f);
+    color: #000;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    transition: var(--transition-fast);
+    font-size: 0.85rem;
+    box-shadow: 0 3px 12px rgba(0,255,159,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+    z-index: 5;
 }
 
-.avatar-edit-btn:hover {
-    transform: scale(1.1);
-    background: #fff;
+.vx-avatar-edit:hover {
+    transform: scale(1.15);
+    box-shadow: 0 5px 20px rgba(0,255,159,0.6);
 }
 
-.profile-text-content {
+@keyframes avatarGlow {
+    0% { box-shadow: 0 0 20px rgba(0,255,159,0.3), 0 0 50px rgba(0,255,159,0.08); }
+    100% { box-shadow: 0 0 35px rgba(0,255,159,0.5), 0 0 80px rgba(0,255,159,0.15); }
+}
+
+/* ---- User Info ---- */
+.vx-user-info {
     flex: 1;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
 }
 
-.profile-name {
-    font-size: 2.5rem;
+.vx-username {
+    font-size: 2.2rem;
     font-weight: 900;
     margin: 0;
     color: #fff;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    text-shadow: 0 2px 15px rgba(0,0,0,0.5);
 }
 
-.profile-handle {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    font-family: var(--font-en);
-    margin-bottom: 20px;
+.vx-handle {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.4);
+    font-family: var(--font-en, 'Outfit', sans-serif);
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
 }
 
-.profile-stats {
+.vx-stats-row {
     display: flex;
-    gap: 40px;
+    gap: 32px;
 }
 
-.stat-item {
+.vx-stat {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: border-color 0.3s, background 0.3s;
 }
 
-.stat-val {
-    font-size: 1.5rem;
+.vx-stat:hover {
+    border-color: rgba(0,255,159,0.3);
+    background: rgba(0,255,159,0.05);
+}
+
+.vx-stat i {
+    color: var(--accent-nile, #00ff9f);
+    font-size: 0.9rem;
+}
+
+.vx-stat-num {
+    font-size: 1.3rem;
     font-weight: 900;
     color: #fff;
 }
 
-.stat-label {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.vx-stat-label {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.3px;
 }
 
-/* Tabs Styling */
-.profile-tabs-wrapper {
-    margin-top: 40px;
-    border-bottom: 1px solid var(--border-subtle);
+/* ---- Tabs Bar (Glassmorphism) ---- */
+.vx-tabs-bar {
+    position: sticky;
+    top: 60px;
+    z-index: 90;
+    background: rgba(10,10,10,0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
-.profile-tabs {
+.vx-tabs {
     display: flex;
-    gap: 5px;
+    gap: 4px;
+    position: relative;
+    padding: 0;
 }
 
-.tab-btn {
+.vx-tab {
     background: none;
     border: none;
-    padding: 15px 30px;
-    color: var(--text-muted);
-    font-size: 1rem;
+    padding: 16px 28px;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.95rem;
     font-weight: 700;
     cursor: pointer;
+    transition: color 0.3s;
     position: relative;
-    transition: var(--transition-fast);
+    font-family: inherit;
 }
 
-.tab-btn i {
+.vx-tab i {
     margin-left: 8px;
+    font-size: 0.85rem;
 }
 
-.tab-btn:hover {
-    color: #fff;
+.vx-tab:hover {
+    color: rgba(255,255,255,0.8);
 }
 
-.tab-btn.active {
-    color: var(--accent-nile);
+.vx-tab.active {
+    color: var(--accent-nile, #00ff9f);
 }
 
-.tab-btn.active::after {
-    content: "";
+.vx-tab.active::after {
+    content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
     height: 3px;
-    background: var(--accent-nile);
-    box-shadow: 0 0 10px var(--accent-nile);
+    border-radius: 3px 3px 0 0;
+    background: var(--accent-nile, #00ff9f);
+    box-shadow: 0 0 12px var(--accent-nile, #00ff9f), 0 0 30px rgba(0,255,159,0.2);
 }
 
-/* Tab Content Area */
-.tab-content-area {
-    padding: 40px 0;
+/* ---- Content Area ---- */
+.vx-content {
+    padding: 40px 0 80px;
+    min-height: 60vh;
 }
 
-.tab-pane {
+.vx-pane {
     display: none;
 }
 
-.tab-pane.active {
+.vx-pane.active {
     display: block;
-    animation: fadeIn 0.4s ease-out;
+    animation: vxFadeIn 0.4s ease-out;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(15px); }
+@keyframes vxFadeIn {
+    from { opacity: 0; transform: translateY(12px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-.pane-header {
-    margin-bottom: 30px;
-}
-
-.pane-header h2 {
-    font-size: 1.8rem;
-    font-weight: 800;
-    margin-bottom: 5px;
-}
-
-.pane-header p {
-    color: var(--text-muted);
-}
-
-/* Reading History Grid */
-.history-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
-}
-
-.history-card {
-    background: var(--bg-surface-elevated);
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid var(--border-subtle);
-    transition: var(--transition-fast);
+/* ---- Pane Header ---- */
+.vx-pane-head {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 28px;
+    gap: 20px;
 }
 
-.history-card:hover {
-    transform: translateY(-5px);
-    border-color: #333;
-}
-
-.hc-thumb {
-    position: relative;
-    height: 200px;
-    overflow: hidden;
-}
-
-.hc-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.5s;
-}
-
-.history-card:hover .hc-thumb img {
-    transform: scale(1.1);
-}
-
-.hc-progress-overlay {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgba(0,0,0,0.7);
-    padding: 4px 8px;
-    border-radius: 6px;
-    font-size: 0.75rem;
+.vx-pane-head h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin: 0 0 4px;
     color: #fff;
 }
 
-.hc-content {
-    padding: 15px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+.vx-pane-sub {
+    color: rgba(255,255,255,0.4);
+    font-size: 0.9rem;
+    margin: 0;
 }
 
-.hc-title {
-    font-size: 1.1rem;
+.vx-clear-btn {
+    background: rgba(255,60,60,0.1);
+    border: 1px solid rgba(255,60,60,0.2);
+    color: #ff5555;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: inherit;
+    white-space: nowrap;
+}
+
+.vx-clear-btn:hover {
+    background: rgba(255,60,60,0.2);
+    border-color: rgba(255,60,60,0.4);
+    box-shadow: 0 0 15px rgba(255,60,60,0.15);
+}
+
+/* ---- History Grid (Vortex Style Cards) ---- */
+.vx-history-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.vx-h-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.vx-h-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0,255,159,0.25);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4), 0 0 20px rgba(0,255,159,0.06);
+}
+
+.vx-h-thumb {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.vx-h-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.vx-h-card:hover .vx-h-thumb img {
+    transform: scale(1.08);
+}
+
+.vx-h-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--accent-nile, #00ff9f);
+    color: #000;
+    font-size: 0.7rem;
     font-weight: 800;
-    margin-bottom: 5px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+.vx-h-chapter-tag {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.vx-h-body {
+    padding: 16px;
+}
+
+.vx-h-title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 6px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.hc-meta {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    margin-bottom: 15px;
+.vx-h-meta {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.hc-actions {
-    margin-top: auto;
+.vx-h-meta i {
+    color: var(--accent-nile, #00ff9f);
+    font-size: 0.7rem;
 }
 
-.btn-continue {
-    width: 100%;
+.vx-h-progress {
+    height: 4px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+
+.vx-h-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-nile, #00ff9f), #00cc7a);
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(0,255,159,0.4);
+    transition: width 0.6s ease;
+}
+
+.vx-h-action {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    background: #2563eb; /* Blue as in screenshot */
-    color: #fff;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--accent-nile, #00ff9f), #00cc7a);
+    color: #000;
     padding: 10px;
-    border-radius: 8px;
-    font-weight: 700;
-    transition: 0.3s;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    transition: box-shadow 0.3s, transform 0.2s;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-family: inherit;
 }
 
-.btn-continue:hover {
-    background: #1d4ed8;
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+.vx-h-action:hover {
+    box-shadow: 0 4px 20px rgba(0,255,159,0.35);
+    transform: translateY(-1px);
 }
 
-.hc-footer-meta {
-    margin-top: 12px;
-    font-size: 0.75rem;
-    color: #555;
-    padding-top: 10px;
-    border-top: 1px solid #1a1a1a;
-    display: flex;
-    justify-content: space-between;
+/* ---- Bookmarks Grid (Vortex Style) ---- */
+.vx-bookmarks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 18px;
 }
 
-/* Empty State */
-.empty-state {
-    grid-column: 1 / -1;
-    text-align: center;
-    padding: 80px 0;
-    color: var(--text-muted);
-}
-
-.empty-state i {
-    font-size: 4rem;
-    margin-bottom: 20px;
-    opacity: 0.2;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .profile-main-info {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 20px;
-    }
-    
-    .profile-stats {
-        justify-content: center;
-    }
-    
-    .profile-name {
-        font-size: 1.8rem;
-    }
-    
-    .tab-btn {
-        padding: 15px 15px;
-        font-size: 0.9rem;
-    }
-}
-
-/* Settings & Avatar Decorator */
-.settings-section {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+.vx-bm-card {
+    position: relative;
     border-radius: 12px;
-    padding: 2rem;
-    margin-bottom: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.03);
 }
 
-.settings-section h3 {
-    font-size: 1.2rem;
+.vx-bm-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 15px rgba(0,255,159,0.1);
+    border-color: rgba(0,255,159,0.3);
+}
+
+.vx-bm-cover {
+    position: relative;
+    aspect-ratio: 2/3;
+    overflow: hidden;
+}
+
+.vx-bm-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.vx-bm-card:hover .vx-bm-cover img {
+    transform: scale(1.1);
+}
+
+.vx-bm-cover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+}
+
+.vx-bm-status {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 3px 9px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 2;
+}
+
+.vx-bm-status.ongoing {
+    background: var(--accent-nile, #00ff9f);
+    color: #000;
+}
+
+.vx-bm-status.completed {
+    background: #6366f1;
     color: #fff;
-    margin-bottom: 0.5rem;
+}
+
+.vx-bm-heart {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: center;
+    color: #ff4b6e;
+    font-size: 0.8rem;
+    z-index: 2;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    border: none;
 }
 
-.settings-desc {
-    color: var(--text-muted);
+.vx-bm-heart:hover {
+    transform: scale(1.2);
+    background: rgba(255,75,110,0.3);
+}
+
+.vx-bm-info {
+    padding: 12px 10px;
+}
+
+.vx-bm-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 4px;
+}
+
+.vx-bm-chapter {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.4);
+}
+
+/* ---- Settings Cards ---- */
+.vx-settings-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+}
+
+.vx-settings-card:hover {
+    border-color: rgba(255,255,255,0.1);
+}
+
+.vx-settings-card h3 {
+    font-size: 1.15rem;
+    color: #fff;
+    margin: 0 0 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vx-settings-card h3 i {
+    color: var(--accent-nile, #00ff9f);
+}
+
+.vx-settings-desc {
+    color: rgba(255,255,255,0.4);
+    font-size: 0.88rem;
+    margin: 0 0 20px;
+}
+
+.vx-theme-options {
+    display: flex;
+    gap: 12px;
+}
+
+.vx-theme-btn {
+    padding: 10px 24px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.04);
+    color: rgba(255,255,255,0.6);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: inherit;
     font-size: 0.9rem;
-    margin-bottom: 1.5rem;
 }
 
+.vx-theme-btn i {
+    margin-left: 6px;
+}
+
+.vx-theme-btn:hover {
+    border-color: rgba(0,255,159,0.3);
+    color: #fff;
+}
+
+.vx-theme-btn.active {
+    background: rgba(0,255,159,0.1);
+    border-color: var(--accent-nile, #00ff9f);
+    color: var(--accent-nile, #00ff9f);
+    box-shadow: 0 0 15px rgba(0,255,159,0.1);
+}
+
+/* Danger Zone */
+.vx-danger-zone {
+    border-color: rgba(255,60,60,0.15);
+}
+
+.vx-danger-zone h3 i {
+    color: #ff5555;
+}
+
+.vx-danger-btn {
+    background: rgba(255,60,60,0.1);
+    border: 1px solid rgba(255,60,60,0.25);
+    color: #ff5555;
+    padding: 10px 24px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+.vx-danger-btn:hover {
+    background: rgba(255,60,60,0.2);
+    box-shadow: 0 0 20px rgba(255,60,60,0.15);
+}
+
+/* ---- Empty State ---- */
+.vx-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 70px 20px;
+    color: rgba(255,255,255,0.3);
+}
+
+.vx-empty i {
+    font-size: 3.5rem;
+    margin-bottom: 18px;
+    display: block;
+    opacity: 0.25;
+}
+
+.vx-empty p {
+    font-size: 1rem;
+    margin-bottom: 18px;
+}
+
+.vx-empty a {
+    display: inline-block;
+    padding: 10px 24px;
+    background: var(--accent-nile, #00ff9f);
+    color: #000;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: box-shadow 0.3s;
+}
+
+.vx-empty a:hover {
+    box-shadow: 0 4px 20px rgba(0,255,159,0.3);
+}
+
+/* ---- Owned Decos Grid (reuse from old) ---- */
 .owned-decos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 16px;
 }
 
 .owned-deco-card {
-    background: #0f0f13;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    padding: 1.5rem;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 20px;
     text-align: center;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
     position: relative;
     overflow: hidden;
 }
 
 .owned-deco-card:hover {
-    border-color: var(--accent-nile);
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0, 255, 159, 0.2);
+    border-color: rgba(0,255,159,0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0,255,159,0.1);
 }
 
 .owned-deco-card.active {
-    border-color: var(--accent-nile);
-    background: rgba(0, 255, 159, 0.1);
+    border-color: var(--accent-nile, #00ff9f);
+    background: rgba(0,255,159,0.06);
 }
 
 .owned-deco-card.active::before {
-    content: '\f058'; /* Check-circle */
+    content: '\f058';
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     position: absolute;
-    top: 10px;
-    right: 10px;
-    color: var(--accent-nile);
-    font-size: 1.5rem;
-    z-index: 20;
+    top: 8px;
+    right: 8px;
+    color: var(--accent-nile, #00ff9f);
+    font-size: 1.2rem;
 }
 
 .owned-preview-box {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1rem;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 12px;
     position: relative;
     border-radius: 50%;
 }
@@ -433,91 +729,429 @@
 }
 
 .owned-deco-title {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 700;
     color: #fff;
-    font-family: var(--font-en);
 }
 
-/* =========================================
-   Custom New Effects (from screenshot)
-   ========================================= */
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    .vx-profile-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 18px;
+    }
+    .vx-stats-row {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .vx-username {
+        font-size: 1.7rem;
+    }
+    .vx-tabs {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .vx-tab {
+        padding: 14px 18px;
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+    .vx-history-grid {
+        grid-template-columns: 1fr;
+    }
+    .vx-bookmarks-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+    .vx-pane-head {
+        flex-direction: column;
+    }
+}
 
-.deco-overlay.deco-headphones {
-    border: none;
-    background-image: url('images/deco-headphones.png');
-    background-size: 110%;
+/* Empty state from old CSS kept for settings deco grid */
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px 0;
+    color: rgba(255,255,255,0.3);
+}
+
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    opacity: 0.2;
+    display: block;
+}
+
+/* =========================================================
+   Premium Shop & Profile Avatar Decoration Overlays
+   ========================================================= */
+.deco-parent {
+    position: relative !important;
+}
+
+.deco-overlay {
+    position: absolute;
+    inset: -6px;
+    pointer-events: none;
+    z-index: 15;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+/* =========================================================
+   8 NEW PREMIUM DECORATIONS (Nexus Exclusive 2026)
+   ========================================================= */
+
+@keyframes decoSpin { 100% { transform: rotate(360deg); } }
+@keyframes decoSpinReverse { 100% { transform: rotate(-360deg); } }
+@keyframes decoPulse { 0%,100%{opacity:.6;transform:scale(.98)} 50%{opacity:1;transform:scale(1.03)} }
+
+/* 1. Phoenix Aura - Fiery Animated Ring */
+.deco-overlay.deco-phoenix-aura {
+    inset: -12px;
+    background-image: url('https://media.giphy.com/media/3o72EX5Qgp9kVjl3Fe/giphy.gif');
+    background-size: 110% 110%;
     background-position: center;
     background-repeat: no-repeat;
-    transform: scale(1.3) translateY(-10%); /* Headphones usually sit on top and slightly wider */
-    z-index: 50;
-    pointer-events: none;
+    filter: drop-shadow(0 0 10px rgba(255, 69, 0, 0.8));
+    border: none !important;
+    box-shadow: none !important;
+    mask: none !important;
+    -webkit-mask: none !important;
+    border-radius: 0 !important;
 }
 
-.deco-overlay.deco-pumpkin {
-    border: none;
-    background-image: url('images/deco-pumpkin.png');
-    background-size: contain;
+/* 2. Dragon Spirit - Golden Radiant Ring */
+.deco-overlay.deco-dragon-spirit {
+    inset: -12px;
+    background-image: url('https://media.giphy.com/media/l0IpYf3At29C0fMXC/giphy.gif');
+    background-size: 110% 110%;
     background-position: center;
     background-repeat: no-repeat;
-    transform: scale(1.4); /* Big glowing aura */
-    filter: drop-shadow(0 0 10px #ff6600);
-    z-index: 50;
-    pointer-events: none;
-    animation: pulseGlow 2s infinite alternate;
+    filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.8));
+    border: none !important;
+    box-shadow: none !important;
+    mask: none !important;
+    -webkit-mask: none !important;
+    border-radius: 0 !important;
 }
 
-.deco-overlay.deco-wings {
-    border: none;
-    background-image: url('images/deco-wings.png');
-    background-size: contain;
+/* 3. Galaxy Orbit - Cosmic Celestial Ring */
+.deco-overlay.deco-galaxy-orbit {
+    inset: -15px;
+    background-image: url('https://media.giphy.com/media/26xBI73gWquGHjCI8/giphy.gif');
+    background-size: 115% 115%;
     background-position: center;
     background-repeat: no-repeat;
-    transform: scale(1.8) translateY(10%); /* Wings need to stick out behind or around */
-    z-index: -1; /* If possible, wings look better behind, but overlay is usually in front */
-    filter: drop-shadow(0 0 8px #ff0000);
-    pointer-events: none;
+    filter: drop-shadow(0 0 10px rgba(106, 13, 173, 0.8));
+    border: none !important;
+    box-shadow: none !important;
+    mask: none !important;
+    -webkit-mask: none !important;
+    border-radius: 0 !important;
 }
 
-/* Fallbacks in case user didn't put the images in images/ folder yet */
-.deco-overlay.deco-headphones::after {
+/* 4. Cyber Neon - High-Tech Grid Ring */
+.deco-overlay.deco-cyber-neon {
+    inset: -12px;
+    background-image: url('https://media.giphy.com/media/l0IpYBAtJdzk9JG1O/giphy.gif');
+    background-size: 110% 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0 0 8px rgba(0, 255, 136, 0.8));
+    border: none !important;
+    box-shadow: none !important;
+    mask: none !important;
+    -webkit-mask: none !important;
+    border-radius: 0 !important;
+}
+
+/* 5. Blossom Drift - Sakura Petals Falling */
+.deco-overlay.deco-blossom-drift {
+    inset: -12px;
+    background-image: url('https://media.giphy.com/media/3o7TKoWXm3okO1kg6s/giphy.gif');
+    background-size: 110% 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0 0 8px rgba(255, 105, 180, 0.8));
+    border: none !important;
+    box-shadow: none !important;
+    mask: none !important;
+    -webkit-mask: none !important;
+    border-radius: 0 !important;
+}
+
+/* 6. Abyss Gaze - Purple Shadow Void */
+.deco-overlay.deco-abyss-gaze {
+    inset: -12px;
+    background-image: url('https://media.giphy.com/media/l0IpXz2eUXAIfD9uM/giphy.gif');
+    background-size: 110% 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0 0 15px rgba(139, 0, 255, 0.8));
+    border: none !important;
+    box-shadow: none !important;
+    mask: none !important;
+    -webkit-mask: none !important;
+    border-radius: 0 !important;
+}
+
+/* 7. Lightning Storm - Electrical Discharges */
+.deco-overlay.deco-lightning-storm {
+    inset: -12px;
+    background-image: url('https://media.giphy.com/media/3o85xG8S6H8PqV4qgE/giphy.gif');
+    background-size: 110% 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0 0 12px rgba(0, 191, 255, 0.8));
+    border: none !important;
+    box-shadow: none !important;
+    mask: none !important;
+    -webkit-mask: none !important;
+    border-radius: 0 !important;
+}
+
+/* 8. Prism Shimmer - Rainbow Chromatic Flares */
+.deco-overlay.deco-prism-shimmer {
+    inset: -12px;
+    background-image: url('https://media.giphy.com/media/l0IpXP7n8O8U5v5O8/giphy.gif');
+    background-size: 110% 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+    border: none !important;
+    box-shadow: none !important;
+    mask: none !important;
+    -webkit-mask: none !important;
+    border-radius: 0 !important;
+}
+
+/* =========================================================
+   QUEST / MISSION SYSTEM STYLES (Glassmorphism & Neon)
+   ========================================================= */
+
+.quests-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 1rem;
+    font-family: var(--font-ar);
+}
+
+.quests-section h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #fff;
+    border-bottom: 2px solid rgba(255,255,255,0.05);
+    padding-bottom: 0.5rem;
+}
+
+.quests-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.quest-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 14px;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.quest-card::before {
     content: '';
     position: absolute;
-    inset: -10px;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #666;
+    transition: background 0.3s;
+}
+
+.quest-card.completed::before {
+    background: var(--accent-nile, #00ff88);
+}
+
+.quest-card.active-quest::before {
+    background: #00bfff;
+}
+
+.quest-card:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.quest-card.completed:hover {
+    border-color: rgba(0, 255, 136, 0.2);
+    box-shadow: 0 8px 30px rgba(0, 255, 136, 0.05);
+}
+
+.quest-icon-side {
+    font-size: 1.8rem;
+    color: #666;
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: rgba(255,255,255,0.02);
     border-radius: 50%;
-    border-top: 15px solid #a855f7; /* Purple arch like headphones */
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    box-shadow: 0 -5px 15px rgba(168, 85, 247, 0.5);
-    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
 }
 
-.deco-overlay.deco-pumpkin::after {
-    content: '';
-    position: absolute;
-    inset: -5px;
-    border-radius: 50%;
-    border: 3px dashed #ff6600;
-    box-shadow: inset 0 0 10px #ff6600, 0 0 20px #ffcc00;
-    z-index: -1;
-    animation: spin 10s linear infinite;
+.quest-card.completed .quest-icon-side {
+    color: var(--accent-nile, #00ff88);
+    background: rgba(0, 255, 136, 0.06);
+    filter: drop-shadow(0 0 5px rgba(0,255,136,0.2));
 }
 
-.deco-overlay.deco-wings::after {
-    content: '';
-    position: absolute;
-    left: -20px; right: -20px; bottom: 10px; height: 50px;
-    border-radius: 50%;
-    border-bottom: 20px solid #dc2626; /* Crimson arch at bottom */
-    filter: blur(2px) drop-shadow(0 5px 10px #7f1d1d);
-    z-index: -1;
+.quest-card.active-quest .quest-icon-side {
+    color: #00bfff;
+    background: rgba(0, 191, 255, 0.06);
 }
 
-@keyframes pulseGlow {
-    from { filter: drop-shadow(0 0 5px #ff6600); }
-    to { filter: drop-shadow(0 0 20px #ffcc00); }
+.quest-details-side {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-@keyframes spin {
-    100% { transform: rotate(360deg); }
+.quest-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #eee;
+}
+
+.quest-progress-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.quest-progress-bar {
+    flex-grow: 1;
+    height: 6px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.quest-progress-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #666;
+}
+
+.quest-card.completed .quest-progress-fill {
+    background: linear-gradient(90deg, #00ff88, #00bfff);
+}
+
+.quest-card.active-quest .quest-progress-fill {
+    background: linear-gradient(90deg, #00bfff, #0077ff);
+}
+
+.quest-progress-text {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #888;
+    min-width: 45px;
+    text-align: left;
+}
+
+.quest-reward-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    flex-shrink: 0;
+}
+
+.quest-reward-badge {
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    color: #ffd700;
+    font-size: 0.85rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all 0.3s;
+}
+
+.quest-card.claimed .quest-reward-badge {
+    background: rgba(255,255,255,0.03);
+    border-color: rgba(255,255,255,0.05);
+    color: #666;
+}
+
+.quest-btn {
+    border: none;
+    font-family: var(--font-ar);
+    font-weight: 800;
+    font-size: 0.85rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    min-width: 100px;
+}
+
+.quest-btn.incomplete {
+    background: rgba(255,255,255,0.04);
+    color: #666;
+    cursor: not-allowed;
+}
+
+.quest-btn.claimable {
+    background: linear-gradient(135deg, #00ff88 0%, #00bfff 100%);
+    color: #000;
+    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.2);
+    animation: questPulse 1.5s infinite;
+}
+
+.quest-btn.claimable:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 255, 136, 0.35);
+}
+
+.quest-btn.claimed {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    color: #555;
+    cursor: default;
+}
+
+@keyframes questPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); box-shadow: 0 6px 20px rgba(0, 255, 136, 0.4); }
+}
+
+.mt-4 {
+    margin-top: 2rem !important;
 }

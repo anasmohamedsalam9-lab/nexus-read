@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -30,7 +30,7 @@
                     </button>
 
                     <a href="index.html" class="brand-logo" style="display:flex;align-items:center;">
-                        <img src="images/logo.png?v=2.6" alt="Nexus Logo" style="height: 35px; width: 35px; margin-right: 10px; border-radius: 5px;">
+                        <img src="images/logo.png?v=2.6" alt="Nexus Logo" style="height: 35px; width: 35px; margin-right: 10px; background: transparent;">
                         <span class="logo-primary" style="color:#00ff88;">Nexus</span>
                     </a>
 
@@ -40,8 +40,7 @@
                         <li><a href="shop.html">المتجر <span class="en-sub">Shop</span></a></li>
                         <li><a href="#" class="cat-nav-btn" data-category="manhwa">المنهوا <span class="en-sub">Manhwa</span></a></li>
                         <li><a href="#" class="cat-nav-btn" data-category="manga">المانجا <span class="en-sub">Manga</span></a></li>
-                        <li><a href="#" class="cat-nav-btn" data-category="comics">كوميكس <span class="en-sub">Comics</span></a></li>
-                        <li><a href="#" class="cat-nav-btn" data-category="novels">الروايات <span class="en-sub">Novels</span></a></li>
+                        <li><a href="browse.html?genre=romance" class="cat-nav-btn" data-category="romance">رومانسي <span class="en-sub">Romance</span></a></li>
                     </ul>
 
                     <div class="nav-actions">
@@ -89,8 +88,9 @@
 
         <!-- Continue Reading Section -->
         <section class="continue-reading-section container" id="continueReadingSection" style="display:none;">
-            <div class="section-header">
-                <h2><i class="fas fa-history text-accent"></i> متابعة القراءة <span class="ar-title">Continue Reading</span></h2>
+            <div class="section-header" style="display: flex; justify-content: space-between; align-items: center;">
+                <h2><i class="fas fa-history text-accent"></i> متابعة القراءة</h2>
+                <a href="profile.html" class="btn btn-secondary btn-sm" style="border-radius: 20px; font-size: 0.85rem;"><i class="fas fa-arrow-left"></i> عرض السجل بالكامل</a>
             </div>
             <div class="continue-grid" id="continueReadingGrid">
                 <!-- Injected by JS -->
@@ -100,28 +100,19 @@
         <!-- Premium Exclusive Coverflow Carousel -->
         <section class="premium-carousel-section" id="premiumCarouselSection">
             <div class="section-header container" style="margin-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
-                <h2><i class="fas fa-crown text-accent"></i> الأكثر شعبية <span class="ar-title" style="font-size:0.7em;">Must Read</span></h2>
-
-            </div>
+                <h2><i class="fas fa-crown text-accent"></i> الأكثر شعبية</h2>
+            </div>
             <div class="premium-carousel-track" id="premiumCarouselTrack">
                 <!-- Premium coverflow cards injected here -->
             </div>
         </section>
 
-        <!-- Top Horizontal Bar (Mini Slider) -->
-        <section class="top-horizontal-bar">
-            <div class="top-slider-container" id="topSlider">
-                <!-- Mini Cards Injected by JS -->
-            </div>
-        </section>
-
         <!-- Main Content Area -->
         <main class="asura-home container">
-            
-            <!-- Trending Today Slider -->
+
             <section class="trending-section" id="trending">
                 <div class="section-header">
-                    <h2><i class="fas fa-random text-accent"></i> أعمال أخرى <span class="ar-title">Other Works</span></h2>
+                    <h2><i class="fas fa-random text-accent"></i> أعمال أخرى</h2>
                 </div>
                 
                 <div class="trending-slider-wrapper">
@@ -141,7 +132,7 @@
                 <!-- Left Column: Latest Updates -->
                 <div class="latest-col" id="updates">
                     <div class="section-header">
-                        <h2><span class="ar-title">أحدث التحديثات</span> <span class="en-part">Latest Updates</span> <i class="fas fa-bolt"></i></h2>
+                        <h2><i class="fas fa-bolt text-accent"></i> أحدث التحديثات</h2>
                     </div>
                     
                     <div class="latest-list" id="latestUpdatesList">
@@ -156,14 +147,14 @@
                 <!-- Right Column: Popular Sidebar -->
                 <aside class="popular-sidebar" id="popular">
                     <div class="section-header">
-                        <h2><i class="fas fa-star text-accent"></i> الأكثر قراءة <span class="ar-title">Most Read</span></h2>
+                        <h2><i class="fas fa-star text-accent"></i> الأكثر قراءة</h2>
                     </div>
                     
                     <!-- Sidebar Tabs -->
                     <div class="popular-tabs">
-                        <button class="pop-tab active" data-range="weekly">Weekly</button>
-                        <button class="pop-tab" data-range="monthly">Monthly</button>
-                        <button class="pop-tab" data-range="alltime">All Time</button>
+                        <button class="pop-tab active" data-range="weekly">أسبوعي</button>
+                        <button class="pop-tab" data-range="monthly">شهري</button>
+                        <button class="pop-tab" data-range="alltime">الكل</button>
                     </div>
 
                     <!-- Numbered List Container -->
@@ -185,19 +176,19 @@
             <!-- Genres Section -->
             <section class="genres-section mt-2" id="genres-section">
                 <div class="section-header">
-                    <h2><i class="fas fa-tags text-accent"></i> Genres <span class="ar-title">التصنيفات</span></h2>
+                    <h2><i class="fas fa-tags text-accent"></i> التصنيفات</h2>
                 </div>
                 <div class="genres-grid">
-                    <a href="browse.html?genre=action" class="genre-btn neon-box">Action</a>
-                    <a href="browse.html?genre=fantasy" class="genre-btn neon-box">Fantasy</a>
-                    <a href="browse.html?genre=romance" class="genre-btn neon-box">Romance</a>
-                    <a href="browse.html?genre=isekai" class="genre-btn neon-box">Isekai</a>
-                    <a href="browse.html?genre=horror" class="genre-btn neon-box">Horror</a>
-                    <a href="browse.html?genre=martial-arts" class="genre-btn neon-box">Martial Arts</a>
-                    <a href="browse.html?genre=sci-fi" class="genre-btn neon-box">Sci-Fi</a>
-                    <a href="browse.html?genre=drama" class="genre-btn neon-box">Drama</a>
-                    <a href="browse.html?genre=comedy" class="genre-btn neon-box">Comedy</a>
-                    <a href="browse.html?genre=mystery" class="genre-btn neon-box">Mystery</a>
+                    <a href="browse.html?genre=action" class="genre-btn neon-box">أكشن</a>
+                    <a href="browse.html?genre=fantasy" class="genre-btn neon-box">خيال</a>
+                    <a href="browse.html?genre=romance" class="genre-btn neon-box">رومانسي</a>
+                    <a href="browse.html?genre=isekai" class="genre-btn neon-box">إيسيكاي</a>
+                    <a href="browse.html?genre=horror" class="genre-btn neon-box">رعب</a>
+                    <a href="browse.html?genre=martial-arts" class="genre-btn neon-box">فنون قتالية</a>
+                    <a href="browse.html?genre=sci-fi" class="genre-btn neon-box">خيال علمي</a>
+                    <a href="browse.html?genre=drama" class="genre-btn neon-box">دراما</a>
+                    <a href="browse.html?genre=comedy" class="genre-btn neon-box">كوميدي</a>
+                    <a href="browse.html?genre=mystery" class="genre-btn neon-box">غموض</a>
                 </div>
             </section>
         </main>
@@ -208,7 +199,7 @@
             <div class="footer-content container">
                 <div class="footer-brand">
                     <a href="index.html" class="brand-logo" style="display:flex;align-items:center;color:#fff;">
-                        <img src="images/logo.png" alt="Nexus Logo" style="height: 30px; width: 30px; margin-left: 10px; border-radius: 5px;">
+                        <img src="images/logo.png" alt="Nexus Logo" style="height: 30px; width: 30px; margin-left: 10px; background: transparent;">
                         Nexus
                     </a>
                     <p class="footer-desc">المنصة العربية الأولى לקراءَة المانها والمانجا بدقة فائقة وبدون إعلانات مزعجة.</p>
@@ -216,7 +207,7 @@
                 <div class="footer-links-inline">
                     <a href="index.html">الرئيسية</a>
                     <a href="browse.html">المكتبة</a>
-                    <a href="admin.html" class="text-accent hover-glow"><i class="fas fa-user-shield"></i> لوحة التحكم</a>
+                    <!-- Admin link hidden for regular users -->
                     <a href="#">سياسة الخصوصية</a>
                     <a href="#">تواصل معنا</a>
                     <a href="#">Discord</a>
@@ -258,7 +249,7 @@
             </div>
             
             <div class="series-chapters-section">
-                <h3><i class="fas fa-list text-accent"></i> الفصول <span class="en-sub">Chapters</span></h3>
+                <h3><i class="fas fa-list text-accent"></i> الفصول</h3>
                 <div class="chapters-list" id="smChaptersList">
                     <!-- Chapters injected here -->
                 </div>
@@ -274,7 +265,10 @@
                 <h3 id="readerMangaTitle">العنوان</h3>
                 <p id="readerChapterNumber" class="text-accent">الفصل</p>
             </div>
-            <div class="hud-actions"><button class="hud-btn" id="settingsBtn"><i class="fas fa-cog"></i></button></div>
+            <div class="hud-actions">
+                <button class="hud-btn" id="returnToSeriesBtn" title="العودة لتفاصيل العمل"><i class="fas fa-info-circle"></i></button>
+                <button class="hud-btn" id="settingsBtn"><i class="fas fa-cog"></i></button>
+            </div>
         </div>
 
         <div class="reader-settings-panel" id="readerSettingsPanel">

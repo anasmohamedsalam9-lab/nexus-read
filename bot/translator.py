@@ -414,14 +414,11 @@ class MangaTranslator:
 
                 text_color = (0, 0, 0) if brightness > 128 else (255, 255, 255)
 
-                # ALWAYS fill original text area with background color to wipe the original English!
-                padding = 2
-                draw.rectangle(
-                    [x_min - padding, y_min - padding, x_max + padding, y_max + padding],
-                    fill=bg_color
-                )
+                # DO NOT draw a solid background rectangle to avoid ugly blocks on the art!
+                # The user explicitly requested to NOT draw fake bubbles.
+                # Instead, we will use a very thick text stroke (outline) to mask the original English text.
 
-                # If after fallback we still have English or empty text, do NOT draw any text, keeping the bubble cleanly erased!
+                # If after fallback we still have English or empty text, do NOT draw any text
                 if not translated or _contains_english(translated):
                     continue
 
@@ -448,11 +445,9 @@ class MangaTranslator:
                     x_pos = x_min + (box_w - line_w) // 2
                     y_pos = y_start + line_idx * (font_size + 4)
 
-                    # Draw text with elegant 8-way outline sweep for 100% legibility (white outline for black text, black for white)
+                    # Draw text with native thick stroke (outline) to mask original English text seamlessly
                     outline_color = (255, 255, 255) if text_color == (0, 0, 0) else (0, 0, 0)
-                    for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1), (-1, -1), (1, 1), (-1, 1), (1, -1)]:
-                        draw.text((x_pos + dx, y_pos + dy), display_line, fill=outline_color, font=font)
-                    draw.text((x_pos, y_pos), display_line, fill=text_color, font=font)
+                    draw.text((x_pos, y_pos), display_line, fill=text_color, font=font, stroke_width=3, stroke_fill=outline_color)
 
             # Save translated image
             os.makedirs(os.path.dirname(output_path), exist_ok=True)
