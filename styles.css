@@ -2683,3 +2683,45 @@ body.theme-arctic-ice ::-webkit-scrollbar-thumb { background: #06b6d4; }
   100% { left: 100%; }
 }
 
+
+/* =========================================================
+   Glitch Logo (NEXUS SCANS)
+   ========================================================= */
+.glitch-logo {
+  display: flex;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #fff;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.glitch-text {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-shadow: 
+    -2px 0 0 rgba(0, 255, 255, 0.8),
+    2px 0 0 rgba(255, 100, 0, 0.8);
+  animation: slight-glitch 3s infinite;
+}
+
+.glitch-icon {
+  margin: 0 8px;
+  font-size: 1.4rem;
+  color: #fff;
+  text-shadow: 
+    -2px 0 0 rgba(0, 255, 255, 0.8),
+    2px 0 0 rgba(255, 100, 0, 0.8);
+  animation: slight-glitch 3s infinite reverse;
+}
+
+@keyframes slight-glitch {
+  0%, 100% { text-shadow: -2px 0 0 rgba(0, 255, 255, 0.8), 2px 0 0 rgba(255, 100, 0, 0.8); }
+  50% { text-shadow: -1px 0 0 rgba(0, 255, 255, 0.8), 1px 0 0 rgba(255, 100, 0, 0.8); }
+  90% { text-shadow: -3px 0 0 rgba(0, 255, 255, 0.8), 2px 0 0 rgba(255, 100, 0, 0.8); }
+}
+
