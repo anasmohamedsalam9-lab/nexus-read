@@ -6690,6 +6690,24 @@ var DB = [
     ],
     "chapters": [
       {
+        "n": "392.2",
+        "d": "2026-06-20",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_9bf31/392.2/7c8f893ecdc3efaa135262f8239828ca.jpg",
+          "https://olympustaff.com/uploads/manga_9bf31/392.2/02b45ba76330fe0219c4df325d4e7dd1.jpg",
+          "https://olympustaff.com/uploads/manga_9bf31/392.2/2817eb1ea599cfd15ead55a4c9d1b46b.jpg"
+        ]
+      },
+      {
+        "n": "392.1",
+        "d": "2026-06-20",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_9bf31/392.1/c75756d1949a6b8eb139897cda80fa5b.jpg",
+          "https://olympustaff.com/uploads/manga_9bf31/392.1/e7acbc6f486b3c0ec20c849c965277bd.jpg",
+          "https://olympustaff.com/uploads/manga_9bf31/392.1/a2f861dba1eb49e281e81f349459679a.jpg"
+        ]
+      },
+      {
         "n": "391.1",
         "d": "2026-06-16",
         "pages": [
@@ -14571,6 +14589,17 @@ var DB = [
     "author": "Nexus Bot",
     "chapters": [
       {
+        "n": "871",
+        "d": "2026-06-20",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_c0c7c/871/100e406faf9a2baf745b42269374a502.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/871/e3fab0e2f8d7bef7463722e23b236994.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/871/af5e46bb399efae47b09517e24146524.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/871/91c1fb7f41ed5bb4340f955d315eea13.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/871/382877df33a7e4dc0d6e776dbefa4194.jpg"
+        ]
+      },
+      {
         "n": "870",
         "d": "2026-06-19",
         "pages": [
@@ -17876,6 +17905,37 @@ var DB = [
       "فانتازيا"
     ],
     "chapters": [
+      {
+        "n": "22",
+        "d": "2026-06-20",
+        "pages": [
+          "https://olympustaff.com/images/TeamX.png",
+          "https://olympustaff.com/images/manga/bdba0ab83b138201c6110274ebb4734d.jpg",
+          "https://olympustaff.com/images/chapter/31bd0772f14518866f5f377af84a9161.webp",
+          "https://olympustaff.com/images/chapter/d21ef5574cb7e83a425cda1e8083b5d1.webp",
+          "https://olympustaff.com/images/chapter/be1a8a5dc9e3d03e72480eef3d56b7b0.jpg",
+          "https://olympustaff.com/images/chapter/e3dbf7987aa79ef2e07e5a00cb658790.webp",
+          "https://olympustaff.com/images/chapter/5bfc8490ff4bd31128c5220bfc6f0d83.webp",
+          "https://olympustaff.com/images/chapter/399a46b5970a0732d388149b8c0f2170.webp",
+          "https://olympustaff.com/images/chapter/19121675507bf579dc74ddcf611333e5.png",
+          "https://olympustaff.com/images/chapter/f19982bfc0c7b0d0efdd5b5e787c3b73.webp",
+          "https://olympustaff.com/images/chapter/3317337c8a218059a54c3d2c2cf67048.webp",
+          "https://olympustaff.com/images/chapter/134234946.webp",
+          "https://olympustaff.com/images/chapter/824773170.webp",
+          "https://olympustaff.com/images/chapter/1382993329.webp",
+          "https://olympustaff.com/images/chapter/1896547979.webp",
+          "https://olympustaff.com/images/chapter/1392296410.webp",
+          "https://olympustaff.com/images/chapter/859316716.webp",
+          "https://olympustaff.com/images/chapter/620083854.webp",
+          "https://olympustaff.com/images/chapter/1315906077.webp",
+          "https://olympustaff.com/images/chapter/1420746503.jpg",
+          "https://olympustaff.com/images/chapter/498803004.jpg",
+          "https://olympustaff.com/images/chapter/989539047.jpg",
+          "https://olympustaff.com/images/chapter/2106093045.jpg",
+          "https://olympustaff.com/images/chapter/6657630.webp",
+          "https://olympustaff.com/images/chapter/215592824.jpg"
+        ]
+      },
       {
         "n": "21",
         "d": "2026-06-14",
