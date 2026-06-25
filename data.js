@@ -340,6 +340,31 @@ var DB = [
     "type": "manhwa",
     "chapters": [
       {
+        "n": "50",
+        "d": "2026-06-25",
+        "pages": [
+          "https://olympustaff.com/images/TeamX.png",
+          "https://olympustaff.com/images/manga/77b7bd1f94bdbd255bfa4b929db38624.png",
+          "https://olympustaff.com/images/chapter/b08885f925b7694fe546b8a2ed5140c4.jpg",
+          "https://olympustaff.com/images/chapter/d0c16ce1802b7a7086f5d62b4e4c0b7b.png",
+          "https://olympustaff.com/images/chapter/b09fe41501b9293246d9223e336e4c50.jpg",
+          "https://olympustaff.com/images/chapter/40a28bd1c2bb28fe9f2f7ab6e8b483f2.png",
+          "https://olympustaff.com/images/chapter/ff52b2f52fca0da4a7ff4ce5c6495073.jpg",
+          "https://olympustaff.com/images/chapter/1b7427afdd38844da16bf0be194587a7.jpg",
+          "https://olympustaff.com/images/chapter/1405333586.jpg",
+          "https://olympustaff.com/images/chapter/786599294.jpg",
+          "https://olympustaff.com/images/chapter/1361721922.jpg",
+          "https://olympustaff.com/images/chapter/504452410.jpg",
+          "https://olympustaff.com/images/chapter/1411015207.webp",
+          "https://olympustaff.com/images/chapter/1835681619.webp",
+          "https://olympustaff.com/images/chapter/619910562.png",
+          "https://olympustaff.com/images/chapter/1442080939.jpg",
+          "https://olympustaff.com/images/chapter/1498320046.png",
+          "https://olympustaff.com/images/chapter/1795823345.jpg",
+          "https://olympustaff.com/images/manga/1227117251319305632.jpg"
+        ]
+      },
+      {
         "n": "49",
         "d": "2026-06-24",
         "pages": [
