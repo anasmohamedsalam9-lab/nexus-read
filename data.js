@@ -1,5 +1,142 @@
 var DB = [
   {
+    "id": "nm_n-a",
+    "title": "N A",
+    "cover": "",
+    "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [],
+    "type": "manhwa",
+    "chapters": [
+      {
+        "n": "12",
+        "d": "2026-06-25",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_15438/12/01.jpg",
+          "https://olympustaff.com/uploads/manga_15438/12/02.jpg",
+          "https://olympustaff.com/uploads/manga_15438/12/03.jpg",
+          "https://olympustaff.com/uploads/manga_15438/12/04.jpg"
+        ]
+      },
+      {
+        "n": "11",
+        "d": "2026-06-25",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_15438/11/01.jpg",
+          "https://olympustaff.com/uploads/manga_15438/11/02.jpg",
+          "https://olympustaff.com/uploads/manga_15438/11/03.jpg",
+          "https://olympustaff.com/uploads/manga_15438/11/04.jpg"
+        ]
+      },
+      {
+        "n": "10",
+        "d": "2026-06-25",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_15438/10/01.jpg",
+          "https://olympustaff.com/uploads/manga_15438/10/02.jpg",
+          "https://olympustaff.com/uploads/manga_15438/10/03.jpg",
+          "https://olympustaff.com/uploads/manga_15438/10/04.jpg"
+        ]
+      },
+      {
+        "n": "9",
+        "d": "2026-06-25",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_15438/9/01.jpg",
+          "https://olympustaff.com/uploads/manga_15438/9/02.jpg",
+          "https://olympustaff.com/uploads/manga_15438/9/03.jpg",
+          "https://olympustaff.com/uploads/manga_15438/9/04.jpg",
+          "https://olympustaff.com/uploads/manga_15438/9/05.jpg"
+        ]
+      },
+      {
+        "n": "8",
+        "d": "2026-06-25",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_15438/8/01.jpg",
+          "https://olympustaff.com/uploads/manga_15438/8/02.jpg",
+          "https://olympustaff.com/uploads/manga_15438/8/03.jpg",
+          "https://olympustaff.com/uploads/manga_15438/8/04.jpg",
+          "https://olympustaff.com/uploads/manga_15438/8/05.jpg"
+        ]
+      },
+      {
+        "n": "7",
+        "d": "2026-06-25",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_15438/7/01.jpg",
+          "https://olympustaff.com/uploads/manga_15438/7/02.jpg",
+          "https://olympustaff.com/uploads/manga_15438/7/03.jpg",
+          "https://olympustaff.com/uploads/manga_15438/7/04.jpg",
+          "https://olympustaff.com/uploads/manga_15438/7/05.jpg"
+        ]
+      },
+      {
+        "n": "6",
+        "d": "2026-06-25",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_15438/6/01.jpg",
+          "https://olympustaff.com/uploads/manga_15438/6/02.jpg",
+          "https://olympustaff.com/uploads/manga_15438/6/03.jpg",
+          "https://olympustaff.com/uploads/manga_15438/6/04.jpg"
+        ]
+      },
+      {
+        "n": "5",
+        "d": "2026-06-25",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_15438/5/01.jpg",
+          "https://olympustaff.com/uploads/manga_15438/5/02.jpg",
+          "https://olympustaff.com/uploads/manga_15438/5/03.jpg"
+        ]
+      },
+      {
+        "n": "4",
+        "d": "2026-06-25",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_15438/4/01.jpg",
+          "https://olympustaff.com/uploads/manga_15438/4/02.jpg",
+          "https://olympustaff.com/uploads/manga_15438/4/03.jpg",
+          "https://olympustaff.com/uploads/manga_15438/4/04.jpg"
+        ]
+      },
+      {
+        "n": "3",
+        "d": "2026-06-25",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_15438/3/01.jpg",
+          "https://olympustaff.com/uploads/manga_15438/3/02.jpg",
+          "https://olympustaff.com/uploads/manga_15438/3/03.jpg",
+          "https://olympustaff.com/uploads/manga_15438/3/04.jpg"
+        ]
+      },
+      {
+        "n": "2",
+        "d": "2026-06-25",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_15438/2/01.jpg",
+          "https://olympustaff.com/uploads/manga_15438/2/02.jpg",
+          "https://olympustaff.com/uploads/manga_15438/2/03.jpg",
+          "https://olympustaff.com/uploads/manga_15438/2/04.jpg",
+          "https://olympustaff.com/uploads/manga_15438/2/05.jpg"
+        ]
+      },
+      {
+        "n": "1",
+        "d": "2026-06-25",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_15438/1/01.jpg",
+          "https://olympustaff.com/uploads/manga_15438/1/02.jpg",
+          "https://olympustaff.com/uploads/manga_15438/1/03.jpg",
+          "https://olympustaff.com/uploads/manga_15438/1/04.jpg",
+          "https://olympustaff.com/uploads/manga_15438/1/05.jpg",
+          "https://olympustaff.com/uploads/manga_15438/1/06.jpg"
+        ]
+      }
+    ]
+  },
+  {
     "id": "nm_immortal-s-way-of-life",
     "title": "Immortal's Way of Life",
     "cover": "",
@@ -6302,6 +6439,19 @@ var DB = [
       "غموض"
     ],
     "chapters": [
+      {
+        "n": "339",
+        "d": "2026-06-25",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_c81e7/339/d2803dded49ca6fefe09404087640614.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/339/5b00172f15886c382e463424a25562ac.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/339/88befbc571e1e7a5a1c774ad86b92fa8.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/339/c11d7e6c281b0ee6cf7efa4502d69a74.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/339/0ca7b8123c0eef20d7352c421650211c.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/339/a5603ef8ffde03fe309a27a88ee15e67.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/339/92a8cf4ad1ae745d390a0af99d67b15e.jpg"
+        ]
+      },
       {
         "n": "338",
         "d": "2026-06-18",
