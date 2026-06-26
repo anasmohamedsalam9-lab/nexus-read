@@ -17659,6 +17659,32 @@ var DB = [
     ],
     "chapters": [
       {
+        "n": "36",
+        "d": "2026-06-26",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_05311/36/f865fb811a29684c2db5d3df4cb0fe6a.jpg",
+          "https://olympustaff.com/uploads/manga_05311/36/1147e0e060e026ba03da10d5b2a2868e.webp",
+          "https://olympustaff.com/uploads/manga_05311/36/583bf441a88eb95e312f6fee2cb2a2db.webp",
+          "https://olympustaff.com/uploads/manga_05311/36/e580c24c643c185cb94f8cf0ae0cf9be.webp",
+          "https://olympustaff.com/uploads/manga_05311/36/7cef10b77e3ef2d6fd64e65d94723183.webp",
+          "https://olympustaff.com/uploads/manga_05311/36/fda7ea05fc957bc06963353f3fc3b9e6.webp",
+          "https://olympustaff.com/uploads/manga_05311/36/03309835201c1c8a6f0629be8f2ecd89.webp",
+          "https://olympustaff.com/uploads/manga_05311/36/35bbfb5b9bde19b3a12f3e9256bc6450.webp",
+          "https://olympustaff.com/uploads/manga_05311/36/24521a19f3cc0c17b1b2567aacb42e44.webp",
+          "https://olympustaff.com/uploads/manga_05311/36/fa1d9852f7a1ead5449b1ac8c98005e4.webp",
+          "https://olympustaff.com/uploads/manga_05311/36/76ec4bba5bbda87897331adcf0d35b47.webp",
+          "https://olympustaff.com/uploads/manga_05311/36/bb4114e5c50fe47c8f1d719ca0afe4d3.webp",
+          "https://olympustaff.com/uploads/manga_05311/36/0bd2edafea231f55da962afd8b4c8d39.webp",
+          "https://olympustaff.com/uploads/manga_05311/36/d1686ca61723e6d76d56374ae7e946dc.webp",
+          "https://olympustaff.com/uploads/manga_05311/36/9fd30a9890552e1d6ba3e709f312b60f.webp",
+          "https://olympustaff.com/uploads/manga_05311/36/263702e1ba948f8300f1efb5fe941de7.webp",
+          "https://olympustaff.com/uploads/manga_05311/36/89ac8b95904a8965e85327492f1f389f.webp",
+          "https://olympustaff.com/uploads/manga_05311/36/f2bf8b485887cb540042761eb582ef8f.webp",
+          "https://olympustaff.com/uploads/manga_05311/36/9ff56b1b5df3b4a2e1364f619c9633ac.webp",
+          "https://olympustaff.com/uploads/manga_05311/36/a4772807bc8a30e7330302bbe3dcf956.jpg"
+        ]
+      },
+      {
         "n": "35",
         "d": "2026-06-19",
         "pages": [
