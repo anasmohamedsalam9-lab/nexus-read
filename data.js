@@ -16167,6 +16167,17 @@ var DB = [
     "author": "Nexus Bot",
     "chapters": [
       {
+        "n": "873",
+        "d": "2026-06-26",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_c0c7c/873/0dc2931be3b17e02307caecbae33a9e3.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/873/a54cb083f9a9428bc84550643f29857d.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/873/e97ca60f126cb5d81257ab27f0b477a0.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/873/0ca64a58d615b7f1e44496c85bd6e44b.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/873/6a597dbf54fb735572e37df80d1489f1.jpg"
+        ]
+      },
+      {
         "n": "872",
         "d": "2026-06-21",
         "pages": [
