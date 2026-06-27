@@ -16167,6 +16167,17 @@ var DB = [
     "author": "Nexus Bot",
     "chapters": [
       {
+        "n": "874",
+        "d": "2026-06-27",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_c0c7c/874/396622d59fe34b9e48440ce41b7cfcb3.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/874/e0eb78df01d91c696c90361e6432a01d.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/874/85878c4bb75e2520be289efe3aadebd7.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/874/96c8e23ba267f7142e11c4515ce5e8c0.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/874/421537215bcf8cbf3b799eb9d7169588.jpg"
+        ]
+      },
+      {
         "n": "873",
         "d": "2026-06-26",
         "pages": [
@@ -22006,6 +22017,39 @@ var DB = [
       "سحر"
     ],
     "chapters": [
+      {
+        "n": "24",
+        "d": "2026-06-27",
+        "pages": [
+          "https://olympustaff.com/images/TeamX.png",
+          "https://olympustaff.com/images/manga/fc15bae6bb5e962d6648c9474a8909f7.png",
+          "https://olympustaff.com/images/chapter/614ac77ed4ebbbd43bbab8b8b133d5c3.png",
+          "https://olympustaff.com/images/chapter/155dac3091da5106dcd6455ba8387264.jpg",
+          "https://olympustaff.com/images/chapter/e7e4c48621a360ce20add44b02e5aa11.jpg",
+          "https://olympustaff.com/images/chapter/91f1c960bb2f6eb723263f03c4d47c5c.jpg",
+          "https://olympustaff.com/images/chapter/76749fb00da56d3a2acdfdd4cbbee636.jpg",
+          "https://olympustaff.com/images/chapter/bcc2620a2c1b1684e313ecd28d1f2ce2.jpg",
+          "https://olympustaff.com/images/chapter/1297437339.jpg",
+          "https://olympustaff.com/images/chapter/932800828.jpg",
+          "https://olympustaff.com/images/chapter/65057845.jpg",
+          "https://olympustaff.com/images/chapter/1403495083.jpg",
+          "https://olympustaff.com/images/chapter/1942756414.jpg",
+          "https://olympustaff.com/images/chapter/379574005.jpg",
+          "https://olympustaff.com/images/chapter/1582670400.jpg",
+          "https://olympustaff.com/images/chapter/295289688.jpg",
+          "https://olympustaff.com/images/chapter/1847929531.jpg",
+          "https://olympustaff.com/images/chapter/1697436104.jpg",
+          "https://olympustaff.com/images/chapter/323162233.jpg",
+          "https://olympustaff.com/images/chapter/184903317.jpg",
+          "https://olympustaff.com/images/chapter/2113579276.jpg",
+          "https://olympustaff.com/images/chapter/534001969.jpg",
+          "https://olympustaff.com/images/chapter/868500508.jpg",
+          "https://olympustaff.com/images/chapter/728444483.jpg",
+          "https://olympustaff.com/images/chapter/1841296151.jpg",
+          "https://olympustaff.com/images/chapter/193750506.jpg",
+          "https://olympustaff.com/images/chapter/1282109774.jpg"
+        ]
+      },
       {
         "n": "23",
         "d": "2026-06-17",
