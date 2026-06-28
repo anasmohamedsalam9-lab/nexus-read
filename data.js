@@ -8316,6 +8316,35 @@ var DB = [
     ],
     "chapters": [
       {
+        "n": "394.1",
+        "d": "2026-06-28",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_9bf31/394.1/f0d1236a454edf05007224e5ea70d7d9.jpg",
+          "https://olympustaff.com/uploads/manga_9bf31/394.1/19ff3e4dab83cbd92d32e977ffa0d515.jpg",
+          "https://olympustaff.com/uploads/manga_9bf31/394.1/40e2e3127858a052aa2041f3e6e2be53.jpg"
+        ]
+      },
+      {
+        "n": "393.3",
+        "d": "2026-06-28",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_9bf31/393.3/8bdae335370e76edb33bc699aa2d9fe5.jpg",
+          "https://olympustaff.com/uploads/manga_9bf31/393.3/8e013c2584e128ed7e06fd4fed22e4ff.jpg",
+          "https://olympustaff.com/uploads/manga_9bf31/393.3/7d5a1b05ecc381b26bd6f4a351c7ae6f.jpg",
+          "https://olympustaff.com/uploads/manga_9bf31/393.3/685c3738c1cb732758eaae65e7e312ed.jpg"
+        ]
+      },
+      {
+        "n": "393.2",
+        "d": "2026-06-28",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_9bf31/393.2/39317eba3366d33c3b23d8586877a15e.jpg",
+          "https://olympustaff.com/uploads/manga_9bf31/393.2/1aa0cda2552120293eb9dd3b17af30bb.jpg",
+          "https://olympustaff.com/uploads/manga_9bf31/393.2/5b13d9c7882e17ebf2037c5f4e2de8ac.jpg",
+          "https://olympustaff.com/uploads/manga_9bf31/393.2/ac808012d6747644b6ff548cbebf5564.jpg"
+        ]
+      },
+      {
         "n": "392.2",
         "d": "2026-06-20",
         "pages": [
