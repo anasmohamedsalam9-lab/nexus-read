@@ -3817,6 +3817,54 @@ var DB = [
     "type": "manhwa",
     "chapters": [
       {
+        "n": "520",
+        "d": "2026-06-28",
+        "pages": [
+          "https://olympustaff.com/images/TeamX.png",
+          "https://olympustaff.com/images/manga/e9ee3a67437b5faba2b2c1a8685324ff.png",
+          "https://olympustaff.com/images/chapter/22f710d74bf1666b6e32560439fb1850.jpg",
+          "https://olympustaff.com/images/chapter/38284ba9704768d1eaa5c031e6c841c7.jpg",
+          "https://olympustaff.com/images/chapter/7253c6d319f783e025d342c612ad65c6.jpg",
+          "https://olympustaff.com/images/chapter/8fb4244f6b9afccff470fb7357007875.jpg",
+          "https://olympustaff.com/images/chapter/166bfea9331345496c83a1e428cae88a.jpg",
+          "https://olympustaff.com/images/chapter/d9bab36e460ce7e18991ad8b87ac913b.jpg",
+          "https://olympustaff.com/images/chapter/1b9b4a2370c315fa2513cc9514cd5b2a.jpg",
+          "https://olympustaff.com/images/chapter/00e39fd805f2db02e9a9c49248f45e32.jpg",
+          "https://olympustaff.com/images/chapter/221d957c6dd00f6b1fb141cce01efab4.jpg",
+          "https://olympustaff.com/images/chapter/b78c84cc5cb854b05e102f2210f6d4d7.jpg",
+          "https://olympustaff.com/images/chapter/af68a66524c26aff35dd1a79adf5a1b3.jpg",
+          "https://olympustaff.com/images/chapter/e2765ceacf6487aa8b4eb4a62e9f48be.jpg",
+          "https://olympustaff.com/images/chapter/2b5bccd870f6e9c32772c3bfeda09821.jpg",
+          "https://olympustaff.com/images/chapter/3e9d4b25fbb0fcbc0d93996d566574a1.jpg",
+          "https://olympustaff.com/images/chapter/5272cd212972a3638289ae752964f796.jpg",
+          "https://olympustaff.com/images/chapter/a09b62fc84b52082bb34bb02054516d5.jpg",
+          "https://olympustaff.com/images/chapter/de0168e39b20fa0dc4886138eb063e2f.jpg",
+          "https://olympustaff.com/images/chapter/bb2f634e388aed598b2dd90c8044586b.jpg",
+          "https://olympustaff.com/images/chapter/5783bf9bce638c2149168ae4a45c4749.jpg",
+          "https://olympustaff.com/images/chapter/99582b31e645008e0249289509c93b2a.jpg",
+          "https://olympustaff.com/images/chapter/3a758b8ea818e7e2cacc8a20c270a058.jpg",
+          "https://olympustaff.com/images/chapter/20e1afb4f611405d93eb6050061377e2.jpg",
+          "https://olympustaff.com/images/chapter/0182597ee45656cd8710d838babea904.jpg",
+          "https://olympustaff.com/images/chapter/f8a84f2938c7db0174a7cdc8c3d74044.jpg",
+          "https://olympustaff.com/images/chapter/29ed17ebc37e952abb38aec8a55bc284.jpg",
+          "https://olympustaff.com/images/chapter/e7d8e6b35473d1472f16837c2b05e9c4.jpg",
+          "https://olympustaff.com/images/chapter/575499343.jpg",
+          "https://olympustaff.com/images/chapter/777942903.jpg",
+          "https://olympustaff.com/images/chapter/1272016628.jpg",
+          "https://olympustaff.com/images/chapter/788327464.jpg",
+          "https://olympustaff.com/images/chapter/1196130318.jpg",
+          "https://olympustaff.com/images/chapter/1876830421.jpg",
+          "https://olympustaff.com/images/chapter/1226722707.jpg",
+          "https://olympustaff.com/images/chapter/1809212634.jpg",
+          "https://olympustaff.com/images/chapter/234391951.jpg",
+          "https://olympustaff.com/images/chapter/1396824466.jpg",
+          "https://olympustaff.com/images/chapter/1373633254.jpg",
+          "https://olympustaff.com/images/chapter/513198785.jpg",
+          "https://olympustaff.com/images/chapter/16888070.jpg",
+          "https://olympustaff.com/images/chapter/1737929268.jpg"
+        ]
+      },
+      {
         "n": "519",
         "d": "2026-06-17",
         "pages": [
@@ -16166,6 +16214,16 @@ var DB = [
     "status": "Ongoing",
     "author": "Nexus Bot",
     "chapters": [
+      {
+        "n": "875",
+        "d": "2026-06-28",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_c0c7c/875/d99b35771e439278082f4c7c70911b5a.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/875/1002f89d806d836662b80d6ee03b4b23.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/875/2f13b6b00b20e90e76bcc3277a22b51f.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/875/ba85d35455b4b4d066616cdd15ce9d88.jpg"
+        ]
+      },
       {
         "n": "874",
         "d": "2026-06-27",
