@@ -160,6 +160,27 @@ var DB = [
     "type": "manhwa",
     "chapters": [
       {
+        "n": "18",
+        "d": "2026-06-29",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_c88d8/18/7905ae68e3f228f0b9f79498c35a34a7.jpg",
+          "https://olympustaff.com/uploads/manga_c88d8/18/eb0e32f170362c7c4421e13a26939734.webp",
+          "https://olympustaff.com/uploads/manga_c88d8/18/2c625d80134e45d11f774f5be1b50c6f.webp",
+          "https://olympustaff.com/uploads/manga_c88d8/18/bd63afc7c5c29a18f247602dfcba80d6.webp",
+          "https://olympustaff.com/uploads/manga_c88d8/18/04640ccb44dd41de9e0bcc1d7624838d.webp",
+          "https://olympustaff.com/uploads/manga_c88d8/18/8412812a23da1998f0fd848a5d7f4249.webp",
+          "https://olympustaff.com/uploads/manga_c88d8/18/c498c222cdcbcbdf74e6e79a14cb11f1.webp",
+          "https://olympustaff.com/uploads/manga_c88d8/18/68dcc655de05c9c03eb8f088263696c3.webp",
+          "https://olympustaff.com/uploads/manga_c88d8/18/027eca41b33513335a612f1b0b2fd066.webp",
+          "https://olympustaff.com/uploads/manga_c88d8/18/58af2d175a4419954ba97acc80947894.webp",
+          "https://olympustaff.com/uploads/manga_c88d8/18/43a55e6e4324ab8642eb6a4570062e4f.webp",
+          "https://olympustaff.com/uploads/manga_c88d8/18/f22e4fab445a50c9686522a825d29ff0.webp",
+          "https://olympustaff.com/uploads/manga_c88d8/18/e30f57a73bce7884fa0389b26a00237b.webp",
+          "https://olympustaff.com/uploads/manga_c88d8/18/8c20732d61bf4476259006ddf74da987.webp",
+          "https://olympustaff.com/uploads/manga_c88d8/18/4a20f53e7c10c30eea5eb11e4af90daf.jpg"
+        ]
+      },
+      {
         "n": "17",
         "d": "2026-06-20",
         "pages": [
