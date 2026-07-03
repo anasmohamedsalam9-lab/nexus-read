@@ -6992,6 +6992,19 @@ var DB = [
     ],
     "chapters": [
       {
+        "n": "341",
+        "d": "2026-07-03",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_c81e7/341/d28a7a8a866c4b5ac27ea130bfbf92a5.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/341/3bb84c6866e20594d243ca425e11bcc2.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/341/1806ee01ccbddbc2e3908fa115ea006e.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/341/616a6c39144af6b8520a91ec357212cf.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/341/862cc614cbc6683cf92d4b041497b5f4.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/341/415f4b1ed5dab8749547a5c245ddd1e0.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/341/9e469bf68d3bc229a2d7369133926970.jpg"
+        ]
+      },
+      {
         "n": "340",
         "d": "2026-06-30",
         "pages": [
@@ -16760,6 +16773,17 @@ var DB = [
     "status": "Ongoing",
     "author": "Nexus Bot",
     "chapters": [
+      {
+        "n": "876",
+        "d": "2026-07-03",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_c0c7c/876/373872c08d3f5149ce4667934089dd92.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/876/e5ee8a2d0c25703b00130fad07a47898.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/876/29c2239004bebc92f81f192fbeb157a0.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/876/0eed3fcce21e8c52a76868b48c5534f5.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/876/09ba8d267097f9981ee05288aed8f0c7.jpg"
+        ]
+      },
       {
         "n": "875",
         "d": "2026-06-28",
