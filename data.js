@@ -1078,6 +1078,24 @@ var DB = [
     "type": "manhwa",
     "chapters": [
       {
+        "n": "10",
+        "d": "2026-07-05",
+        "pages": [
+          "https://olympustaff.com/images/TeamX.png",
+          "https://olympustaff.com/images/manga/88d77a34c39c67eb3478c0b3f398cc1b.png",
+          "https://olympustaff.com/images/chapter/58d971f7e63bbdb376dc2c541a7c26a4.jpg",
+          "https://olympustaff.com/images/chapter/259b35a4f4cc2f38242b5ceeb74f8dfe.png",
+          "https://olympustaff.com/images/chapter/03fad3d7e8cb3c84a476f0bd07dc0bdd.jpg",
+          "https://olympustaff.com/images/chapter/a986283e23a9f1abd41582b0a71a1406.jpg",
+          "https://olympustaff.com/images/chapter/3fb103ca9b8707a823bdce0ee248f93d.jpg",
+          "https://olympustaff.com/images/chapter/d03272bccd6e707287a527f6d6fe55e2.jpg",
+          "https://olympustaff.com/images/chapter/bf521c879e2aa25bd63a95b1506b2345.jpg",
+          "https://olympustaff.com/images/chapter/a62bbd4b76837df02a5e6aa12578d9e3.jpg",
+          "https://olympustaff.com/images/chapter/ee469460290c0af540032d7c603736a3.jpg",
+          "https://olympustaff.com/images/chapter/e58a8f6f14026f04d1a329d3b298653e.jpg"
+        ]
+      },
+      {
         "n": "9",
         "d": "2026-07-04",
         "pages": [
