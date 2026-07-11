@@ -18819,6 +18819,16 @@ var DB = [
     "author": "Nexus Bot",
     "chapters": [
       {
+        "n": "880",
+        "d": "2026-07-11",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_c0c7c/880/bb0edcd52a084f789e46a03df5f1b4ed.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/880/d2836b0ffe0495e5a679a8d90be07bef.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/880/fa95c74407cde9a1848b0f413e8e09c1.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/880/d45b0ccbef96ca6ce6335afbaf5f30bb.jpg"
+        ]
+      },
+      {
         "n": "879",
         "d": "2026-07-10",
         "pages": [
@@ -20374,6 +20384,31 @@ var DB = [
       "ثأر"
     ],
     "chapters": [
+      {
+        "n": "38",
+        "d": "2026-07-11",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_05311/38/89bab64f08f3631edfb62579432bc1d3.jpg",
+          "https://olympustaff.com/uploads/manga_05311/38/6a2c5246749ac880d581fca4fe8f5b17.webp",
+          "https://olympustaff.com/uploads/manga_05311/38/cde5e42f8993938b3ba0b24af42b5bee.webp",
+          "https://olympustaff.com/uploads/manga_05311/38/54b79e97ffad8e6ba72a03a435b3631e.webp",
+          "https://olympustaff.com/uploads/manga_05311/38/98bc87d9159ec95e3cf11e52ffea59b2.webp",
+          "https://olympustaff.com/uploads/manga_05311/38/1cd12ac28b76d326afedece5d3337324.webp",
+          "https://olympustaff.com/uploads/manga_05311/38/7a3568c0995a5d291fbe76ab2c5ab946.webp",
+          "https://olympustaff.com/uploads/manga_05311/38/91dc4296b169a4ff4970d5a792b307e5.webp",
+          "https://olympustaff.com/uploads/manga_05311/38/452449554c970e0886578ac021cde28c.webp",
+          "https://olympustaff.com/uploads/manga_05311/38/10593648364a2e879c3a42157e48f570.webp",
+          "https://olympustaff.com/uploads/manga_05311/38/b54d2e0cc4d43ba465ef5933103a20f9.webp",
+          "https://olympustaff.com/uploads/manga_05311/38/a8bbe816fb19fb83e868332c21d1f007.webp",
+          "https://olympustaff.com/uploads/manga_05311/38/8178f91b070ec94231b6ad31dfbc3b74.webp",
+          "https://olympustaff.com/uploads/manga_05311/38/2782e5dbf6e2774f837004e4470583b5.webp",
+          "https://olympustaff.com/uploads/manga_05311/38/f54380c3712715529efa2d587ac2cf58.webp",
+          "https://olympustaff.com/uploads/manga_05311/38/1639400217397b83d1054f02b4ed8de1.webp",
+          "https://olympustaff.com/uploads/manga_05311/38/d1dd7f096f4087664161e03589eae3c5.webp",
+          "https://olympustaff.com/uploads/manga_05311/38/e3bd1d7f091279191bbfdc8af008917c.webp",
+          "https://olympustaff.com/uploads/manga_05311/38/77698e2b3f2c627be7271192b68ccf60.jpg"
+        ]
+      },
       {
         "n": "37",
         "d": "2026-07-03",
