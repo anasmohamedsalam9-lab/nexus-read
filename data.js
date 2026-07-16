@@ -1293,6 +1293,39 @@ var DB = [
     "type": "manhwa",
     "chapters": [
       {
+        "n": "25",
+        "d": "2026-07-16",
+        "pages": [
+          "https://olympustaff.com/images/TeamX.png",
+          "https://olympustaff.com/images/manga/87a1b1984418e7fbdda8631ba3147843.png",
+          "https://olympustaff.com/images/chapter/f2506e69ea671a092d49404ea5b3aa25.jpg",
+          "https://olympustaff.com/images/chapter/97169ca0a6090e5ca3c231461e88feb8.jpg",
+          "https://olympustaff.com/images/chapter/8d8635ad5dd40d83556dec8f8a9aceb7.jpg",
+          "https://olympustaff.com/images/chapter/d30e0627bf5f6b565ff185bf4680abca.jpg",
+          "https://olympustaff.com/images/chapter/0f0f926793423c2ee84c55b880082823.jpg",
+          "https://olympustaff.com/images/chapter/f8b33aba434b7655673a20a42ea4d1b5.jpg",
+          "https://olympustaff.com/images/chapter/75e9e0f6a599f4af1b529376544d13e6.jpg",
+          "https://olympustaff.com/images/chapter/63ec8924f813e22441192d15181a2503.jpg",
+          "https://olympustaff.com/images/chapter/98c07e8114973caac3c28dda3c51208e.jpg",
+          "https://olympustaff.com/images/chapter/84497edf3d7ce2fb4c3ce78d70eecb3f.jpg",
+          "https://olympustaff.com/images/chapter/378e8a6215384bf3c3360f8c6dfe4ebc.jpg",
+          "https://olympustaff.com/images/chapter/353cbac05f9c01e5fd8da0ed03c9fa9c.jpg",
+          "https://olympustaff.com/images/chapter/abfaa6d168624b0295abb551730cca39.png",
+          "https://olympustaff.com/images/chapter/aa8e052b0d19dcc6f6d4d28595525d08.jpg",
+          "https://olympustaff.com/images/chapter/54e7f15b8f32af4c6f7324f6b8a2ab7b.jpg",
+          "https://olympustaff.com/images/chapter/9080bc32eaf1224139590add70ad3731.jpg",
+          "https://olympustaff.com/images/chapter/214125d4214e7f90a5f3298b50780471.jpg",
+          "https://olympustaff.com/images/chapter/0ce3709c54fe837eb0cb61c27679ec1b.png",
+          "https://olympustaff.com/images/chapter/8e5820dae4c5f54b299e49b36d30f551.jpg",
+          "https://olympustaff.com/images/chapter/c972ec21b4d006f475379790136411bd.webp",
+          "https://olympustaff.com/images/chapter/67911baf1827c6bedadfe327175cb43d.jpg",
+          "https://olympustaff.com/images/chapter/1c56918755d747e9d15da8a429224ad4.jpg",
+          "https://olympustaff.com/images/chapter/555675dd746b4a91c29d2a8c524bdccf.jpg",
+          "https://olympustaff.com/images/chapter/4db59e1708b487fa2c42db31864af6ff.png",
+          "https://olympustaff.com/images/chapter/d0a7b2837342bb5377168a14e5bb4635.png"
+        ]
+      },
+      {
         "n": "24",
         "d": "2026-07-10",
         "pages": [
