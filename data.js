@@ -2,7 +2,7 @@ var DB = [
   {
     "id": "nm_the-rebel-of-the-tyrant-noble-family",
     "title": "The Rebel of the Tyrant Noble Family",
-    "cover": "",
+    "cover": "assets/covers/the-rebel-of-the-tyrant-noble-family.webp",
     "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
     "status": "Ongoing",
     "author": "Nile Bot",
@@ -562,7 +562,7 @@ var DB = [
   {
     "id": "nm_holy-emperor-s-grandson-is-a-necromancer",
     "title": "Holy Emperor’s Grandson is a Necromancer",
-    "cover": "",
+    "cover": "assets/covers/holy-emperor-s-grandson-is-a-necromancer.webp",
     "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
     "status": "Ongoing",
     "author": "Nile Bot",
@@ -1353,7 +1353,7 @@ var DB = [
   {
     "id": "nm_the-apocalypse-needs-a-pro",
     "title": "The Apocalypse Needs a Pro",
-    "cover": "",
+    "cover": "assets/covers/the-apocalypse-needs-a-pro.webp",
     "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
     "status": "Ongoing",
     "author": "Nile Bot",
@@ -3100,7 +3100,7 @@ var DB = [
   {
     "id": "nm_stray-bullet",
     "title": "Stray Bullet",
-    "cover": "",
+    "cover": "assets/covers/stray-bullet.webp",
     "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
     "status": "Ongoing",
     "author": "Nile Bot",
@@ -3411,7 +3411,7 @@ var DB = [
   {
     "id": "nm_happy-face-from-slave-to-arena-legend",
     "title": "Happy Face: From Slave to Arena Legend",
-    "cover": "",
+    "cover": "assets/covers/happy-face-from-slave-to-arena-legend.webp",
     "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
     "status": "Ongoing",
     "author": "Nile Bot",
@@ -3957,7 +3957,7 @@ var DB = [
   {
     "id": "nm_immortal-s-way-of-life",
     "title": "Immortal's Way of Life",
-    "cover": "",
+    "cover": "assets/covers/immortal-s-way-of-life.webp",
     "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
     "status": "Ongoing",
     "author": "Nile Bot",
@@ -4296,7 +4296,7 @@ var DB = [
   {
     "id": "nm_the-magic-tower-s-problem-child",
     "title": "The Magic Tower's Problem Child",
-    "cover": "",
+    "cover": "assets/covers/the-magic-tower-s-problem-child.webp",
     "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
     "status": "Ongoing",
     "author": "Nile Bot",
@@ -6073,7 +6073,7 @@ var DB = [
   {
     "id": "nm_full-time-awakening",
     "title": "Full-Time Awakening",
-    "cover": "",
+    "cover": "assets/covers/full-time-awakening.webp",
     "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
     "status": "Ongoing",
     "author": "Nile Bot",
@@ -6761,7 +6761,7 @@ var DB = [
   {
     "id": "nm_like-a-chilling-flame",
     "title": "Like A Chilling Flame",
-    "cover": "",
+    "cover": "assets/covers/like-a-chilling-flame.webp",
     "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
     "status": "Ongoing",
     "author": "Nile Bot",
@@ -7147,7 +7147,7 @@ var DB = [
   {
     "id": "nm_stronger-when-facing-strength-my-cultivation-has-no-limits",
     "title": "Stronger When Facing Strength, My Cultivation Has No Limits",
-    "cover": "",
+    "cover": "assets/covers/stronger-when-facing-strength-my-cultivation-has-no-limits.webp",
     "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
     "status": "Ongoing",
     "author": "Nile Bot",
@@ -7665,7 +7665,7 @@ var DB = [
   {
     "id": "nm_battle-through-the-heavens",
     "title": "battle through the heavens",
-    "cover": "",
+    "cover": "assets/covers/battle-through-the-heavens.webp",
     "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
     "status": "Ongoing",
     "author": "Nile Bot",
@@ -8255,7 +8255,7 @@ var DB = [
   {
     "id": "nm_ichigo-mashimaro",
     "title": "Ichigo Mashimaro",
-    "cover": "",
+    "cover": "assets/covers/ichigo-mashimaro.webp",
     "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
     "status": "Ongoing",
     "author": "Nile Bot",
@@ -8518,12 +8518,12 @@ var DB = [
   {
     "id": "nm_introvert",
     "title": "Introvert",
-    "cover": "",
-    "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
+    "cover": "assets/covers/introvert.webp",
+    "desc": "Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?",
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manga",
+    "type": "manhwa",
     "chapters": [
       {
         "n": "93",
@@ -20239,7 +20239,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manga",
+    "type": "manhwa",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
