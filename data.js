@@ -2,7 +2,7 @@ var DB = [
   {
     "id": "nm_mount-hua-sect-s-greatest-genius",
     "title": "Mount Hua Sect’s Greatest Genius",
-    "cover": "",
+    "cover": "assets/covers/mount-hua-sect-s-greatest-genius.webp",
     "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
     "status": "Ongoing",
     "author": "Nile Bot",
@@ -585,7 +585,7 @@ var DB = [
   {
     "id": "nm_fog-land",
     "title": "Fog land",
-    "cover": "",
+    "cover": "assets/covers/fog-land.webp",
     "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
     "status": "Ongoing",
     "author": "Nile Bot",
