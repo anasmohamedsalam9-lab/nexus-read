@@ -1,5 +1,66 @@
 var DB = [
   {
+    "id": "nm_62",
+    "title": "62",
+    "cover": "",
+    "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [],
+    "type": "manhwa",
+    "chapters": [
+      {
+        "n": "5",
+        "d": "2026-08-31",
+        "pages": [
+          "assets/chapters/62/ch-5/1.webp",
+          "assets/chapters/62/ch-5/2.webp",
+          "assets/chapters/62/ch-5/3.webp"
+        ]
+      },
+      {
+        "n": "4",
+        "d": "2026-08-31",
+        "pages": [
+          "assets/chapters/62/ch-4/1.webp",
+          "assets/chapters/62/ch-4/2.webp",
+          "assets/chapters/62/ch-4/3.webp",
+          "assets/chapters/62/ch-4/4.webp"
+        ]
+      },
+      {
+        "n": "3",
+        "d": "2026-08-31",
+        "pages": [
+          "assets/chapters/62/ch-3/1.webp",
+          "assets/chapters/62/ch-3/2.webp",
+          "assets/chapters/62/ch-3/3.webp",
+          "assets/chapters/62/ch-3/4.webp"
+        ]
+      },
+      {
+        "n": "2",
+        "d": "2026-08-31",
+        "pages": [
+          "assets/chapters/62/ch-2/1.webp",
+          "assets/chapters/62/ch-2/2.webp",
+          "assets/chapters/62/ch-2/3.webp",
+          "assets/chapters/62/ch-2/4.webp"
+        ]
+      },
+      {
+        "n": "1",
+        "d": "2026-08-31",
+        "pages": [
+          "assets/chapters/62/ch-1/1.webp",
+          "assets/chapters/62/ch-1/2.webp",
+          "assets/chapters/62/ch-1/3.webp",
+          "assets/chapters/62/ch-1/4.webp"
+        ]
+      }
+    ]
+  },
+  {
     "id": "nm_hellogin",
     "title": "Hellogin",
     "cover": "",
@@ -11845,7 +11906,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -13440,7 +13501,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -13722,6 +13783,19 @@ var DB = [
       "غموض"
     ],
     "chapters": [
+      {
+        "n": "353",
+        "d": "2026-08-31",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_c81e7/353/34d47a3483cbf1fa7929811abf3baf8f.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/353/d5dc2745203ce70db5427eee169fee27.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/353/c9167417616264088f4ba56bf8b9b0ba.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/353/d75d2b6c088c79aedd8f8d79d37c31ba.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/353/dccbaed71981f97d77b3b9d7b69c4877.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/353/739110c8ba7e379ade93142d12fe05b4.jpg",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
       {
         "n": "352",
         "d": "2026-08-31",
@@ -20646,7 +20720,7 @@ var DB = [
         ]
       }
     ],
-    "type": "comics",
+    "type": "manga",
     "desc": "بعد أن خانه أقرب تلاميذه وقتل، يستيقظ إمبراطور الشياطين الأسطوري تشو ييفان في جسد خادم شاب ضعيف لعائلة نبيلة متدهورة. بروح الشياطين وقدراته السابقة، يقرر حماية الفتاة الشابة والارتقاء بالعائلة مجدداً للانتقام وتطهير كل من وقف في طريقه!",
     "genres": [
       "أكشن",
@@ -21385,6 +21459,289 @@ var DB = [
     "author": "Nexus Bot",
     "chapters": [
       {
+        "n": "264",
+        "d": "2026-08-31",
+        "pages": [
+          "assets/chapters/player/ch-264/1.webp",
+          "assets/chapters/player/ch-264/2.webp",
+          "assets/chapters/player/ch-264/3.webp",
+          "assets/chapters/player/ch-264/4.webp",
+          "assets/chapters/player/ch-264/5.webp",
+          "assets/chapters/player/ch-264/6.webp",
+          "assets/chapters/player/ch-264/7.webp",
+          "assets/chapters/player/ch-264/8.webp",
+          "assets/chapters/player/ch-264/9.webp",
+          "assets/chapters/player/ch-264/10.webp",
+          "assets/chapters/player/ch-264/11.webp",
+          "assets/chapters/player/ch-264/12.webp",
+          "assets/chapters/player/ch-264/13.webp",
+          "assets/chapters/player/ch-264/14.webp",
+          "assets/chapters/player/ch-264/15.webp",
+          "assets/chapters/player/ch-264/16.webp",
+          "assets/chapters/player/ch-264/17.webp",
+          "assets/chapters/player/ch-264/18.webp",
+          "assets/chapters/player/ch-264/19.webp",
+          "assets/chapters/player/ch-264/20.webp",
+          "assets/chapters/player/ch-264/21.webp",
+          "assets/chapters/player/ch-264/22.webp",
+          "assets/chapters/player/ch-264/23.webp",
+          "assets/chapters/player/ch-264/24.webp",
+          "assets/chapters/player/ch-264/25.webp",
+          "assets/chapters/player/ch-264/26.webp"
+        ]
+      },
+      {
+        "n": "263",
+        "d": "2026-08-31",
+        "pages": [
+          "assets/chapters/player/ch-263/1.webp",
+          "assets/chapters/player/ch-263/2.webp",
+          "assets/chapters/player/ch-263/3.webp",
+          "assets/chapters/player/ch-263/4.webp",
+          "assets/chapters/player/ch-263/5.webp",
+          "assets/chapters/player/ch-263/6.webp",
+          "assets/chapters/player/ch-263/7.webp",
+          "assets/chapters/player/ch-263/8.webp",
+          "assets/chapters/player/ch-263/9.webp",
+          "assets/chapters/player/ch-263/10.webp",
+          "assets/chapters/player/ch-263/11.webp",
+          "assets/chapters/player/ch-263/12.webp",
+          "assets/chapters/player/ch-263/13.webp",
+          "assets/chapters/player/ch-263/14.webp",
+          "assets/chapters/player/ch-263/15.webp",
+          "assets/chapters/player/ch-263/16.webp",
+          "assets/chapters/player/ch-263/17.webp",
+          "assets/chapters/player/ch-263/18.webp",
+          "assets/chapters/player/ch-263/19.webp",
+          "assets/chapters/player/ch-263/20.webp",
+          "assets/chapters/player/ch-263/21.webp"
+        ]
+      },
+      {
+        "n": "262",
+        "d": "2026-08-31",
+        "pages": [
+          "assets/chapters/player/ch-262/1.webp",
+          "assets/chapters/player/ch-262/2.webp",
+          "assets/chapters/player/ch-262/3.webp",
+          "assets/chapters/player/ch-262/4.webp",
+          "assets/chapters/player/ch-262/5.webp",
+          "assets/chapters/player/ch-262/6.webp",
+          "assets/chapters/player/ch-262/7.webp",
+          "assets/chapters/player/ch-262/8.webp",
+          "assets/chapters/player/ch-262/9.webp",
+          "assets/chapters/player/ch-262/10.webp",
+          "assets/chapters/player/ch-262/11.webp",
+          "assets/chapters/player/ch-262/12.webp",
+          "assets/chapters/player/ch-262/13.webp",
+          "assets/chapters/player/ch-262/14.webp",
+          "assets/chapters/player/ch-262/15.webp",
+          "assets/chapters/player/ch-262/16.webp",
+          "assets/chapters/player/ch-262/17.webp",
+          "assets/chapters/player/ch-262/18.webp",
+          "assets/chapters/player/ch-262/19.webp",
+          "assets/chapters/player/ch-262/20.webp",
+          "assets/chapters/player/ch-262/21.webp",
+          "assets/chapters/player/ch-262/22.webp"
+        ]
+      },
+      {
+        "n": "261",
+        "d": "2026-08-31",
+        "pages": [
+          "assets/chapters/player/ch-261/1.webp",
+          "assets/chapters/player/ch-261/2.webp",
+          "assets/chapters/player/ch-261/3.webp",
+          "assets/chapters/player/ch-261/4.webp",
+          "assets/chapters/player/ch-261/5.webp",
+          "assets/chapters/player/ch-261/6.webp",
+          "assets/chapters/player/ch-261/7.webp",
+          "assets/chapters/player/ch-261/8.webp",
+          "assets/chapters/player/ch-261/9.webp",
+          "assets/chapters/player/ch-261/10.webp",
+          "assets/chapters/player/ch-261/11.webp",
+          "assets/chapters/player/ch-261/12.webp",
+          "assets/chapters/player/ch-261/13.webp",
+          "assets/chapters/player/ch-261/14.webp",
+          "assets/chapters/player/ch-261/15.webp",
+          "assets/chapters/player/ch-261/16.webp",
+          "assets/chapters/player/ch-261/17.webp"
+        ]
+      },
+      {
+        "n": "260",
+        "d": "2026-08-31",
+        "pages": [
+          "assets/chapters/player/ch-260/1.webp",
+          "assets/chapters/player/ch-260/2.webp",
+          "assets/chapters/player/ch-260/3.webp",
+          "assets/chapters/player/ch-260/4.webp",
+          "assets/chapters/player/ch-260/5.webp",
+          "assets/chapters/player/ch-260/6.webp",
+          "assets/chapters/player/ch-260/7.webp",
+          "assets/chapters/player/ch-260/8.webp",
+          "assets/chapters/player/ch-260/9.webp",
+          "assets/chapters/player/ch-260/10.webp",
+          "assets/chapters/player/ch-260/11.webp",
+          "assets/chapters/player/ch-260/12.webp",
+          "assets/chapters/player/ch-260/13.webp",
+          "assets/chapters/player/ch-260/14.webp",
+          "assets/chapters/player/ch-260/15.webp",
+          "assets/chapters/player/ch-260/16.webp",
+          "assets/chapters/player/ch-260/17.webp",
+          "assets/chapters/player/ch-260/18.webp"
+        ]
+      },
+      {
+        "n": "259",
+        "d": "2026-08-31",
+        "pages": [
+          "assets/chapters/player/ch-259/1.webp",
+          "assets/chapters/player/ch-259/2.webp",
+          "assets/chapters/player/ch-259/3.webp",
+          "assets/chapters/player/ch-259/4.webp",
+          "assets/chapters/player/ch-259/5.webp",
+          "assets/chapters/player/ch-259/6.webp",
+          "assets/chapters/player/ch-259/7.webp",
+          "assets/chapters/player/ch-259/8.webp",
+          "assets/chapters/player/ch-259/9.webp",
+          "assets/chapters/player/ch-259/10.webp",
+          "assets/chapters/player/ch-259/11.webp",
+          "assets/chapters/player/ch-259/12.webp",
+          "assets/chapters/player/ch-259/13.webp",
+          "assets/chapters/player/ch-259/14.webp",
+          "assets/chapters/player/ch-259/15.webp",
+          "assets/chapters/player/ch-259/16.webp",
+          "assets/chapters/player/ch-259/17.webp",
+          "assets/chapters/player/ch-259/18.webp",
+          "assets/chapters/player/ch-259/19.webp",
+          "assets/chapters/player/ch-259/20.webp"
+        ]
+      },
+      {
+        "n": "258",
+        "d": "2026-08-31",
+        "pages": [
+          "assets/chapters/player/ch-258/1.webp",
+          "assets/chapters/player/ch-258/2.webp",
+          "assets/chapters/player/ch-258/3.webp",
+          "assets/chapters/player/ch-258/4.webp",
+          "assets/chapters/player/ch-258/5.webp",
+          "assets/chapters/player/ch-258/6.webp",
+          "assets/chapters/player/ch-258/7.webp",
+          "assets/chapters/player/ch-258/8.webp",
+          "assets/chapters/player/ch-258/9.webp",
+          "assets/chapters/player/ch-258/10.webp",
+          "assets/chapters/player/ch-258/11.webp",
+          "assets/chapters/player/ch-258/12.webp",
+          "assets/chapters/player/ch-258/13.webp",
+          "assets/chapters/player/ch-258/14.webp",
+          "assets/chapters/player/ch-258/15.webp",
+          "assets/chapters/player/ch-258/16.webp",
+          "assets/chapters/player/ch-258/17.webp"
+        ]
+      },
+      {
+        "n": "257",
+        "d": "2026-08-31",
+        "pages": [
+          "assets/chapters/player/ch-257/1.webp",
+          "assets/chapters/player/ch-257/2.webp",
+          "assets/chapters/player/ch-257/3.webp",
+          "assets/chapters/player/ch-257/4.webp",
+          "assets/chapters/player/ch-257/5.webp",
+          "assets/chapters/player/ch-257/6.webp",
+          "assets/chapters/player/ch-257/7.webp",
+          "assets/chapters/player/ch-257/8.webp",
+          "assets/chapters/player/ch-257/9.webp",
+          "assets/chapters/player/ch-257/10.webp",
+          "assets/chapters/player/ch-257/11.webp",
+          "assets/chapters/player/ch-257/12.webp",
+          "assets/chapters/player/ch-257/13.webp",
+          "assets/chapters/player/ch-257/14.webp",
+          "assets/chapters/player/ch-257/15.webp",
+          "assets/chapters/player/ch-257/16.webp",
+          "assets/chapters/player/ch-257/17.webp",
+          "assets/chapters/player/ch-257/18.webp",
+          "assets/chapters/player/ch-257/19.webp",
+          "assets/chapters/player/ch-257/20.webp",
+          "assets/chapters/player/ch-257/21.webp",
+          "assets/chapters/player/ch-257/22.webp",
+          "assets/chapters/player/ch-257/23.webp",
+          "assets/chapters/player/ch-257/24.webp"
+        ]
+      },
+      {
+        "n": "256",
+        "d": "2026-08-31",
+        "pages": [
+          "assets/chapters/player/ch-256/1.webp",
+          "assets/chapters/player/ch-256/2.webp",
+          "assets/chapters/player/ch-256/3.webp",
+          "assets/chapters/player/ch-256/4.webp",
+          "assets/chapters/player/ch-256/5.webp",
+          "assets/chapters/player/ch-256/6.webp",
+          "assets/chapters/player/ch-256/7.webp",
+          "assets/chapters/player/ch-256/8.webp",
+          "assets/chapters/player/ch-256/9.webp",
+          "assets/chapters/player/ch-256/10.webp",
+          "assets/chapters/player/ch-256/11.webp",
+          "assets/chapters/player/ch-256/12.webp",
+          "assets/chapters/player/ch-256/13.webp",
+          "assets/chapters/player/ch-256/14.webp",
+          "assets/chapters/player/ch-256/15.webp",
+          "assets/chapters/player/ch-256/16.webp",
+          "assets/chapters/player/ch-256/17.webp",
+          "assets/chapters/player/ch-256/18.webp",
+          "assets/chapters/player/ch-256/19.webp",
+          "assets/chapters/player/ch-256/20.webp",
+          "assets/chapters/player/ch-256/21.webp",
+          "assets/chapters/player/ch-256/22.webp",
+          "assets/chapters/player/ch-256/23.webp",
+          "assets/chapters/player/ch-256/24.webp",
+          "assets/chapters/player/ch-256/25.webp",
+          "assets/chapters/player/ch-256/26.webp",
+          "assets/chapters/player/ch-256/27.webp",
+          "assets/chapters/player/ch-256/28.webp",
+          "assets/chapters/player/ch-256/29.webp",
+          "assets/chapters/player/ch-256/30.webp",
+          "assets/chapters/player/ch-256/31.webp",
+          "assets/chapters/player/ch-256/32.webp",
+          "assets/chapters/player/ch-256/33.webp"
+        ]
+      },
+      {
+        "n": "255",
+        "d": "2026-08-31",
+        "pages": [
+          "assets/chapters/player/ch-255/1.webp",
+          "assets/chapters/player/ch-255/2.webp",
+          "assets/chapters/player/ch-255/3.webp",
+          "assets/chapters/player/ch-255/4.webp",
+          "assets/chapters/player/ch-255/5.webp",
+          "assets/chapters/player/ch-255/6.webp",
+          "assets/chapters/player/ch-255/7.webp",
+          "assets/chapters/player/ch-255/8.webp",
+          "assets/chapters/player/ch-255/9.webp",
+          "assets/chapters/player/ch-255/10.webp",
+          "assets/chapters/player/ch-255/11.webp",
+          "assets/chapters/player/ch-255/12.webp",
+          "assets/chapters/player/ch-255/13.webp",
+          "assets/chapters/player/ch-255/14.webp",
+          "assets/chapters/player/ch-255/15.webp",
+          "assets/chapters/player/ch-255/16.webp",
+          "assets/chapters/player/ch-255/17.webp",
+          "assets/chapters/player/ch-255/18.webp",
+          "assets/chapters/player/ch-255/19.webp",
+          "assets/chapters/player/ch-255/20.webp",
+          "assets/chapters/player/ch-255/21.webp",
+          "assets/chapters/player/ch-255/22.webp",
+          "assets/chapters/player/ch-255/23.webp",
+          "assets/chapters/player/ch-255/24.webp",
+          "assets/chapters/player/ch-255/25.webp"
+        ]
+      },
+      {
         "n": "254",
         "d": "2026-05-18",
         "pages": [
@@ -21713,7 +22070,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -23781,7 +24138,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
