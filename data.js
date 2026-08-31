@@ -167,7 +167,7 @@ var DB = [
   {
     "id": "nm_rebirth-monarch-of-the-dead",
     "title": "Rebirth: Monarch of the Dead",
-    "cover": "",
+    "cover": "assets/covers/rebirth-monarch-of-the-dead.webp",
     "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
     "status": "Ongoing",
     "author": "Nile Bot",
@@ -1092,7 +1092,7 @@ var DB = [
   {
     "id": "nm_yuukoku-no-moriarty",
     "title": "Yuukoku No Moriarty",
-    "cover": "",
+    "cover": "assets/covers/yuukoku-no-moriarty.webp",
     "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
     "status": "Ongoing",
     "author": "Nile Bot",
@@ -1932,7 +1932,7 @@ var DB = [
   {
     "id": "nm_time-of-the-blind-beast",
     "title": "Time Of The Blind Beast",
-    "cover": "",
+    "cover": "assets/covers/time-of-the-blind-beast.webp",
     "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
     "status": "Ongoing",
     "author": "Nile Bot",
@@ -11845,7 +11845,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manga",
+    "type": "manhwa",
     "chapters": [
       {
         "n": "93",
@@ -23781,7 +23781,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manga",
+    "type": "manhwa",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
