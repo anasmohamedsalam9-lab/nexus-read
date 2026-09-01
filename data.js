@@ -1,5 +1,109 @@
 var DB = [
   {
+    "id": "nm_55",
+    "title": "55",
+    "cover": "",
+    "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [],
+    "type": "manhwa",
+    "chapters": [
+      {
+        "n": "4",
+        "d": "2026-09-01",
+        "pages": [
+          "assets/chapters/55/ch-4/1.webp",
+          "assets/chapters/55/ch-4/2.webp",
+          "assets/chapters/55/ch-4/3.webp",
+          "assets/chapters/55/ch-4/4.webp",
+          "assets/chapters/55/ch-4/5.webp",
+          "assets/chapters/55/ch-4/6.webp",
+          "assets/chapters/55/ch-4/7.webp",
+          "assets/chapters/55/ch-4/8.webp",
+          "assets/chapters/55/ch-4/9.webp"
+        ]
+      },
+      {
+        "n": "3",
+        "d": "2026-09-01",
+        "pages": [
+          "assets/chapters/55/ch-3/1.webp",
+          "assets/chapters/55/ch-3/2.webp",
+          "assets/chapters/55/ch-3/3.webp",
+          "assets/chapters/55/ch-3/4.webp",
+          "assets/chapters/55/ch-3/5.webp",
+          "assets/chapters/55/ch-3/6.webp",
+          "assets/chapters/55/ch-3/7.webp",
+          "assets/chapters/55/ch-3/8.webp",
+          "assets/chapters/55/ch-3/9.webp",
+          "assets/chapters/55/ch-3/10.webp",
+          "assets/chapters/55/ch-3/11.webp",
+          "assets/chapters/55/ch-3/12.webp",
+          "assets/chapters/55/ch-3/13.webp",
+          "assets/chapters/55/ch-3/14.webp",
+          "assets/chapters/55/ch-3/15.webp",
+          "assets/chapters/55/ch-3/16.webp",
+          "assets/chapters/55/ch-3/17.webp",
+          "assets/chapters/55/ch-3/18.webp",
+          "assets/chapters/55/ch-3/19.webp",
+          "assets/chapters/55/ch-3/20.webp",
+          "assets/chapters/55/ch-3/21.webp",
+          "assets/chapters/55/ch-3/22.webp"
+        ]
+      },
+      {
+        "n": "2",
+        "d": "2026-09-01",
+        "pages": [
+          "assets/chapters/55/ch-2/1.webp",
+          "assets/chapters/55/ch-2/2.webp",
+          "assets/chapters/55/ch-2/3.webp",
+          "assets/chapters/55/ch-2/4.webp",
+          "assets/chapters/55/ch-2/5.webp",
+          "assets/chapters/55/ch-2/6.webp",
+          "assets/chapters/55/ch-2/7.webp",
+          "assets/chapters/55/ch-2/8.webp",
+          "assets/chapters/55/ch-2/9.webp",
+          "assets/chapters/55/ch-2/10.webp",
+          "assets/chapters/55/ch-2/11.webp"
+        ]
+      },
+      {
+        "n": "1",
+        "d": "2026-09-01",
+        "pages": [
+          "assets/chapters/55/ch-1/1.webp",
+          "assets/chapters/55/ch-1/2.webp",
+          "assets/chapters/55/ch-1/3.webp",
+          "assets/chapters/55/ch-1/4.webp",
+          "assets/chapters/55/ch-1/5.webp",
+          "assets/chapters/55/ch-1/6.webp",
+          "assets/chapters/55/ch-1/7.webp",
+          "assets/chapters/55/ch-1/8.webp",
+          "assets/chapters/55/ch-1/9.webp",
+          "assets/chapters/55/ch-1/10.webp",
+          "assets/chapters/55/ch-1/11.webp",
+          "assets/chapters/55/ch-1/12.webp",
+          "assets/chapters/55/ch-1/13.webp",
+          "assets/chapters/55/ch-1/14.webp",
+          "assets/chapters/55/ch-1/15.webp",
+          "assets/chapters/55/ch-1/16.webp",
+          "assets/chapters/55/ch-1/17.webp",
+          "assets/chapters/55/ch-1/18.webp",
+          "assets/chapters/55/ch-1/19.webp",
+          "assets/chapters/55/ch-1/20.webp",
+          "assets/chapters/55/ch-1/21.webp",
+          "assets/chapters/55/ch-1/22.webp",
+          "assets/chapters/55/ch-1/23.webp",
+          "assets/chapters/55/ch-1/24.webp",
+          "assets/chapters/55/ch-1/25.webp",
+          "assets/chapters/55/ch-1/26.webp"
+        ]
+      }
+    ]
+  },
+  {
     "id": "nm_5",
     "title": "5",
     "cover": "",
@@ -13723,7 +13827,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -23887,7 +23991,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -25955,7 +26059,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
