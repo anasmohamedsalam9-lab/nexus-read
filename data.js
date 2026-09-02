@@ -1,5 +1,1437 @@
 var DB = [
   {
+    "id": "nm_22",
+    "title": "22",
+    "cover": "",
+    "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [],
+    "type": "manhwa",
+    "chapters": [
+      {
+        "n": "50",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-50/1.webp",
+          "assets/chapters/22/ch-50/2.webp",
+          "assets/chapters/22/ch-50/3.webp",
+          "assets/chapters/22/ch-50/4.webp",
+          "assets/chapters/22/ch-50/5.webp",
+          "assets/chapters/22/ch-50/6.webp",
+          "assets/chapters/22/ch-50/7.webp",
+          "assets/chapters/22/ch-50/8.webp",
+          "assets/chapters/22/ch-50/9.webp"
+        ]
+      },
+      {
+        "n": "49",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-49/1.webp",
+          "assets/chapters/22/ch-49/2.webp",
+          "assets/chapters/22/ch-49/3.webp",
+          "assets/chapters/22/ch-49/4.webp"
+        ]
+      },
+      {
+        "n": "48",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-48/1.webp",
+          "assets/chapters/22/ch-48/2.webp",
+          "assets/chapters/22/ch-48/3.webp",
+          "assets/chapters/22/ch-48/4.webp",
+          "assets/chapters/22/ch-48/5.webp",
+          "assets/chapters/22/ch-48/6.webp",
+          "assets/chapters/22/ch-48/7.webp",
+          "assets/chapters/22/ch-48/8.webp"
+        ]
+      },
+      {
+        "n": "47",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-47/1.webp",
+          "assets/chapters/22/ch-47/2.webp",
+          "assets/chapters/22/ch-47/3.webp",
+          "assets/chapters/22/ch-47/4.webp"
+        ]
+      },
+      {
+        "n": "46",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-46/1.webp",
+          "assets/chapters/22/ch-46/2.webp",
+          "assets/chapters/22/ch-46/3.webp",
+          "assets/chapters/22/ch-46/4.webp",
+          "assets/chapters/22/ch-46/5.webp",
+          "assets/chapters/22/ch-46/6.webp",
+          "assets/chapters/22/ch-46/7.webp",
+          "assets/chapters/22/ch-46/8.webp",
+          "assets/chapters/22/ch-46/9.webp"
+        ]
+      },
+      {
+        "n": "45",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-45/1.webp",
+          "assets/chapters/22/ch-45/2.webp",
+          "assets/chapters/22/ch-45/3.webp",
+          "assets/chapters/22/ch-45/4.webp",
+          "assets/chapters/22/ch-45/5.webp"
+        ]
+      },
+      {
+        "n": "44",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-44/1.webp",
+          "assets/chapters/22/ch-44/2.webp",
+          "assets/chapters/22/ch-44/3.webp",
+          "assets/chapters/22/ch-44/4.webp",
+          "assets/chapters/22/ch-44/5.webp",
+          "assets/chapters/22/ch-44/6.webp",
+          "assets/chapters/22/ch-44/7.webp",
+          "assets/chapters/22/ch-44/8.webp",
+          "assets/chapters/22/ch-44/9.webp"
+        ]
+      },
+      {
+        "n": "43",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-43/1.webp",
+          "assets/chapters/22/ch-43/2.webp",
+          "assets/chapters/22/ch-43/3.webp",
+          "assets/chapters/22/ch-43/4.webp"
+        ]
+      },
+      {
+        "n": "42",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-42/1.webp",
+          "assets/chapters/22/ch-42/2.webp",
+          "assets/chapters/22/ch-42/3.webp",
+          "assets/chapters/22/ch-42/4.webp",
+          "assets/chapters/22/ch-42/5.webp",
+          "assets/chapters/22/ch-42/6.webp",
+          "assets/chapters/22/ch-42/7.webp",
+          "assets/chapters/22/ch-42/8.webp",
+          "assets/chapters/22/ch-42/9.webp"
+        ]
+      },
+      {
+        "n": "41",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-41/1.webp",
+          "assets/chapters/22/ch-41/2.webp",
+          "assets/chapters/22/ch-41/3.webp",
+          "assets/chapters/22/ch-41/4.webp"
+        ]
+      },
+      {
+        "n": "40",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-40/1.webp",
+          "assets/chapters/22/ch-40/2.webp",
+          "assets/chapters/22/ch-40/3.webp",
+          "assets/chapters/22/ch-40/4.webp",
+          "assets/chapters/22/ch-40/5.webp",
+          "assets/chapters/22/ch-40/6.webp",
+          "assets/chapters/22/ch-40/7.webp",
+          "assets/chapters/22/ch-40/8.webp",
+          "assets/chapters/22/ch-40/9.webp",
+          "assets/chapters/22/ch-40/10.webp"
+        ]
+      },
+      {
+        "n": "39",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-39/1.webp",
+          "assets/chapters/22/ch-39/2.webp",
+          "assets/chapters/22/ch-39/3.webp",
+          "assets/chapters/22/ch-39/4.webp",
+          "assets/chapters/22/ch-39/5.webp"
+        ]
+      },
+      {
+        "n": "38",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-38/1.webp",
+          "assets/chapters/22/ch-38/2.webp",
+          "assets/chapters/22/ch-38/3.webp",
+          "assets/chapters/22/ch-38/4.webp",
+          "assets/chapters/22/ch-38/5.webp",
+          "assets/chapters/22/ch-38/6.webp",
+          "assets/chapters/22/ch-38/7.webp",
+          "assets/chapters/22/ch-38/8.webp",
+          "assets/chapters/22/ch-38/9.webp"
+        ]
+      },
+      {
+        "n": "37",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-37/1.webp",
+          "assets/chapters/22/ch-37/2.webp",
+          "assets/chapters/22/ch-37/3.webp",
+          "assets/chapters/22/ch-37/4.webp",
+          "assets/chapters/22/ch-37/5.webp",
+          "assets/chapters/22/ch-37/6.webp",
+          "assets/chapters/22/ch-37/7.webp",
+          "assets/chapters/22/ch-37/8.webp"
+        ]
+      },
+      {
+        "n": "36",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-36/1.webp",
+          "assets/chapters/22/ch-36/2.webp",
+          "assets/chapters/22/ch-36/3.webp",
+          "assets/chapters/22/ch-36/4.webp",
+          "assets/chapters/22/ch-36/5.webp",
+          "assets/chapters/22/ch-36/6.webp",
+          "assets/chapters/22/ch-36/7.webp",
+          "assets/chapters/22/ch-36/8.webp"
+        ]
+      },
+      {
+        "n": "35.5",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-35.5/1.webp",
+          "assets/chapters/22/ch-35.5/2.webp",
+          "assets/chapters/22/ch-35.5/3.webp",
+          "assets/chapters/22/ch-35.5/4.webp",
+          "assets/chapters/22/ch-35.5/5.webp",
+          "assets/chapters/22/ch-35.5/6.webp",
+          "assets/chapters/22/ch-35.5/7.webp",
+          "assets/chapters/22/ch-35.5/8.webp",
+          "assets/chapters/22/ch-35.5/9.webp",
+          "assets/chapters/22/ch-35.5/10.webp",
+          "assets/chapters/22/ch-35.5/11.webp",
+          "assets/chapters/22/ch-35.5/12.webp",
+          "assets/chapters/22/ch-35.5/13.webp",
+          "assets/chapters/22/ch-35.5/14.webp",
+          "assets/chapters/22/ch-35.5/15.webp",
+          "assets/chapters/22/ch-35.5/16.webp",
+          "assets/chapters/22/ch-35.5/17.webp",
+          "assets/chapters/22/ch-35.5/18.webp",
+          "assets/chapters/22/ch-35.5/19.webp",
+          "assets/chapters/22/ch-35.5/20.webp",
+          "assets/chapters/22/ch-35.5/21.webp",
+          "assets/chapters/22/ch-35.5/22.webp"
+        ]
+      },
+      {
+        "n": "35",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-35/1.webp",
+          "assets/chapters/22/ch-35/2.webp",
+          "assets/chapters/22/ch-35/3.webp",
+          "assets/chapters/22/ch-35/4.webp",
+          "assets/chapters/22/ch-35/5.webp",
+          "assets/chapters/22/ch-35/6.webp",
+          "assets/chapters/22/ch-35/7.webp",
+          "assets/chapters/22/ch-35/8.webp",
+          "assets/chapters/22/ch-35/9.webp"
+        ]
+      },
+      {
+        "n": "34",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-34/1.webp",
+          "assets/chapters/22/ch-34/2.webp",
+          "assets/chapters/22/ch-34/3.webp",
+          "assets/chapters/22/ch-34/4.webp"
+        ]
+      },
+      {
+        "n": "33",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-33/1.webp",
+          "assets/chapters/22/ch-33/2.webp",
+          "assets/chapters/22/ch-33/3.webp",
+          "assets/chapters/22/ch-33/4.webp",
+          "assets/chapters/22/ch-33/5.webp",
+          "assets/chapters/22/ch-33/6.webp",
+          "assets/chapters/22/ch-33/7.webp",
+          "assets/chapters/22/ch-33/8.webp",
+          "assets/chapters/22/ch-33/9.webp"
+        ]
+      },
+      {
+        "n": "32",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-32/1.webp",
+          "assets/chapters/22/ch-32/2.webp",
+          "assets/chapters/22/ch-32/3.webp",
+          "assets/chapters/22/ch-32/4.webp",
+          "assets/chapters/22/ch-32/5.webp"
+        ]
+      },
+      {
+        "n": "31",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-31/1.webp",
+          "assets/chapters/22/ch-31/2.webp",
+          "assets/chapters/22/ch-31/3.webp",
+          "assets/chapters/22/ch-31/4.webp",
+          "assets/chapters/22/ch-31/5.webp"
+        ]
+      },
+      {
+        "n": "30",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-30/1.webp",
+          "assets/chapters/22/ch-30/2.webp",
+          "assets/chapters/22/ch-30/3.webp",
+          "assets/chapters/22/ch-30/4.webp",
+          "assets/chapters/22/ch-30/5.webp",
+          "assets/chapters/22/ch-30/6.webp",
+          "assets/chapters/22/ch-30/7.webp",
+          "assets/chapters/22/ch-30/8.webp"
+        ]
+      },
+      {
+        "n": "29",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-29/1.webp",
+          "assets/chapters/22/ch-29/2.webp",
+          "assets/chapters/22/ch-29/3.webp",
+          "assets/chapters/22/ch-29/4.webp"
+        ]
+      },
+      {
+        "n": "28",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-28/1.webp",
+          "assets/chapters/22/ch-28/2.webp",
+          "assets/chapters/22/ch-28/3.webp",
+          "assets/chapters/22/ch-28/4.webp",
+          "assets/chapters/22/ch-28/5.webp",
+          "assets/chapters/22/ch-28/6.webp",
+          "assets/chapters/22/ch-28/7.webp",
+          "assets/chapters/22/ch-28/8.webp",
+          "assets/chapters/22/ch-28/9.webp"
+        ]
+      },
+      {
+        "n": "27",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-27/1.webp",
+          "assets/chapters/22/ch-27/2.webp",
+          "assets/chapters/22/ch-27/3.webp",
+          "assets/chapters/22/ch-27/4.webp",
+          "assets/chapters/22/ch-27/5.webp"
+        ]
+      },
+      {
+        "n": "26",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-26/1.webp",
+          "assets/chapters/22/ch-26/2.webp",
+          "assets/chapters/22/ch-26/3.webp",
+          "assets/chapters/22/ch-26/4.webp",
+          "assets/chapters/22/ch-26/5.webp",
+          "assets/chapters/22/ch-26/6.webp",
+          "assets/chapters/22/ch-26/7.webp",
+          "assets/chapters/22/ch-26/8.webp",
+          "assets/chapters/22/ch-26/9.webp"
+        ]
+      },
+      {
+        "n": "25",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-25/1.webp",
+          "assets/chapters/22/ch-25/2.webp",
+          "assets/chapters/22/ch-25/3.webp",
+          "assets/chapters/22/ch-25/4.webp",
+          "assets/chapters/22/ch-25/5.webp"
+        ]
+      },
+      {
+        "n": "24",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-24/1.webp",
+          "assets/chapters/22/ch-24/2.webp",
+          "assets/chapters/22/ch-24/3.webp",
+          "assets/chapters/22/ch-24/4.webp",
+          "assets/chapters/22/ch-24/5.webp",
+          "assets/chapters/22/ch-24/6.webp",
+          "assets/chapters/22/ch-24/7.webp",
+          "assets/chapters/22/ch-24/8.webp"
+        ]
+      },
+      {
+        "n": "23",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-23/1.webp",
+          "assets/chapters/22/ch-23/2.webp",
+          "assets/chapters/22/ch-23/3.webp",
+          "assets/chapters/22/ch-23/4.webp",
+          "assets/chapters/22/ch-23/5.webp"
+        ]
+      },
+      {
+        "n": "22",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-22/1.webp",
+          "assets/chapters/22/ch-22/2.webp",
+          "assets/chapters/22/ch-22/3.webp",
+          "assets/chapters/22/ch-22/4.webp",
+          "assets/chapters/22/ch-22/5.webp",
+          "assets/chapters/22/ch-22/6.webp",
+          "assets/chapters/22/ch-22/7.webp",
+          "assets/chapters/22/ch-22/8.webp",
+          "assets/chapters/22/ch-22/9.webp"
+        ]
+      },
+      {
+        "n": "21",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-21/1.webp",
+          "assets/chapters/22/ch-21/2.webp",
+          "assets/chapters/22/ch-21/3.webp",
+          "assets/chapters/22/ch-21/4.webp"
+        ]
+      },
+      {
+        "n": "20",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-20/1.webp",
+          "assets/chapters/22/ch-20/2.webp",
+          "assets/chapters/22/ch-20/3.webp",
+          "assets/chapters/22/ch-20/4.webp",
+          "assets/chapters/22/ch-20/5.webp",
+          "assets/chapters/22/ch-20/6.webp",
+          "assets/chapters/22/ch-20/7.webp",
+          "assets/chapters/22/ch-20/8.webp",
+          "assets/chapters/22/ch-20/9.webp"
+        ]
+      },
+      {
+        "n": "19",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-19/1.webp",
+          "assets/chapters/22/ch-19/2.webp",
+          "assets/chapters/22/ch-19/3.webp",
+          "assets/chapters/22/ch-19/4.webp",
+          "assets/chapters/22/ch-19/5.webp"
+        ]
+      },
+      {
+        "n": "18",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-18/1.webp",
+          "assets/chapters/22/ch-18/2.webp",
+          "assets/chapters/22/ch-18/3.webp",
+          "assets/chapters/22/ch-18/4.webp",
+          "assets/chapters/22/ch-18/5.webp",
+          "assets/chapters/22/ch-18/6.webp",
+          "assets/chapters/22/ch-18/7.webp",
+          "assets/chapters/22/ch-18/8.webp",
+          "assets/chapters/22/ch-18/9.webp"
+        ]
+      },
+      {
+        "n": "17",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-17/1.webp",
+          "assets/chapters/22/ch-17/2.webp",
+          "assets/chapters/22/ch-17/3.webp",
+          "assets/chapters/22/ch-17/4.webp"
+        ]
+      },
+      {
+        "n": "16",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-16/1.webp",
+          "assets/chapters/22/ch-16/2.webp",
+          "assets/chapters/22/ch-16/3.webp",
+          "assets/chapters/22/ch-16/4.webp",
+          "assets/chapters/22/ch-16/5.webp",
+          "assets/chapters/22/ch-16/6.webp",
+          "assets/chapters/22/ch-16/7.webp",
+          "assets/chapters/22/ch-16/8.webp",
+          "assets/chapters/22/ch-16/9.webp",
+          "assets/chapters/22/ch-16/10.webp",
+          "assets/chapters/22/ch-16/11.webp",
+          "assets/chapters/22/ch-16/12.webp",
+          "assets/chapters/22/ch-16/13.webp",
+          "assets/chapters/22/ch-16/14.webp",
+          "assets/chapters/22/ch-16/15.webp"
+        ]
+      },
+      {
+        "n": "15.5",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-15.5/1.webp",
+          "assets/chapters/22/ch-15.5/2.webp",
+          "assets/chapters/22/ch-15.5/3.webp",
+          "assets/chapters/22/ch-15.5/4.webp",
+          "assets/chapters/22/ch-15.5/5.webp",
+          "assets/chapters/22/ch-15.5/6.webp",
+          "assets/chapters/22/ch-15.5/7.webp",
+          "assets/chapters/22/ch-15.5/8.webp",
+          "assets/chapters/22/ch-15.5/9.webp"
+        ]
+      },
+      {
+        "n": "15",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-15/1.webp",
+          "assets/chapters/22/ch-15/2.webp",
+          "assets/chapters/22/ch-15/3.webp",
+          "assets/chapters/22/ch-15/4.webp"
+        ]
+      },
+      {
+        "n": "14",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-14/1.webp",
+          "assets/chapters/22/ch-14/2.webp",
+          "assets/chapters/22/ch-14/3.webp",
+          "assets/chapters/22/ch-14/4.webp",
+          "assets/chapters/22/ch-14/5.webp",
+          "assets/chapters/22/ch-14/6.webp",
+          "assets/chapters/22/ch-14/7.webp",
+          "assets/chapters/22/ch-14/8.webp",
+          "assets/chapters/22/ch-14/9.webp",
+          "assets/chapters/22/ch-14/10.webp"
+        ]
+      },
+      {
+        "n": "13",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-13/1.webp",
+          "assets/chapters/22/ch-13/2.webp",
+          "assets/chapters/22/ch-13/3.webp",
+          "assets/chapters/22/ch-13/4.webp"
+        ]
+      },
+      {
+        "n": "12",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-12/1.webp",
+          "assets/chapters/22/ch-12/2.webp",
+          "assets/chapters/22/ch-12/3.webp",
+          "assets/chapters/22/ch-12/4.webp",
+          "assets/chapters/22/ch-12/5.webp",
+          "assets/chapters/22/ch-12/6.webp",
+          "assets/chapters/22/ch-12/7.webp",
+          "assets/chapters/22/ch-12/8.webp",
+          "assets/chapters/22/ch-12/9.webp"
+        ]
+      },
+      {
+        "n": "11",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-11/1.webp",
+          "assets/chapters/22/ch-11/2.webp",
+          "assets/chapters/22/ch-11/3.webp",
+          "assets/chapters/22/ch-11/4.webp",
+          "assets/chapters/22/ch-11/5.webp",
+          "assets/chapters/22/ch-11/6.webp",
+          "assets/chapters/22/ch-11/7.webp",
+          "assets/chapters/22/ch-11/8.webp",
+          "assets/chapters/22/ch-11/9.webp",
+          "assets/chapters/22/ch-11/10.webp",
+          "assets/chapters/22/ch-11/11.webp",
+          "assets/chapters/22/ch-11/12.webp",
+          "assets/chapters/22/ch-11/13.webp",
+          "assets/chapters/22/ch-11/14.webp",
+          "assets/chapters/22/ch-11/15.webp",
+          "assets/chapters/22/ch-11/16.webp",
+          "assets/chapters/22/ch-11/17.webp",
+          "assets/chapters/22/ch-11/18.webp",
+          "assets/chapters/22/ch-11/19.webp",
+          "assets/chapters/22/ch-11/20.webp",
+          "assets/chapters/22/ch-11/21.webp"
+        ]
+      },
+      {
+        "n": "10",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-10/1.webp",
+          "assets/chapters/22/ch-10/2.webp",
+          "assets/chapters/22/ch-10/3.webp",
+          "assets/chapters/22/ch-10/4.webp",
+          "assets/chapters/22/ch-10/5.webp",
+          "assets/chapters/22/ch-10/6.webp",
+          "assets/chapters/22/ch-10/7.webp",
+          "assets/chapters/22/ch-10/8.webp",
+          "assets/chapters/22/ch-10/9.webp",
+          "assets/chapters/22/ch-10/10.webp",
+          "assets/chapters/22/ch-10/11.webp",
+          "assets/chapters/22/ch-10/12.webp",
+          "assets/chapters/22/ch-10/13.webp",
+          "assets/chapters/22/ch-10/14.webp",
+          "assets/chapters/22/ch-10/15.webp",
+          "assets/chapters/22/ch-10/16.webp",
+          "assets/chapters/22/ch-10/17.webp",
+          "assets/chapters/22/ch-10/18.webp",
+          "assets/chapters/22/ch-10/19.webp",
+          "assets/chapters/22/ch-10/20.webp",
+          "assets/chapters/22/ch-10/21.webp",
+          "assets/chapters/22/ch-10/22.webp",
+          "assets/chapters/22/ch-10/23.webp",
+          "assets/chapters/22/ch-10/24.webp",
+          "assets/chapters/22/ch-10/25.webp",
+          "assets/chapters/22/ch-10/26.webp"
+        ]
+      },
+      {
+        "n": "9",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-9/1.webp",
+          "assets/chapters/22/ch-9/2.webp",
+          "assets/chapters/22/ch-9/3.webp",
+          "assets/chapters/22/ch-9/4.webp",
+          "assets/chapters/22/ch-9/5.webp",
+          "assets/chapters/22/ch-9/6.webp",
+          "assets/chapters/22/ch-9/7.webp",
+          "assets/chapters/22/ch-9/8.webp",
+          "assets/chapters/22/ch-9/9.webp",
+          "assets/chapters/22/ch-9/10.webp",
+          "assets/chapters/22/ch-9/11.webp",
+          "assets/chapters/22/ch-9/12.webp",
+          "assets/chapters/22/ch-9/13.webp",
+          "assets/chapters/22/ch-9/14.webp",
+          "assets/chapters/22/ch-9/15.webp",
+          "assets/chapters/22/ch-9/16.webp",
+          "assets/chapters/22/ch-9/17.webp",
+          "assets/chapters/22/ch-9/18.webp",
+          "assets/chapters/22/ch-9/19.webp",
+          "assets/chapters/22/ch-9/20.webp",
+          "assets/chapters/22/ch-9/21.webp",
+          "assets/chapters/22/ch-9/22.webp",
+          "assets/chapters/22/ch-9/23.webp",
+          "assets/chapters/22/ch-9/24.webp",
+          "assets/chapters/22/ch-9/25.webp",
+          "assets/chapters/22/ch-9/26.webp"
+        ]
+      },
+      {
+        "n": "8",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-8/1.webp",
+          "assets/chapters/22/ch-8/2.webp",
+          "assets/chapters/22/ch-8/3.webp",
+          "assets/chapters/22/ch-8/4.webp",
+          "assets/chapters/22/ch-8/5.webp",
+          "assets/chapters/22/ch-8/6.webp",
+          "assets/chapters/22/ch-8/7.webp",
+          "assets/chapters/22/ch-8/8.webp",
+          "assets/chapters/22/ch-8/9.webp",
+          "assets/chapters/22/ch-8/10.webp",
+          "assets/chapters/22/ch-8/11.webp",
+          "assets/chapters/22/ch-8/12.webp",
+          "assets/chapters/22/ch-8/13.webp",
+          "assets/chapters/22/ch-8/14.webp",
+          "assets/chapters/22/ch-8/15.webp",
+          "assets/chapters/22/ch-8/16.webp",
+          "assets/chapters/22/ch-8/17.webp",
+          "assets/chapters/22/ch-8/18.webp",
+          "assets/chapters/22/ch-8/19.webp",
+          "assets/chapters/22/ch-8/20.webp",
+          "assets/chapters/22/ch-8/21.webp",
+          "assets/chapters/22/ch-8/22.webp",
+          "assets/chapters/22/ch-8/23.webp",
+          "assets/chapters/22/ch-8/24.webp"
+        ]
+      },
+      {
+        "n": "7",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-7/1.webp",
+          "assets/chapters/22/ch-7/2.webp",
+          "assets/chapters/22/ch-7/3.webp",
+          "assets/chapters/22/ch-7/4.webp",
+          "assets/chapters/22/ch-7/5.webp",
+          "assets/chapters/22/ch-7/6.webp",
+          "assets/chapters/22/ch-7/7.webp",
+          "assets/chapters/22/ch-7/8.webp",
+          "assets/chapters/22/ch-7/9.webp",
+          "assets/chapters/22/ch-7/10.webp",
+          "assets/chapters/22/ch-7/11.webp",
+          "assets/chapters/22/ch-7/12.webp",
+          "assets/chapters/22/ch-7/13.webp",
+          "assets/chapters/22/ch-7/14.webp",
+          "assets/chapters/22/ch-7/15.webp",
+          "assets/chapters/22/ch-7/16.webp",
+          "assets/chapters/22/ch-7/17.webp",
+          "assets/chapters/22/ch-7/18.webp",
+          "assets/chapters/22/ch-7/19.webp",
+          "assets/chapters/22/ch-7/20.webp",
+          "assets/chapters/22/ch-7/21.webp",
+          "assets/chapters/22/ch-7/22.webp",
+          "assets/chapters/22/ch-7/23.webp",
+          "assets/chapters/22/ch-7/24.webp",
+          "assets/chapters/22/ch-7/25.webp",
+          "assets/chapters/22/ch-7/26.webp"
+        ]
+      },
+      {
+        "n": "6",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-6/1.webp",
+          "assets/chapters/22/ch-6/2.webp",
+          "assets/chapters/22/ch-6/3.webp",
+          "assets/chapters/22/ch-6/4.webp",
+          "assets/chapters/22/ch-6/5.webp",
+          "assets/chapters/22/ch-6/6.webp",
+          "assets/chapters/22/ch-6/7.webp",
+          "assets/chapters/22/ch-6/8.webp",
+          "assets/chapters/22/ch-6/9.webp",
+          "assets/chapters/22/ch-6/10.webp",
+          "assets/chapters/22/ch-6/11.webp",
+          "assets/chapters/22/ch-6/12.webp",
+          "assets/chapters/22/ch-6/13.webp",
+          "assets/chapters/22/ch-6/14.webp",
+          "assets/chapters/22/ch-6/15.webp",
+          "assets/chapters/22/ch-6/16.webp",
+          "assets/chapters/22/ch-6/17.webp",
+          "assets/chapters/22/ch-6/18.webp",
+          "assets/chapters/22/ch-6/19.webp",
+          "assets/chapters/22/ch-6/20.webp",
+          "assets/chapters/22/ch-6/21.webp",
+          "assets/chapters/22/ch-6/22.webp",
+          "assets/chapters/22/ch-6/23.webp",
+          "assets/chapters/22/ch-6/24.webp",
+          "assets/chapters/22/ch-6/25.webp"
+        ]
+      },
+      {
+        "n": "5",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-5/1.webp",
+          "assets/chapters/22/ch-5/2.webp",
+          "assets/chapters/22/ch-5/3.webp",
+          "assets/chapters/22/ch-5/4.webp",
+          "assets/chapters/22/ch-5/5.webp",
+          "assets/chapters/22/ch-5/6.webp",
+          "assets/chapters/22/ch-5/7.webp",
+          "assets/chapters/22/ch-5/8.webp",
+          "assets/chapters/22/ch-5/9.webp",
+          "assets/chapters/22/ch-5/10.webp",
+          "assets/chapters/22/ch-5/11.webp",
+          "assets/chapters/22/ch-5/12.webp",
+          "assets/chapters/22/ch-5/13.webp",
+          "assets/chapters/22/ch-5/14.webp",
+          "assets/chapters/22/ch-5/15.webp",
+          "assets/chapters/22/ch-5/16.webp",
+          "assets/chapters/22/ch-5/17.webp",
+          "assets/chapters/22/ch-5/18.webp",
+          "assets/chapters/22/ch-5/19.webp",
+          "assets/chapters/22/ch-5/20.webp",
+          "assets/chapters/22/ch-5/21.webp",
+          "assets/chapters/22/ch-5/22.webp",
+          "assets/chapters/22/ch-5/23.webp",
+          "assets/chapters/22/ch-5/24.webp"
+        ]
+      },
+      {
+        "n": "4",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-4/1.webp",
+          "assets/chapters/22/ch-4/2.webp",
+          "assets/chapters/22/ch-4/3.webp",
+          "assets/chapters/22/ch-4/4.webp",
+          "assets/chapters/22/ch-4/5.webp",
+          "assets/chapters/22/ch-4/6.webp",
+          "assets/chapters/22/ch-4/7.webp",
+          "assets/chapters/22/ch-4/8.webp",
+          "assets/chapters/22/ch-4/9.webp",
+          "assets/chapters/22/ch-4/10.webp",
+          "assets/chapters/22/ch-4/11.webp",
+          "assets/chapters/22/ch-4/12.webp",
+          "assets/chapters/22/ch-4/13.webp",
+          "assets/chapters/22/ch-4/14.webp",
+          "assets/chapters/22/ch-4/15.webp",
+          "assets/chapters/22/ch-4/16.webp",
+          "assets/chapters/22/ch-4/17.webp",
+          "assets/chapters/22/ch-4/18.webp",
+          "assets/chapters/22/ch-4/19.webp",
+          "assets/chapters/22/ch-4/20.webp",
+          "assets/chapters/22/ch-4/21.webp",
+          "assets/chapters/22/ch-4/22.webp",
+          "assets/chapters/22/ch-4/23.webp",
+          "assets/chapters/22/ch-4/24.webp",
+          "assets/chapters/22/ch-4/25.webp",
+          "assets/chapters/22/ch-4/26.webp"
+        ]
+      },
+      {
+        "n": "3",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-3/1.webp",
+          "assets/chapters/22/ch-3/2.webp",
+          "assets/chapters/22/ch-3/3.webp",
+          "assets/chapters/22/ch-3/4.webp",
+          "assets/chapters/22/ch-3/5.webp",
+          "assets/chapters/22/ch-3/6.webp",
+          "assets/chapters/22/ch-3/7.webp",
+          "assets/chapters/22/ch-3/8.webp",
+          "assets/chapters/22/ch-3/9.webp",
+          "assets/chapters/22/ch-3/10.webp",
+          "assets/chapters/22/ch-3/11.webp",
+          "assets/chapters/22/ch-3/12.webp",
+          "assets/chapters/22/ch-3/13.webp",
+          "assets/chapters/22/ch-3/14.webp",
+          "assets/chapters/22/ch-3/15.webp",
+          "assets/chapters/22/ch-3/16.webp",
+          "assets/chapters/22/ch-3/17.webp",
+          "assets/chapters/22/ch-3/18.webp",
+          "assets/chapters/22/ch-3/19.webp",
+          "assets/chapters/22/ch-3/20.webp",
+          "assets/chapters/22/ch-3/21.webp",
+          "assets/chapters/22/ch-3/22.webp",
+          "assets/chapters/22/ch-3/23.webp",
+          "assets/chapters/22/ch-3/24.webp",
+          "assets/chapters/22/ch-3/25.webp",
+          "assets/chapters/22/ch-3/26.webp"
+        ]
+      },
+      {
+        "n": "2",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-2/1.webp",
+          "assets/chapters/22/ch-2/2.webp",
+          "assets/chapters/22/ch-2/3.webp",
+          "assets/chapters/22/ch-2/4.webp",
+          "assets/chapters/22/ch-2/5.webp",
+          "assets/chapters/22/ch-2/6.webp",
+          "assets/chapters/22/ch-2/7.webp",
+          "assets/chapters/22/ch-2/8.webp",
+          "assets/chapters/22/ch-2/9.webp",
+          "assets/chapters/22/ch-2/10.webp",
+          "assets/chapters/22/ch-2/11.webp",
+          "assets/chapters/22/ch-2/12.webp",
+          "assets/chapters/22/ch-2/13.webp",
+          "assets/chapters/22/ch-2/14.webp",
+          "assets/chapters/22/ch-2/15.webp",
+          "assets/chapters/22/ch-2/16.webp",
+          "assets/chapters/22/ch-2/17.webp",
+          "assets/chapters/22/ch-2/18.webp",
+          "assets/chapters/22/ch-2/19.webp",
+          "assets/chapters/22/ch-2/20.webp",
+          "assets/chapters/22/ch-2/21.webp",
+          "assets/chapters/22/ch-2/22.webp",
+          "assets/chapters/22/ch-2/23.webp",
+          "assets/chapters/22/ch-2/24.webp",
+          "assets/chapters/22/ch-2/25.webp"
+        ]
+      },
+      {
+        "n": "1",
+        "d": "2026-09-02",
+        "pages": [
+          "assets/chapters/22/ch-1/1.webp",
+          "assets/chapters/22/ch-1/2.webp",
+          "assets/chapters/22/ch-1/3.webp",
+          "assets/chapters/22/ch-1/4.webp",
+          "assets/chapters/22/ch-1/5.webp",
+          "assets/chapters/22/ch-1/6.webp",
+          "assets/chapters/22/ch-1/7.webp",
+          "assets/chapters/22/ch-1/8.webp",
+          "assets/chapters/22/ch-1/9.webp",
+          "assets/chapters/22/ch-1/10.webp",
+          "assets/chapters/22/ch-1/11.webp",
+          "assets/chapters/22/ch-1/12.webp",
+          "assets/chapters/22/ch-1/13.webp",
+          "assets/chapters/22/ch-1/14.webp",
+          "assets/chapters/22/ch-1/15.webp",
+          "assets/chapters/22/ch-1/16.webp",
+          "assets/chapters/22/ch-1/17.webp",
+          "assets/chapters/22/ch-1/18.webp",
+          "assets/chapters/22/ch-1/19.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "nm_welcome-to-the-apocalyptic-world",
+    "title": "Welcome To The Apocalyptic World",
+    "cover": "",
+    "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [],
+    "type": "manhwa",
+    "chapters": []
+  },
+  {
+    "id": "nm_rise-of-the-limitless-necromancer",
+    "title": "Rise of the Limitless Necromancer",
+    "cover": "",
+    "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [
+      "أكشن",
+      "إثارة",
+      "إيسيكاي",
+      "نظام",
+      "وحوش",
+      "مغامرات",
+      "خارق للطبيعة",
+      "سحر",
+      "شياطين",
+      "إعادة إحياء",
+      "زنزانات"
+    ],
+    "type": "manhwa",
+    "chapters": [
+      {
+        "n": "40",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/images/TeamX.png",
+          "https://1.bp.blogspot.com/-_A83iDM6JYc/VhtxROLILrI/AAAAAAAADK4/aM4ikIA6aqI/s1600/btn_close.gif",
+          "https://olympustaff.com/images/manga/c4e7528848f856c918106bdad56f475f.jpg",
+          "https://olympustaff.com/images/chapter/7007e9989330d0b175ff87f81130e578.jpg",
+          "https://olympustaff.com/images/chapter/d4d5e07f40d570592e18a0a604fdb9d1.jpg",
+          "https://olympustaff.com/images/chapter/700e6df15e4377997067e382ac78d888.jpg",
+          "https://olympustaff.com/images/chapter/d26ff8141bd4115e78fd881d4e0bdd29.jpg",
+          "https://olympustaff.com/images/chapter/89de310901b88252ee564e4089670b15.jpg",
+          "https://olympustaff.com/images/chapter/ee513fa3e8f40ee189fd325b91960e02.jpg",
+          "https://olympustaff.com/images/chapter/1ffabd1d2d2bede69d7c8c8cba747d99.jpg",
+          "https://olympustaff.com/images/chapter/8077e42d7ac20aaa065aecf10c3a7059.jpg",
+          "https://olympustaff.com/images/chapter/b0277e77239061095c3cfb75dab65e29.jpg",
+          "https://olympustaff.com/images/chapter/14734bb1aaf2f3d98ad41040bb311316.jpg",
+          "https://olympustaff.com/images/chapter/9bedc5021a496faa8ec7bb6a7e6f982d.jpg",
+          "https://olympustaff.com/images/chapter/2478e936e61352f2124fe5af005d6d70.jpg",
+          "https://olympustaff.com/images/chapter/9166f516f5af0962b60aa735cc59017f.jpg",
+          "https://olympustaff.com/images/chapter/1e2b2bb973dd06007fd9b26fcc7c454b.jpg",
+          "https://olympustaff.com/images/chapter/91dba98c4b7e8ff1e62b27723fc58a3f.jpg",
+          "https://olympustaff.com/images/chapter/8fc3e4fc6d41fde34de715dc9ca2b1e2.jpg",
+          "https://olympustaff.com/images/chapter/04453d4691e93b3283b127b81ddf3531.jpg",
+          "https://olympustaff.com/images/chapter/aafdcb967adf92d05fd04e9429fbb875.jpg",
+          "https://olympustaff.com/images/chapter/9ad1d127370a2e14378d5b5ab0850127.jpg",
+          "https://olympustaff.com/images/chapter/0f2040a1258f81cec8d5defd6fd382a2.jpg",
+          "https://olympustaff.com/images/chapter/161ad99a44f6e7d8ee6b55dd0a1da989.jpg",
+          "https://olympustaff.com/images/chapter/dd3e0eb6d4368656ab2ffa6dd18c0902.jpg",
+          "https://olympustaff.com/images/chapter/4d4bd31aea02034009b8959d4901cf40.jpg",
+          "https://olympustaff.com/images/chapter/fba9d07aac546b36ce5f2ebc5b0e21b8.jpg",
+          "https://olympustaff.com/images/chapter/eb0a98471c4a403f00ccd1540ef11e13.jpg",
+          "https://olympustaff.com/images/chapter/0dd3c7ce28cd055ed078e5453cc2071f.jpg",
+          "https://olympustaff.com/images/chapter/b8c5e7da8189458ba9b80e616c1fc620.jpg",
+          "https://olympustaff.com/images/chapter/3e597023a6185213b95cf03aa0483177.jpg",
+          "https://olympustaff.com/images/chapter/3fac428d3cf9b66c9c3019b4f8400cf7.jpg",
+          "https://olympustaff.com/images/chapter/4168e194e5360f27046c6a3cf51fad76.png",
+          "https://olympustaff.com/images/chapter/4bc8b913895e5de2f2ce2e95b9687c9c.png",
+          "https://olympustaff.com/images/chapter/80d5d20bbaddc265968066fc32d4d07d.jpg",
+          "https://olympustaff.com/images/chapter/c2b377e8beb05745a21f447598b78540.jpg",
+          "https://olympustaff.com/images/chapter/12a074d8df71e35771363ee5eebb08eb.jpg",
+          "https://olympustaff.com/images/chapter/381439a4926c7e3a63fe04b6d3a2cb6d.jpg",
+          "https://olympustaff.com/images/chapter/b23e5bf1929bc705ebb5ef6ec4a1d3a2.jpg",
+          "https://olympustaff.com/images/chapter/9cf6c4e6cbf882d39fef20e63bde14f2.jpg",
+          "https://olympustaff.com/images/chapter/73011e06c4072d08af27710ff325d64a.jpg",
+          "https://olympustaff.com/images/chapter/dfb53b79ea35ef9bcefa9799fb0eea28.jpg",
+          "https://olympustaff.com/images/chapter/33bd927f154908d8b52ddfdb93c3272b.png"
+        ]
+      },
+      {
+        "n": "31",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/31/8703cc309b0c157793861672e3b7ad34.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/31/bd523257492511b9901db4c40d27cb72.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/31/7af375cea6b314d0f355b87e2ae1351d.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/31/fc70bd03b5e5ac4874280cfe579c9f0e.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/31/efab9d3b4a1dfa04ffaa36ad33b39f48.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/31/c70be360122bc3766e7e5e5bc07a2a95.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "30",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/30/b15c997e4f95758a5fbb9d50d1174d6e.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/30/9211dad49cd508e15e8d6a80a5f6e9dd.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/30/dee2a2cd21b438185d0f74982beda72d.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/30/d8793a364fb379840bfdfac9a2cbabd5.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/30/8120cbefd7e4c287a8c07f0ef89be64a.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "29",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/29/35d76f185790f01f63573e351c11900b.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/29/44601bc7eda08bf095e42183a5e0f77f.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/29/afa5089268dfdf6066fa8d3847229f5e.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/29/70502c14520ee41da67b3bb554d951e7.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/29/e386ff56c6eab3cca2927b25c8bee5dc.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/29/d120a12fa4f16791df89b9b94b78da38.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "28",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/28/220da28ef6f43cb3c924b61ad9be2b0e.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/28/1de17996ba2f2757b6f86b30d033ea33.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/28/bcdce1ed9b14ecbcae3edf01bd7bcb50.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/28/72d209efa0ca84fd4021a27be1679d6e.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/28/32f9157daff18ef0c0c815fe732cd6ed.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/28/eaff9d9902c43a4283431e024551fa27.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "27",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/27/1c2d91a466f3c6dee478b8383d1558b5.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/27/eb0d6c2491930f337182e98df53759e6.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/27/e1ed3529806ce47b02b5dc17a2c9a215.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/27/16e36a3de981b53441e6c6e5b554cebb.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/27/3fc5bb2c9d1cb7cfefd1011378ee681f.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/27/f8213bd01d0b5b78ae38079cbe12a555.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "26",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/26/22916908d588910f7c053a9b79800432.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/26/fb834a57fa33e8e5c9fbe7890fbb3bfc.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/26/36332117e0d7d734e34aa95d2b4fc4c9.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/26/78561e65ff5c60729a7ef4f61b917c1e.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/26/3cfa37968a5e21f24112e7a0f98eba51.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "25",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/25/ca5da0e2b3ac2e1fecda5ffd682cd510.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/25/9c295f357330bcbe720236905ba04a43.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/25/ab5ee477ca7ca70ee8d3dd4f2c518caf.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/25/a0c34b3b827201771f953a00b1e66100.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/25/25ad8165e32319fc5276cf0c32d234bb.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/25/29ead96ff34a1c961270163ea2eea7d2.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/25/35d9998abecc6ecba3140b2480670aca.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "24",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/24/be023779d9ee01150143bc5afada6015.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/24/47cccdd914500243c50fd74e442ac338.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/24/1d869be54b84614102e9c7f4445f7496.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/24/2c33ab4eaab62299e93938d06bda1daf.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/24/37a78af96f30b868d361559f69902150.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/24/d0192350fcc422d58a77ff83f65d2828.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "23",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/23/e09ae2ffa0bc29612205e2cbd7ea5ee5.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/23/ec5ba5386bc3ca4260479d683f3c976c.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/23/d3ba1b0dd00a6a2982535cf4c79dbdfd.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/23/0f2d67bc1e6c03222e728c51e00019f7.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/23/d093b4f8c73da4cf07dcc9dcaa9a48ff.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "22",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/22/70e68193e6c973abed2c79bcba5f50fb.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/22/4c554bf327a0e0c3e8b673282f2f9031.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/22/25ec709efc92632e1279681f2dfbcbf7.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/22/0aa98e46fd2ec563c1017e502bcd14dc.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/22/b02d61273fe66e09612c946225220db2.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "21",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/21/83a06b867d221199cdf54d39f19394d7.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/21/18aca71be5f784b49263ba3e9c638dd5.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/21/15c43f2364396cedbc426739090d221a.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/21/50a1dc4190be3f7fd435a0e88b0b4675.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/21/15ab92762e1698e4de0ad2102ad1e84c.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/21/eb865e2a9cdeb0f10f86254429047d78.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "20",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/20/e99f81bb7037d2dbbffbfedd3b02e201.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/20/c9369f5b133e6d78c99c1c1ec37cee22.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/20/c76cca78faade1b3aa00dccdf388b0e0.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/20/e7077cccdd6278d16a36d00904547754.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/20/b843a3b691037cb8c2a90409393752a4.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "19",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/19/a2eac012244dbee75536644154e01eed.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/19/e501d84e20faee808e0305aa7f6e53e2.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/19/4980aa4d1c600964c560061af100efae.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/19/beed56515b8b644bd1a4ced203d5b893.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/19/7cfbcdbd923d8c0ce897fd81687ec008.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/19/8a8b0354b8b8a1f53d56dd5151e16f52.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "18",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/18/3c8cad273c1fb7fbceb2ec6bcc53dce8.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/18/f4cf2d595d8bcab9a52ba8499cb710c7.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/18/dcdc1f38d8433c4c83d32ba62fcaee88.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/18/38bd787be0200905e060c3fa795e31be.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/18/542bf228ac57726c9e4d6f2445518d8b.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "17",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/17/b56b4885d69d75f86f7c01bf7eed789a.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/17/c79d3b37b5452bc5f4980192e13b7bb4.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/17/02aa143a25df907d3e2b3833f60681f3.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/17/207d427bfe15e6bafbfaf3cdca0b5fb9.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/17/fc052241c774853ee79b7690208f4143.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "16",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/16/60135632343487d8d455d892d2ed7654.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/16/714474fb6df1b7f81734661df4efd1c0.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/16/4ea2b3eebcc5532b8ecfae413f0dedc2.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/16/70ccc655e1fda97598769b25a4f30490.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/16/8b8728ce28b5b32dc9c5110770693031.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/16/704da0ed1d03e7102ca01c6f4b434359.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/16/379d29d1575aaca20e0f728c2eee9f3a.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "15",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/15/e99965a8c56398172fcdd0692a0ceb11.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/15/ff868c432affb6392fbb7c52248d5532.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/15/14fa2abce9505b51ae3347643f496624.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/15/ec5d2ef9d78c35dd8f2edf8bb7595246.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/15/efd94f5c21795b72327ef2721b8a618a.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/15/cec64e2f5e29a02cce8d477cb44ea7e6.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/15/0afc63a7140e8883ff455064ca982d89.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/15/c1dda9f0dea482ba9fd649bd2fce4263.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/15/fa0647750b68d0794a48501650047ad7.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "14",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/14/e847d79fc6501036d4913fbcd28a2214.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/14/7c054666b4aab2df1a2522c9bd93bc8d.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/14/1c942d8626e84a8e7d763303f535eef6.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/14/2329e9df709083e620fc52bb458b1a36.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/14/6883e28a04b1fadaca415b85dbf26490.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/14/89cc6083ccd59c09ccc5e8bfc2c134a4.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/14/9b43dc3b1e006d06a962707baf9a3bcc.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/14/c3e46c4e645bd8c8c7b670a057bfb768.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "13",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/13/a9e88938cfe1157a4de712538608822a.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/13/08fe7feffed6e9bd012270f142bcc49c.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/13/1f90f787f94b7d942801fd4a8f60b349.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/13/89eaa64e0012b0d0131c84c49084f86b.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/13/42ce23387e4f80f26b012553685641fb.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/13/19b003434981d06dd1e24cb797ad3d7e.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/13/2885060b901d5c2819e99be37ab68d26.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/13/245de6bf6bfb839432f40dd8417620c0.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "12",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/12/7620eb3d5b2c1018066daec40a1bec70.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/12/f0a3ec48ed35e5cea7f7957a1857b011.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/12/38fd6eab952bbdb86d4405c6206381b9.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/12/e25130d2955890fbcb115f3922311d20.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/12/9f0d2cc2a7dd4acae01c90bdead04f87.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/12/89ab439f8b087831030d5b4b4fd5a31b.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/12/406c91f14b9cb20921d9e37757b18866.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/12/520d1f575ef03cecc80287b08e477078.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/12/c8823cd6d715281b4540e4d29ca71899.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "11",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/11/9b61328197c8fb95c2907dd504ec7f67.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/11/0b94d88fadb5d0a0345708d08fbf7a96.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/11/c4ac689e6690d87e21901d7d5c001abd.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/11/5407b1a505c87d51b6948edfaa010519.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/11/d150ce7ebef4c427379a65f35894a2b7.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/11/33c5a75214b1ccf6190db6508840fbff.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/11/62e838be61744189d8e46681d837b9db.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/11/1d8cf1eb2136c0fb4d75c4abd0c2ce97.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "10",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/10/bada61137970333c7859f5a2e5f30e06.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/10/3f9f7d619eecf114c8e12c120804da30.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/10/c8c7cab395b985b40f412b20ac8b6a74.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/10/3b9a3620e577c323d490a6f5db8d8150.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/10/b754d9fdf3e3fe1640d71376d171161c.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/10/53b57bc82c68cd4778bf89d3f5c348da.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/10/f1602ddc45b235d385173a0a5a7e2cd8.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/10/fb1c55ffb9bf9d3d7a2505637cc8e855.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "9",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/9/410347c4015dd0403d900805c86f9ffd.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/9/823f340e81c0b0f164d53a755f724750.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/9/8872e79228f12a85ca0c64c890a71f59.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/9/cfbd82320d5b761e16fffdbb4e15bb0d.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/9/a3d2ae020f403c204b9596c684452306.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/9/b020d1f6ac0e01bd6db4083a96902cc6.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/9/a1a7513e88d6da74c82aff7cac6fee53.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/9/7be7fcb595b63f6fd231c23d2322c4e7.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "8",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/8/a18125df707b92960638188870444303.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/8/0bc1d99a0c57c150cecc55bc62c2e912.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/8/a0261b371d52610a8a6ea35fbfac81e1.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/8/9c44b9ef1a0d9cc356cabaf1d9da559f.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/8/e1b55d4266ce7bbd3c4176c0b20d85d8.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/8/67697749e8e5483a1b94260f090bd105.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/8/7058678f4aaa9f5b656be909398d0497.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/8/1f20905f3535858d92188b381cb6a489.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/8/1f928e48132dcc40a0c9acee1781c0b0.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "7",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/07/98f76f1ab62a0f6dfba4b55b8e176bf8.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/07/006b17c0f64fff2415ded9665c4bb3a9.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/07/de9810a58f9a9db0e0dc34a37ff4e85c.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/07/fba39b18388721b488992e741bcb0489.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/07/ce61a2db22533f230a8a8078203a995c.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/07/066ee3560d227dc281a79725c08b6883.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/07/829315bc38c7a19d3abb907f58559285.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/07/4952a3ca0e02324ef1676951d3ead3fc.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/07/23a94480fd02054e5a0fd262c23810b3.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/07/0e4ff7816880e7cd9a7a622d4fb27927.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "6",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/6/b323cfd65dd2fd838ddbd0fda17198a8.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/6/d3b28a159b03559dc43a556edc20ed45.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/6/5b150b99dd66756d1b559b19ab4f768a.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/6/9cba4216cb4d41352454a6b610c89105.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/6/03db05502aec5f14a057bd90f9935960.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/6/6d5e542aa4a7f87f94b914c2551588b9.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/6/119524a24b60abad335fc27ba2fe16cf.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/6/cd15c4200fa0caf946bf06cd146e287b.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/6/1acd7e67fbd2871a2cdf9ac5103e8d83.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/6/beb55a90a8c401482d5aad590bcd88fa.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "5",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/5/8125b0ea0494eedb8648616b1cf03688.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/5/b04c981226c6727fab0bf2dd054dbe7b.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/5/5650fd4c356fc9844620b33c2f8c1694.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/5/b7f5b68407625cfaa84fe75f6616a2ad.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/5/5ebb90b0f9a7b36c84b61f85813e20f2.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/5/dc13ab2e5faefb7c824ff179b6d74cb4.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/5/407b8c929d237f6d2ceb82bbb5724336.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/5/1ac67969c88bf94ccb3fcf891037297b.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/5/43b1832be57a8a04242518cd9a1809cd.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "4",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/4/c3c557c9f194d76d7bb08a654910b1ce.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/4/cd3cbc5ccb0b4ff71599a42f9df08896.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/4/a149e0a59015795e71cb1c80d6ca13c5.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/4/235e390c2f0eadca0e46704559cd8258.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/4/315ff2d4a8ab6cd2d3cb3ec4e565b205.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/4/1b18124374e26c5f0491a78669104b0c.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/4/bc95d8dbc1789afcc8757275daa5bdaf.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/4/0c60cb799aa5bd899a181f0081157115.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/4/5caa12f2bea7d0b2b0029a561e1d60e7.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "3",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/3/98564e4d2a0a57db30162c50e2b99efd.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/3/e2da262368233121b61ced52cc2e273c.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/3/da320ccca131b0ab5aeac1c026286302.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/3/bfe7d93ff1b360c22dc302bb33c6ba7e.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/3/1087cc2df5d0bc34191ef06a56fb9a9a.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/3/11a0b453bdfa9c34d9dc03e06f22b377.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/3/7f9f596b7ce81cb35f6237fe42f4cd07.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/3/d5e4360bf87184c9135e77174033ba4f.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/3/e772ad00f26a3a3412038abee92fae8b.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/3/0217b7b8f3a7531cf716ecc8d5ba41ae.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/3/d9f07e6ad375c7894efcabd6e6537e0d.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/3/94538d0a2a846c7dc4501874efd38910.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/3/aeb0f4ff8599fc5fe08ed759b13f174f.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/3/2a678f05422ab2c281496644cf949662.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "2",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/2/4c8d04e7210f5f6e964a3fd6da82b6c1.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/2/5857806b44d06d6166de43405f0f7acd.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/2/41acb624d15a4c9640869f225191cbed.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/2/2736202709f6a81f90f65eab9aaa9527.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/2/861344cf4ec14b6224f8c4bb3c298484.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/2/4a9cd05905dbb4d6cc0bad5a6b25815a.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/2/236931644131c32124485a2ed75d9d51.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/2/de037d0e40c21e3a5ada36a46fd95dc7.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/2/7d52da2c9e3ecf4447d9231dca28ca4f.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/2/fd71679a1d2d1e674690891d14f6d03c.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/2/b5ccd1ab02633c4a237f45a0d2394e8c.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/2/5a9b9efa2617f3557f13be7ef1a6c5b4.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/2/2d26557a65f45b45e5461f82e81ac951.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/2/9e4d47d9a6351a87f8a75181ef1cc36f.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/2/c9da11eb5b844b428fbe41bbcfcaffde.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/2/bf72f8226b6fed34562d97bcde865e3d.webp",
+          "https://olympustaff.com/uploads/manga_86d7c/2/c1514040abf2be899db857b93b5c5599.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "1",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_86d7c/1/bd1b813271b5be259fa7d8ab51f5f238.jpg",
+          "https://olympustaff.com/uploads/manga_86d7c/1/80fe1c20afbc54959eb28d14f6ccc3b0.jpg",
+          "https://olympustaff.com/uploads/manga_86d7c/1/405ed7804607f439ed54e929eaaa10fe.jpg",
+          "https://olympustaff.com/uploads/manga_86d7c/1/fbd01fca202877a5d1cc8d15a57474da.jpg",
+          "https://olympustaff.com/uploads/manga_86d7c/1/5341ee96f09ddf3ba4e72683fabf55e6.jpg",
+          "https://olympustaff.com/uploads/manga_86d7c/1/dc7c466be9ce66468efc7b4d6fedd2f2.jpg",
+          "https://olympustaff.com/uploads/manga_86d7c/1/05b74f3e8611dd64317c8fdc71d0dc66.jpg",
+          "https://olympustaff.com/uploads/manga_86d7c/1/a5861431217c42f70fd06bb1f4cdc81d.jpg",
+          "https://olympustaff.com/uploads/manga_86d7c/1/8845828861dde9328d9dff0b98a5d0de.jpg",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      }
+    ]
+  },
+  {
     "id": "nm_49",
     "title": "49",
     "cover": "",
@@ -15056,7 +16488,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -25220,7 +26652,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -27288,7 +28720,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
