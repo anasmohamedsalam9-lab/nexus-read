@@ -3357,6 +3357,46 @@ var DB = [
     "type": "manhwa",
     "chapters": [
       {
+        "n": "31",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/images/TeamX.png",
+          "https://1.bp.blogspot.com/-_A83iDM6JYc/VhtxROLILrI/AAAAAAAADK4/aM4ikIA6aqI/s1600/btn_close.gif",
+          "https://olympustaff.com/images/manga/f630b545661caaa5ff5904ed318028bb.png",
+          "https://olympustaff.com/images/chapter/742aeef86a68b63db1bf9f615df0ad7b.jpg",
+          "https://olympustaff.com/images/chapter/9b2a38458b3d00fe1084e2f451e924ea.jpg",
+          "https://olympustaff.com/images/chapter/4b9d822697edbef7f71569a0c8b5e112.png",
+          "https://olympustaff.com/images/chapter/f5609e974dc144f194f9a2c936b8b645.png",
+          "https://olympustaff.com/images/chapter/d6375033bd90a72a5cc0681524f2f463.png",
+          "https://olympustaff.com/images/chapter/d044a46963948457b4f3702f2cf8600e.png",
+          "https://olympustaff.com/images/chapter/f601d549e6b8805301a940ef5ed8d59b.webp",
+          "https://olympustaff.com/images/chapter/2b19b8993937a4bfc4b50239eb971990.png",
+          "https://olympustaff.com/images/chapter/6290219f8bcd4e877ae6409ddd4898a6.png",
+          "https://olympustaff.com/images/chapter/acc3fcdcffc8dfac096058a0d470d5e6.png",
+          "https://olympustaff.com/images/chapter/a6ebfd417bc820cfc83674f3bc5b37ab.png",
+          "https://olympustaff.com/images/chapter/f206a4197b61087774a7971b3bb03796.png",
+          "https://olympustaff.com/images/chapter/668b309aabe4c6c8e04345d8b3156cec.png",
+          "https://olympustaff.com/images/chapter/6d843e851efbe8cc898d2f8ab79e9213.png",
+          "https://olympustaff.com/images/chapter/9e2146a43249ffc82442b900f01972b2.png",
+          "https://olympustaff.com/images/chapter/18ce19d44ea67b85d84e5c22afe5c8c3.png",
+          "https://olympustaff.com/images/chapter/3240a246a7f55eea2fc3c6ad03d12293.jpg",
+          "https://olympustaff.com/images/chapter/b8c972ab39875b6f39feeb4d7ab30aa3.png",
+          "https://olympustaff.com/images/chapter/af7668f5a709e665e9731c76c6c61de5.png",
+          "https://olympustaff.com/images/chapter/a886e4bad88ca985d1bae6ca1a6cc828.jpg",
+          "https://olympustaff.com/images/chapter/a358fe4325475e52a020eed8e3d0eb2c.png",
+          "https://olympustaff.com/images/chapter/29bd3cd55ec2368c979d18eafc768988.jpg",
+          "https://olympustaff.com/images/chapter/70924ec919ada788ba66ee406229da52.jpg",
+          "https://olympustaff.com/images/chapter/45ebdeaf75a3316321ab6cb6ccb3bd49.png",
+          "https://olympustaff.com/images/chapter/8c3e78f7a5d3e328d9d24b79df7042e8.png",
+          "https://olympustaff.com/images/chapter/bb98f0ed1fd17dd6b43e9b2969123241.png",
+          "https://olympustaff.com/images/chapter/393cf2494b257f654d76f2ded4ff0b8f.png",
+          "https://olympustaff.com/images/chapter/2fd7fd1824139590671413aecbfeddd9.png",
+          "https://olympustaff.com/images/chapter/82593ddc130e46e98ef98b87066e3f83.png",
+          "https://olympustaff.com/images/chapter/c5056834475f9c799b91ec2ccec9383f.png",
+          "https://olympustaff.com/images/chapter/3dca27137cccb984cd9b63dc8533cab2.png"
+        ]
+      },
+      {
         "n": "30",
         "d": "2026-08-31",
         "pages": [
@@ -15016,7 +15056,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -25180,7 +25220,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -27248,7 +27288,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
@@ -30122,6 +30162,55 @@ var DB = [
       "سفر عبر الزمن"
     ],
     "chapters": [
+      {
+        "n": "77",
+        "d": "2026-09-02",
+        "pages": [
+          "https://olympustaff.com/images/TeamX.png",
+          "https://1.bp.blogspot.com/-_A83iDM6JYc/VhtxROLILrI/AAAAAAAADK4/aM4ikIA6aqI/s1600/btn_close.gif",
+          "https://olympustaff.com/images/manga/22d8c264347d08ba3a218b33980f5485.gif",
+          "https://olympustaff.com/images/chapter/e6da8fea8031047d979695f7fdc42a1d.png",
+          "https://olympustaff.com/images/chapter/20621eaf2db364c5a7bba3993815e545.png",
+          "https://olympustaff.com/images/chapter/2e98218fadce4b7ae5fbd9a5fcb2c6bf.png",
+          "https://olympustaff.com/images/chapter/d3e6aaae83413dddada33eaa1a7e420d.png",
+          "https://olympustaff.com/images/chapter/7f5004c0895b2c74d31a852dc2a2edcc.png",
+          "https://olympustaff.com/images/chapter/824604875d9bd9973c5539c284479a12.png",
+          "https://olympustaff.com/images/chapter/0490474e3698ae238dbfd61b2e1cffa8.png",
+          "https://olympustaff.com/images/chapter/6e9fd0b3ea49e7f468c820731fe4f1d7.png",
+          "https://olympustaff.com/images/chapter/576a70ffbf1c67b8a526d91bad2dc790.png",
+          "https://olympustaff.com/images/chapter/679312942ebbc43216fc4ff27d02ff33.png",
+          "https://olympustaff.com/images/chapter/8bf05144b032ddeaeb917fc9ec462305.png",
+          "https://olympustaff.com/images/chapter/c1f1583f056d84b4539903cd9f1ae7ac.png",
+          "https://olympustaff.com/images/chapter/3276adfde030eddd88450cce5d0c9d1c.png",
+          "https://olympustaff.com/images/chapter/50b64c7cc2e7c2d216637da2c0a03d86.png",
+          "https://olympustaff.com/images/chapter/4e73bad84194e3ad83cd8d82e55ea0b3.png",
+          "https://olympustaff.com/images/chapter/765ac2a506e9dda3800fd30119eb7aad.png",
+          "https://olympustaff.com/images/chapter/240d0738df06e033211c240281feee81.png",
+          "https://olympustaff.com/images/chapter/6f275090f301a065bc63235bba2c57e8.png",
+          "https://olympustaff.com/images/chapter/e469194e6980dfff63505db5c637d140.png",
+          "https://olympustaff.com/images/chapter/276733cfb0f2322b12a601bb88736e3a.png",
+          "https://olympustaff.com/images/chapter/dca1f0cbe8f9dbe5ec3e8bbf7a7aa945.png",
+          "https://olympustaff.com/images/chapter/576e444001e7263355db0e8721974a66.png",
+          "https://olympustaff.com/images/chapter/1880679556.png",
+          "https://olympustaff.com/images/chapter/978890973.png",
+          "https://olympustaff.com/images/chapter/37374069.png",
+          "https://olympustaff.com/images/chapter/1866209576.png",
+          "https://olympustaff.com/images/chapter/1315012480.png",
+          "https://olympustaff.com/images/chapter/1046201190.png",
+          "https://olympustaff.com/images/chapter/1071869389.png",
+          "https://olympustaff.com/images/chapter/1550000102.png",
+          "https://olympustaff.com/images/chapter/4899570.png",
+          "https://olympustaff.com/images/chapter/1680170358.png",
+          "https://olympustaff.com/images/chapter/1498144906.png",
+          "https://olympustaff.com/images/chapter/345679725.png",
+          "https://olympustaff.com/images/chapter/2037550379.png",
+          "https://olympustaff.com/images/chapter/1874873039.png",
+          "https://olympustaff.com/images/chapter/431243695.png",
+          "https://olympustaff.com/images/chapter/11445725.png",
+          "https://olympustaff.com/images/chapter/1335153173.png",
+          "https://olympustaff.com/images/chapter/1816123793.png"
+        ]
+      },
       {
         "n": "76",
         "d": "2026-08-31",
