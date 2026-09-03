@@ -897,7 +897,7 @@ var DB = [
   {
     "id": "nm_welcome-to-the-apocalyptic-world",
     "title": "Welcome To The Apocalyptic World",
-    "cover": "",
+    "cover": "assets/covers/welcome-to-the-apocalyptic-world.webp",
     "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
     "status": "Ongoing",
     "author": "Nile Bot",
@@ -908,7 +908,7 @@ var DB = [
   {
     "id": "nm_rise-of-the-limitless-necromancer",
     "title": "Rise of the Limitless Necromancer",
-    "cover": "",
+    "cover": "assets/covers/rise-of-the-limitless-necromancer.webp",
     "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
     "status": "Ongoing",
     "author": "Nile Bot",
@@ -16488,7 +16488,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manga",
+    "type": "manhwa",
     "chapters": [
       {
         "n": "93",
@@ -26652,7 +26652,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manga",
+    "type": "manhwa",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -28720,7 +28720,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manga",
+    "type": "manhwa",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
