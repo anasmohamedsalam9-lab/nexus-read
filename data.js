@@ -1,5 +1,614 @@
 var DB = [
   {
+    "id": "nm_196",
+    "title": "196",
+    "cover": "",
+    "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [],
+    "type": "manhwa",
+    "chapters": [
+      {
+        "n": "37",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-37/1.webp",
+          "assets/chapters/196/ch-37/2.webp",
+          "assets/chapters/196/ch-37/3.webp",
+          "assets/chapters/196/ch-37/4.webp",
+          "assets/chapters/196/ch-37/5.webp",
+          "assets/chapters/196/ch-37/6.webp",
+          "assets/chapters/196/ch-37/7.webp",
+          "assets/chapters/196/ch-37/8.webp",
+          "assets/chapters/196/ch-37/9.webp",
+          "assets/chapters/196/ch-37/10.webp",
+          "assets/chapters/196/ch-37/11.webp",
+          "assets/chapters/196/ch-37/12.webp",
+          "assets/chapters/196/ch-37/13.webp",
+          "assets/chapters/196/ch-37/14.webp",
+          "assets/chapters/196/ch-37/15.webp",
+          "assets/chapters/196/ch-37/16.webp",
+          "assets/chapters/196/ch-37/17.webp",
+          "assets/chapters/196/ch-37/18.webp",
+          "assets/chapters/196/ch-37/19.webp",
+          "assets/chapters/196/ch-37/20.webp",
+          "assets/chapters/196/ch-37/21.webp",
+          "assets/chapters/196/ch-37/22.webp",
+          "assets/chapters/196/ch-37/23.webp",
+          "assets/chapters/196/ch-37/24.webp",
+          "assets/chapters/196/ch-37/25.webp",
+          "assets/chapters/196/ch-37/26.webp",
+          "assets/chapters/196/ch-37/27.webp",
+          "assets/chapters/196/ch-37/28.webp",
+          "assets/chapters/196/ch-37/29.webp",
+          "assets/chapters/196/ch-37/30.webp",
+          "assets/chapters/196/ch-37/31.webp",
+          "assets/chapters/196/ch-37/32.webp",
+          "assets/chapters/196/ch-37/33.webp",
+          "assets/chapters/196/ch-37/34.webp",
+          "assets/chapters/196/ch-37/35.webp",
+          "assets/chapters/196/ch-37/36.webp",
+          "assets/chapters/196/ch-37/37.webp",
+          "assets/chapters/196/ch-37/38.webp",
+          "assets/chapters/196/ch-37/39.webp"
+        ]
+      },
+      {
+        "n": "36",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-36/1.webp"
+        ]
+      },
+      {
+        "n": "35",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-35/1.webp"
+        ]
+      },
+      {
+        "n": "34",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-34/1.webp"
+        ]
+      },
+      {
+        "n": "33",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-33/1.webp"
+        ]
+      },
+      {
+        "n": "32",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-32/1.webp"
+        ]
+      },
+      {
+        "n": "31",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-31/1.webp"
+        ]
+      },
+      {
+        "n": "30",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-30/1.webp",
+          "assets/chapters/196/ch-30/2.webp",
+          "assets/chapters/196/ch-30/3.webp",
+          "assets/chapters/196/ch-30/4.webp",
+          "assets/chapters/196/ch-30/5.webp"
+        ]
+      },
+      {
+        "n": "29",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-29/1.webp",
+          "assets/chapters/196/ch-29/2.webp",
+          "assets/chapters/196/ch-29/3.webp",
+          "assets/chapters/196/ch-29/4.webp",
+          "assets/chapters/196/ch-29/5.webp",
+          "assets/chapters/196/ch-29/6.webp",
+          "assets/chapters/196/ch-29/7.webp",
+          "assets/chapters/196/ch-29/8.webp",
+          "assets/chapters/196/ch-29/9.webp",
+          "assets/chapters/196/ch-29/10.webp"
+        ]
+      },
+      {
+        "n": "28",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-28/1.webp",
+          "assets/chapters/196/ch-28/2.webp",
+          "assets/chapters/196/ch-28/3.webp",
+          "assets/chapters/196/ch-28/4.webp",
+          "assets/chapters/196/ch-28/5.webp",
+          "assets/chapters/196/ch-28/6.webp",
+          "assets/chapters/196/ch-28/7.webp",
+          "assets/chapters/196/ch-28/8.webp"
+        ]
+      },
+      {
+        "n": "24",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-24/1.webp",
+          "assets/chapters/196/ch-24/2.webp",
+          "assets/chapters/196/ch-24/3.webp",
+          "assets/chapters/196/ch-24/4.webp",
+          "assets/chapters/196/ch-24/5.webp",
+          "assets/chapters/196/ch-24/6.webp",
+          "assets/chapters/196/ch-24/7.webp",
+          "assets/chapters/196/ch-24/8.webp",
+          "assets/chapters/196/ch-24/9.webp",
+          "assets/chapters/196/ch-24/10.webp",
+          "assets/chapters/196/ch-24/11.webp",
+          "assets/chapters/196/ch-24/12.webp",
+          "assets/chapters/196/ch-24/13.webp",
+          "assets/chapters/196/ch-24/14.webp",
+          "assets/chapters/196/ch-24/15.webp",
+          "assets/chapters/196/ch-24/16.webp",
+          "assets/chapters/196/ch-24/17.webp",
+          "assets/chapters/196/ch-24/18.webp",
+          "assets/chapters/196/ch-24/19.webp",
+          "assets/chapters/196/ch-24/20.webp"
+        ]
+      },
+      {
+        "n": "23",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-23/1.webp",
+          "assets/chapters/196/ch-23/2.webp",
+          "assets/chapters/196/ch-23/3.webp",
+          "assets/chapters/196/ch-23/4.webp"
+        ]
+      },
+      {
+        "n": "22",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-22/1.webp",
+          "assets/chapters/196/ch-22/2.webp",
+          "assets/chapters/196/ch-22/3.webp",
+          "assets/chapters/196/ch-22/4.webp"
+        ]
+      },
+      {
+        "n": "21",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-21/1.webp",
+          "assets/chapters/196/ch-21/2.webp",
+          "assets/chapters/196/ch-21/3.webp",
+          "assets/chapters/196/ch-21/4.webp",
+          "assets/chapters/196/ch-21/5.webp",
+          "assets/chapters/196/ch-21/6.webp",
+          "assets/chapters/196/ch-21/7.webp",
+          "assets/chapters/196/ch-21/8.webp"
+        ]
+      },
+      {
+        "n": "20",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-20/1.webp",
+          "assets/chapters/196/ch-20/2.webp",
+          "assets/chapters/196/ch-20/3.webp",
+          "assets/chapters/196/ch-20/4.webp",
+          "assets/chapters/196/ch-20/5.webp",
+          "assets/chapters/196/ch-20/6.webp",
+          "assets/chapters/196/ch-20/7.webp",
+          "assets/chapters/196/ch-20/8.webp",
+          "assets/chapters/196/ch-20/9.webp",
+          "assets/chapters/196/ch-20/10.webp",
+          "assets/chapters/196/ch-20/11.webp",
+          "assets/chapters/196/ch-20/12.webp",
+          "assets/chapters/196/ch-20/13.webp",
+          "assets/chapters/196/ch-20/14.webp",
+          "assets/chapters/196/ch-20/15.webp",
+          "assets/chapters/196/ch-20/16.webp",
+          "assets/chapters/196/ch-20/17.webp",
+          "assets/chapters/196/ch-20/18.webp",
+          "assets/chapters/196/ch-20/19.webp",
+          "assets/chapters/196/ch-20/20.webp",
+          "assets/chapters/196/ch-20/21.webp",
+          "assets/chapters/196/ch-20/22.webp",
+          "assets/chapters/196/ch-20/23.webp",
+          "assets/chapters/196/ch-20/24.webp"
+        ]
+      },
+      {
+        "n": "19",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-19/1.webp",
+          "assets/chapters/196/ch-19/2.webp",
+          "assets/chapters/196/ch-19/3.webp",
+          "assets/chapters/196/ch-19/4.webp",
+          "assets/chapters/196/ch-19/5.webp",
+          "assets/chapters/196/ch-19/6.webp"
+        ]
+      },
+      {
+        "n": "18",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-18/1.webp",
+          "assets/chapters/196/ch-18/2.webp",
+          "assets/chapters/196/ch-18/3.webp",
+          "assets/chapters/196/ch-18/4.webp",
+          "assets/chapters/196/ch-18/5.webp",
+          "assets/chapters/196/ch-18/6.webp",
+          "assets/chapters/196/ch-18/7.webp",
+          "assets/chapters/196/ch-18/8.webp"
+        ]
+      },
+      {
+        "n": "17",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-17/1.webp",
+          "assets/chapters/196/ch-17/2.webp",
+          "assets/chapters/196/ch-17/3.webp",
+          "assets/chapters/196/ch-17/4.webp",
+          "assets/chapters/196/ch-17/5.webp",
+          "assets/chapters/196/ch-17/6.webp",
+          "assets/chapters/196/ch-17/7.webp",
+          "assets/chapters/196/ch-17/8.webp",
+          "assets/chapters/196/ch-17/9.webp",
+          "assets/chapters/196/ch-17/10.webp"
+        ]
+      },
+      {
+        "n": "16",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-16/1.webp",
+          "assets/chapters/196/ch-16/2.webp",
+          "assets/chapters/196/ch-16/3.webp",
+          "assets/chapters/196/ch-16/4.webp",
+          "assets/chapters/196/ch-16/5.webp",
+          "assets/chapters/196/ch-16/6.webp",
+          "assets/chapters/196/ch-16/7.webp",
+          "assets/chapters/196/ch-16/8.webp",
+          "assets/chapters/196/ch-16/9.webp",
+          "assets/chapters/196/ch-16/10.webp"
+        ]
+      },
+      {
+        "n": "15",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-15/1.webp",
+          "assets/chapters/196/ch-15/2.webp",
+          "assets/chapters/196/ch-15/3.webp",
+          "assets/chapters/196/ch-15/4.webp",
+          "assets/chapters/196/ch-15/5.webp",
+          "assets/chapters/196/ch-15/6.webp",
+          "assets/chapters/196/ch-15/7.webp",
+          "assets/chapters/196/ch-15/8.webp",
+          "assets/chapters/196/ch-15/9.webp",
+          "assets/chapters/196/ch-15/10.webp",
+          "assets/chapters/196/ch-15/11.webp",
+          "assets/chapters/196/ch-15/12.webp"
+        ]
+      },
+      {
+        "n": "14",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-14/1.webp",
+          "assets/chapters/196/ch-14/2.webp",
+          "assets/chapters/196/ch-14/3.webp",
+          "assets/chapters/196/ch-14/4.webp",
+          "assets/chapters/196/ch-14/5.webp",
+          "assets/chapters/196/ch-14/6.webp",
+          "assets/chapters/196/ch-14/7.webp",
+          "assets/chapters/196/ch-14/8.webp",
+          "assets/chapters/196/ch-14/9.webp",
+          "assets/chapters/196/ch-14/10.webp"
+        ]
+      },
+      {
+        "n": "13",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-13/1.webp",
+          "assets/chapters/196/ch-13/2.webp",
+          "assets/chapters/196/ch-13/3.webp",
+          "assets/chapters/196/ch-13/4.webp",
+          "assets/chapters/196/ch-13/5.webp",
+          "assets/chapters/196/ch-13/6.webp",
+          "assets/chapters/196/ch-13/7.webp",
+          "assets/chapters/196/ch-13/8.webp",
+          "assets/chapters/196/ch-13/9.webp",
+          "assets/chapters/196/ch-13/10.webp",
+          "assets/chapters/196/ch-13/11.webp",
+          "assets/chapters/196/ch-13/12.webp",
+          "assets/chapters/196/ch-13/13.webp",
+          "assets/chapters/196/ch-13/14.webp",
+          "assets/chapters/196/ch-13/15.webp",
+          "assets/chapters/196/ch-13/16.webp",
+          "assets/chapters/196/ch-13/17.webp",
+          "assets/chapters/196/ch-13/18.webp",
+          "assets/chapters/196/ch-13/19.webp",
+          "assets/chapters/196/ch-13/20.webp",
+          "assets/chapters/196/ch-13/21.webp",
+          "assets/chapters/196/ch-13/22.webp",
+          "assets/chapters/196/ch-13/23.webp"
+        ]
+      },
+      {
+        "n": "12",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-12/1.webp",
+          "assets/chapters/196/ch-12/2.webp",
+          "assets/chapters/196/ch-12/3.webp",
+          "assets/chapters/196/ch-12/4.webp",
+          "assets/chapters/196/ch-12/5.webp",
+          "assets/chapters/196/ch-12/6.webp",
+          "assets/chapters/196/ch-12/7.webp",
+          "assets/chapters/196/ch-12/8.webp"
+        ]
+      },
+      {
+        "n": "11",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-11/1.webp",
+          "assets/chapters/196/ch-11/2.webp",
+          "assets/chapters/196/ch-11/3.webp",
+          "assets/chapters/196/ch-11/4.webp"
+        ]
+      },
+      {
+        "n": "10",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-10/1.webp",
+          "assets/chapters/196/ch-10/2.webp",
+          "assets/chapters/196/ch-10/3.webp",
+          "assets/chapters/196/ch-10/4.webp",
+          "assets/chapters/196/ch-10/5.webp",
+          "assets/chapters/196/ch-10/6.webp",
+          "assets/chapters/196/ch-10/7.webp",
+          "assets/chapters/196/ch-10/8.webp",
+          "assets/chapters/196/ch-10/9.webp",
+          "assets/chapters/196/ch-10/10.webp",
+          "assets/chapters/196/ch-10/11.webp",
+          "assets/chapters/196/ch-10/12.webp"
+        ]
+      },
+      {
+        "n": "9",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-9/1.webp",
+          "assets/chapters/196/ch-9/2.webp",
+          "assets/chapters/196/ch-9/3.webp",
+          "assets/chapters/196/ch-9/4.webp",
+          "assets/chapters/196/ch-9/5.webp",
+          "assets/chapters/196/ch-9/6.webp",
+          "assets/chapters/196/ch-9/7.webp",
+          "assets/chapters/196/ch-9/8.webp",
+          "assets/chapters/196/ch-9/9.webp",
+          "assets/chapters/196/ch-9/10.webp",
+          "assets/chapters/196/ch-9/11.webp",
+          "assets/chapters/196/ch-9/12.webp",
+          "assets/chapters/196/ch-9/13.webp",
+          "assets/chapters/196/ch-9/14.webp",
+          "assets/chapters/196/ch-9/15.webp",
+          "assets/chapters/196/ch-9/16.webp",
+          "assets/chapters/196/ch-9/17.webp",
+          "assets/chapters/196/ch-9/18.webp"
+        ]
+      },
+      {
+        "n": "8",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-8/1.webp",
+          "assets/chapters/196/ch-8/2.webp",
+          "assets/chapters/196/ch-8/3.webp",
+          "assets/chapters/196/ch-8/4.webp",
+          "assets/chapters/196/ch-8/5.webp",
+          "assets/chapters/196/ch-8/6.webp",
+          "assets/chapters/196/ch-8/7.webp",
+          "assets/chapters/196/ch-8/8.webp",
+          "assets/chapters/196/ch-8/9.webp",
+          "assets/chapters/196/ch-8/10.webp",
+          "assets/chapters/196/ch-8/11.webp",
+          "assets/chapters/196/ch-8/12.webp",
+          "assets/chapters/196/ch-8/13.webp"
+        ]
+      },
+      {
+        "n": "7",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-7/1.webp",
+          "assets/chapters/196/ch-7/2.webp",
+          "assets/chapters/196/ch-7/3.webp",
+          "assets/chapters/196/ch-7/4.webp",
+          "assets/chapters/196/ch-7/5.webp",
+          "assets/chapters/196/ch-7/6.webp",
+          "assets/chapters/196/ch-7/7.webp",
+          "assets/chapters/196/ch-7/8.webp",
+          "assets/chapters/196/ch-7/9.webp",
+          "assets/chapters/196/ch-7/10.webp",
+          "assets/chapters/196/ch-7/11.webp",
+          "assets/chapters/196/ch-7/12.webp",
+          "assets/chapters/196/ch-7/13.webp",
+          "assets/chapters/196/ch-7/14.webp",
+          "assets/chapters/196/ch-7/15.webp",
+          "assets/chapters/196/ch-7/16.webp",
+          "assets/chapters/196/ch-7/17.webp",
+          "assets/chapters/196/ch-7/18.webp",
+          "assets/chapters/196/ch-7/19.webp",
+          "assets/chapters/196/ch-7/20.webp"
+        ]
+      },
+      {
+        "n": "6",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-6/1.webp",
+          "assets/chapters/196/ch-6/2.webp",
+          "assets/chapters/196/ch-6/3.webp",
+          "assets/chapters/196/ch-6/4.webp",
+          "assets/chapters/196/ch-6/5.webp",
+          "assets/chapters/196/ch-6/6.webp",
+          "assets/chapters/196/ch-6/7.webp",
+          "assets/chapters/196/ch-6/8.webp",
+          "assets/chapters/196/ch-6/9.webp",
+          "assets/chapters/196/ch-6/10.webp",
+          "assets/chapters/196/ch-6/11.webp",
+          "assets/chapters/196/ch-6/12.webp",
+          "assets/chapters/196/ch-6/13.webp",
+          "assets/chapters/196/ch-6/14.webp",
+          "assets/chapters/196/ch-6/15.webp",
+          "assets/chapters/196/ch-6/16.webp",
+          "assets/chapters/196/ch-6/17.webp",
+          "assets/chapters/196/ch-6/18.webp",
+          "assets/chapters/196/ch-6/19.webp",
+          "assets/chapters/196/ch-6/20.webp"
+        ]
+      },
+      {
+        "n": "5",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-5/1.webp",
+          "assets/chapters/196/ch-5/2.webp",
+          "assets/chapters/196/ch-5/3.webp",
+          "assets/chapters/196/ch-5/4.webp",
+          "assets/chapters/196/ch-5/5.webp",
+          "assets/chapters/196/ch-5/6.webp",
+          "assets/chapters/196/ch-5/7.webp",
+          "assets/chapters/196/ch-5/8.webp",
+          "assets/chapters/196/ch-5/9.webp",
+          "assets/chapters/196/ch-5/10.webp",
+          "assets/chapters/196/ch-5/11.webp",
+          "assets/chapters/196/ch-5/12.webp",
+          "assets/chapters/196/ch-5/13.webp",
+          "assets/chapters/196/ch-5/14.webp",
+          "assets/chapters/196/ch-5/15.webp"
+        ]
+      },
+      {
+        "n": "4",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-4/1.webp",
+          "assets/chapters/196/ch-4/2.webp",
+          "assets/chapters/196/ch-4/3.webp",
+          "assets/chapters/196/ch-4/4.webp",
+          "assets/chapters/196/ch-4/5.webp",
+          "assets/chapters/196/ch-4/6.webp",
+          "assets/chapters/196/ch-4/7.webp",
+          "assets/chapters/196/ch-4/8.webp",
+          "assets/chapters/196/ch-4/9.webp",
+          "assets/chapters/196/ch-4/10.webp",
+          "assets/chapters/196/ch-4/11.webp",
+          "assets/chapters/196/ch-4/12.webp",
+          "assets/chapters/196/ch-4/13.webp",
+          "assets/chapters/196/ch-4/14.webp",
+          "assets/chapters/196/ch-4/15.webp",
+          "assets/chapters/196/ch-4/16.webp"
+        ]
+      },
+      {
+        "n": "3",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-3/1.webp",
+          "assets/chapters/196/ch-3/2.webp",
+          "assets/chapters/196/ch-3/3.webp",
+          "assets/chapters/196/ch-3/4.webp",
+          "assets/chapters/196/ch-3/5.webp",
+          "assets/chapters/196/ch-3/6.webp",
+          "assets/chapters/196/ch-3/7.webp",
+          "assets/chapters/196/ch-3/8.webp",
+          "assets/chapters/196/ch-3/9.webp",
+          "assets/chapters/196/ch-3/10.webp",
+          "assets/chapters/196/ch-3/11.webp",
+          "assets/chapters/196/ch-3/12.webp",
+          "assets/chapters/196/ch-3/13.webp",
+          "assets/chapters/196/ch-3/14.webp",
+          "assets/chapters/196/ch-3/15.webp",
+          "assets/chapters/196/ch-3/16.webp"
+        ]
+      },
+      {
+        "n": "2",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-2/1.webp",
+          "assets/chapters/196/ch-2/2.webp",
+          "assets/chapters/196/ch-2/3.webp",
+          "assets/chapters/196/ch-2/4.webp",
+          "assets/chapters/196/ch-2/5.webp",
+          "assets/chapters/196/ch-2/6.webp",
+          "assets/chapters/196/ch-2/7.webp",
+          "assets/chapters/196/ch-2/8.webp",
+          "assets/chapters/196/ch-2/9.webp",
+          "assets/chapters/196/ch-2/10.webp",
+          "assets/chapters/196/ch-2/11.webp",
+          "assets/chapters/196/ch-2/12.webp",
+          "assets/chapters/196/ch-2/13.webp",
+          "assets/chapters/196/ch-2/14.webp",
+          "assets/chapters/196/ch-2/15.webp",
+          "assets/chapters/196/ch-2/16.webp",
+          "assets/chapters/196/ch-2/17.webp",
+          "assets/chapters/196/ch-2/18.webp",
+          "assets/chapters/196/ch-2/19.webp",
+          "assets/chapters/196/ch-2/20.webp",
+          "assets/chapters/196/ch-2/21.webp",
+          "assets/chapters/196/ch-2/22.webp",
+          "assets/chapters/196/ch-2/23.webp",
+          "assets/chapters/196/ch-2/24.webp",
+          "assets/chapters/196/ch-2/25.webp",
+          "assets/chapters/196/ch-2/26.webp"
+        ]
+      },
+      {
+        "n": "1",
+        "d": "2026-09-04",
+        "pages": [
+          "assets/chapters/196/ch-1/1.webp",
+          "assets/chapters/196/ch-1/2.webp",
+          "assets/chapters/196/ch-1/3.webp",
+          "assets/chapters/196/ch-1/4.webp",
+          "assets/chapters/196/ch-1/5.webp",
+          "assets/chapters/196/ch-1/6.webp",
+          "assets/chapters/196/ch-1/7.webp",
+          "assets/chapters/196/ch-1/8.webp",
+          "assets/chapters/196/ch-1/9.webp",
+          "assets/chapters/196/ch-1/10.webp",
+          "assets/chapters/196/ch-1/11.webp",
+          "assets/chapters/196/ch-1/12.webp",
+          "assets/chapters/196/ch-1/13.webp",
+          "assets/chapters/196/ch-1/14.webp",
+          "assets/chapters/196/ch-1/15.webp",
+          "assets/chapters/196/ch-1/16.webp",
+          "assets/chapters/196/ch-1/17.webp",
+          "assets/chapters/196/ch-1/18.webp"
+        ]
+      }
+    ]
+  },
+  {
     "id": "nm_the-lord-who-levels-up-by-absorbing-powers",
     "title": "The Lord Who Levels Up by Absorbing Powers",
     "cover": "assets/covers/the-lord-who-levels-up-by-absorbing-powers.webp",
@@ -16863,7 +17472,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -27038,7 +27647,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -29106,7 +29715,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
