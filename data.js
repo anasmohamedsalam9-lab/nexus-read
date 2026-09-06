@@ -1,5 +1,198 @@
 var DB = [
   {
+    "id": "nm_15",
+    "title": "15",
+    "cover": "",
+    "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [],
+    "type": "manhwa",
+    "chapters": [
+      {
+        "n": "16",
+        "d": "2026-09-06",
+        "pages": [
+          "assets/chapters/15/ch-16/1.webp",
+          "assets/chapters/15/ch-16/2.webp",
+          "assets/chapters/15/ch-16/3.webp",
+          "assets/chapters/15/ch-16/4.webp",
+          "assets/chapters/15/ch-16/5.webp",
+          "assets/chapters/15/ch-16/6.webp",
+          "assets/chapters/15/ch-16/7.webp",
+          "assets/chapters/15/ch-16/8.webp",
+          "assets/chapters/15/ch-16/9.webp",
+          "assets/chapters/15/ch-16/10.webp",
+          "assets/chapters/15/ch-16/11.webp"
+        ]
+      },
+      {
+        "n": "15",
+        "d": "2026-09-06",
+        "pages": [
+          "assets/chapters/15/ch-15/1.webp",
+          "assets/chapters/15/ch-15/2.webp",
+          "assets/chapters/15/ch-15/3.webp",
+          "assets/chapters/15/ch-15/4.webp",
+          "assets/chapters/15/ch-15/5.webp",
+          "assets/chapters/15/ch-15/6.webp",
+          "assets/chapters/15/ch-15/7.webp",
+          "assets/chapters/15/ch-15/8.webp",
+          "assets/chapters/15/ch-15/9.webp",
+          "assets/chapters/15/ch-15/10.webp"
+        ]
+      },
+      {
+        "n": "12",
+        "d": "2026-09-06",
+        "pages": [
+          "assets/chapters/15/ch-12/1.webp",
+          "assets/chapters/15/ch-12/2.webp",
+          "assets/chapters/15/ch-12/3.webp",
+          "assets/chapters/15/ch-12/4.webp",
+          "assets/chapters/15/ch-12/5.webp",
+          "assets/chapters/15/ch-12/6.webp",
+          "assets/chapters/15/ch-12/7.webp",
+          "assets/chapters/15/ch-12/8.webp",
+          "assets/chapters/15/ch-12/9.webp"
+        ]
+      },
+      {
+        "n": "10",
+        "d": "2026-09-06",
+        "pages": [
+          "assets/chapters/15/ch-10/1.webp",
+          "assets/chapters/15/ch-10/2.webp",
+          "assets/chapters/15/ch-10/3.webp",
+          "assets/chapters/15/ch-10/4.webp",
+          "assets/chapters/15/ch-10/5.webp",
+          "assets/chapters/15/ch-10/6.webp",
+          "assets/chapters/15/ch-10/7.webp",
+          "assets/chapters/15/ch-10/8.webp",
+          "assets/chapters/15/ch-10/9.webp",
+          "assets/chapters/15/ch-10/10.webp",
+          "assets/chapters/15/ch-10/11.webp"
+        ]
+      },
+      {
+        "n": "9",
+        "d": "2026-09-06",
+        "pages": [
+          "assets/chapters/15/ch-9/1.webp",
+          "assets/chapters/15/ch-9/2.webp",
+          "assets/chapters/15/ch-9/3.webp",
+          "assets/chapters/15/ch-9/4.webp",
+          "assets/chapters/15/ch-9/5.webp",
+          "assets/chapters/15/ch-9/6.webp",
+          "assets/chapters/15/ch-9/7.webp",
+          "assets/chapters/15/ch-9/8.webp",
+          "assets/chapters/15/ch-9/9.webp"
+        ]
+      },
+      {
+        "n": "7",
+        "d": "2026-09-06",
+        "pages": [
+          "assets/chapters/15/ch-7/1.webp",
+          "assets/chapters/15/ch-7/2.webp",
+          "assets/chapters/15/ch-7/3.webp",
+          "assets/chapters/15/ch-7/4.webp",
+          "assets/chapters/15/ch-7/5.webp",
+          "assets/chapters/15/ch-7/6.webp",
+          "assets/chapters/15/ch-7/7.webp",
+          "assets/chapters/15/ch-7/8.webp",
+          "assets/chapters/15/ch-7/9.webp",
+          "assets/chapters/15/ch-7/10.webp"
+        ]
+      },
+      {
+        "n": "5",
+        "d": "2026-09-06",
+        "pages": [
+          "assets/chapters/15/ch-5/1.webp",
+          "assets/chapters/15/ch-5/2.webp",
+          "assets/chapters/15/ch-5/3.webp",
+          "assets/chapters/15/ch-5/4.webp",
+          "assets/chapters/15/ch-5/5.webp",
+          "assets/chapters/15/ch-5/6.webp",
+          "assets/chapters/15/ch-5/7.webp",
+          "assets/chapters/15/ch-5/8.webp",
+          "assets/chapters/15/ch-5/9.webp",
+          "assets/chapters/15/ch-5/10.webp"
+        ]
+      },
+      {
+        "n": "4",
+        "d": "2026-09-06",
+        "pages": [
+          "assets/chapters/15/ch-4/1.webp",
+          "assets/chapters/15/ch-4/2.webp",
+          "assets/chapters/15/ch-4/3.webp",
+          "assets/chapters/15/ch-4/4.webp",
+          "assets/chapters/15/ch-4/5.webp",
+          "assets/chapters/15/ch-4/6.webp",
+          "assets/chapters/15/ch-4/7.webp",
+          "assets/chapters/15/ch-4/8.webp",
+          "assets/chapters/15/ch-4/9.webp",
+          "assets/chapters/15/ch-4/10.webp",
+          "assets/chapters/15/ch-4/11.webp",
+          "assets/chapters/15/ch-4/12.webp",
+          "assets/chapters/15/ch-4/13.webp",
+          "assets/chapters/15/ch-4/14.webp",
+          "assets/chapters/15/ch-4/15.webp",
+          "assets/chapters/15/ch-4/16.webp"
+        ]
+      },
+      {
+        "n": "3",
+        "d": "2026-09-06",
+        "pages": [
+          "assets/chapters/15/ch-3/1.webp",
+          "assets/chapters/15/ch-3/2.webp",
+          "assets/chapters/15/ch-3/3.webp",
+          "assets/chapters/15/ch-3/4.webp",
+          "assets/chapters/15/ch-3/5.webp",
+          "assets/chapters/15/ch-3/6.webp",
+          "assets/chapters/15/ch-3/7.webp",
+          "assets/chapters/15/ch-3/8.webp",
+          "assets/chapters/15/ch-3/9.webp",
+          "assets/chapters/15/ch-3/10.webp"
+        ]
+      },
+      {
+        "n": "2",
+        "d": "2026-09-06",
+        "pages": [
+          "assets/chapters/15/ch-2/1.webp",
+          "assets/chapters/15/ch-2/2.webp",
+          "assets/chapters/15/ch-2/3.webp",
+          "assets/chapters/15/ch-2/4.webp",
+          "assets/chapters/15/ch-2/5.webp",
+          "assets/chapters/15/ch-2/6.webp",
+          "assets/chapters/15/ch-2/7.webp",
+          "assets/chapters/15/ch-2/8.webp",
+          "assets/chapters/15/ch-2/9.webp"
+        ]
+      },
+      {
+        "n": "1",
+        "d": "2026-09-06",
+        "pages": [
+          "assets/chapters/15/ch-1/1.webp",
+          "assets/chapters/15/ch-1/2.webp",
+          "assets/chapters/15/ch-1/3.webp",
+          "assets/chapters/15/ch-1/4.webp",
+          "assets/chapters/15/ch-1/5.webp",
+          "assets/chapters/15/ch-1/6.webp",
+          "assets/chapters/15/ch-1/7.webp",
+          "assets/chapters/15/ch-1/8.webp",
+          "assets/chapters/15/ch-1/9.webp",
+          "assets/chapters/15/ch-1/10.webp"
+        ]
+      }
+    ]
+  },
+  {
     "id": "nm_196",
     "title": "196",
     "cover": "",
@@ -17472,7 +17665,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -27657,7 +27850,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -29725,7 +29918,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
@@ -32633,6 +32826,55 @@ var DB = [
       "سفر عبر الزمن"
     ],
     "chapters": [
+      {
+        "n": "78",
+        "d": "2026-09-06",
+        "pages": [
+          "https://olympustaff.com/images/TeamX.png",
+          "https://1.bp.blogspot.com/-_A83iDM6JYc/VhtxROLILrI/AAAAAAAADK4/aM4ikIA6aqI/s1600/btn_close.gif",
+          "https://olympustaff.com/images/manga/22d8c264347d08ba3a218b33980f5485.gif",
+          "https://olympustaff.com/images/chapter/58f4c1a0bc89e965a1b11efbddcce278.png",
+          "https://olympustaff.com/images/chapter/e6da8fea8031047d979695f7fdc42a1d.png",
+          "https://olympustaff.com/images/chapter/20621eaf2db364c5a7bba3993815e545.png",
+          "https://olympustaff.com/images/chapter/2e98218fadce4b7ae5fbd9a5fcb2c6bf.png",
+          "https://olympustaff.com/images/chapter/d3e6aaae83413dddada33eaa1a7e420d.png",
+          "https://olympustaff.com/images/chapter/7f5004c0895b2c74d31a852dc2a2edcc.png",
+          "https://olympustaff.com/images/chapter/824604875d9bd9973c5539c284479a12.png",
+          "https://olympustaff.com/images/chapter/0490474e3698ae238dbfd61b2e1cffa8.png",
+          "https://olympustaff.com/images/chapter/6e9fd0b3ea49e7f468c820731fe4f1d7.png",
+          "https://olympustaff.com/images/chapter/576a70ffbf1c67b8a526d91bad2dc790.png",
+          "https://olympustaff.com/images/chapter/679312942ebbc43216fc4ff27d02ff33.png",
+          "https://olympustaff.com/images/chapter/8bf05144b032ddeaeb917fc9ec462305.png",
+          "https://olympustaff.com/images/chapter/c1f1583f056d84b4539903cd9f1ae7ac.png",
+          "https://olympustaff.com/images/chapter/3276adfde030eddd88450cce5d0c9d1c.png",
+          "https://olympustaff.com/images/chapter/50b64c7cc2e7c2d216637da2c0a03d86.png",
+          "https://olympustaff.com/images/chapter/4e73bad84194e3ad83cd8d82e55ea0b3.png",
+          "https://olympustaff.com/images/chapter/765ac2a506e9dda3800fd30119eb7aad.png",
+          "https://olympustaff.com/images/chapter/240d0738df06e033211c240281feee81.png",
+          "https://olympustaff.com/images/chapter/6f275090f301a065bc63235bba2c57e8.png",
+          "https://olympustaff.com/images/chapter/e469194e6980dfff63505db5c637d140.png",
+          "https://olympustaff.com/images/chapter/276733cfb0f2322b12a601bb88736e3a.png",
+          "https://olympustaff.com/images/chapter/dca1f0cbe8f9dbe5ec3e8bbf7a7aa945.png",
+          "https://olympustaff.com/images/chapter/576e444001e7263355db0e8721974a66.png",
+          "https://olympustaff.com/images/chapter/1880679556.png",
+          "https://olympustaff.com/images/chapter/978890973.png",
+          "https://olympustaff.com/images/chapter/37374069.png",
+          "https://olympustaff.com/images/chapter/1866209576.png",
+          "https://olympustaff.com/images/chapter/1315012480.png",
+          "https://olympustaff.com/images/chapter/1046201190.png",
+          "https://olympustaff.com/images/chapter/1071869389.png",
+          "https://olympustaff.com/images/chapter/1550000102.png",
+          "https://olympustaff.com/images/chapter/4899570.png",
+          "https://olympustaff.com/images/chapter/1680170358.png",
+          "https://olympustaff.com/images/chapter/1498144906.png",
+          "https://olympustaff.com/images/chapter/345679725.png",
+          "https://olympustaff.com/images/chapter/2037550379.png",
+          "https://olympustaff.com/images/chapter/1874873039.png",
+          "https://olympustaff.com/images/chapter/431243695.png",
+          "https://olympustaff.com/images/chapter/11445725.png",
+          "https://olympustaff.com/images/chapter/1335153173.png"
+        ]
+      },
       {
         "n": "77",
         "d": "2026-09-02",
