@@ -17472,7 +17472,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -21355,6 +21355,16 @@ var DB = [
       "زمكاني"
     ],
     "chapters": [
+      {
+        "n": "403.3",
+        "d": "2026-09-06",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_9bf31/403.3/cb35e5a391b4c59753c60e569f3ac7d6.jpg",
+          "https://olympustaff.com/uploads/manga_9bf31/403.3/c7cd7b0bcbecb9f9d5d0dfe2f2653822.jpg",
+          "https://olympustaff.com/uploads/manga_9bf31/403.3/017efb56a4ca6a3d99eb9329f4626cc1.jpg",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
       {
         "n": "402.3",
         "d": "2026-09-03",
@@ -27647,7 +27657,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -29715,7 +29725,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
