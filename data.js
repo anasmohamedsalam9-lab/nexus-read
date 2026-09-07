@@ -1,5 +1,138 @@
 var DB = [
   {
+    "id": "nm_13",
+    "title": "13",
+    "cover": "",
+    "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [],
+    "type": "manhwa",
+    "chapters": [
+      {
+        "n": "2.1",
+        "d": "2026-09-07",
+        "pages": [
+          "assets/chapters/13/ch-2.1/1.webp",
+          "assets/chapters/13/ch-2.1/2.webp",
+          "assets/chapters/13/ch-2.1/3.webp",
+          "assets/chapters/13/ch-2.1/4.webp",
+          "assets/chapters/13/ch-2.1/5.webp",
+          "assets/chapters/13/ch-2.1/6.webp",
+          "assets/chapters/13/ch-2.1/7.webp",
+          "assets/chapters/13/ch-2.1/8.webp",
+          "assets/chapters/13/ch-2.1/9.webp",
+          "assets/chapters/13/ch-2.1/10.webp",
+          "assets/chapters/13/ch-2.1/11.webp",
+          "assets/chapters/13/ch-2.1/12.webp",
+          "assets/chapters/13/ch-2.1/13.webp",
+          "assets/chapters/13/ch-2.1/14.webp",
+          "assets/chapters/13/ch-2.1/15.webp",
+          "assets/chapters/13/ch-2.1/16.webp",
+          "assets/chapters/13/ch-2.1/17.webp",
+          "assets/chapters/13/ch-2.1/18.webp",
+          "assets/chapters/13/ch-2.1/19.webp",
+          "assets/chapters/13/ch-2.1/20.webp"
+        ]
+      },
+      {
+        "n": "2",
+        "d": "2026-09-07",
+        "pages": [
+          "assets/chapters/13/ch-2/1.webp",
+          "assets/chapters/13/ch-2/2.webp",
+          "assets/chapters/13/ch-2/3.webp",
+          "assets/chapters/13/ch-2/4.webp",
+          "assets/chapters/13/ch-2/5.webp",
+          "assets/chapters/13/ch-2/6.webp",
+          "assets/chapters/13/ch-2/7.webp",
+          "assets/chapters/13/ch-2/8.webp",
+          "assets/chapters/13/ch-2/9.webp",
+          "assets/chapters/13/ch-2/10.webp",
+          "assets/chapters/13/ch-2/11.webp",
+          "assets/chapters/13/ch-2/12.webp",
+          "assets/chapters/13/ch-2/13.webp",
+          "assets/chapters/13/ch-2/14.webp",
+          "assets/chapters/13/ch-2/15.webp",
+          "assets/chapters/13/ch-2/16.webp",
+          "assets/chapters/13/ch-2/17.webp",
+          "assets/chapters/13/ch-2/18.webp",
+          "assets/chapters/13/ch-2/19.webp",
+          "assets/chapters/13/ch-2/20.webp",
+          "assets/chapters/13/ch-2/21.webp",
+          "assets/chapters/13/ch-2/22.webp",
+          "assets/chapters/13/ch-2/23.webp",
+          "assets/chapters/13/ch-2/24.webp",
+          "assets/chapters/13/ch-2/25.webp",
+          "assets/chapters/13/ch-2/26.webp",
+          "assets/chapters/13/ch-2/27.webp",
+          "assets/chapters/13/ch-2/28.webp",
+          "assets/chapters/13/ch-2/29.webp"
+        ]
+      },
+      {
+        "n": "1.1",
+        "d": "2026-09-07",
+        "pages": [
+          "assets/chapters/13/ch-1.1/1.webp",
+          "assets/chapters/13/ch-1.1/2.webp",
+          "assets/chapters/13/ch-1.1/3.webp",
+          "assets/chapters/13/ch-1.1/4.webp",
+          "assets/chapters/13/ch-1.1/5.webp",
+          "assets/chapters/13/ch-1.1/6.webp",
+          "assets/chapters/13/ch-1.1/7.webp",
+          "assets/chapters/13/ch-1.1/8.webp"
+        ]
+      },
+      {
+        "n": "1",
+        "d": "2026-09-07",
+        "pages": [
+          "assets/chapters/13/ch-1/1.webp",
+          "assets/chapters/13/ch-1/2.webp",
+          "assets/chapters/13/ch-1/3.webp",
+          "assets/chapters/13/ch-1/4.webp",
+          "assets/chapters/13/ch-1/5.webp",
+          "assets/chapters/13/ch-1/6.webp",
+          "assets/chapters/13/ch-1/7.webp",
+          "assets/chapters/13/ch-1/8.webp",
+          "assets/chapters/13/ch-1/9.webp",
+          "assets/chapters/13/ch-1/10.webp",
+          "assets/chapters/13/ch-1/11.webp",
+          "assets/chapters/13/ch-1/12.webp",
+          "assets/chapters/13/ch-1/13.webp",
+          "assets/chapters/13/ch-1/14.webp",
+          "assets/chapters/13/ch-1/15.webp",
+          "assets/chapters/13/ch-1/16.webp",
+          "assets/chapters/13/ch-1/17.webp",
+          "assets/chapters/13/ch-1/18.webp",
+          "assets/chapters/13/ch-1/19.webp",
+          "assets/chapters/13/ch-1/20.webp",
+          "assets/chapters/13/ch-1/21.webp",
+          "assets/chapters/13/ch-1/22.webp",
+          "assets/chapters/13/ch-1/23.webp",
+          "assets/chapters/13/ch-1/24.webp",
+          "assets/chapters/13/ch-1/25.webp",
+          "assets/chapters/13/ch-1/26.webp",
+          "assets/chapters/13/ch-1/27.webp",
+          "assets/chapters/13/ch-1/28.webp",
+          "assets/chapters/13/ch-1/29.webp",
+          "assets/chapters/13/ch-1/30.webp",
+          "assets/chapters/13/ch-1/31.webp",
+          "assets/chapters/13/ch-1/32.webp",
+          "assets/chapters/13/ch-1/33.webp",
+          "assets/chapters/13/ch-1/34.webp",
+          "assets/chapters/13/ch-1/35.webp",
+          "assets/chapters/13/ch-1/36.webp",
+          "assets/chapters/13/ch-1/37.webp",
+          "assets/chapters/13/ch-1/38.webp",
+          "assets/chapters/13/ch-1/39.webp",
+          "assets/chapters/13/ch-1/40.webp"
+        ]
+      }
+    ]
+  },
+  {
     "id": "nm_15",
     "title": "15",
     "cover": "",
@@ -17665,7 +17798,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -27850,7 +27983,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -29918,7 +30051,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
