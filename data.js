@@ -21559,7 +21559,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -23436,6 +23436,19 @@ var DB = [
       "غموض"
     ],
     "chapters": [
+      {
+        "n": "357",
+        "d": "2026-09-17",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_c81e7/357/a327fb61066f0750b8f9cfcff21c3a35.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/357/631db7e5207a1475b51a3aac5b9e4a7b.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/357/4756a0063456396c306f53236950cacd.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/357/9e19eee1a00cec1695187920467cfbdd.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/357/93ce24ee527c9d62b6604a94ed1d7df2.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/357/873d85011d070e2a085df19e56045307.jpg",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
       {
         "n": "356",
         "d": "2026-09-16",
@@ -31824,7 +31837,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -33892,7 +33905,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
