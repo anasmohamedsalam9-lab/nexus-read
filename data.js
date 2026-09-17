@@ -1,5 +1,128 @@
 var DB = [
   {
+    "id": "nm_45",
+    "title": "45",
+    "cover": "",
+    "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [],
+    "type": "manhwa",
+    "chapters": [
+      {
+        "n": "9",
+        "d": "2026-09-17",
+        "pages": [
+          "assets/chapters/45/ch-9/1.webp",
+          "assets/chapters/45/ch-9/2.webp",
+          "assets/chapters/45/ch-9/3.webp",
+          "assets/chapters/45/ch-9/4.webp",
+          "assets/chapters/45/ch-9/5.webp"
+        ]
+      },
+      {
+        "n": "8",
+        "d": "2026-09-17",
+        "pages": [
+          "assets/chapters/45/ch-8/1.webp",
+          "assets/chapters/45/ch-8/2.webp",
+          "assets/chapters/45/ch-8/3.webp",
+          "assets/chapters/45/ch-8/4.webp"
+        ]
+      },
+      {
+        "n": "7",
+        "d": "2026-09-17",
+        "pages": [
+          "assets/chapters/45/ch-7/1.webp",
+          "assets/chapters/45/ch-7/2.webp",
+          "assets/chapters/45/ch-7/3.webp",
+          "assets/chapters/45/ch-7/4.webp"
+        ]
+      },
+      {
+        "n": "6.5",
+        "d": "2026-09-17",
+        "pages": [
+          "assets/chapters/45/ch-6.5/1.webp",
+          "assets/chapters/45/ch-6.5/2.webp",
+          "assets/chapters/45/ch-6.5/3.webp",
+          "assets/chapters/45/ch-6.5/4.webp",
+          "assets/chapters/45/ch-6.5/5.webp",
+          "assets/chapters/45/ch-6.5/6.webp",
+          "assets/chapters/45/ch-6.5/7.webp",
+          "assets/chapters/45/ch-6.5/8.webp",
+          "assets/chapters/45/ch-6.5/9.webp",
+          "assets/chapters/45/ch-6.5/10.webp",
+          "assets/chapters/45/ch-6.5/11.webp",
+          "assets/chapters/45/ch-6.5/12.webp",
+          "assets/chapters/45/ch-6.5/13.webp",
+          "assets/chapters/45/ch-6.5/14.webp"
+        ]
+      },
+      {
+        "n": "6",
+        "d": "2026-09-17",
+        "pages": [
+          "assets/chapters/45/ch-6/1.webp",
+          "assets/chapters/45/ch-6/2.webp",
+          "assets/chapters/45/ch-6/3.webp",
+          "assets/chapters/45/ch-6/4.webp"
+        ]
+      },
+      {
+        "n": "5",
+        "d": "2026-09-17",
+        "pages": [
+          "assets/chapters/45/ch-5/1.webp",
+          "assets/chapters/45/ch-5/2.webp",
+          "assets/chapters/45/ch-5/3.webp",
+          "assets/chapters/45/ch-5/4.webp"
+        ]
+      },
+      {
+        "n": "4",
+        "d": "2026-09-17",
+        "pages": [
+          "assets/chapters/45/ch-4/1.webp",
+          "assets/chapters/45/ch-4/2.webp",
+          "assets/chapters/45/ch-4/3.webp",
+          "assets/chapters/45/ch-4/4.webp"
+        ]
+      },
+      {
+        "n": "3",
+        "d": "2026-09-17",
+        "pages": [
+          "assets/chapters/45/ch-3/1.webp",
+          "assets/chapters/45/ch-3/2.webp",
+          "assets/chapters/45/ch-3/3.webp",
+          "assets/chapters/45/ch-3/4.webp"
+        ]
+      },
+      {
+        "n": "2",
+        "d": "2026-09-17",
+        "pages": [
+          "assets/chapters/45/ch-2/1.webp",
+          "assets/chapters/45/ch-2/2.webp",
+          "assets/chapters/45/ch-2/3.webp",
+          "assets/chapters/45/ch-2/4.webp"
+        ]
+      },
+      {
+        "n": "1",
+        "d": "2026-09-17",
+        "pages": [
+          "assets/chapters/45/ch-1/1.webp",
+          "assets/chapters/45/ch-1/2.webp",
+          "assets/chapters/45/ch-1/3.webp",
+          "assets/chapters/45/ch-1/4.webp"
+        ]
+      }
+    ]
+  },
+  {
     "id": "nm_48",
     "title": "48",
     "cover": "",
@@ -23304,7 +23427,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -33582,7 +33705,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -35650,7 +35773,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
