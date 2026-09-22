@@ -1,5 +1,39 @@
 var DB = [
   {
+    "id": "nm_the-maid-with-a-child",
+    "title": "The Maid With A Child",
+    "cover": "",
+    "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [],
+    "type": "manhwa",
+    "chapters": [
+      {
+        "n": "2",
+        "d": "2026-09-22",
+        "pages": [
+          "assets/chapters/the-maid-with-a-child/ch-2/1.webp",
+          "assets/chapters/the-maid-with-a-child/ch-2/2.webp",
+          "assets/chapters/the-maid-with-a-child/ch-2/3.webp",
+          "assets/chapters/the-maid-with-a-child/ch-2/4.webp",
+          "assets/chapters/the-maid-with-a-child/ch-2/5.webp"
+        ]
+      },
+      {
+        "n": "1",
+        "d": "2026-09-22",
+        "pages": [
+          "assets/chapters/the-maid-with-a-child/ch-1/1.webp",
+          "assets/chapters/the-maid-with-a-child/ch-1/2.webp",
+          "assets/chapters/the-maid-with-a-child/ch-1/3.webp",
+          "assets/chapters/the-maid-with-a-child/ch-1/4.webp",
+          "assets/chapters/the-maid-with-a-child/ch-1/5.webp"
+        ]
+      }
+    ]
+  },
+  {
     "id": "nm_30",
     "title": "30",
     "cover": "",
@@ -28373,7 +28407,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -38651,7 +38685,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -40719,7 +40753,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
