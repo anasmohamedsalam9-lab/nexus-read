@@ -6521,6 +6521,37 @@ var DB = [
     "type": "manhwa",
     "chapters": [
       {
+        "n": "22",
+        "d": "2026-09-26",
+        "pages": [
+          "https://olympustaff.com/images/TeamX.png",
+          "https://1.bp.blogspot.com/-_A83iDM6JYc/VhtxROLILrI/AAAAAAAADK4/aM4ikIA6aqI/s1600/btn_close.gif",
+          "https://olympustaff.com/images/manga/657fd46a92113a408be69d5a6f982b8a.gif",
+          "https://olympustaff.com/images/chapter/0c5f6657f823a10c55343e079558bb6f.png",
+          "https://olympustaff.com/images/chapter/3fc205491b2de17c98005f9d21f342fc.png",
+          "https://olympustaff.com/images/chapter/ed370c2a256d8a2a08fa7633668e2767.png",
+          "https://olympustaff.com/images/chapter/78f59304183505020e3bf1062c1544e6.png",
+          "https://olympustaff.com/images/chapter/75a2aa9f24d49d8a3e20761ce9bfc913.png",
+          "https://olympustaff.com/images/chapter/05b9d2907e0d4bd5e6ac000b2ebc3cc0.png",
+          "https://olympustaff.com/images/chapter/4fc4872a578f2a276baaa221d3520b32.png",
+          "https://olympustaff.com/images/chapter/f75d0873737cef31a116027324103fbd.jpg",
+          "https://olympustaff.com/images/chapter/990508d2d820febf83a353630b4eb6f3.png",
+          "https://olympustaff.com/images/chapter/3429dc1bd44fb34b94570d55d4c03ed3.png",
+          "https://olympustaff.com/images/chapter/076817a01e8097cb37fcba99723eb107.jpg",
+          "https://olympustaff.com/images/chapter/6015819d2634295b08df1fc9ab18e433.png",
+          "https://olympustaff.com/images/chapter/09e0cbe80cc640673a6fbe92c25f683c.png",
+          "https://olympustaff.com/images/chapter/f4dfa505beb8379187f8f2ccc74e41de.png",
+          "https://olympustaff.com/images/chapter/b50af87b15d8a07d75d13b682fbc1a14.png",
+          "https://olympustaff.com/images/chapter/44551d2c13452a0f7cb2f28986a6e691.png",
+          "https://olympustaff.com/images/chapter/286d4f34eb460e562ea34df90db79422.webp",
+          "https://olympustaff.com/images/chapter/45e07cadc06a65ce65b61908be2e1227.png",
+          "https://olympustaff.com/images/chapter/f0ae92131a738733efb1bb9e670f4331.png",
+          "https://olympustaff.com/images/chapter/93d0f2430133bd67cf79ca46f0866978.png",
+          "https://olympustaff.com/images/chapter/7491caae71cd0e0899f320da074adbd7.png",
+          "https://olympustaff.com/images/chapter/059ea77da19b612ef16f80dc4d5c552b.png"
+        ]
+      },
+      {
         "n": "21",
         "d": "2026-09-19",
         "pages": [
@@ -32571,7 +32602,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -34448,6 +34479,32 @@ var DB = [
       "غموض"
     ],
     "chapters": [
+      {
+        "n": "359",
+        "d": "2026-09-26",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_c81e7/359/97c9036c76b55062fd7d596eee283ceb.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/359/f6b2326198c8135d6f6b7d9078fed1c7.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/359/2178a76531844879b4da788fb92db1e4.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/359/b8d495f2a7c26c8ba583ab9c2639c6af.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/359/4e98c040fc2d9c6b440ae1c4bc8b8663.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/359/ca427f2341f7b2b260565bfbcf0697a8.jpg",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "358",
+        "d": "2026-09-26",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_c81e7/358/8873631d58aca166dba7ce354ba2c69c.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/358/310fef31c607616ec41f5796c69dd937.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/358/4f048aeb50fca5ae96817435cf1a3a45.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/358/439a08fe933ee31cfcb7530cc3839486.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/358/0edba0ac0c676718099b35a4bb2b78f6.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/358/37f24bdc68e924d5cb81bba1a4ed5c57.jpg",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
       {
         "n": "357",
         "d": "2026-09-17",
@@ -42849,7 +42906,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -44917,7 +44974,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
@@ -44935,6 +44992,17 @@ var DB = [
     "status": "Ongoing",
     "author": "Nexus Bot",
     "chapters": [
+      {
+        "n": "914",
+        "d": "2026-09-26",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_c0c7c/914/541e26607d63d094fbddba2b864f4419.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/914/4b498acba0a69ca5282912e9e1bbe30f.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/914/8f2a2d3e27a7df5e51e03e6932e86cdb.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/914/d6c5627e948934c610ffad99707610a5.jpg",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
       {
         "n": "913",
         "d": "2026-09-25",
