@@ -1,5 +1,150 @@
 var DB = [
   {
+    "id": "nm_the-hero-cannot-rest",
+    "title": "The Hero Cannot Rest",
+    "cover": "",
+    "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [
+      "أكشن",
+      "إثارة",
+      "إيسيكاي",
+      "بطل غير إعتيادي",
+      "خيال",
+      "نظام",
+      "غموض",
+      "مغامرات",
+      "سحر",
+      "فانتازيا",
+      "زنزانات",
+      "حرب"
+    ],
+    "type": "manhwa",
+    "chapters": [
+      {
+        "n": "7",
+        "d": "2026-10-01",
+        "pages": [
+          "https://olympustaff.com/images/TeamX.png",
+          "https://1.bp.blogspot.com/-_A83iDM6JYc/VhtxROLILrI/AAAAAAAADK4/aM4ikIA6aqI/s1600/btn_close.gif",
+          "https://olympustaff.com/images/manga/bf952c2e6022c762f1044c3d7862211c.png",
+          "https://olympustaff.com/images/chapter/0bb97227938f516a35048bf6a2f535e8.png",
+          "https://olympustaff.com/images/chapter/0c4c0e3062448bd2287b47d2daab78c8.png",
+          "https://olympustaff.com/images/chapter/dd5c10cec9959279d42e3b715f63853b.png",
+          "https://olympustaff.com/images/chapter/e9caf4f3c837b6859114197297815a08.png",
+          "https://olympustaff.com/images/chapter/6282d939410a68b172aa7c71d80f5512.png",
+          "https://olympustaff.com/images/chapter/bceb51d51ab067e76b35142fd0ef4a17.jpg",
+          "https://olympustaff.com/images/chapter/a8e6b40c6d7a83b05a153943dbc26214.webp"
+        ]
+      },
+      {
+        "n": "5",
+        "d": "2026-10-01",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_d1e94/5/e5e6a38150b500fc18f11cc89e9bf45b.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/5/e038f49544e7ac1df9771dccf4d1411c.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/5/394333bd8600d9d074aa947a2e7560df.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/5/aa7f8e5f9c3fffe48755b9c4e40d0552.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/5/381a29fe155750be1b513821646eaed8.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/5/5e008ab0b4c5c3e1cf5a4c40b160eb3c.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/5/911cfc771da2b9cf6142cea1fe3d3b8d.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/5/177086cd9bb870a67c59916edb53fa38.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/5/42b0618a2357def4a9a2046347ff1ca8.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/5/d2884b66fa275df23c015513acd3d36b.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/5/f04c078fbbd5236ff5a636991f0f3216.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/5/b448aa3340b7846b84732fb869bad3bc.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "4",
+        "d": "2026-10-01",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_d1e94/4/661aa584e43dc2088ac58ccc13c27065.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/4/5364d12eb2c202efb31ebabe999a4965.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/4/45c47e2566fdc65eac2157b7ad9c42ea.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/4/2f18b7e3782daf2c712ad8c764d294bc.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/4/dfc12d0530db10187dff134a360a6264.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/4/9c74856704b2504210ce9c12847e8a30.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/4/b123a051c09e240cc8a9b02b886fc6a1.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/4/fc8e610e1efedbb136adb3c305a23628.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/4/34420bbbb2df0a448c4c0a6997b6b956.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/4/99e9c6a329dab242ac5d990a3c5da5d0.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/4/981d05f9bab12d902e60daaef93d18b8.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/4/b765f962ead093c6b52322f5c3c94850.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/4/d0f19c8cf9e1616c43e6e25b06a1e24e.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/4/216f778e86952de5877a40a5e5ada6fc.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "3",
+        "d": "2026-10-01",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_d1e94/3/148055e7ab07a4da9c28126407ff3551.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/3/5d3e1350b02f4d79035993e4fd3c3e24.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/3/fc76c7303952568db49fa1410610653e.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/3/cb0a83c49ee00e609201d1dbd4718f74.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/3/77301f136962854d5a7c594e4ffd16a0.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/3/05c69e0ee5f9d1308d73cc78f464d642.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/3/cdccec243143f7bc3a876a84751803b2.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/3/7df7e093ef007a441f25129d5db7aa66.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/3/881c85dce3a696699d20ebee925a2f25.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/3/ee6b0369b9c4c965de28909ddd7eea65.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/3/21bf309978b710c5d540687e806a8a4a.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/3/f719a0301a77e6a36bcbfc1c15ad6088.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/3/baadae84285ee96decd030e6c0283501.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "2",
+        "d": "2026-10-01",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_d1e94/2/2a2ad84207734ff4ac8032d438c1ba0a.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/2/ada74fd332d72b1246673d9ec8a5f4b9.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/2/93561e9d7063656acc279db4054fad62.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/2/6b1dfe8ca55fbd8765260be7b0e95261.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/2/30c1510e53f7ca08da1bda30c2179f60.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/2/50c2efff0ad8922de393ec3976c0c3c2.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/2/0ce8112165d5586808aecf88bb03ed54.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/2/bb98b44fd8c1e6e8ed6ce3e482561482.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/2/04227ac1a56cebf5f05c46f6a6f75a05.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/2/3982d68a2db25c09647466a7d9984ff2.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/2/e72f1e540aff020621825f525177dd1e.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
+        "n": "1",
+        "d": "2026-10-01",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_d1e94/1/31de1ea9c983a4a2f90ba9955826c3ef.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/1/a215ab9607f4a4e4486443adc59927d2.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/1/ba8ec352e96fcc98d74be25efadc0cf7.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/1/f6ebd3cbf7d0f58a053dbff6c08be68b.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/1/7c2c6f11fe50a3a643ea2696a8edb208.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/1/85eaa926b8aee69c4fc3610d9beac795.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/1/099dc4a21d2620967632708caaf154b8.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/1/fb00607845102fd667b339cbe4b4af98.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/1/a6f114983421a07c60f5a715bdaa75f6.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/1/ad3a136e514df7f175a05afe5f4393d1.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/1/839f5fae5187ecce14c9066340ddd9a9.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/1/5aa4a57dc71558ca0914c60e03c9dfc9.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/1/87ceae116b197225483589fb0a7dd9de.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/1/650ad9daa717e195572abfdc5013cc38.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/1/dd0737b75d4566ae9fe1249a11c63fb2.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/1/dfed8d84e6b8d5c4aa404b80f2888330.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/1/9b11786971e6c841d8aafe7e2d020fd3.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/1/ce8a8d2e81856d0f249d2aab1c1839a9.webp",
+          "https://olympustaff.com/uploads/manga_d1e94/1/b9ead9059afda1c37c98e64c76da9f4a.webp",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      }
+    ]
+  },
+  {
     "id": "nm_rise-of-the-northern-shadow",
     "title": "Rise Of The Northern Shadow",
     "cover": "assets/covers/rise-of-the-northern-shadow.webp",
@@ -33411,7 +33556,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -43726,7 +43871,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -45794,7 +45939,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
