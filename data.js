@@ -2,7 +2,7 @@ var DB = [
   {
     "id": "nm_rise-of-the-northern-shadow",
     "title": "Rise Of The Northern Shadow",
-    "cover": "",
+    "cover": "assets/covers/rise-of-the-northern-shadow.webp",
     "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
     "status": "Ongoing",
     "author": "Nile Bot",
@@ -527,7 +527,7 @@ var DB = [
   {
     "id": "nm_the-long-way-of-the-warrior",
     "title": "The Long Way Of The Warrior",
-    "cover": "",
+    "cover": "assets/covers/the-long-way-of-the-warrior.webp",
     "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
     "status": "Ongoing",
     "author": "Nile Bot",
@@ -33362,7 +33362,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manga",
+    "type": "manhwa",
     "chapters": [
       {
         "n": "93",
@@ -43677,7 +43677,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manga",
+    "type": "manhwa",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -45745,7 +45745,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manga",
+    "type": "manhwa",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
