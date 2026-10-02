@@ -1,5 +1,16 @@
 var DB = [
   {
+    "id": "nm_20",
+    "title": "20",
+    "cover": "",
+    "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [],
+    "type": "manhwa",
+    "chapters": []
+  },
+  {
     "id": "nm_the-hero-cannot-rest",
     "title": "The Hero Cannot Rest",
     "cover": "assets/covers/the-hero-cannot-rest.webp",
@@ -692,6 +703,55 @@ var DB = [
     ],
     "type": "manhwa",
     "chapters": [
+      {
+        "n": "207",
+        "d": "2026-10-02",
+        "pages": [
+          "https://olympustaff.com/images/TeamX.png",
+          "https://1.bp.blogspot.com/-_A83iDM6JYc/VhtxROLILrI/AAAAAAAADK4/aM4ikIA6aqI/s1600/btn_close.gif",
+          "https://olympustaff.com/images/manga/91a8e01da1dea353e61a9abb1604cfa3.png",
+          "https://olympustaff.com/images/chapter/3324543633d14f432b1ce5c482198e1f.png",
+          "https://olympustaff.com/images/chapter/ff238df19da921cac76e39632d7cf80b.png",
+          "https://olympustaff.com/images/chapter/b1bf84f630c11956c5d107427ae74710.png",
+          "https://olympustaff.com/images/chapter/58f91caeda7daa14aafef3628e7e382e.png",
+          "https://olympustaff.com/images/chapter/d23394ab48175682c547a09b54d26a70.png",
+          "https://olympustaff.com/images/chapter/2319a973f0783d7f990902de5d5be3f7.png",
+          "https://olympustaff.com/images/chapter/d2c2b397f737b09399b7e3296b6ceb34.png",
+          "https://olympustaff.com/images/chapter/9d5c93bc7385f438345b09e8fe8bc184.png",
+          "https://olympustaff.com/images/chapter/d8ce56724be37ecc428f62664b149a00.png",
+          "https://olympustaff.com/images/chapter/4026fd93f00289a84f49d89962753fd6.png",
+          "https://olympustaff.com/images/chapter/bf15665103c38896c2f97a7caa04617e.png",
+          "https://olympustaff.com/images/chapter/bbdaa77f94459b19ef24df62bb4118bc.png",
+          "https://olympustaff.com/images/chapter/48c1591a0fddc2b5f8821932e04f3a59.png",
+          "https://olympustaff.com/images/chapter/f563cf54165973e849203f1d47b1d025.png",
+          "https://olympustaff.com/images/chapter/1584ff6adf2800a6f324453b36907036.png",
+          "https://olympustaff.com/images/chapter/4cc085f300ff2d1c5cd579fed205d7a3.png",
+          "https://olympustaff.com/images/chapter/58d8494dd31d513e58408c09fe50a6d7.png",
+          "https://olympustaff.com/images/chapter/3751ee7889442c62e1f59b6766a99b8f.png",
+          "https://olympustaff.com/images/chapter/4d2bcf15a3962c3f0bb61e09b4085b98.png",
+          "https://olympustaff.com/images/chapter/5012d01ca18f72a42ec0eb5737eb698e.png",
+          "https://olympustaff.com/images/chapter/04a56c85bb0d9ff8cd78fce3ffe7fa29.png",
+          "https://olympustaff.com/images/chapter/b55c7bf6870932cd76391d382b01960b.png",
+          "https://olympustaff.com/images/chapter/c58647550608ac6f6aee0c26739faeba.png",
+          "https://olympustaff.com/images/chapter/8dd435047d403c190ee612b528674d6d.png",
+          "https://olympustaff.com/images/chapter/86e717a4ce0c47ed628316b9e7c6ffb9.png",
+          "https://olympustaff.com/images/chapter/4369176c84041eeb4dcebc834cefdeaf.png",
+          "https://olympustaff.com/images/chapter/8fbabbe31e754fb2864c37bf3567f59d.png",
+          "https://olympustaff.com/images/chapter/3504c9c6ea8a8521928e1464e0b03566.png",
+          "https://olympustaff.com/images/chapter/ccc46a5ed480a6c71066a5ff9f091bff.png",
+          "https://olympustaff.com/images/chapter/887297b0556d714e984d16943169004f.png",
+          "https://olympustaff.com/images/chapter/0eee3da8c494d18d2d38183dad08e3bb.png",
+          "https://olympustaff.com/images/chapter/d2333d28d1d9bc4082c1275638056ac6.png",
+          "https://olympustaff.com/images/chapter/2bc197f3b57b640ce118e50991af3eb1.png",
+          "https://olympustaff.com/images/chapter/90f86ce8ea3c1d8d8e212f8a27fbb3ef.jpg",
+          "https://olympustaff.com/images/chapter/d6f125ef6acc1ccd96b3d5c9f69699e8.png",
+          "https://olympustaff.com/images/chapter/cec62aeb876b16e62aff3822c349e1bb.webp",
+          "https://olympustaff.com/images/chapter/e20c6815cccbb2322cc4b89dcb4e8694.jpg",
+          "https://olympustaff.com/images/chapter/0103210508c13e925e11117355119c3e.png",
+          "https://olympustaff.com/images/chapter/2a493f99e931499f4ea317997392aa38.png",
+          "https://olympustaff.com/images/chapter/07d6bdd737e16ac47ff81201de513d44.png"
+        ]
+      },
       {
         "n": "205",
         "d": "2026-10-01",
@@ -33556,7 +33616,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -43882,7 +43942,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -45950,7 +46010,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
