@@ -34351,7 +34351,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -36228,6 +36228,19 @@ var DB = [
       "غموض"
     ],
     "chapters": [
+      {
+        "n": "360",
+        "d": "2026-10-04",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_c81e7/360/e755a7f1b6be8b5ec12247a17d4dc612.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/360/ee2bd9da786b876697841970aea07bae.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/360/1bc60031ef67a8951fc8258424ada1bf.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/360/6029caa20efc20a781a09eb3517b728e.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/360/b810f3e3a495de0d94cd78e6236cba3f.jpg",
+          "https://olympustaff.com/uploads/manga_c81e7/360/97c06ccf52b2a5f33c5ec964a0936832.jpg",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
       {
         "n": "359",
         "d": "2026-09-26",
@@ -44677,7 +44690,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -46745,7 +46758,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
@@ -46763,6 +46776,17 @@ var DB = [
     "status": "Ongoing",
     "author": "Nexus Bot",
     "chapters": [
+      {
+        "n": "918",
+        "d": "2026-10-04",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_c0c7c/918/15e41741024b9d0b2843766a379e3e70.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/918/c15f409350fa532cd51081174120b08f.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/918/0b979cde6247ae9efc74f03b42bb6f20.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/918/7727742c9672f1bb14414ba3a3941204.jpg",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
       {
         "n": "917",
         "d": "2026-10-03",
