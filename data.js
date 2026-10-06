@@ -2292,6 +2292,89 @@ var DB = [
     "type": "manhwa",
     "chapters": [
       {
+        "n": "16",
+        "d": "2026-10-06",
+        "pages": [
+          "assets/chapters/28/ch-16/1.webp",
+          "assets/chapters/28/ch-16/2.webp",
+          "assets/chapters/28/ch-16/3.webp",
+          "assets/chapters/28/ch-16/4.webp",
+          "assets/chapters/28/ch-16/5.webp",
+          "assets/chapters/28/ch-16/6.webp",
+          "assets/chapters/28/ch-16/7.webp",
+          "assets/chapters/28/ch-16/8.webp",
+          "assets/chapters/28/ch-16/9.webp",
+          "assets/chapters/28/ch-16/10.webp",
+          "assets/chapters/28/ch-16/11.webp",
+          "assets/chapters/28/ch-16/12.webp",
+          "assets/chapters/28/ch-16/13.webp",
+          "assets/chapters/28/ch-16/14.webp",
+          "assets/chapters/28/ch-16/15.webp",
+          "assets/chapters/28/ch-16/16.webp",
+          "assets/chapters/28/ch-16/17.webp",
+          "assets/chapters/28/ch-16/18.webp",
+          "assets/chapters/28/ch-16/19.webp",
+          "assets/chapters/28/ch-16/20.webp",
+          "assets/chapters/28/ch-16/21.webp",
+          "assets/chapters/28/ch-16/22.webp",
+          "assets/chapters/28/ch-16/23.webp",
+          "assets/chapters/28/ch-16/24.webp",
+          "assets/chapters/28/ch-16/25.webp",
+          "assets/chapters/28/ch-16/26.webp",
+          "assets/chapters/28/ch-16/27.webp",
+          "assets/chapters/28/ch-16/28.webp",
+          "assets/chapters/28/ch-16/29.webp",
+          "assets/chapters/28/ch-16/30.webp",
+          "assets/chapters/28/ch-16/31.webp",
+          "assets/chapters/28/ch-16/32.webp",
+          "assets/chapters/28/ch-16/33.webp",
+          "assets/chapters/28/ch-16/34.webp",
+          "assets/chapters/28/ch-16/35.webp",
+          "assets/chapters/28/ch-16/36.webp",
+          "assets/chapters/28/ch-16/37.webp",
+          "assets/chapters/28/ch-16/38.webp",
+          "assets/chapters/28/ch-16/39.webp",
+          "assets/chapters/28/ch-16/40.webp",
+          "assets/chapters/28/ch-16/41.webp",
+          "assets/chapters/28/ch-16/42.webp"
+        ]
+      },
+      {
+        "n": "15",
+        "d": "2026-10-06",
+        "pages": [
+          "assets/chapters/28/ch-15/1.webp",
+          "assets/chapters/28/ch-15/2.webp",
+          "assets/chapters/28/ch-15/3.webp",
+          "assets/chapters/28/ch-15/4.webp",
+          "assets/chapters/28/ch-15/5.webp",
+          "assets/chapters/28/ch-15/6.webp",
+          "assets/chapters/28/ch-15/7.webp",
+          "assets/chapters/28/ch-15/8.webp",
+          "assets/chapters/28/ch-15/9.webp",
+          "assets/chapters/28/ch-15/10.webp",
+          "assets/chapters/28/ch-15/11.webp",
+          "assets/chapters/28/ch-15/12.webp"
+        ]
+      },
+      {
+        "n": "14",
+        "d": "2026-10-06",
+        "pages": [
+          "assets/chapters/28/ch-14/1.webp",
+          "assets/chapters/28/ch-14/2.webp",
+          "assets/chapters/28/ch-14/3.webp",
+          "assets/chapters/28/ch-14/4.webp",
+          "assets/chapters/28/ch-14/5.webp",
+          "assets/chapters/28/ch-14/6.webp",
+          "assets/chapters/28/ch-14/7.webp",
+          "assets/chapters/28/ch-14/8.webp",
+          "assets/chapters/28/ch-14/9.webp",
+          "assets/chapters/28/ch-14/10.webp",
+          "assets/chapters/28/ch-14/11.webp"
+        ]
+      },
+      {
         "n": "13",
         "d": "2026-09-25",
         "pages": [
@@ -34884,7 +34967,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -45223,7 +45306,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -47291,7 +47374,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
@@ -50422,6 +50505,55 @@ var DB = [
       "سفر عبر الزمن"
     ],
     "chapters": [
+      {
+        "n": "86",
+        "d": "2026-10-06",
+        "pages": [
+          "https://olympustaff.com/images/TeamX.png",
+          "https://1.bp.blogspot.com/-_A83iDM6JYc/VhtxROLILrI/AAAAAAAADK4/aM4ikIA6aqI/s1600/btn_close.gif",
+          "https://olympustaff.com/images/manga/22d8c264347d08ba3a218b33980f5485.gif",
+          "https://olympustaff.com/images/chapter/9e4c3c50043a1a72a534787245fc16ee.png",
+          "https://olympustaff.com/images/chapter/fd5267fcf34bc6542dd2ca74d43950a9.png",
+          "https://olympustaff.com/images/chapter/39a4710b3acbc7a07d114d898e81fae5.png",
+          "https://olympustaff.com/images/chapter/a82aa6c9fb02965f90a467f40ca6f0db.png",
+          "https://olympustaff.com/images/chapter/baa1a00ef3634f16b6db7832780a810c.png",
+          "https://olympustaff.com/images/chapter/00fa3ff86294705f0b08c2926a2ef58a.png",
+          "https://olympustaff.com/images/chapter/5ff84db91f0a3a2829e737dafb3f6613.png",
+          "https://olympustaff.com/images/chapter/338b38a3c80f5879cf6965b21485e74a.png",
+          "https://olympustaff.com/images/chapter/58f4c1a0bc89e965a1b11efbddcce278.png",
+          "https://olympustaff.com/images/chapter/e6da8fea8031047d979695f7fdc42a1d.png",
+          "https://olympustaff.com/images/chapter/20621eaf2db364c5a7bba3993815e545.png",
+          "https://olympustaff.com/images/chapter/2e98218fadce4b7ae5fbd9a5fcb2c6bf.png",
+          "https://olympustaff.com/images/chapter/d3e6aaae83413dddada33eaa1a7e420d.png",
+          "https://olympustaff.com/images/chapter/7f5004c0895b2c74d31a852dc2a2edcc.png",
+          "https://olympustaff.com/images/chapter/824604875d9bd9973c5539c284479a12.png",
+          "https://olympustaff.com/images/chapter/0490474e3698ae238dbfd61b2e1cffa8.png",
+          "https://olympustaff.com/images/chapter/6e9fd0b3ea49e7f468c820731fe4f1d7.png",
+          "https://olympustaff.com/images/chapter/576a70ffbf1c67b8a526d91bad2dc790.png",
+          "https://olympustaff.com/images/chapter/679312942ebbc43216fc4ff27d02ff33.png",
+          "https://olympustaff.com/images/chapter/8bf05144b032ddeaeb917fc9ec462305.png",
+          "https://olympustaff.com/images/chapter/c1f1583f056d84b4539903cd9f1ae7ac.png",
+          "https://olympustaff.com/images/chapter/3276adfde030eddd88450cce5d0c9d1c.png",
+          "https://olympustaff.com/images/chapter/50b64c7cc2e7c2d216637da2c0a03d86.png",
+          "https://olympustaff.com/images/chapter/4e73bad84194e3ad83cd8d82e55ea0b3.png",
+          "https://olympustaff.com/images/chapter/765ac2a506e9dda3800fd30119eb7aad.png",
+          "https://olympustaff.com/images/chapter/240d0738df06e033211c240281feee81.png",
+          "https://olympustaff.com/images/chapter/6f275090f301a065bc63235bba2c57e8.png",
+          "https://olympustaff.com/images/chapter/e469194e6980dfff63505db5c637d140.png",
+          "https://olympustaff.com/images/chapter/276733cfb0f2322b12a601bb88736e3a.png",
+          "https://olympustaff.com/images/chapter/dca1f0cbe8f9dbe5ec3e8bbf7a7aa945.png",
+          "https://olympustaff.com/images/chapter/576e444001e7263355db0e8721974a66.png",
+          "https://olympustaff.com/images/chapter/1880679556.png",
+          "https://olympustaff.com/images/chapter/978890973.png",
+          "https://olympustaff.com/images/chapter/37374069.png",
+          "https://olympustaff.com/images/chapter/1866209576.png",
+          "https://olympustaff.com/images/chapter/1315012480.png",
+          "https://olympustaff.com/images/chapter/1046201190.png",
+          "https://olympustaff.com/images/chapter/1071869389.png",
+          "https://olympustaff.com/images/chapter/1550000102.png",
+          "https://olympustaff.com/images/chapter/4899570.png"
+        ]
+      },
       {
         "n": "85",
         "d": "2026-10-03",
