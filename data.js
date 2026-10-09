@@ -2,7 +2,7 @@ var DB = [
   {
     "id": "nm_my-home",
     "title": "My Home",
-    "cover": "",
+    "cover": "assets/covers/my-home.webp",
     "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
     "status": "Ongoing",
     "author": "Nile Bot",
@@ -37924,7 +37924,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manga",
+    "type": "manhwa",
     "chapters": [
       {
         "n": "93",
@@ -48276,7 +48276,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manga",
+    "type": "manhwa",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -50344,7 +50344,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manga",
+    "type": "manhwa",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
