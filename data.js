@@ -1,5 +1,740 @@
 var DB = [
   {
+    "id": "nm_my-home",
+    "title": "My Home",
+    "cover": "",
+    "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [],
+    "type": "manhwa",
+    "chapters": [
+      {
+        "n": "55",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-55/1.webp",
+          "assets/chapters/my-home/ch-55/2.webp",
+          "assets/chapters/my-home/ch-55/3.webp",
+          "assets/chapters/my-home/ch-55/4.webp",
+          "assets/chapters/my-home/ch-55/5.webp",
+          "assets/chapters/my-home/ch-55/6.webp",
+          "assets/chapters/my-home/ch-55/7.webp",
+          "assets/chapters/my-home/ch-55/8.webp",
+          "assets/chapters/my-home/ch-55/9.webp",
+          "assets/chapters/my-home/ch-55/10.webp"
+        ]
+      },
+      {
+        "n": "54",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-54/1.webp",
+          "assets/chapters/my-home/ch-54/2.webp",
+          "assets/chapters/my-home/ch-54/3.webp",
+          "assets/chapters/my-home/ch-54/4.webp",
+          "assets/chapters/my-home/ch-54/5.webp",
+          "assets/chapters/my-home/ch-54/6.webp"
+        ]
+      },
+      {
+        "n": "53",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-53/1.webp",
+          "assets/chapters/my-home/ch-53/2.webp",
+          "assets/chapters/my-home/ch-53/3.webp",
+          "assets/chapters/my-home/ch-53/4.webp",
+          "assets/chapters/my-home/ch-53/5.webp",
+          "assets/chapters/my-home/ch-53/6.webp"
+        ]
+      },
+      {
+        "n": "52",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-52/1.webp",
+          "assets/chapters/my-home/ch-52/2.webp",
+          "assets/chapters/my-home/ch-52/3.webp",
+          "assets/chapters/my-home/ch-52/4.webp",
+          "assets/chapters/my-home/ch-52/5.webp",
+          "assets/chapters/my-home/ch-52/6.webp"
+        ]
+      },
+      {
+        "n": "51",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-51/1.webp",
+          "assets/chapters/my-home/ch-51/2.webp",
+          "assets/chapters/my-home/ch-51/3.webp",
+          "assets/chapters/my-home/ch-51/4.webp",
+          "assets/chapters/my-home/ch-51/5.webp",
+          "assets/chapters/my-home/ch-51/6.webp"
+        ]
+      },
+      {
+        "n": "50",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-50/1.webp",
+          "assets/chapters/my-home/ch-50/2.webp",
+          "assets/chapters/my-home/ch-50/3.webp",
+          "assets/chapters/my-home/ch-50/4.webp",
+          "assets/chapters/my-home/ch-50/5.webp",
+          "assets/chapters/my-home/ch-50/6.webp"
+        ]
+      },
+      {
+        "n": "49",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-49/1.webp",
+          "assets/chapters/my-home/ch-49/2.webp",
+          "assets/chapters/my-home/ch-49/3.webp",
+          "assets/chapters/my-home/ch-49/4.webp",
+          "assets/chapters/my-home/ch-49/5.webp",
+          "assets/chapters/my-home/ch-49/6.webp"
+        ]
+      },
+      {
+        "n": "48",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-48/1.webp",
+          "assets/chapters/my-home/ch-48/2.webp",
+          "assets/chapters/my-home/ch-48/3.webp",
+          "assets/chapters/my-home/ch-48/4.webp",
+          "assets/chapters/my-home/ch-48/5.webp",
+          "assets/chapters/my-home/ch-48/6.webp"
+        ]
+      },
+      {
+        "n": "47",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-47/1.webp",
+          "assets/chapters/my-home/ch-47/2.webp",
+          "assets/chapters/my-home/ch-47/3.webp",
+          "assets/chapters/my-home/ch-47/4.webp",
+          "assets/chapters/my-home/ch-47/5.webp",
+          "assets/chapters/my-home/ch-47/6.webp"
+        ]
+      },
+      {
+        "n": "46.5",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-46.5/1.webp",
+          "assets/chapters/my-home/ch-46.5/2.webp",
+          "assets/chapters/my-home/ch-46.5/3.webp",
+          "assets/chapters/my-home/ch-46.5/4.webp",
+          "assets/chapters/my-home/ch-46.5/5.webp"
+        ]
+      },
+      {
+        "n": "46",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-46/1.webp",
+          "assets/chapters/my-home/ch-46/2.webp",
+          "assets/chapters/my-home/ch-46/3.webp",
+          "assets/chapters/my-home/ch-46/4.webp"
+        ]
+      },
+      {
+        "n": "45",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-45/1.webp",
+          "assets/chapters/my-home/ch-45/2.webp",
+          "assets/chapters/my-home/ch-45/3.webp",
+          "assets/chapters/my-home/ch-45/4.webp"
+        ]
+      },
+      {
+        "n": "44.5",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-44.5/1.webp",
+          "assets/chapters/my-home/ch-44.5/2.webp",
+          "assets/chapters/my-home/ch-44.5/3.webp",
+          "assets/chapters/my-home/ch-44.5/4.webp"
+        ]
+      },
+      {
+        "n": "44",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-44/1.webp",
+          "assets/chapters/my-home/ch-44/2.webp",
+          "assets/chapters/my-home/ch-44/3.webp",
+          "assets/chapters/my-home/ch-44/4.webp"
+        ]
+      },
+      {
+        "n": "43",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-43/1.webp",
+          "assets/chapters/my-home/ch-43/2.webp",
+          "assets/chapters/my-home/ch-43/3.webp",
+          "assets/chapters/my-home/ch-43/4.webp",
+          "assets/chapters/my-home/ch-43/5.webp"
+        ]
+      },
+      {
+        "n": "42",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-42/1.webp",
+          "assets/chapters/my-home/ch-42/2.webp",
+          "assets/chapters/my-home/ch-42/3.webp",
+          "assets/chapters/my-home/ch-42/4.webp",
+          "assets/chapters/my-home/ch-42/5.webp",
+          "assets/chapters/my-home/ch-42/6.webp"
+        ]
+      },
+      {
+        "n": "41",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-41/1.webp",
+          "assets/chapters/my-home/ch-41/2.webp",
+          "assets/chapters/my-home/ch-41/3.webp",
+          "assets/chapters/my-home/ch-41/4.webp",
+          "assets/chapters/my-home/ch-41/5.webp",
+          "assets/chapters/my-home/ch-41/6.webp"
+        ]
+      },
+      {
+        "n": "40",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-40/1.webp",
+          "assets/chapters/my-home/ch-40/2.webp",
+          "assets/chapters/my-home/ch-40/3.webp",
+          "assets/chapters/my-home/ch-40/4.webp",
+          "assets/chapters/my-home/ch-40/5.webp",
+          "assets/chapters/my-home/ch-40/6.webp"
+        ]
+      },
+      {
+        "n": "39",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-39/1.webp",
+          "assets/chapters/my-home/ch-39/2.webp",
+          "assets/chapters/my-home/ch-39/3.webp",
+          "assets/chapters/my-home/ch-39/4.webp"
+        ]
+      },
+      {
+        "n": "38",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-38/1.webp",
+          "assets/chapters/my-home/ch-38/2.webp",
+          "assets/chapters/my-home/ch-38/3.webp",
+          "assets/chapters/my-home/ch-38/4.webp",
+          "assets/chapters/my-home/ch-38/5.webp",
+          "assets/chapters/my-home/ch-38/6.webp",
+          "assets/chapters/my-home/ch-38/7.webp",
+          "assets/chapters/my-home/ch-38/8.webp",
+          "assets/chapters/my-home/ch-38/9.webp",
+          "assets/chapters/my-home/ch-38/10.webp"
+        ]
+      },
+      {
+        "n": "37.5",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-37.5/1.webp",
+          "assets/chapters/my-home/ch-37.5/2.webp",
+          "assets/chapters/my-home/ch-37.5/3.webp",
+          "assets/chapters/my-home/ch-37.5/4.webp",
+          "assets/chapters/my-home/ch-37.5/5.webp",
+          "assets/chapters/my-home/ch-37.5/6.webp",
+          "assets/chapters/my-home/ch-37.5/7.webp",
+          "assets/chapters/my-home/ch-37.5/8.webp",
+          "assets/chapters/my-home/ch-37.5/9.webp"
+        ]
+      },
+      {
+        "n": "37",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-37/1.webp",
+          "assets/chapters/my-home/ch-37/2.webp",
+          "assets/chapters/my-home/ch-37/3.webp",
+          "assets/chapters/my-home/ch-37/4.webp",
+          "assets/chapters/my-home/ch-37/5.webp",
+          "assets/chapters/my-home/ch-37/6.webp",
+          "assets/chapters/my-home/ch-37/7.webp"
+        ]
+      },
+      {
+        "n": "36",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-36/1.webp",
+          "assets/chapters/my-home/ch-36/2.webp",
+          "assets/chapters/my-home/ch-36/3.webp",
+          "assets/chapters/my-home/ch-36/4.webp"
+        ]
+      },
+      {
+        "n": "35",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-35/1.webp",
+          "assets/chapters/my-home/ch-35/2.webp",
+          "assets/chapters/my-home/ch-35/3.webp",
+          "assets/chapters/my-home/ch-35/4.webp",
+          "assets/chapters/my-home/ch-35/5.webp"
+        ]
+      },
+      {
+        "n": "34",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-34/1.webp",
+          "assets/chapters/my-home/ch-34/2.webp",
+          "assets/chapters/my-home/ch-34/3.webp",
+          "assets/chapters/my-home/ch-34/4.webp",
+          "assets/chapters/my-home/ch-34/5.webp",
+          "assets/chapters/my-home/ch-34/6.webp"
+        ]
+      },
+      {
+        "n": "33.5",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-33.5/1.webp",
+          "assets/chapters/my-home/ch-33.5/2.webp",
+          "assets/chapters/my-home/ch-33.5/3.webp",
+          "assets/chapters/my-home/ch-33.5/4.webp"
+        ]
+      },
+      {
+        "n": "33",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-33/1.webp",
+          "assets/chapters/my-home/ch-33/2.webp",
+          "assets/chapters/my-home/ch-33/3.webp",
+          "assets/chapters/my-home/ch-33/4.webp",
+          "assets/chapters/my-home/ch-33/5.webp",
+          "assets/chapters/my-home/ch-33/6.webp"
+        ]
+      },
+      {
+        "n": "32",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-32/1.webp",
+          "assets/chapters/my-home/ch-32/2.webp",
+          "assets/chapters/my-home/ch-32/3.webp",
+          "assets/chapters/my-home/ch-32/4.webp",
+          "assets/chapters/my-home/ch-32/5.webp"
+        ]
+      },
+      {
+        "n": "31",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-31/1.webp",
+          "assets/chapters/my-home/ch-31/2.webp",
+          "assets/chapters/my-home/ch-31/3.webp",
+          "assets/chapters/my-home/ch-31/4.webp",
+          "assets/chapters/my-home/ch-31/5.webp",
+          "assets/chapters/my-home/ch-31/6.webp"
+        ]
+      },
+      {
+        "n": "30",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-30/1.webp",
+          "assets/chapters/my-home/ch-30/2.webp",
+          "assets/chapters/my-home/ch-30/3.webp",
+          "assets/chapters/my-home/ch-30/4.webp",
+          "assets/chapters/my-home/ch-30/5.webp",
+          "assets/chapters/my-home/ch-30/6.webp"
+        ]
+      },
+      {
+        "n": "29",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-29/1.webp",
+          "assets/chapters/my-home/ch-29/2.webp",
+          "assets/chapters/my-home/ch-29/3.webp",
+          "assets/chapters/my-home/ch-29/4.webp",
+          "assets/chapters/my-home/ch-29/5.webp",
+          "assets/chapters/my-home/ch-29/6.webp"
+        ]
+      },
+      {
+        "n": "28",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-28/1.webp",
+          "assets/chapters/my-home/ch-28/2.webp",
+          "assets/chapters/my-home/ch-28/3.webp",
+          "assets/chapters/my-home/ch-28/4.webp",
+          "assets/chapters/my-home/ch-28/5.webp",
+          "assets/chapters/my-home/ch-28/6.webp"
+        ]
+      },
+      {
+        "n": "27",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-27/1.webp",
+          "assets/chapters/my-home/ch-27/2.webp",
+          "assets/chapters/my-home/ch-27/3.webp",
+          "assets/chapters/my-home/ch-27/4.webp",
+          "assets/chapters/my-home/ch-27/5.webp",
+          "assets/chapters/my-home/ch-27/6.webp"
+        ]
+      },
+      {
+        "n": "26",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-26/1.webp",
+          "assets/chapters/my-home/ch-26/2.webp",
+          "assets/chapters/my-home/ch-26/3.webp",
+          "assets/chapters/my-home/ch-26/4.webp",
+          "assets/chapters/my-home/ch-26/5.webp",
+          "assets/chapters/my-home/ch-26/6.webp",
+          "assets/chapters/my-home/ch-26/7.webp"
+        ]
+      },
+      {
+        "n": "25",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-25/1.webp",
+          "assets/chapters/my-home/ch-25/2.webp",
+          "assets/chapters/my-home/ch-25/3.webp",
+          "assets/chapters/my-home/ch-25/4.webp",
+          "assets/chapters/my-home/ch-25/5.webp",
+          "assets/chapters/my-home/ch-25/6.webp"
+        ]
+      },
+      {
+        "n": "24",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-24/1.webp",
+          "assets/chapters/my-home/ch-24/2.webp",
+          "assets/chapters/my-home/ch-24/3.webp",
+          "assets/chapters/my-home/ch-24/4.webp",
+          "assets/chapters/my-home/ch-24/5.webp",
+          "assets/chapters/my-home/ch-24/6.webp"
+        ]
+      },
+      {
+        "n": "23",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-23/1.webp",
+          "assets/chapters/my-home/ch-23/2.webp",
+          "assets/chapters/my-home/ch-23/3.webp",
+          "assets/chapters/my-home/ch-23/4.webp",
+          "assets/chapters/my-home/ch-23/5.webp",
+          "assets/chapters/my-home/ch-23/6.webp"
+        ]
+      },
+      {
+        "n": "22",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-22/1.webp",
+          "assets/chapters/my-home/ch-22/2.webp",
+          "assets/chapters/my-home/ch-22/3.webp",
+          "assets/chapters/my-home/ch-22/4.webp",
+          "assets/chapters/my-home/ch-22/5.webp",
+          "assets/chapters/my-home/ch-22/6.webp"
+        ]
+      },
+      {
+        "n": "21",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-21/1.webp",
+          "assets/chapters/my-home/ch-21/2.webp",
+          "assets/chapters/my-home/ch-21/3.webp",
+          "assets/chapters/my-home/ch-21/4.webp",
+          "assets/chapters/my-home/ch-21/5.webp",
+          "assets/chapters/my-home/ch-21/6.webp"
+        ]
+      },
+      {
+        "n": "20",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-20/1.webp",
+          "assets/chapters/my-home/ch-20/2.webp",
+          "assets/chapters/my-home/ch-20/3.webp",
+          "assets/chapters/my-home/ch-20/4.webp",
+          "assets/chapters/my-home/ch-20/5.webp",
+          "assets/chapters/my-home/ch-20/6.webp"
+        ]
+      },
+      {
+        "n": "19",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-19/1.webp",
+          "assets/chapters/my-home/ch-19/2.webp",
+          "assets/chapters/my-home/ch-19/3.webp",
+          "assets/chapters/my-home/ch-19/4.webp",
+          "assets/chapters/my-home/ch-19/5.webp",
+          "assets/chapters/my-home/ch-19/6.webp"
+        ]
+      },
+      {
+        "n": "18",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-18/1.webp",
+          "assets/chapters/my-home/ch-18/2.webp",
+          "assets/chapters/my-home/ch-18/3.webp",
+          "assets/chapters/my-home/ch-18/4.webp",
+          "assets/chapters/my-home/ch-18/5.webp",
+          "assets/chapters/my-home/ch-18/6.webp",
+          "assets/chapters/my-home/ch-18/7.webp",
+          "assets/chapters/my-home/ch-18/8.webp",
+          "assets/chapters/my-home/ch-18/9.webp",
+          "assets/chapters/my-home/ch-18/10.webp",
+          "assets/chapters/my-home/ch-18/11.webp"
+        ]
+      },
+      {
+        "n": "17.5",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-17.5/1.webp",
+          "assets/chapters/my-home/ch-17.5/2.webp",
+          "assets/chapters/my-home/ch-17.5/3.webp",
+          "assets/chapters/my-home/ch-17.5/4.webp",
+          "assets/chapters/my-home/ch-17.5/5.webp",
+          "assets/chapters/my-home/ch-17.5/6.webp",
+          "assets/chapters/my-home/ch-17.5/7.webp",
+          "assets/chapters/my-home/ch-17.5/8.webp"
+        ]
+      },
+      {
+        "n": "17",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-17/1.webp",
+          "assets/chapters/my-home/ch-17/2.webp",
+          "assets/chapters/my-home/ch-17/3.webp",
+          "assets/chapters/my-home/ch-17/4.webp",
+          "assets/chapters/my-home/ch-17/5.webp",
+          "assets/chapters/my-home/ch-17/6.webp"
+        ]
+      },
+      {
+        "n": "16",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-16/1.webp",
+          "assets/chapters/my-home/ch-16/2.webp",
+          "assets/chapters/my-home/ch-16/3.webp",
+          "assets/chapters/my-home/ch-16/4.webp",
+          "assets/chapters/my-home/ch-16/5.webp",
+          "assets/chapters/my-home/ch-16/6.webp"
+        ]
+      },
+      {
+        "n": "15",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-15/1.webp",
+          "assets/chapters/my-home/ch-15/2.webp",
+          "assets/chapters/my-home/ch-15/3.webp",
+          "assets/chapters/my-home/ch-15/4.webp",
+          "assets/chapters/my-home/ch-15/5.webp",
+          "assets/chapters/my-home/ch-15/6.webp",
+          "assets/chapters/my-home/ch-15/7.webp"
+        ]
+      },
+      {
+        "n": "14",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-14/1.webp",
+          "assets/chapters/my-home/ch-14/2.webp",
+          "assets/chapters/my-home/ch-14/3.webp",
+          "assets/chapters/my-home/ch-14/4.webp",
+          "assets/chapters/my-home/ch-14/5.webp",
+          "assets/chapters/my-home/ch-14/6.webp"
+        ]
+      },
+      {
+        "n": "13",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-13/1.webp",
+          "assets/chapters/my-home/ch-13/2.webp",
+          "assets/chapters/my-home/ch-13/3.webp",
+          "assets/chapters/my-home/ch-13/4.webp",
+          "assets/chapters/my-home/ch-13/5.webp",
+          "assets/chapters/my-home/ch-13/6.webp"
+        ]
+      },
+      {
+        "n": "12",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-12/1.webp",
+          "assets/chapters/my-home/ch-12/2.webp",
+          "assets/chapters/my-home/ch-12/3.webp",
+          "assets/chapters/my-home/ch-12/4.webp",
+          "assets/chapters/my-home/ch-12/5.webp",
+          "assets/chapters/my-home/ch-12/6.webp",
+          "assets/chapters/my-home/ch-12/7.webp"
+        ]
+      },
+      {
+        "n": "11",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-11/1.webp",
+          "assets/chapters/my-home/ch-11/2.webp",
+          "assets/chapters/my-home/ch-11/3.webp",
+          "assets/chapters/my-home/ch-11/4.webp",
+          "assets/chapters/my-home/ch-11/5.webp"
+        ]
+      },
+      {
+        "n": "10",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-10/1.webp",
+          "assets/chapters/my-home/ch-10/2.webp",
+          "assets/chapters/my-home/ch-10/3.webp",
+          "assets/chapters/my-home/ch-10/4.webp",
+          "assets/chapters/my-home/ch-10/5.webp",
+          "assets/chapters/my-home/ch-10/6.webp"
+        ]
+      },
+      {
+        "n": "9",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-9/1.webp",
+          "assets/chapters/my-home/ch-9/2.webp",
+          "assets/chapters/my-home/ch-9/3.webp",
+          "assets/chapters/my-home/ch-9/4.webp",
+          "assets/chapters/my-home/ch-9/5.webp",
+          "assets/chapters/my-home/ch-9/6.webp",
+          "assets/chapters/my-home/ch-9/7.webp"
+        ]
+      },
+      {
+        "n": "8",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-8/1.webp",
+          "assets/chapters/my-home/ch-8/2.webp",
+          "assets/chapters/my-home/ch-8/3.webp",
+          "assets/chapters/my-home/ch-8/4.webp",
+          "assets/chapters/my-home/ch-8/5.webp",
+          "assets/chapters/my-home/ch-8/6.webp"
+        ]
+      },
+      {
+        "n": "7",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-7/1.webp",
+          "assets/chapters/my-home/ch-7/2.webp",
+          "assets/chapters/my-home/ch-7/3.webp",
+          "assets/chapters/my-home/ch-7/4.webp",
+          "assets/chapters/my-home/ch-7/5.webp",
+          "assets/chapters/my-home/ch-7/6.webp"
+        ]
+      },
+      {
+        "n": "6",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-6/1.webp",
+          "assets/chapters/my-home/ch-6/2.webp",
+          "assets/chapters/my-home/ch-6/3.webp",
+          "assets/chapters/my-home/ch-6/4.webp",
+          "assets/chapters/my-home/ch-6/5.webp",
+          "assets/chapters/my-home/ch-6/6.webp"
+        ]
+      },
+      {
+        "n": "5",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-5/1.webp",
+          "assets/chapters/my-home/ch-5/2.webp",
+          "assets/chapters/my-home/ch-5/3.webp",
+          "assets/chapters/my-home/ch-5/4.webp",
+          "assets/chapters/my-home/ch-5/5.webp"
+        ]
+      },
+      {
+        "n": "4",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-4/1.webp",
+          "assets/chapters/my-home/ch-4/2.webp",
+          "assets/chapters/my-home/ch-4/3.webp",
+          "assets/chapters/my-home/ch-4/4.webp",
+          "assets/chapters/my-home/ch-4/5.webp",
+          "assets/chapters/my-home/ch-4/6.webp"
+        ]
+      },
+      {
+        "n": "3",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-3/1.webp",
+          "assets/chapters/my-home/ch-3/2.webp",
+          "assets/chapters/my-home/ch-3/3.webp",
+          "assets/chapters/my-home/ch-3/4.webp",
+          "assets/chapters/my-home/ch-3/5.webp",
+          "assets/chapters/my-home/ch-3/6.webp",
+          "assets/chapters/my-home/ch-3/7.webp"
+        ]
+      },
+      {
+        "n": "2",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-2/1.webp",
+          "assets/chapters/my-home/ch-2/2.webp",
+          "assets/chapters/my-home/ch-2/3.webp",
+          "assets/chapters/my-home/ch-2/4.webp",
+          "assets/chapters/my-home/ch-2/5.webp"
+        ]
+      },
+      {
+        "n": "1",
+        "d": "2026-10-09",
+        "pages": [
+          "assets/chapters/my-home/ch-1/1.webp",
+          "assets/chapters/my-home/ch-1/2.webp",
+          "assets/chapters/my-home/ch-1/3.webp",
+          "assets/chapters/my-home/ch-1/4.webp",
+          "assets/chapters/my-home/ch-1/5.webp",
+          "assets/chapters/my-home/ch-1/6.webp"
+        ]
+      }
+    ]
+  },
+  {
     "id": "nm_41",
     "title": "41",
     "cover": "",
@@ -37189,7 +37924,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -47541,7 +48276,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -49609,7 +50344,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
