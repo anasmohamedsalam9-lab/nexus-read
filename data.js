@@ -40834,7 +40834,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -51186,7 +51186,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -53254,7 +53254,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
@@ -53272,6 +53272,18 @@ var DB = [
     "status": "Ongoing",
     "author": "Nexus Bot",
     "chapters": [
+      {
+        "n": "921",
+        "d": "2026-10-11",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_c0c7c/921/73da6caec59068c19491027507441ca3.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/921/4ce02695f1cfe43de5b85ea375928f61.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/921/fad41853965237a3d4e7352c720532ca.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/921/f51a017c6a0eed7ba9739f509c0fe4ed.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/921/bebde5490cacf5c7d39e02e7f241682f.jpg",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
       {
         "n": "920",
         "d": "2026-10-10",
