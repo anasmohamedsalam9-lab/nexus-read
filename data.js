@@ -3878,6 +3878,26 @@ var DB = [
     "type": "manhwa",
     "chapters": [
       {
+        "n": "61",
+        "d": "2026-10-22",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_d7577/61/e63f9abf5e48af242f40a1c3840cebf2.jpg",
+          "https://olympustaff.com/uploads/manga_d7577/61/bd0b97b1872228027c8cb87a3b328561.jpg",
+          "https://olympustaff.com/uploads/manga_d7577/61/ef76db93a03bc9ecbfca86c0ab6ca38a.jpg",
+          "https://olympustaff.com/uploads/manga_d7577/61/faf054243f9349a465c22566b3c93b22.jpg",
+          "https://olympustaff.com/uploads/manga_d7577/61/fee98257f8a8144c90249eba67e12b56.jpg",
+          "https://olympustaff.com/uploads/manga_d7577/61/db1f96cb6b09854c2a72fb628130b632.jpg",
+          "https://olympustaff.com/uploads/manga_d7577/61/5d9c1323dd01cb033d91fd2bb6b5bc68.jpg",
+          "https://olympustaff.com/uploads/manga_d7577/61/1ebe216afa29be8f265a83acfdf9584e.jpg",
+          "https://olympustaff.com/uploads/manga_d7577/61/1b38c8ed136cb6ef523c419f96acc168.jpg",
+          "https://olympustaff.com/uploads/manga_d7577/61/dc043a5493cb2bae7fd4267b33ccb47d.jpg",
+          "https://olympustaff.com/uploads/manga_d7577/61/3f81921696a4f03b6abb4df47f727b3b.jpg",
+          "https://olympustaff.com/uploads/manga_d7577/61/ee5ab7013f2edfbb5bda6a1eb62f8937.jpg",
+          "https://olympustaff.com/uploads/manga_d7577/61/2bf0720940bcd2e29d4b5b1b5dbbba2a.jpg",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
+      {
         "n": "60",
         "d": "2026-10-19",
         "pages": [
@@ -48767,7 +48787,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -59155,7 +59175,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -61223,7 +61243,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
