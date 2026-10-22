@@ -32309,6 +32309,71 @@ var DB = [
     "type": "manhwa",
     "chapters": [
       {
+        "n": "54.5",
+        "d": "2026-10-22",
+        "pages": [
+          "assets/chapters/22/ch-54.5/1.webp",
+          "assets/chapters/22/ch-54.5/2.webp",
+          "assets/chapters/22/ch-54.5/3.webp",
+          "assets/chapters/22/ch-54.5/4.webp",
+          "assets/chapters/22/ch-54.5/5.webp",
+          "assets/chapters/22/ch-54.5/6.webp",
+          "assets/chapters/22/ch-54.5/7.webp",
+          "assets/chapters/22/ch-54.5/8.webp",
+          "assets/chapters/22/ch-54.5/9.webp"
+        ]
+      },
+      {
+        "n": "54",
+        "d": "2026-10-22",
+        "pages": [
+          "assets/chapters/22/ch-54/1.webp",
+          "assets/chapters/22/ch-54/2.webp",
+          "assets/chapters/22/ch-54/3.webp",
+          "assets/chapters/22/ch-54/4.webp",
+          "assets/chapters/22/ch-54/5.webp",
+          "assets/chapters/22/ch-54/6.webp",
+          "assets/chapters/22/ch-54/7.webp",
+          "assets/chapters/22/ch-54/8.webp",
+          "assets/chapters/22/ch-54/9.webp"
+        ]
+      },
+      {
+        "n": "53",
+        "d": "2026-10-22",
+        "pages": [
+          "assets/chapters/22/ch-53/1.webp",
+          "assets/chapters/22/ch-53/2.webp",
+          "assets/chapters/22/ch-53/3.webp",
+          "assets/chapters/22/ch-53/4.webp"
+        ]
+      },
+      {
+        "n": "52",
+        "d": "2026-10-22",
+        "pages": [
+          "assets/chapters/22/ch-52/1.webp",
+          "assets/chapters/22/ch-52/2.webp",
+          "assets/chapters/22/ch-52/3.webp",
+          "assets/chapters/22/ch-52/4.webp",
+          "assets/chapters/22/ch-52/5.webp",
+          "assets/chapters/22/ch-52/6.webp",
+          "assets/chapters/22/ch-52/7.webp",
+          "assets/chapters/22/ch-52/8.webp"
+        ]
+      },
+      {
+        "n": "51",
+        "d": "2026-10-22",
+        "pages": [
+          "assets/chapters/22/ch-51/1.webp",
+          "assets/chapters/22/ch-51/2.webp",
+          "assets/chapters/22/ch-51/3.webp",
+          "assets/chapters/22/ch-51/4.webp",
+          "assets/chapters/22/ch-51/5.webp"
+        ]
+      },
+      {
         "n": "50",
         "d": "2026-09-02",
         "pages": [
@@ -48787,7 +48852,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -52799,6 +52864,17 @@ var DB = [
       "زمكاني"
     ],
     "chapters": [
+      {
+        "n": "409.3",
+        "d": "2026-10-22",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_9bf31/409.3/29465a7234508c91e4e625197adcf088.jpg",
+          "https://olympustaff.com/uploads/manga_9bf31/409.3/0ce300b8b06935a977fc55395c4e92c9.jpg",
+          "https://olympustaff.com/uploads/manga_9bf31/409.3/911ea9e4a9240b94b62dea989e3d39b7.jpg",
+          "https://olympustaff.com/uploads/manga_9bf31/409.3/7c3281bba8393a595eca6ce49c5ea19a.jpg",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
       {
         "n": "408.3",
         "d": "2026-10-13",
@@ -59175,7 +59251,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -61243,7 +61319,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
