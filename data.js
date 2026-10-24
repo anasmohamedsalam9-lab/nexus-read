@@ -1,5 +1,1512 @@
 var DB = [
   {
+    "id": "nm_i-shall-seal-the-heavens-2025",
+    "title": "I Shall Seal The Heavens 2025",
+    "cover": "",
+    "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [],
+    "type": "manhwa",
+    "chapters": [
+      {
+        "n": "95",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-95/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-95/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-95/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-95/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-95/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-95/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-95/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-95/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-95/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-95/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-95/11.webp"
+        ]
+      },
+      {
+        "n": "94",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-94/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-94/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-94/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-94/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-94/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-94/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-94/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-94/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-94/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-94/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-94/11.webp"
+        ]
+      },
+      {
+        "n": "93",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-93/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-93/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-93/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-93/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-93/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-93/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-93/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-93/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-93/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-93/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-93/11.webp"
+        ]
+      },
+      {
+        "n": "92",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-92/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-92/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-92/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-92/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-92/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-92/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-92/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-92/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-92/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-92/10.webp"
+        ]
+      },
+      {
+        "n": "91",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-91/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-91/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-91/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-91/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-91/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-91/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-91/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-91/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-91/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-91/10.webp"
+        ]
+      },
+      {
+        "n": "90",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-90/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-90/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-90/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-90/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-90/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-90/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-90/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-90/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-90/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-90/10.webp"
+        ]
+      },
+      {
+        "n": "89",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-89/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-89/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-89/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-89/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-89/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-89/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-89/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-89/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-89/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-89/10.webp"
+        ]
+      },
+      {
+        "n": "88",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-88/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-88/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-88/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-88/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-88/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-88/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-88/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-88/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-88/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-88/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-88/11.webp"
+        ]
+      },
+      {
+        "n": "87",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-87/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-87/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-87/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-87/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-87/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-87/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-87/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-87/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-87/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-87/10.webp"
+        ]
+      },
+      {
+        "n": "86",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-86/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-86/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-86/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-86/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-86/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-86/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-86/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-86/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-86/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-86/10.webp"
+        ]
+      },
+      {
+        "n": "85",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-85/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-85/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-85/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-85/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-85/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-85/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-85/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-85/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-85/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-85/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-85/11.webp"
+        ]
+      },
+      {
+        "n": "84",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-84/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-84/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-84/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-84/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-84/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-84/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-84/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-84/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-84/9.webp"
+        ]
+      },
+      {
+        "n": "83",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-83/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-83/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-83/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-83/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-83/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-83/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-83/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-83/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-83/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-83/10.webp"
+        ]
+      },
+      {
+        "n": "82",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-82/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-82/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-82/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-82/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-82/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-82/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-82/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-82/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-82/9.webp"
+        ]
+      },
+      {
+        "n": "81",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-81/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-81/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-81/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-81/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-81/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-81/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-81/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-81/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-81/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-81/10.webp"
+        ]
+      },
+      {
+        "n": "80",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-80/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-80/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-80/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-80/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-80/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-80/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-80/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-80/8.webp"
+        ]
+      },
+      {
+        "n": "79",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-79/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-79/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-79/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-79/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-79/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-79/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-79/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-79/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-79/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-79/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-79/11.webp"
+        ]
+      },
+      {
+        "n": "78",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-78/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-78/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-78/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-78/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-78/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-78/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-78/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-78/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-78/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-78/10.webp"
+        ]
+      },
+      {
+        "n": "77",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-77/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-77/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-77/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-77/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-77/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-77/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-77/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-77/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-77/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-77/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-77/11.webp"
+        ]
+      },
+      {
+        "n": "76",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-76/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-76/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-76/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-76/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-76/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-76/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-76/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-76/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-76/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-76/10.webp"
+        ]
+      },
+      {
+        "n": "75",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-75/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-75/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-75/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-75/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-75/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-75/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-75/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-75/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-75/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-75/10.webp"
+        ]
+      },
+      {
+        "n": "74",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-74/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-74/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-74/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-74/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-74/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-74/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-74/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-74/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-74/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-74/10.webp"
+        ]
+      },
+      {
+        "n": "73",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-73/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-73/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-73/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-73/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-73/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-73/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-73/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-73/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-73/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-73/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-73/11.webp"
+        ]
+      },
+      {
+        "n": "72",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-72/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-72/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-72/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-72/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-72/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-72/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-72/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-72/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-72/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-72/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-72/11.webp"
+        ]
+      },
+      {
+        "n": "71",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-71/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-71/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-71/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-71/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-71/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-71/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-71/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-71/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-71/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-71/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-71/11.webp"
+        ]
+      },
+      {
+        "n": "70",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-70/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-70/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-70/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-70/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-70/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-70/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-70/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-70/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-70/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-70/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-70/11.webp"
+        ]
+      },
+      {
+        "n": "69",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-69/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-69/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-69/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-69/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-69/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-69/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-69/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-69/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-69/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-69/10.webp"
+        ]
+      },
+      {
+        "n": "68",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-68/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-68/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-68/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-68/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-68/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-68/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-68/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-68/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-68/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-68/10.webp"
+        ]
+      },
+      {
+        "n": "67",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-67/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-67/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-67/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-67/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-67/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-67/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-67/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-67/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-67/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-67/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-67/11.webp"
+        ]
+      },
+      {
+        "n": "66",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-66/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-66/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-66/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-66/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-66/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-66/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-66/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-66/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-66/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-66/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-66/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-66/12.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-66/13.webp"
+        ]
+      },
+      {
+        "n": "65",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-65/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-65/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-65/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-65/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-65/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-65/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-65/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-65/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-65/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-65/10.webp"
+        ]
+      },
+      {
+        "n": "64",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-64/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-64/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-64/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-64/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-64/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-64/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-64/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-64/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-64/9.webp"
+        ]
+      },
+      {
+        "n": "63",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-63/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-63/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-63/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-63/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-63/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-63/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-63/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-63/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-63/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-63/10.webp"
+        ]
+      },
+      {
+        "n": "62",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-62/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-62/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-62/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-62/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-62/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-62/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-62/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-62/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-62/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-62/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-62/11.webp"
+        ]
+      },
+      {
+        "n": "61",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-61/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-61/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-61/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-61/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-61/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-61/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-61/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-61/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-61/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-61/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-61/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-61/12.webp"
+        ]
+      },
+      {
+        "n": "60",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-60/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-60/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-60/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-60/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-60/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-60/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-60/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-60/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-60/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-60/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-60/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-60/12.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-60/13.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-60/14.webp"
+        ]
+      },
+      {
+        "n": "59",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-59/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-59/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-59/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-59/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-59/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-59/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-59/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-59/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-59/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-59/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-59/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-59/12.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-59/13.webp"
+        ]
+      },
+      {
+        "n": "58",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-58/1.webp"
+        ]
+      },
+      {
+        "n": "57",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-57/1.webp"
+        ]
+      },
+      {
+        "n": "56",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-56/1.webp"
+        ]
+      },
+      {
+        "n": "55",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-55/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-55/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-55/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-55/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-55/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-55/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-55/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-55/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-55/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-55/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-55/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-55/12.webp"
+        ]
+      },
+      {
+        "n": "54",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-54/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-54/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-54/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-54/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-54/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-54/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-54/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-54/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-54/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-54/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-54/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-54/12.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-54/13.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-54/14.webp"
+        ]
+      },
+      {
+        "n": "53",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-53/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-53/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-53/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-53/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-53/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-53/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-53/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-53/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-53/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-53/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-53/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-53/12.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-53/13.webp"
+        ]
+      },
+      {
+        "n": "52",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-52/1.webp"
+        ]
+      },
+      {
+        "n": "51",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-51/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-51/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-51/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-51/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-51/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-51/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-51/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-51/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-51/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-51/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-51/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-51/12.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-51/13.webp"
+        ]
+      },
+      {
+        "n": "50",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-50/1.webp"
+        ]
+      },
+      {
+        "n": "49",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-49/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-49/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-49/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-49/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-49/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-49/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-49/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-49/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-49/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-49/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-49/11.webp"
+        ]
+      },
+      {
+        "n": "48",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-48/1.webp"
+        ]
+      },
+      {
+        "n": "47",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-47/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-47/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-47/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-47/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-47/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-47/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-47/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-47/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-47/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-47/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-47/11.webp"
+        ]
+      },
+      {
+        "n": "46",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-46/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-46/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-46/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-46/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-46/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-46/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-46/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-46/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-46/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-46/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-46/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-46/12.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-46/13.webp"
+        ]
+      },
+      {
+        "n": "45",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-45/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-45/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-45/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-45/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-45/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-45/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-45/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-45/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-45/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-45/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-45/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-45/12.webp"
+        ]
+      },
+      {
+        "n": "44",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-44/1.webp"
+        ]
+      },
+      {
+        "n": "43",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-43/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-43/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-43/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-43/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-43/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-43/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-43/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-43/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-43/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-43/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-43/11.webp"
+        ]
+      },
+      {
+        "n": "42",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-42/1.webp"
+        ]
+      },
+      {
+        "n": "41",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-41/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-41/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-41/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-41/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-41/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-41/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-41/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-41/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-41/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-41/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-41/11.webp"
+        ]
+      },
+      {
+        "n": "40",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-40/1.webp"
+        ]
+      },
+      {
+        "n": "39",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-39/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-39/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-39/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-39/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-39/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-39/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-39/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-39/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-39/9.webp"
+        ]
+      },
+      {
+        "n": "38",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-38/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-38/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-38/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-38/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-38/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-38/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-38/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-38/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-38/9.webp"
+        ]
+      },
+      {
+        "n": "37",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-37/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-37/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-37/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-37/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-37/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-37/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-37/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-37/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-37/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-37/10.webp"
+        ]
+      },
+      {
+        "n": "36",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-36/1.webp"
+        ]
+      },
+      {
+        "n": "35",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-35/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-35/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-35/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-35/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-35/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-35/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-35/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-35/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-35/9.webp"
+        ]
+      },
+      {
+        "n": "34",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-34/1.webp"
+        ]
+      },
+      {
+        "n": "33",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-33/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-33/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-33/3.webp"
+        ]
+      },
+      {
+        "n": "32",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-32/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-32/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-32/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-32/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-32/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-32/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-32/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-32/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-32/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-32/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-32/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-32/12.webp"
+        ]
+      },
+      {
+        "n": "31",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-31/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-31/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-31/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-31/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-31/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-31/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-31/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-31/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-31/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-31/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-31/11.webp"
+        ]
+      },
+      {
+        "n": "30",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-30/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-30/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-30/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-30/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-30/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-30/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-30/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-30/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-30/9.webp"
+        ]
+      },
+      {
+        "n": "29",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-29/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-29/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-29/3.webp"
+        ]
+      },
+      {
+        "n": "28",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-28/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-28/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-28/3.webp"
+        ]
+      },
+      {
+        "n": "27",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-27/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-27/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-27/3.webp"
+        ]
+      },
+      {
+        "n": "26",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-26/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-26/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-26/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-26/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-26/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-26/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-26/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-26/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-26/9.webp"
+        ]
+      },
+      {
+        "n": "25",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-25/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-25/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-25/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-25/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-25/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-25/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-25/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-25/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-25/9.webp"
+        ]
+      },
+      {
+        "n": "24",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-24/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-24/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-24/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-24/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-24/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-24/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-24/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-24/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-24/9.webp"
+        ]
+      },
+      {
+        "n": "23",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-23/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-23/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-23/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-23/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-23/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-23/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-23/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-23/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-23/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-23/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-23/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-23/12.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-23/13.webp"
+        ]
+      },
+      {
+        "n": "22",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-22/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-22/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-22/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-22/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-22/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-22/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-22/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-22/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-22/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-22/10.webp"
+        ]
+      },
+      {
+        "n": "21",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-21/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-21/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-21/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-21/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-21/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-21/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-21/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-21/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-21/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-21/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-21/11.webp"
+        ]
+      },
+      {
+        "n": "20",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-20/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-20/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-20/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-20/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-20/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-20/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-20/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-20/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-20/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-20/10.webp"
+        ]
+      },
+      {
+        "n": "19",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-19/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-19/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-19/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-19/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-19/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-19/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-19/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-19/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-19/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-19/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-19/11.webp"
+        ]
+      },
+      {
+        "n": "18",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-18/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-18/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-18/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-18/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-18/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-18/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-18/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-18/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-18/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-18/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-18/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-18/12.webp"
+        ]
+      },
+      {
+        "n": "17",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-17/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-17/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-17/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-17/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-17/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-17/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-17/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-17/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-17/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-17/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-17/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-17/12.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-17/13.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-17/14.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-17/15.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-17/16.webp"
+        ]
+      },
+      {
+        "n": "16",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-16/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-16/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-16/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-16/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-16/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-16/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-16/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-16/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-16/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-16/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-16/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-16/12.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-16/13.webp"
+        ]
+      },
+      {
+        "n": "15",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-15/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-15/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-15/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-15/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-15/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-15/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-15/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-15/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-15/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-15/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-15/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-15/12.webp"
+        ]
+      },
+      {
+        "n": "14",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-14/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-14/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-14/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-14/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-14/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-14/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-14/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-14/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-14/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-14/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-14/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-14/12.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-14/13.webp"
+        ]
+      },
+      {
+        "n": "13",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-13/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-13/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-13/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-13/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-13/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-13/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-13/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-13/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-13/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-13/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-13/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-13/12.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-13/13.webp"
+        ]
+      },
+      {
+        "n": "12",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-12/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-12/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-12/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-12/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-12/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-12/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-12/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-12/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-12/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-12/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-12/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-12/12.webp"
+        ]
+      },
+      {
+        "n": "11",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-11/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-11/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-11/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-11/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-11/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-11/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-11/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-11/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-11/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-11/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-11/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-11/12.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-11/13.webp"
+        ]
+      },
+      {
+        "n": "10",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-10/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-10/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-10/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-10/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-10/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-10/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-10/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-10/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-10/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-10/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-10/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-10/12.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-10/13.webp"
+        ]
+      },
+      {
+        "n": "9",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-9/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-9/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-9/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-9/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-9/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-9/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-9/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-9/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-9/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-9/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-9/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-9/12.webp"
+        ]
+      },
+      {
+        "n": "8",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-8/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-8/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-8/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-8/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-8/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-8/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-8/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-8/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-8/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-8/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-8/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-8/12.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-8/13.webp"
+        ]
+      },
+      {
+        "n": "7",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-7/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-7/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-7/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-7/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-7/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-7/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-7/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-7/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-7/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-7/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-7/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-7/12.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-7/13.webp"
+        ]
+      },
+      {
+        "n": "6",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-6/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-6/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-6/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-6/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-6/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-6/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-6/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-6/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-6/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-6/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-6/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-6/12.webp"
+        ]
+      },
+      {
+        "n": "5",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-5/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-5/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-5/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-5/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-5/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-5/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-5/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-5/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-5/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-5/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-5/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-5/12.webp"
+        ]
+      },
+      {
+        "n": "4",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-4/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-4/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-4/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-4/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-4/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-4/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-4/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-4/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-4/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-4/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-4/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-4/12.webp"
+        ]
+      },
+      {
+        "n": "3",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-3/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-3/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-3/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-3/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-3/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-3/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-3/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-3/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-3/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-3/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-3/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-3/12.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-3/13.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-3/14.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-3/15.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-3/16.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-3/17.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-3/18.webp"
+        ]
+      },
+      {
+        "n": "2",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-2/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-2/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-2/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-2/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-2/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-2/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-2/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-2/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-2/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-2/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-2/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-2/12.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-2/13.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-2/14.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-2/15.webp"
+        ]
+      },
+      {
+        "n": "1",
+        "d": "2026-10-24",
+        "pages": [
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-1/1.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-1/2.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-1/3.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-1/4.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-1/5.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-1/6.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-1/7.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-1/8.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-1/9.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-1/10.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-1/11.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-1/12.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-1/13.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-1/14.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-1/15.webp",
+          "assets/chapters/i-shall-seal-the-heavens-2025/ch-1/16.webp"
+        ]
+      }
+    ]
+  },
+  {
     "id": "nm_21",
     "title": "21",
     "cover": "",
@@ -49258,7 +50765,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -59668,7 +61175,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -61736,7 +63243,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
@@ -61754,6 +63261,18 @@ var DB = [
     "status": "Ongoing",
     "author": "Nexus Bot",
     "chapters": [
+      {
+        "n": "926",
+        "d": "2026-10-24",
+        "pages": [
+          "https://olympustaff.com/uploads/manga_c0c7c/926/2b4a0dbf6edc20ee62a244eefddbcf85.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/926/5886b54452095858b7bb2f081194a81c.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/926/08549b5956328193d0dc8bdbcd8cae54.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/926/cd667807685a7bd95bece95a289c3d73.jpg",
+          "https://olympustaff.com/uploads/manga_c0c7c/926/1697278617ddb4baac14fb2f8e2f7816.jpg",
+          "https://i.ibb.co/XxgjtmZX/AF713393-9-B16-464-F-A596-77-A5-D0834-D54.png"
+        ]
+      },
       {
         "n": "925",
         "d": "2026-10-23",
