@@ -1,5 +1,45 @@
 var DB = [
   {
+    "id": "nm_that-trash-was-me",
+    "title": "That Trash Was Me",
+    "cover": "",
+    "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [],
+    "type": "manhwa",
+    "chapters": [
+      {
+        "n": "1",
+        "d": "2026-10-30",
+        "pages": [
+          "assets/chapters/that-trash-was-me/ch-1/1.webp",
+          "assets/chapters/that-trash-was-me/ch-1/2.webp",
+          "assets/chapters/that-trash-was-me/ch-1/3.webp",
+          "assets/chapters/that-trash-was-me/ch-1/4.webp",
+          "assets/chapters/that-trash-was-me/ch-1/5.webp",
+          "assets/chapters/that-trash-was-me/ch-1/6.webp",
+          "assets/chapters/that-trash-was-me/ch-1/7.webp",
+          "assets/chapters/that-trash-was-me/ch-1/8.webp",
+          "assets/chapters/that-trash-was-me/ch-1/9.webp",
+          "assets/chapters/that-trash-was-me/ch-1/10.webp",
+          "assets/chapters/that-trash-was-me/ch-1/11.webp",
+          "assets/chapters/that-trash-was-me/ch-1/12.webp",
+          "assets/chapters/that-trash-was-me/ch-1/13.webp",
+          "assets/chapters/that-trash-was-me/ch-1/14.webp",
+          "assets/chapters/that-trash-was-me/ch-1/15.webp",
+          "assets/chapters/that-trash-was-me/ch-1/16.webp",
+          "assets/chapters/that-trash-was-me/ch-1/17.webp",
+          "assets/chapters/that-trash-was-me/ch-1/18.webp",
+          "assets/chapters/that-trash-was-me/ch-1/19.webp",
+          "assets/chapters/that-trash-was-me/ch-1/20.webp",
+          "assets/chapters/that-trash-was-me/ch-1/21.webp",
+          "assets/chapters/that-trash-was-me/ch-1/22.webp"
+        ]
+      }
+    ]
+  },
+  {
     "id": "nm_95",
     "title": "95",
     "cover": "",
@@ -52874,7 +52914,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -63297,7 +63337,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -65365,7 +65405,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
