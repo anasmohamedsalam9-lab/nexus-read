@@ -1,5 +1,61 @@
 var DB = [
   {
+    "id": "nm_129",
+    "title": "129",
+    "cover": "",
+    "desc": "قصة مشوقة ومثيرة! استكشف الأحداث الآن.",
+    "status": "Ongoing",
+    "author": "Nile Bot",
+    "genres": [],
+    "type": "manhwa",
+    "chapters": [
+      {
+        "n": "7",
+        "d": "2026-10-31",
+        "pages": [
+          "assets/chapters/129/ch-7/1.webp",
+          "assets/chapters/129/ch-7/2.webp",
+          "assets/chapters/129/ch-7/3.webp",
+          "assets/chapters/129/ch-7/4.webp",
+          "assets/chapters/129/ch-7/5.webp",
+          "assets/chapters/129/ch-7/6.webp",
+          "assets/chapters/129/ch-7/7.webp",
+          "assets/chapters/129/ch-7/8.webp"
+        ]
+      },
+      {
+        "n": "6",
+        "d": "2026-10-31",
+        "pages": [
+          "assets/chapters/129/ch-6/1.webp",
+          "assets/chapters/129/ch-6/2.webp",
+          "assets/chapters/129/ch-6/3.webp",
+          "assets/chapters/129/ch-6/4.webp",
+          "assets/chapters/129/ch-6/5.webp",
+          "assets/chapters/129/ch-6/6.webp",
+          "assets/chapters/129/ch-6/7.webp",
+          "assets/chapters/129/ch-6/8.webp"
+        ]
+      },
+      {
+        "n": "1",
+        "d": "2026-10-31",
+        "pages": [
+          "assets/chapters/129/ch-1/1.webp",
+          "assets/chapters/129/ch-1/2.webp",
+          "assets/chapters/129/ch-1/3.webp",
+          "assets/chapters/129/ch-1/4.webp",
+          "assets/chapters/129/ch-1/5.webp",
+          "assets/chapters/129/ch-1/6.webp",
+          "assets/chapters/129/ch-1/7.webp",
+          "assets/chapters/129/ch-1/8.webp",
+          "assets/chapters/129/ch-1/9.webp",
+          "assets/chapters/129/ch-1/10.webp"
+        ]
+      }
+    ]
+  },
+  {
     "id": "nm_that-trash-was-me",
     "title": "That Trash Was Me",
     "cover": "assets/covers/that-trash-was-me.webp",
@@ -42169,6 +42225,52 @@ var DB = [
     "type": "manga",
     "chapters": [
       {
+        "n": "80",
+        "d": "2026-10-31",
+        "pages": [
+          "assets/chapters/yuukoku-no-moriarty/ch-80/1.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/2.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/3.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/4.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/5.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/6.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/7.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/8.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/9.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/10.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/11.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/12.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/13.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/14.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/15.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/16.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/17.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/18.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/19.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/20.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/21.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/22.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/23.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/24.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/25.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/26.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/27.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/28.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/29.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/30.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/31.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/32.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/33.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/34.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/35.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/36.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/37.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/38.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/39.webp",
+          "assets/chapters/yuukoku-no-moriarty/ch-80/40.webp"
+        ]
+      },
+      {
         "n": "16.5",
         "d": "2026-08-30",
         "pages": [
@@ -52914,7 +53016,7 @@ var DB = [
     "status": "Ongoing",
     "author": "Nile Bot",
     "genres": [],
-    "type": "manhwa",
+    "type": "manga",
     "chapters": [
       {
         "n": "93",
@@ -63337,7 +63439,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "genres": [
       "أكشن",
       "مغامرة",
@@ -65405,7 +65507,7 @@ var DB = [
         ]
       }
     ],
-    "type": "manhwa",
+    "type": "manga",
     "desc": "سيو جي وو هو شاب طيب القلب يتمتع بقوة سرية فائقة السرعة، يحب القطط كثيراً. في يوم من الأيام، يلتقي بقط سمين غريب يتبين أنه كادين، أحد أقوى المستيقظين في العالم والذي اضطر للتناسخ في جسد قط هرباً من أعدائه. معاً، يبدآن رحلة شيقة ومضحكة في عالم المستيقظين السريين!",
     "genres": [
       "أكشن",
